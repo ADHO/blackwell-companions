@@ -10,11 +10,16 @@ Note that doing the same for the Companion to Digital Literary Studies should be
 ## TODO:
 * Implement search functionality
   The XTF-based search function (as implemented) is very limited anyway -- replicating it should be easy.
+* Implement a "print view"
 
-### Nice-to-haves / Possible improvements
+### Nice-to-haves / Improvements
 * pre-generate pages for SEO and progressive-enhancement purposes
+  * the TOC, at least, should probably be hardcoded
+  * a build system for stamping out templating will be needed
+  * this will result in better URLs, and make a fall-back search functionality easier
   * note to self -- switch the DOM order of the TOC and the article
 
 * redevelop some of the markup / css?
   * the markup is awful (seriously -- I've stripped the tables around the chapter content, but take a look at the TOC...)
   * the CSS for the text is just copied from the XTF-based site.  Nicer typography might be nice.
+  * a (more) responsive, mobile-friendly layout would be nice, too.
