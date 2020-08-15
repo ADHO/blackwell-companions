@@ -31,15 +31,25 @@
   </footer>
 
   <script>
-    const includes = document.getElementsByTagName('include');
-    [].forEach.call(includes, i => {
-      let filePath = i.getAttribute('src');
-      fetch(filePath).then(file => {
-        file.text().then(content => {
-          i.insertAdjacentHTML('afterend', content);
-          i.remove();
+    const loadPage = (filePath, targetElem = document.querySelector("main")) => {
+      return fetch(filePath).then(file =>
+        file.text().then(content => targetElem.innerHTML = content)
+      );
+    };
+
+    const includes = document.getElementsByTagName("include");
+    Promise.all(
+      Array.from(includes).map((include) =>
+        loadPage(include.getAttribute("src"), include.parentElement)
+      )
+    ).then(() => {
+      for (let link of document.querySelectorAll("nav a[href^='DH_html/']")) {
+        link.addEventListener("click", (event) => {
+          event.preventDefault();
+          const href = link.getAttribute("href");
+          loadPage(href);
         });
-      });
+      }
     });
   </script>
 </body>
