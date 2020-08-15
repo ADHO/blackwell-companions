@@ -1,0 +1,61 @@
+input#open-sidebar {
+  display: none;
+
+  &:checked {
+    & ~ label[for="open-sidebar"] {
+      top: 90px;
+      left: calc(35vw - 25px);
+
+      .spinner {
+        background-color: var(--background-color);
+      }
+
+      & .horizontal {
+        opacity: 0;
+      }
+
+      & .diagonal.part-1 {
+        margin-top: 8px;
+        transform: rotate(135deg);
+      }
+
+      & .diagonal.part-2 {
+        margin-top: -9px;
+        transform: rotate(-135deg);
+      }
+    }
+
+    & ~ nav {
+      transition: opacity 1000ms ease, width 200ms linear, padding 200ms linear;
+    }
+  }
+
+  &:not(:checked) ~ nav {
+    opacity: 0;
+    padding: 0 0 1em;
+    transition: opacity 100ms linear, width 200ms linear, padding 200ms linear;
+    width: 0vw;
+  }
+}
+
+label[for="open-sidebar"] {
+  cursor: pointer;
+  height: 22px;
+  left: 15px;
+  position: absolute;
+  top: 30px;
+  width: 22px;
+  z-index: 99;
+
+  .spinner {
+    background-color: white;
+    box-sizing: border-box;
+    float: left;
+    height: 3px;
+    margin-top: 3px;
+    position: relative;
+    transition: all 500ms;
+    user-select: none;
+    width: 100%;
+  }
+}
