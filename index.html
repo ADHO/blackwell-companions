@@ -43,12 +43,20 @@
       }
     }
 
+    const urlParams = new URLSearchParams(window.location.search);
+    const chapter = urlParams.get("chapter");
+    if (chapter) document.querySelector("main include").setAttribute("src", chapter);
+
     const includes = document.getElementsByTagName("include");
     Promise.all(
       Array.from(includes).map((include) =>
         loadPage(include.getAttribute("src"), include.parentElement)
       )
     ).then(() => {
+      if (chapter) {
+        document.querySelector("nav a.current")?.classList.remove("current");
+        document.querySelector(`nav a[href="${chapter}"]`).classList.add("current");
+      }
       for (let link of document.querySelectorAll("nav a[href^='DH_html/']")) {
         link.addEventListener("click", (event) => {
           event.preventDefault();
@@ -56,6 +64,8 @@
           loadPage(href).then(() => {
             document.querySelector("nav a.current")?.classList.remove("current");
             document.querySelector(`nav a[href="${href}"]`).classList.add("current");
+            urlParams.set("chapter", href);
+            window.history.replaceState({}, '', `${location.pathname}?chapter=${urlParams.get("chapter")}`);
             updateImgSrcs();
           });
         });
