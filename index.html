@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>A Companion to Digital Humanities</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="DH_html/css/default/results.css">
+  <link rel="stylesheet" type="text/css" href="DH_html/css/default/content.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>A Companion to Digital Humanities</h1>
+    <h3>Edited by Susan Schriebman, Ray Siemens, and John Unsworth</h3>
+  </header>
+
+  <nav>
+    <include src="DH_html/9781405103213_toc.html">Loading...</include>
+  </nav>
+
+  <main>
+    <include src="DH_html/9781405103213_intro.html">Loading...</include>
+  </main>
+
+  <footer>
+    Cite as: A Companion to Digital Humanities, ed. Susan Schreibman, Ray Siemens, John Unsworth. Oxford: Blackwell,
+    2004. http://www.digitalhumanities.org/companion/
+  </footer>
+
+  <script>
+    const includes = document.getElementsByTagName('include');
+    [].forEach.call(includes, i => {
+      let filePath = i.getAttribute('src');
+      fetch(filePath).then(file => {
+        file.text().then(content => {
+          i.insertAdjacentHTML('afterend', content);
+          i.remove();
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

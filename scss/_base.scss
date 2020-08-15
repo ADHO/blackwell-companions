@@ -1,0 +1,40 @@
+:root {
+  --background-color: #62708d;
+}
+
+body {
+  display: grid;
+  grid-template: 100px calc(100vh - 130px) 30px / auto;
+  margin: 0;
+}
+
+header {
+  grid-column: 1 / 4;
+  background-color: var(--background-color);
+  color: white;
+  padding: 0 2em;
+}
+
+nav {
+  grid-column: 1 / 2;
+  overflow: auto;
+  padding: 0 1em 1em;
+  width: 35vw;
+}
+
+main {
+  grid-column: 2 / 4;
+  overflow: auto;
+
+  .content {
+    margin-bottom: 15px;
+  }
+}
+
+footer {
+  grid-column: 1 / 4;
+  display: grid;
+  place-items: center;
+  background-color: var(--background-color);
+  color: white;
+}
