@@ -37,6 +37,12 @@
       );
     };
 
+    const updateImgSrcs = () => {
+      for (let img of document.querySelectorAll("main .content img")) {
+        img.src = `DH_html/${img.getAttribute('src')}`;
+      }
+    }
+
     const includes = document.getElementsByTagName("include");
     Promise.all(
       Array.from(includes).map((include) =>
@@ -47,9 +53,11 @@
         link.addEventListener("click", (event) => {
           event.preventDefault();
           const href = link.getAttribute("href");
-          loadPage(href);
+          loadPage(href).then(() => updateImgSrcs());
+
         });
       }
+      updateImgSrcs();
     });
   </script>
 </body>
