@@ -11,7 +11,7 @@ Note that doing the same for the Companion to Digital Literary Studies should be
 * Implement search functionality
   The XTF-based search function (as implemented) is very limited anyway -- replicating it should be easy.
 
-## Nice-to-haves / Possible improvements
+### Nice-to-haves / Possible improvements
 * pre-generate pages for SEO and progressive-enhancement purposes
   * note to self -- switch the DOM order of the TOC and the article
 
