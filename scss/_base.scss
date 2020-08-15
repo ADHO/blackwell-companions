@@ -41,8 +41,14 @@ nav {
   }
 
   td:nth-child(3) {
-    text-indent: -2.5em;
-    padding-left: 2.5em;
+    display: flex;
+
+    b {
+      display: inline-block;
+      min-width: 2em;
+      text-align: right;
+      margin-right: 8px;
+    }
   }
 }
 
