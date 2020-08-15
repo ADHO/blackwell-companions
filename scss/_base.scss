@@ -31,6 +31,14 @@ nav {
   overflow: auto;
   padding: 0 1em 1em;
   width: 35vw;
+
+  a.current {
+    background: #ffcc66;
+    cursor: none;
+    font-weight: bold;
+    pointer-events: none;
+    text-decoration: none;
+  }
 }
 
 main {

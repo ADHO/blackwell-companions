@@ -53,8 +53,11 @@
         link.addEventListener("click", (event) => {
           event.preventDefault();
           const href = link.getAttribute("href");
-          loadPage(href).then(() => updateImgSrcs());
-
+          loadPage(href).then(() => {
+            document.querySelector("nav a.current")?.classList.remove("current");
+            document.querySelector(`nav a[href="${href}"]`).classList.add("current");
+            updateImgSrcs();
+          });
         });
       }
       updateImgSrcs();
