@@ -39,6 +39,11 @@ nav {
     pointer-events: none;
     text-decoration: none;
   }
+
+  td:nth-child(3) {
+    text-indent: -2.5em;
+    padding-left: 2.5em;
+  }
 }
 
 main {
