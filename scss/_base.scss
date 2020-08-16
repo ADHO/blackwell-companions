@@ -1,5 +1,6 @@
 :root {
   --background-color: #62708d;
+  --highlight-color: #ffcc66;
 }
 
 body {
@@ -33,15 +34,10 @@ header {
     margin-top: 4px;
   }
 
-  h1,
-  h3 {
-    margin: 0;
-  }
-
   a,
   a:visited,
   a:link {
-    color: white;
+    color: var(--highlight-color);
     text-decoration: none;
 
     &:hover {
