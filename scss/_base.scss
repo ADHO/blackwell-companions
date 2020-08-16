@@ -4,7 +4,7 @@
 
 body {
   display: grid;
-  grid-template: 100px calc(100vh - 130px) 30px / auto;
+  grid-template: 100px calc(100vh - 130px) 30px / auto 1fr;
   margin: 0;
 }
 
