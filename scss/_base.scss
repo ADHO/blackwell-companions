@@ -4,7 +4,7 @@
 
 body {
   display: grid;
-  grid-template: 100px calc(100vh - 130px) 30px / auto 1fr;
+  grid-template: 75px calc(100vh - 105px) 30px / auto 1fr;
   margin: 0;
 }
 
@@ -13,6 +13,30 @@ header {
   background-color: var(--background-color);
   color: white;
   padding: 0 2em;
+
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 220px;
+  grid-template-rows: 40px 30px;
+  grid-template-areas:
+    "title bw"
+    "subtitle bw";
+
+  div {
+    display: grid;
+    grid-area: bw;
+    font-size: x-small;
+    text-align: center;
+  }
+
+  img {
+    margin-top: 4px;
+  }
+
+  h1,
+  h3 {
+    margin: 0;
+  }
 
   a,
   a:visited,
