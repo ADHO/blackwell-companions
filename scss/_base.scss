@@ -47,6 +47,7 @@ header {
 }
 
 nav {
+  border-right: 1px solid var(--background-color);
   grid-column: 1 / 2;
   overflow: auto;
   padding: 0 1em 1em;
