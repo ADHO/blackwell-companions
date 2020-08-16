@@ -10,9 +10,11 @@ Note that doing the same for the Companion to Digital Literary Studies should be
 
 
 ## TODO:
-* Implement search functionality
+* **Implement search functionality**  
   The XTF-based search function (as implemented) is very limited anyway -- replicating it should be easy.
-* Implement a "print view"
+* **Implement a "print view"**  
+  Does this need to be an actual button that displays the "print view", or just some `@media print` styles...?
+* This site doesn't use the chapter headers and footers with the prev / next navigation buttons (I don't much like them, personally) -- should they be added back in?
 
 ### Nice-to-haves / Improvements
 * pre-generate pages for SEO and progressive-enhancement purposes
