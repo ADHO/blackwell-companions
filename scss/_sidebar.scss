@@ -4,7 +4,7 @@ input#open-sidebar {
   &:checked {
     & ~ label[for="open-sidebar"] {
       top: 90px;
-      left: calc(35vw - 25px);
+      left: calc(var(--sidebar-width) - 25px);
 
       .spinner {
         background-color: var(--background-color);

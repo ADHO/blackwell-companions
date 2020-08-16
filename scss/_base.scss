@@ -1,11 +1,18 @@
 :root {
   --background-color: #62708d;
   --highlight-color: #ffcc66;
+  --header-height: 75px;
+  --footer-height: 30px;
+  --sidebar-width: 35vw;
 }
 
 body {
   display: grid;
-  grid-template: 75px calc(100vh - 105px) 30px / auto 1fr;
+  grid-template:
+    var(--header-height) calc(
+      100vh - var(--header-height) - var(--footer-height)
+    )
+    var(--footer-height) / auto 1fr;
   margin: 0;
 }
 
@@ -51,7 +58,7 @@ nav {
   grid-column: 1 / 2;
   overflow: auto;
   padding: 0 1em 1em;
-  width: 35vw;
+  width: var(--sidebar-width);
 
   a.current {
     background: #ffcc66;
