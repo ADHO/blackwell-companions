@@ -4,9 +4,9 @@ https://distracted-banach-2ed882.netlify.app/
 
 This is a prototype / proof-of-concept / initial version (depending!) of a conversion of the Companion to Digital Humanities XTF installation at http://digitalhumanities.org/companion/
 
-The site is entirely static, and as such it has (imho) a number of advantages over the XTF-based site.  XTF is heavy and burdensome to support -- it requires a Java-based Tomcat server and significant server resources and represents a significant technical debt.  This seems excessive for a static site with a very limited search function.  An entirely static site like this requires almost zero infrastructure resources (indeed, it can easily be hosted for free on, e.g., GitHub Pages or Netlify, as with this demo), requires no maintenance and exposes no security concerns.
+The site is entirely static, and as such it has (imho) a number of advantages over the XTF-based site.  XTF is heavy and burdensome to support -- it requires a Java-based Tomcat server and significant server resources and represents a substantial technical debt.  This seems excessive for a site that presents fixed content with a very limited search function.  An entirely static site like this requires almost zero infrastructure resources (indeed, it can easily be hosted for free on, e.g., GitHub Pages or Netlify, as with this demo), requires no maintenance and exposes no security concerns.
 
-For a (slightly unfair) point of comparison, the XTF installation that currently serves up the two Companions is currently consuming about half a gigabyte of RAM and about 5Gb of storage space.  Something like this requires essentially zero RAM, and less than 20mb of storage for each Companion.
+For a (only slightly unfair) point of comparison, the XTF installation that currently serves up the two Companions is currently consuming about half a gigabyte of RAM and about 5Gb of storage space.  Something like this requires essentially zero RAM, and less than 20mb of storage for each Companion.
 
 The search functionality included here is slightly more sophisticated than the current offering (XTF could, presumably, be configured to do the same, but the existing installation has only very limited search capabilities).
 
