@@ -49,7 +49,7 @@
       );
     };
 
-    const onPageLoaded = (chapter_href) => {
+    window.addEventListener("articleLoaded", ({ detail: chapter_href }) => {
       document.querySelector("nav a.current")?.classList.remove("current");
       document.querySelector(`nav a[href="${chapter_href}"]`).classList.add("current");
       document.querySelector("main").setAttribute("data-current-chapter", chapter_href);
@@ -57,7 +57,7 @@
         img.src = `DH_html/${img.getAttribute('src')}`;
       }
       document.querySelector("main").scrollTop = 0;
-    }
+    });
 
     const urlParams = new URLSearchParams(window.location.search);
     const chapter = urlParams.get("chapter");
@@ -74,13 +74,13 @@
           event.preventDefault();
           const href = link.getAttribute("href");
           loadPage(href).then(() => {
-            onPageLoaded(href);
+            window.dispatchEvent(new CustomEvent("articleLoaded", { detail: href }));
             urlParams.set("chapter", href);
             window.history.replaceState({}, '', `${location.pathname}?chapter=${urlParams.get("chapter")}`);
           });
         });
       }
-      if (chapter) onPageLoaded(chapter);
+      if (chapter) window.dispatchEvent(new CustomEvent("articleLoaded", { detail: chapter }));
     });
   </script>
 </body>
