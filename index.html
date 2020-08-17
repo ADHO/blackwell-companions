@@ -68,7 +68,7 @@
 
     const includes = document.getElementsByTagName("include");
     Promise.all(
-      Array.from(includes).map((include) =>
+      [...includes].map((include) =>
         loadPage(include.getAttribute("src"), include.parentElement)
       )
     ).then(() => {
