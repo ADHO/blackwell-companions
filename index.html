@@ -90,7 +90,10 @@
           });
         });
       }
-      if (chapter) window.dispatchEvent(new CustomEvent("articleLoaded", { detail: chapter }));
+      if (chapter) {
+        window.dispatchEvent(new CustomEvent("articleWillLoad", { detail: chapter }));
+        window.dispatchEvent(new CustomEvent("articleLoaded", { detail: chapter }));
+      }
     });
   </script>
   <script src="https://unpkg.com/lunr/lunr.js"></script>
