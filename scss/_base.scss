@@ -24,21 +24,33 @@ header {
 
   display: grid;
   align-items: center;
-  grid-template-columns: auto 220px;
+  grid-template-columns: 65px auto 220px;
   grid-template-rows: 40px 30px;
   grid-template-areas:
-    "title bw"
-    "subtitle bw";
+    "img title bw"
+    "img subtitle bw";
 
-  div {
+  > img {
+    grid-area: img;
+  }
+
+  h1 {
+    margin-top: 25px;
+  }
+
+  h3 {
+    margin-top: 5px;
+  }
+
+  #publisher {
     display: grid;
     grid-area: bw;
     font-size: x-small;
     text-align: center;
-  }
 
-  img {
-    margin-top: 4px;
+    img {
+      margin-top: 4px;
+    }
   }
 
   a,
