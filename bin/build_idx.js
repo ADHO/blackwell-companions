@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+// Custom plugin to make matched terms available in their original form
+//  (for the purpose of highlighting in context)
 var originalWordMetadata = (builder) => {
   // Define a pipeline function that stores the token length as metadata
   var pipelineFunction = (token) => {
@@ -34,18 +36,15 @@ stdin.on("end", () => {
     this.ref("id");
     this.field("text");
 
-    this.metadataWhitelist = ["position"];
     this.use(originalWordMetadata);
-
-    // this is a bit of a kludge so that possessives can be found
-    // this.tokenizer.separator = /[\s\-'’]+/;
 
     documents.forEach((doc) => this.add(doc));
   });
 
-  // Remove unnecessary duplicates
+  // Count hits and de-duplicate originalWords
   for (let [term, termIndex] of Object.entries(idx.invertedIndex)) {
     for (let docTermIndex of Object.values(termIndex.text)) {
+      docTermIndex.hitCount = [docTermIndex.originalWord.length];
       docTermIndex.originalWord = [...new Set(docTermIndex.originalWord)];
     }
   }
