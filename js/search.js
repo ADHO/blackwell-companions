@@ -32,6 +32,14 @@ const highlightInNode = (
   }
 };
 
+const unMarkupArticle = () => {
+  [...document.querySelectorAll("main mark")].forEach((mark) => {
+    const parent = mark.parentNode;
+    while (mark.firstChild) parent.insertBefore(mark.firstChild, mark);
+    parent.removeChild(mark);
+  });
+};
+
 const markupArticle = (result) => {
   for (let [term, metadata] of Object.entries(result.matchData.metadata)) {
     metadata.text.originalWord
@@ -43,7 +51,16 @@ const markupArticle = (result) => {
   document.querySelector("main mark").scrollIntoView();
 };
 
+const clearSearchResults = () => {
+  document.getElementById("match-counts").innerHTML = "";
+  [...document.querySelectorAll(`nav a[href^="DH_html/"]`)].forEach((link) => {
+    link.closest("tr").firstElementChild.innerHTML = "";
+  });
+  unMarkupArticle();
+};
+
 const doSearch = (/* event */) => {
+  clearSearchResults();
   const query = document.querySelector("#query").value;
   results = idx.search(query);
 
