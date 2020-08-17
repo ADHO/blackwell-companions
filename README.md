@@ -8,15 +8,18 @@ The site is entirely static, and as such it has (imho) a number of advantages ov
 
 For a (slightly unfair) point of comparison, the XTF installation that currently serves up the two Companions is currently consuming about half a gigabyte of RAM and about 5Gb of storage space.  Something like this requires essentially zero RAM, and less than 20mb of storage for each Companion.
 
+The search functionality included here is slightly more sophisticated than the current offering (XTF could, presumably, be configured to do the same, but the existing installation has only very limited search capabilities).
+
 Note that doing the same for the Companion to Digital Literary Studies should be a case of dropping in the content and changing a few constants.
 
 
-## TODO:
-* **Implement search functionality**  
-  The XTF-based search function (as implemented) is very limited anyway -- replicating it should be easy.
+## TODO for full feature-parity:
 * **Implement a "print view"**  
   Does this need to be an actual button that displays the "print view", or just some `@media print` styles...?
+* Add in the "Corrections to John Unsworth" link?
+* Add in the "Buy the book" link? (Note that this doesn't actually work, so presumably a new link would have to be found.)
 * This site doesn't use the chapter headers and footers with the prev / next navigation buttons (I don't much like them, personally) -- should they be added back in?
+* Likewise the prev/next search hit UI -- might be a nice-to-have?
 
 ### Nice-to-haves / Improvements
 * pre-generate pages for SEO and progressive-enhancement purposes
@@ -24,6 +27,7 @@ Note that doing the same for the Companion to Digital Literary Studies should be
   * a build system for stamping out templating will be needed
   * this will result in better URLs, and make a fall-back search functionality easier
   * note to self -- switch the DOM order of the TOC and the article
+  * would rank this as fairly important
 
 * redevelop some of the markup / css?
   * the markup is awful (seriously -- I've stripped the tables around the chapter content, but take a look at the TOC...)
@@ -31,3 +35,5 @@ Note that doing the same for the Companion to Digital Literary Studies should be
   * a (more) responsive, mobile-friendly layout would be nice, too.
 
 * depending on network latency, there can be a bit of a lag on loading a new chapter -- some immediate feedback (e.g. a spinner or something) would improve UX (this has been mitigated a little by applying the "current link" styling before loading the page, but more could be done).
+
+* as it stands this will not work on Internet Explorer (MS Edge should be fine).  Support *could* be added, but I would argue against unless a compelling case could be made, tbh.

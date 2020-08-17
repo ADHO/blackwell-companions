@@ -68,6 +68,16 @@ nav {
     text-decoration: none;
   }
 
+  td[width="1"] {
+    text-align: right;
+    vertical-align: baseline;
+    width: 2.5em;
+  }
+
+  td[width="15"] {
+    width: 0;
+  }
+
   td:nth-child(3) {
     display: flex;
 
@@ -78,6 +88,11 @@ nav {
       margin-right: 8px;
     }
   }
+
+  .hit-count {
+    color: red;
+    font-weight: bold;
+  }
 }
 
 main {
@@ -86,6 +101,12 @@ main {
 
   .content {
     margin-bottom: 15px;
+  }
+
+  mark {
+    color: red;
+    font-weight: bold;
+    background-color: #d6dce5;
   }
 }
 

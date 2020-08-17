@@ -30,7 +30,13 @@
     <span class="spinner diagonal part-2">&nbsp;</span>
   </label>
   <nav>
-    <include src="DH_html/9781405103213_toc.html">Loading...</include>
+    <input id="search" type="text">
+    <button id="go">Search!</button>
+    <br>
+    <span id="match-counts"></span>
+    <div>
+      <include src="DH_html/9781405103213_toc.html">Loading...</include>
+    </div>
   </nav>
 
   <main>
@@ -87,6 +93,8 @@
       if (chapter) window.dispatchEvent(new CustomEvent("articleLoaded", { detail: chapter }));
     });
   </script>
+  <script src="https://unpkg.com/lunr/lunr.js"></script>
+  <script src="js/search.js" defer async></script>
 </body>
 
 </html>
