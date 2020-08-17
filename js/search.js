@@ -6,9 +6,11 @@ const getIndex = fetch("data/idx.json")
   .then((response) => response.json())
   .then((json) => (idx = lunr.Index.load(json)));
 
-// getIndex.then(() =>
-//   document.querySelector("article").classList.remove("loading"),
-// );
+getIndex.then(() => {
+  const searchButton = document.querySelector("#do-search");
+  searchButton.disabled = false;
+  searchButton.innerText = "Search!";
+});
 
 const highlightInNode = (
   node,
