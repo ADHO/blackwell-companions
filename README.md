@@ -6,6 +6,8 @@ This is a prototype / proof-of-concept / initial version (depending!) of a conve
 
 The site is entirely static, and as such it has (imho) a number of advantages over the XTF-based site.  XTF is heavy and burdensome to support -- it requires a Java-based Tomcat server and significant server resources and represents a significant technical debt.  This seems excessive for a static site with a very limited search function.  An entirely static site like this requires almost zero infrastructure resources (indeed, it can easily be hosted for free on, e.g., GitHub Pages or Netlify, as with this demo), requires no maintenance and exposes no security concerns.
 
+For a (slightly unfair) point of comparison, the XTF installation that currently serves up the two Companions is currently consuming about half a gigabyte of RAM and about 5Gb of storage space.  Something like this requires essentially zero RAM, and less than 20mb of storage for each Companion.
+
 Note that doing the same for the Companion to Digital Literary Studies should be a case of dropping in the content and changing a few constants.
 
 
@@ -27,3 +29,5 @@ Note that doing the same for the Companion to Digital Literary Studies should be
   * the markup is awful (seriously -- I've stripped the tables around the chapter content, but take a look at the TOC...)
   * the CSS for the text is just copied from the XTF-based site.  Nicer typography might be nice.
   * a (more) responsive, mobile-friendly layout would be nice, too.
+
+* depending on network latency, there can be a bit of a lag on loading a new chapter -- some immediate feedback (e.g. a spinner or something) would improve UX (this has been mitigated a little by applying the "current link" styling before loading the page, but more could be done).
