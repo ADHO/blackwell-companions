@@ -90,7 +90,7 @@ const doSearch = (/* event */) => {
 
   document.getElementById(
     "match-counts",
-  ).innerHTML = `Found ${totalHitCount} matches for “${query}” in ${results.length} documents.`;
+  ).innerHTML = `Found <mark>${totalHitCount}</mark> matches for “<mark>${query}</mark>” in <mark>${results.length}</mark> documents.`;
 };
 
 document.querySelector("#do-search").addEventListener("click", doSearch);
