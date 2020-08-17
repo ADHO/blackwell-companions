@@ -44,7 +44,7 @@ const markupArticle = (result) => {
 };
 
 const doSearch = (/* event */) => {
-  const query = document.querySelector("#search").value;
+  const query = document.querySelector("#query").value;
   results = idx.search(query);
 
   let totalHitCount = 0;
@@ -74,7 +74,7 @@ const doSearch = (/* event */) => {
   ).innerHTML = `Found ${totalHitCount} matches in ${results.length} documents.`;
 };
 
-document.querySelector("#go").addEventListener("click", doSearch);
+document.querySelector("#do-search").addEventListener("click", doSearch);
 document.querySelector("#search").addEventListener("keypress", (event) => {
   if (event.key === "Enter") doSearch();
 });
