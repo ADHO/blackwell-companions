@@ -34,6 +34,7 @@ stdin.on("end", () => {
     this.ref("id");
     this.field("text");
 
+    this.metadataWhitelist = ["position"];
     this.use(originalWordMetadata);
 
     // this is a bit of a kludge so that possessives can be found
