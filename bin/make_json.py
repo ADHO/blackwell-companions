@@ -14,6 +14,10 @@ def main():
 
     output = []
     for chapter_html in (Path(__file__).parent / "../DH_html").glob("*.html"):
+        if chapter_html.name.endswith("_title.html"):
+            continue
+        if chapter_html.name.endswith("_toc.html"):
+            continue
         print("=========================", file=sys.stderr)
         print(chapter_html.name, file=sys.stderr)
 
