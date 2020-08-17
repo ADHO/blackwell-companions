@@ -6,9 +6,11 @@ const getIndex = fetch("data/idx.json")
   .then((response) => response.json())
   .then((json) => (idx = lunr.Index.load(json)));
 
-// getIndex.then(() =>
-//   document.querySelector("article").classList.remove("loading"),
-// );
+getIndex.then(() => {
+  const searchButton = document.querySelector("#do-search");
+  searchButton.disabled = false;
+  searchButton.innerText = "Search!";
+});
 
 const highlightInNode = (
   node,
@@ -32,6 +34,14 @@ const highlightInNode = (
   }
 };
 
+const unMarkupArticle = () => {
+  [...document.querySelectorAll("main mark")].forEach((mark) => {
+    const parent = mark.parentNode;
+    while (mark.firstChild) parent.insertBefore(mark.firstChild, mark);
+    parent.removeChild(mark);
+  });
+};
+
 const markupArticle = (result) => {
   for (let [term, metadata] of Object.entries(result.matchData.metadata)) {
     metadata.text.originalWord
@@ -43,8 +53,17 @@ const markupArticle = (result) => {
   document.querySelector("main mark").scrollIntoView();
 };
 
+const clearSearchResults = () => {
+  document.getElementById("match-counts").innerHTML = "";
+  [...document.querySelectorAll(`nav a[href^="DH_html/"]`)].forEach((link) => {
+    link.closest("tr").firstElementChild.innerHTML = "";
+  });
+  unMarkupArticle();
+};
+
 const doSearch = (/* event */) => {
-  const query = document.querySelector("#search").value;
+  clearSearchResults();
+  const query = document.querySelector("#query").value;
   results = idx.search(query);
 
   let totalHitCount = 0;
@@ -71,10 +90,10 @@ const doSearch = (/* event */) => {
 
   document.getElementById(
     "match-counts",
-  ).innerHTML = `Found ${totalHitCount} matches in ${results.length} documents.`;
+  ).innerHTML = `Found <mark>${totalHitCount}</mark> matches for “<mark>${query}</mark>” in <mark>${results.length}</mark> documents.`;
 };
 
-document.querySelector("#go").addEventListener("click", doSearch);
+document.querySelector("#do-search").addEventListener("click", doSearch);
 document.querySelector("#search").addEventListener("keypress", (event) => {
   if (event.key === "Enter") doSearch();
 });

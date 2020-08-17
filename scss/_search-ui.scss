@@ -1,0 +1,15 @@
+#search {
+  margin-right: 35px;
+  padding: 1em 0;
+
+  span {
+    display: block;
+    margin: 4px 0 0;
+
+    mark {
+      background: none;
+      color: red;
+      font-weight: bold;
+    }
+  }
+}
