@@ -49,10 +49,14 @@
       );
     };
 
-    const updateImgSrcs = () => {
+    const onPageLoaded = (chapter_href) => {
+      document.querySelector("nav a.current")?.classList.remove("current");
+      document.querySelector(`nav a[href="${chapter_href}"]`).classList.add("current");
+      document.querySelector("main").setAttribute("data-current-chapter", chapter_href);
       for (let img of document.querySelectorAll("main .content img")) {
         img.src = `DH_html/${img.getAttribute('src')}`;
       }
+      document.querySelector("main").scrollTop = 0;
     }
 
     const urlParams = new URLSearchParams(window.location.search);
@@ -65,24 +69,18 @@
         loadPage(include.getAttribute("src"), include.parentElement)
       )
     ).then(() => {
-      if (chapter) {
-        document.querySelector("nav a.current")?.classList.remove("current");
-        document.querySelector(`nav a[href="${chapter}"]`).classList.add("current");
-      }
       for (let link of document.querySelectorAll("nav a[href^='DH_html/']")) {
         link.addEventListener("click", (event) => {
           event.preventDefault();
           const href = link.getAttribute("href");
           loadPage(href).then(() => {
-            document.querySelector("nav a.current")?.classList.remove("current");
-            document.querySelector(`nav a[href="${href}"]`).classList.add("current");
+            onPageLoaded(href);
             urlParams.set("chapter", href);
             window.history.replaceState({}, '', `${location.pathname}?chapter=${urlParams.get("chapter")}`);
-            updateImgSrcs();
           });
         });
       }
-      updateImgSrcs();
+      if (chapter) onPageLoaded(chapter);
     });
   </script>
 </body>
