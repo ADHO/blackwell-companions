@@ -1,7 +1,7 @@
 # A Companion to Digital Humanities
 
-<a href="https://app.netlify.com/sites/distracted-banach-2ed882/deploys"><img src="https://api.netlify.com/api/v1/badges/957c205d-5a3b-4b3b-9293-23607c822765/deploy-status" align="right" alt="Netlify Status"></a>
-https://distracted-banach-2ed882.netlify.app/
+<a href="https://app.netlify.com/sites/companion-dh/deploys"><img src="https://api.netlify.com/api/v1/badges/957c205d-5a3b-4b3b-9293-23607c822765/deploy-status" align="right" alt="Netlify Status"></a>
+https://companion-dh.netlify.app/
 
 This is a prototype / proof-of-concept / initial version (depending!) of a conversion of the Companion to Digital Humanities XTF installation at http://digitalhumanities.org/companion/
 
