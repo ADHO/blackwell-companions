@@ -29,8 +29,7 @@ Note that doing the same for the Companion to Digital Literary Studies should be
   - the TOC, at least, should probably be hardcoded
   - a build system for stamping out templating will be needed
   - this will result in better URLs, and make a fall-back search functionality easier
-  - note to self -- switch the DOM order of the TOC and the article
-  - would rank this as fairly important
+  - switching the DOM order of the TOC and the article would improved SEO / accessibility
 
 - redevelop some of the markup / css?
 
@@ -38,6 +37,6 @@ Note that doing the same for the Companion to Digital Literary Studies should be
   - the CSS for the text is just copied from the XTF-based site. Nicer typography might be nice.
   - a (more) responsive, mobile-friendly layout would be nice, too.
 
-- depending on network latency, there can be a bit of a lag on loading a new chapter -- some immediate feedback (e.g. a spinner or something) would improve UX (this has been mitigated a little by applying the "current link" styling before loading the page, but more could be done).
+- depending on network latency, there can be a bit of a lag on loading a new chapter -- some immediate feedback (e.g. a spinner or something) would improve UX (this has been mitigated substantially by applying the "current link" styling before loading the page, but more could be done).
 
 - as it stands this will not work on Internet Explorer (MS Edge should be fine). Support _could_ be added, but I would argue against unless a compelling case could be made, tbh.
