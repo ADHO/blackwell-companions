@@ -8,10 +8,17 @@
 
 body {
   display: grid;
-  grid-template: auto 1fr auto / auto 1fr;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr auto;
   height: 100vh;
   margin: 0;
   overflow: hidden;
+  position: fixed;
+  width: 100vw;
 }
 
 header {
@@ -37,6 +44,7 @@ header {
   }
 
   h3 {
+    grid-area: subtitle;
     margin-top: 5px;
   }
 
@@ -65,7 +73,7 @@ header {
 
 nav {
   border-right: 1px solid var(--background-color);
-  grid-column: 1 / 2;
+  grid-area: sidebar;
   overflow: auto;
   padding: 0 1em 1em;
   width: var(--sidebar-width);
@@ -109,7 +117,7 @@ nav {
 }
 
 main {
-  grid-column: 2 / 4;
+  grid-area: main;
   overflow: auto;
 
   .content {

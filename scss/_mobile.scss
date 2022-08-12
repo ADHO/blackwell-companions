@@ -1,0 +1,39 @@
+@media (max-width: 768px) {
+  body {
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    grid-area: main;
+    background-color: white;
+    z-index: 2;
+  }
+
+  input#open-sidebar {
+    &:checked {
+      & ~ label[for="open-sidebar"] {
+        left: calc(100% - 1em - 25px);
+      }
+
+      & ~ nav {
+        opacity: 1;
+        transform: translateX(0);
+        transition: transform 200ms linear;
+        width: calc(100vw - 2em);
+      }
+    }
+
+    &:not(:checked) {
+      & ~ nav {
+        opacity: 1;
+        transform: translateX(-100%);
+        transition: transform 200ms linear;
+        width: calc(100vw - 2em);
+      }
+    }
+  }
+}
