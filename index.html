@@ -70,6 +70,8 @@
       document.querySelector("main").scrollTop = 0;
     });
 
+    if (window.innerWidth <= 768) document.getElementById("open-sidebar").checked = false;
+
     const urlParams = new URLSearchParams(window.location.search);
     const chapter = urlParams.get("chapter");
     if (chapter) document.querySelector("main include").setAttribute("src", chapter);
@@ -89,6 +91,7 @@
             window.dispatchEvent(new CustomEvent("articleLoaded", { detail: href }));
             urlParams.set("chapter", href);
             window.history.replaceState({}, '', `${location.pathname}?chapter=${urlParams.get("chapter")}`);
+            if (window.innerWidth <= 768) document.getElementById("open-sidebar").checked = false;
           });
         });
       }
