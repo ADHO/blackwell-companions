@@ -8,12 +8,10 @@
 
 body {
   display: grid;
-  grid-template:
-    var(--header-height) calc(
-      100vh - var(--header-height) - var(--footer-height)
-    )
-    var(--footer-height) / auto 1fr;
+  grid-template: auto 1fr auto / auto 1fr;
+  height: 100vh;
   margin: 0;
+  overflow: hidden;
 }
 
 header {
@@ -123,9 +121,9 @@ main {
 }
 
 footer {
-  grid-column: 1 / 4;
-  display: grid;
-  place-items: center;
   background-color: var(--background-color);
   color: white;
+  grid-column: 1 / 4;
+  padding: 8px;
+  text-align: center;
 }
