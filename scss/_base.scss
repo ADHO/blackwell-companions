@@ -72,8 +72,11 @@ nav {
 
   a.current {
     background: #ffcc66;
+    border-radius: 2px;
     cursor: none;
     font-weight: bold;
+    margin: 1px 0;
+    padding: 2px 4px;
     pointer-events: none;
     text-decoration: none;
   }
