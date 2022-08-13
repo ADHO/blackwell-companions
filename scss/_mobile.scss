@@ -7,10 +7,52 @@
     grid-template-columns: 1fr;
   }
 
+  header {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "title"
+      "subtitle"
+      "bw";
+    padding: 0 0 0 30px;
+    text-align: center;
+
+    h1 {
+      font-size: 1.4em;
+      margin: 10px 0 5px;
+    }
+
+    h3 {
+      font-size: 0.8em;
+      margin: 0;
+    }
+
+    > img {
+      display: none;
+    }
+
+    #publisher {
+      display: block;
+      margin: 4px 0;
+
+      a:not(.alt) {
+        display: none;
+      }
+
+      a.alt {
+        display: inline;
+      }
+    }
+  }
+
   nav {
     grid-area: main;
     background-color: white;
     z-index: 2;
+  }
+
+  label[for="open-sidebar"] {
+    top: 20px;
   }
 
   input#open-sidebar {
