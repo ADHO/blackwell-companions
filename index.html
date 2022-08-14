@@ -92,13 +92,13 @@
       for (let link of document.querySelectorAll("nav a[href^='DH_html/']")) {
         link.addEventListener("click", (event) => {
           event.preventDefault();
+          if (window.innerWidth <= 768) document.getElementById("open-sidebar").checked = false;
           const href = link.getAttribute("href");
           window.dispatchEvent(new CustomEvent("articleWillLoad", { detail: href }));
           loadPage(href).then(() => {
             window.dispatchEvent(new CustomEvent("articleLoaded", { detail: href }));
             urlParams.set("chapter", href);
             window.history.replaceState({}, '', `${location.pathname}?chapter=${urlParams.get("chapter")}`);
-            if (window.innerWidth <= 768) document.getElementById("open-sidebar").checked = false;
           });
         });
       }
