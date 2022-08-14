@@ -54,7 +54,16 @@
   <script>
     const loadPage = (filePath, targetElem = document.querySelector("main")) => {
       return fetch(filePath).then(file =>
-        file.text().then(content => targetElem.innerHTML = content)
+        file.text().then(textContent => {
+          // update relative image paths before appending to the DOM
+          const contentElem = document.createElement("div");
+          contentElem.innerHTML = textContent;
+          for (let img of contentElem.querySelectorAll(".content img")) {
+            img.src = `DH_html/${img.getAttribute('src')}`;
+          }
+          targetElem.innerHTML = "";
+          targetElem.appendChild(contentElem);
+        })
       );
     };
 
@@ -65,9 +74,6 @@
 
     window.addEventListener("articleLoaded", ({ detail: chapter_href }) => {
       document.querySelector("main").setAttribute("data-current-chapter", chapter_href);
-      for (let img of document.querySelectorAll("main .content img")) {
-        img.src = `DH_html/${img.getAttribute('src')}`;
-      }
       document.querySelector("main").scrollTop = 0;
     });
 
