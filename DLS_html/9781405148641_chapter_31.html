@@ -1,0 +1,527 @@
+<div class="content">
+                  <h2 class="normal">31. 
+                     <h2 class="normal">Character Encoding</h2>
+                  </h2>
+                  <span style="font-weight:bold;">Christian Wittern</span>
+                  
+                  <a name="_h71"></a><a name="_h72"></a>
+                  
+                  
+                  
+                  <a name="ss1-6-12_h0"></a><h2 class="normal">Introduction</h2>
+                  
+                  <p>Character encoding is an issue that mostly arises in the context of information processing and digital transcriptions of texts.
+                     To be precise, the honor of having created the first character encoding, long before the digital revolution, goes to Samuel
+                     Finley Breese Morse (1791–1872) for his Morse alphabet used in telegraphic transmissions. Texts are written by creating marks on some kind of medium.
+                     Since these written marks, characters as they are usually called, form part of the writing systems they are used in, they
+                     came to be analyzed and encoded within the context of that writing system.
+                  </p>
+                  
+                  <p>While there are different ways for a text to become digital (for some discussion of this, please see Price, Chapter 24, Electronic Scholarly Editions, in this volume), the present chapter will be concerned only with texts transcribed in some way to form a digital text. There
+                     are many ways of how such a transcription might be achieved, either by converting a scanned image with some specialized software,
+                     or simply by typing the text in a way very similar way to how typing was done on a typewriter. However the input is done,
+                     the result will be a digital text that has been encoded.
+                  </p>
+                  
+                  <p>A direct relationship exists between the written marks on a paper and how they are read. In a computer, however, there is
+                     no such fixed relationship. All characters that are typed by pressing a key will be mapped to some internal numeric representation
+                     of that character. The details of this internal representation, e.g., which number will represent which character, is determined
+                     by the coded character set used in the computing system convention, and is spelled out in the standard document and thus defines
+                     the <i>encoding</i> of that character.
+                  </p>
+                  
+                  <p>Character encoding might seem arcane and a kind of specialized technical knowledge unnecessary, for example, for the transcription
+                     of modern English. The truth is, to the contrary, that every digital text has to use a character encoding in its internal
+                     representation and anybody setting out to work with digital texts had better have at least a basic understanding of what character
+                     encoding is and what the basic issues are.
+                  </p>
+                  
+                  <p>There is another sense of the word encoding when used in connection with digital texts, namely in the combination "text encoding." Text encoding is the process of transcribing a text in digital form. It is sometimes confused with character encoding, which
+                     is the act of assigning distinct numeric values to the individual items (characters) observed in the stream of text. Text
+                     encoding comprises character encoding, but goes beyond that, since it is also concerned with re-creating the structure of
+                     a text in electronic form. Text encoding is sometimes also confused with markup, which is a methodology used in text encoding
+                     to express information about structure, status, or other special features of a text.
+                  </p>
+                  
+                  <p>This chapter will first look at the relationship of character encoding and writing systems in a very general sense, will shortly
+                     look at as much of the history of character encoding as is needed to understand the following, and then look at the single
+                     most important coded character set in use today, namely Unicode. The intricacies of Unicode will then occupy most of the remaining
+                     part of the chapter, except for a short discussion of what is to be done if a character is not to be found in Unicode.
+                  </p>
+                  
+                  
+                  <a name="ss1-6-12_h1"></a><h2 class="normal">Character Encoding and Writing Systems</h2>
+                  
+                  <p>The study of writing systems within a framework of a scientifically sound theory is now usually called "Grammatology" (not Graphology, which is the practice of analyzing a person's handwriting), a designation adopted by I. J. Gelb in his seminal
+                     study <i>A Study of Writing: The Foundations of Grammatology</i> (1952). The philosopher Jacques Derrida later famously took over this term with acknowledgment in quite a different sense,
+                     yet the original sense should be kept, at least in the current context. The name is modeled on "phonology" and "morphology," the linguistic designations for the study of sounds and meaningful units.
+                  </p>
+                  
+                  <p>Characters serve their function as a part of a writing system. While, in everyday language, writing system and script are
+                     frequently used interchangeably, we will need to distinguish them. A writing system needs a script for its graphical representation,
+                     but they are conceptually independent. The same writing system might be written in a number of different scripts, for example
+                     Cyrillic, Greek, and Russian are different graphic instantiations of the same writing system. A script thus is the graphic
+                     form of a writing system.
+                  </p>
+                  
+                  
+                  <a name="ss1-6-12_h2"></a><h2 class="normal">What is a Character?</h2>
+                  
+                  <p>A character is the smallest atomic component of a script that has a semantic value. If used to distinguish from "glyph," it refers to an abstract character, whereas glyph refers to the specific shapes that are used as a visual representation
+                     of a character. In the English alphabet, there are 26 letters that can be written with uppercase or lowercase characters.
+                     There is, however, a virtually unlimited form of glyph shapes that can be used to represent these characters. These shapes
+                     can vary considerably, but they have to maintain their ability to be distinguished from other characters.
+                  </p>
+                  
+                  <p>Characters do not have to be separate typographic entities. Some Indic scripts and Tibetan, for example, write their characters
+                     in a continuum, as is usually done in western handwriting. Even in printing, adjacent characters are sometimes connected (for
+                     example, "f" followed by "I") to form a ligature, but they continue to exist as separate characters.
+                  </p>
+                  
+                  <p>However, since characters are distinguished not only by their shape but also by their semantic value, the meaning of a character
+                     has also to be taken into consideration, which might lead to complications. For more on this, please see the section below
+                     on "Characters, not glyphs."
+                  </p>
+                  
+                  
+                  <a name="ss1-6-12_h3"></a><h2 class="normal">History of Character Encoding</h2>
+                  
+                  <p>As long as the processing of information from end to end occurs only in a single machine, there is no need for a standardized
+                     character encoding. Early computers up to the beginning of the 1960s thus simply used whatever ad-hoc convention to represent
+                     characters internally seemed appropriate; some distinguished upper- and lowercase letters, most did not.
+                  </p>
+                  
+                  <p>However, information exchange very soon came to be seen as an important consideration, so a standard code that would allow
+                     data to move between computers from different vendors and subsequent models of computers from the same vendor became necessary;
+                     thus the development of ASCII (American Standard Code for Information Interchange), generally pronounced "æski," began.
+                  </p>
+                  
+                  <p>The American Standards Association (ASA, later to become ANSI) first published ASCII as a standard in 1963. ASCII-1963 lacked
+                     the lowercase letters, and had an up-arrow (") instead of the caret (<sup>∧</sup>) and a left-arrow () instead of the underscore (_). In 1967, a revised version added the lowercase letters, together with some other changes. In addition to the basic letters
+                     of the English alphabet, ASCII also includes a number of punctuation marks, digits, and an area of 33 code points reserved
+                     for "control codes"; this includes, for example, code points that indicated a "carriage return," "line feed," "backspace," or "tabulator move" and even a code point to ring a bell, thus bringing the total of code points assigned in ASCII to 127.
+                  </p>
+                  
+                  <p>As can be learned immediately even from a cursory look at a table of the ASCII code, the repertoire of characters is suitable
+                     for almost no other language except English (one could theoretically also write Latin and Swahili, but in fact one would be
+                     hard pressed to write even a moderate essay with this repertoire, since it does not allow for foreign loan words, smart quotes,
+                     and other things that are frequently seen in modern English texts), since it defines no accented characters used in other
+                     European languages, not to mention languages like Arabic, Tibetan, or Chinese.
+                  </p>
+                  
+                  <p>ASCII is the ancestor and common subset of most character codes in use today. It was adopted by ISO (International Organization
+                     for Standardization) as ISO 646 in 1967; in 1972, country-specific versions that replaced some of the less frequently used
+                     punctuation characters with accented letters needed for specific languages were introduced. This resulted in a babylonic situation
+                     where French, German, Italian, and the Scandinavian languages all had mutually exclusive, incompatible adaptations which made
+                     it impossible to transfer data to other areas without recoding.
+                  </p>
+                  
+                  <p>Several attempts where made to improve this situation. In 1984, the Apple Macintosh appeared with the so-called MacRoman character
+                     set that allowed all languages of Western Europe to be used in the same document. The IBM codepage 850 (one of a variety of
+                     so-called codepages that could be used in DOS (disk operating system) environments) later achieved something similar. In the
+                     1980s, an effort within the ISO finally succeeded in the publication of an international standard that would allow the combination
+                     of these languages, the group of ISO 8859 standards. This is a series of standards all based on ASCII, but they differ in
+                     the allocation of code points with values in the range 128–255. Of these, the first one, ISO 8859-1 (also known as Latin-1), is (albeit with some non-standard extensions) the "ANSI" used in the versions of the Microsoft Windows operating systems sold in Western Europe and the Americas. With the introduction
+                     of the European common currency, the euro, it became necessary to add the euro symbol to this character code; this version,
+                     with some additional modifications, has been adopted as ISO 8859-15, also known as Latin-0 or Latin-9.
+                  </p>
+                  
+                  <p>As can be seen, even in the latter half of the 1980s, text encoding that involved more than one language (which is the norm,
+                     rather than the exception, for most literary works) was highly platform dependent and no universally applicable standard for
+                     character encoding was available.
+                  </p>
+                  
+                  <p>For non-European languages, a mechanism similar in spirit was introduced with the framework of ISO 2022, which allowed the
+                     combined usage of different national character standards in use in East Asia. However, this was rarely fully implemented and,
+                     more importantly did not address the problem of combining European and Asian languages in one document.
+                  </p>
+                  
+                  
+                  <a name="ss1-6-12_h4"></a><h2 class="normal">Unicode</h2>
+                  
+                  <p>Software vendors and the ISO independently worked toward a solution to this problem that would allow the emerging global stream
+                     of information to flow without impediments. For many years, work was continuing in two independent groups. One of these was
+                     the Unicode Consortium, which was founded by some major software companies interested in capitalizing on the global market;
+                     the other was the character-encoding working groups within the ISO, working toward ISO 10646. The latter were developing a
+                     32-bit character code that would have a potential code space to accommodate 4.3 billion characters, intended as an extension
+                     of the existing national and regional character codes. This would be similar to having a union catalog for libraries that
+                     simply allocates some specific areas to hold the cards of the participating libraries, without actually combining them into
+                     one catalog. Patrons would then have to cycle through these sections and look at every catalog separately, instead of having
+                     one consolidated catalog in which to look things up.
+                  </p>
+                  
+                  <p>Unicode, on the other hand, was planning one universal encoding that would be a truly unified repertoire of characters in
+                     the sense that union catalogs are usually understood: Every character would occur just once, no matter how many scripts and
+                     languages made use of it.
+                  </p>
+                  
+                  <p>Fortunately, after the publication of the first version of Unicode in the early 1990s, an agreement was reached between these
+                     two camps to synchronize development. While there are, to this day, still two different organizations maintaining a universal
+                     international character set, they did agree to assign new characters in the same way to the same code points with the same
+                     name, so for most practical purposes the two can be regarded as equivalent. Since ISO standards are sold by the ISO and not
+                     freely available online, whereas all information related to the Unicode standard is available from the website of the Unicode
+                     consortium (www.unicode.org), I will limit the discussion below to Unicode, but it should be understood that it also applies
+                     to ISO 10646.
+                  </p>
+                  
+                  <a name="ss1-6-12_h5"></a><h3 class="normal">Objectives and history</h3>
+                  
+                  <p>The latest version of Unicode published in book form as <i>The Unicode Standard</i> is version 5.0 at the time of this writing, in the following abbreviated as TUS with a number following indicating the version;
+                     TUS5 in this case. The design principles of Unicode are stated there as follows:
+                  </p>
+                  
+                  <blockquote>
+                     <p>The design of the Unicode Standard reflects the 10 fundamental principles stated in <a href="#ss1-6-12_t1">Table 2-1</a>. Not all of these principles can be satisfied simultaneously. The design strikes a balance between maintaining consistency
+                        for the sake of simplicity and efficiency and maintaining compatibility for interchange with existing standards.
+                     </p>
+                  </blockquote>
+                  <br><a name="ss1-6-12_t1"></a>
+                  <b>
+                     
+                     </b><p> <b>Table 2-1. </b> Table 2-1.
+                     </p>
+                  
+                  
+                  
+                  
+                  <table frame="hsides" width="100%">
+                     
+                     <col align="">
+                     
+                     <col align="">
+                     
+                     <tbody valign="top">
+                        
+                        <tr>
+                           
+                           <td>Universality</td>
+                           
+                           <td>The Unicode Standard provides a single, universal repertoire.</td>
+                           
+                        </tr>
+                        
+                        <tr>
+                           
+                           <td>Efficiency</td>
+                           
+                           <td>Unicode text is simple to parse and process.</td>
+                           
+                        </tr>
+                        
+                        <tr>
+                           
+                           <td>Characters, not glyphs The Unicode Standard encodes characters, not glyphs. Semantics</td>
+                           
+                           <td>Characters have well-defined semantics.</td>
+                           
+                        </tr>
+                        
+                        <tr>
+                           
+                           <td>Plain text</td>
+                           
+                           <td>Unicode characters represent plain text.</td>
+                           
+                        </tr>
+                        
+                        <tr>
+                           
+                           <td>Logical order</td>
+                           
+                           <td>The default for memory representation is logical order.</td>
+                           
+                        </tr>
+                        
+                        <tr>
+                           
+                           <td>Unification</td>
+                           
+                           <td>The Unicode Standard unifies duplicate characters within scripts across languages.</td>
+                           
+                        </tr>
+                        
+                        <tr>
+                           
+                           <td>Dynamic composition</td>
+                           
+                           <td>Accented forms can be dynamically composed.</td>
+                           
+                        </tr>
+                        
+                        <tr>
+                           
+                           <td>Equivalent sequences</td>
+                           
+                           <td>Static precomposed forms have an equivalent dynamically composed sequence of characters.</td>
+                           
+                        </tr>
+                        
+                        <tr>
+                           
+                           <td>Convertibility</td>
+                           
+                           <td>Accurate convertibility is guaranteed between the Unicode Standard and other widely accepted standards.</td>
+                           
+                        </tr>
+                        
+                     </tbody>
+                     
+                  </table>
+                  
+                  
+                  
+                  <br>
+                  
+                  <p>Most of these principles should be immediately obvious. The last principle ensures backward compatibility with existing standards,
+                     which is a very important consideration for the acceptance of Unicode. This means also that many accented characters, which
+                     had been encoded as they are in previous standards ("statically precomposed forms"), have more than one representation, since they can also be "dynamically composed sequences"; this means that accents and base characters are assembled when rendering a text, but stored as separate code points. To
+                     reduce character proliferation, the latter is the preferred way of encoding new characters. We will return to this problem
+                     later under the heading of "Normalization" below.
+                  </p>
+                  
+                  <p>Unification is only applied within scripts, not across different scripts. The LATIN CAPITAL LETTER A (U+0041) (Unicode characters are referred to by their standard name, which is usually given in capital letters, followed in parentheses
+                     by the code point value in hexadecimal notation, prefixed with "U+") and the CYRILLIC CAPITAL LETTER A (U+0410) are thus not unified although they look identical, since they belong to different scripts.
+                  </p>
+                  
+                  <p>Not surprisingly, in the close to twenty years of its development, the objectives and principles underlying the development
+                     have changed considerably. For example, in TUS3 2000: 12 the first principle was "Sixteen-bit character codes: Unicode character codes have a width of 16 bits." This is not true anymore, but this fact by itself is not of a major importance. This change has led, however, to problems
+                     for the early adaptors of Unicode, for example the Java programming language or Microsoft Windows NT. As with many other undertakings,
+                     important considerations had to be modified while working on the task as new information became available and the whole environment
+                     and, with it, many of the tacit assumptions on which earlier decisions were based had to be modified. However, since a standard
+                     can only modify earlier versions in limited ways (namely, it is extremely difficult to remove characters that have already
+                     been allocated, although this has happened on occasion), the current version (5.0, published in the fourth quarter of 2006)
+                     shows some degree of variation in application of the basic principles. Character unification proved to be at times politically
+                     controversial and hindered the adoption of Unicode, especially in East Asia.
+                  </p>
+                  
+                  <p>Since Unicode aimed at maintaining compatibility with existing national and vendor-specific character encodings, it started
+                     out as a superset of the previously mentioned earlier character sets. Any encoded entity that existed in these earlier sets
+                     was also incorporated into Unicode, regardless of its conformance with the Unicode design principles.
+                  </p>
+                  
+                  <p>To give just one example of what kind of practical problems are encountered as a result, units of measurement are frequently
+                     expressed with ordinary letters, for example the A <sup>Ú</sup> ngström unit which was assigned the Unicode value ANGSTROM SIGN (U+212B), although the LATIN CAPITAL LETTER A WITH RING ABOVE (U+00C5) would have been perfectly suitable for this purpose. This example is just one of several types of duplicated encodings
+                     in Unicode of which text encoders have to be aware. Implications of this duplication and related recommendations for text-encoding
+                     projects will be discussed in a later section. A good start for a technical, but nevertheless accessible introduction to the
+                     Unicode Standard is the Technical Introduction at &lt;<a href="http://www.unicode.org/standard/principles.html">http://www.unicode.org/standard/principles.html</a>&gt;.
+                  </p>
+                  
+                  
+                  <a name="ss1-6-12_h6"></a><h3 class="normal">Layout and overall architecture</h3>
+                  
+                  <p>As of version 5, there are 98,890 graphical characters defined in Unicode. In addition, there are 134 format characters, 65
+                     control characters, and 137,468 code points set aside for characters in private use.
+                  </p>
+                  
+                  <p>The encoded characters of the Unicode Standard are grouped by linguistic and functional categories, such as script or writing
+                     system. There are, however, occasional departures from this general principle, as when punctuation associated with the ASCII
+                     standard is kept together with other ASCII characters in the range U+0020 … U+007E, rather than being grouped with other sets of general punctuation characters. By and large, however, the code charts
+                     are arranged so that related characters can be found near each other in the charts.
+                  </p>
+                  
+                  <p>The Unicode code space consists of the numeric values from 0 to 10FFFF, but in practice it has proven convenient to think
+                     of the code space as divided up into planes of characters, each plane consisting of 65,536 code points.
+                  </p>
+                  
+                  <p>The Basic Multilingual Plane (BMP, or Plane 0) contains all the characters in common use for all the modern scripts of the
+                     world, as well as many historical and rare characters. By far the majority of all Unicode characters for almost all textual
+                     data can be found in the BMP.
+                  </p>
+                  
+                  <p>The Supplementary Multilingual Plane (SMP, or Plane 1) is dedicated to the encoding of lesser-used historic scripts, special-purpose
+                     invented scripts, and special notational systems, which either could not be fit into the BMP or would be of very infrequent
+                     usage. Examples of each type include Gothic, Shavian, and musical symbols, respectively. While few scripts are currently encoded
+                     in the SMP in Unicode 5.0, there are many major and minor historic scripts that do not yet have their characters encoded in
+                     the Unicode Standard, and many of those will eventually be allocated in the SMP.
+                  </p>
+                  
+                  <p>The Supplementary Ideographic Plane (SIP, or Plane 2) is the spillover allocation area for those Chinese, Japanese, or Korean
+                     (conventionally abbreviated as CJK) characters that could not be fit in the blocks set aside for more common CJK characters
+                     in the BMP. While there are a small number of common-use CJK characters in the SIP (for Cantonese usage, but also for Japanese),
+                     the vast majority of Plane 2 characters are extremely rare or of historical interest only. The barrier of Han unification
+                     that prevented many of these variant characters from being considered for inclusion into the BMP has been considerably lowered
+                     for the SIP. At the moment, there are more than 40,000 Han characters allocated here, whereas the BMP holds less than 30,000.
+                  </p>
+                  
+                  <p>Within the planes, characters are allocated within character blocks, grouping together characters from a single script, for
+                     example the Greek or Arabic script, or for a similar purpose like punctuation, diacritics, or other typographic symbols.
+                  </p>
+                  
+                  
+                  <a name="ss1-6-12_h7"></a><h3 class="normal">Characters, not glyphs</h3>
+                  
+                  <p>As noted above, Unicode is encoding characters, not glyphs. While this has been employed to unify characters that look fairly
+                     similar and are semantically equivalent, occasionally it works the other way around and requires the encoding of similar,
+                     even indistinguishable characters separately. A "dash" character, for example, might look identical to a "hyphen" character as well to a "minus" sign. The decision which one is going to be used needs to be based on the function of the character in the text and the semantics
+                     of the encoded character. In Unicode, there is for example a HYPHEN-MINUS (U+002D), a SOFT HYPHEN (U+00AD), a NON-BREAKING HYPHEN (U+2011) and of course the HYPHEN (U+2010), not to mention the subscript and superscript variants (U+208B and U+207B). There are also compatibility forms at SMALL HYPHEN-MINUS (U+FE63) and FULLWIDTH HYPHEN-MINUS (U+FF0D), but these should never be considered for newly encoded texts, since they exist only for the sake of roundtrip conversion
+                     with legacy encodings. The "hyphen" character is sometimes lumped together with the "minus" character, but this is basically a legacy of ASCII, which has been carried over to Unicode; there now exists also MINUS SIGN
+                     (U+2212) plus some compatibility forms. As for the "dash" character, Unicode gives four encodings in sequence upfront: FIGURE DASH (U+2012), EN DASH (U+2013), EM DASH (U+2014), and HORIZONTAL BAR (U+2015). The last one might be difficult to find by just looking at the character name, but as its old name "QUOTATION DASH" reveals, this is also a dash character. TUS5 has a note on this character, explaining that it is a "long dash introducing quoted text," while the note for U+2014 says that it "may be used in pairs to offset parenthetical text."
+                  </p>
+                  
+                  
+                  <a name="ss1-6-12_h8"></a><h3 class="normal">Normalization</h3>
+                  
+                  <p>It was mentioned earlier that for a variety of reasons there are situations where a single character has two or more code
+                     points or sequences of code points assigned. Frequently used accented letters, for example, have been given separate Unicode
+                     values (TUS 5.0 calls these "precomposed" characters or forms), although the accents and the base characters also have been encoded, so that these could be used to
+                     assemble the same character. The character LATIN SMALL LETTER U WITH DIAERESIS (U+00FC ü) could also be expressed as a sequence of LATIN SMALL LETTER U (U+0075 u) and COMBINING DIAERESIS (U+0308 u Ü).
+                  </p>
+                  
+                  <p>The way Unicode addresses this problem is by introducing the concept of "Normalization" of a text. A normalized text has all its characters in a known form of representation; other operations, for example search
+                     or string comparison, can then successfully be applied to this text. The <i>Unicode Standard Annex #15 Unicode Normalization Forms</i> (see &lt;<a href="http://www.unicode.org/unicode/reports/tr15/">http://www.unicode.org/unicode/reports/tr15/</a>&gt;) explains the problem in greater detail and gives some recommendations. In many cases, it is most convenient to use the
+                     shortest possible sequence of Unicode characters ("Normalization Form C (NFC)" in the notation of the above-mentioned Unicode document). This will use precomposed accented characters where they exist
+                     and combining sequences in other cases. Many current software applications and operating systems are not capable of rendering
+                     combining sequences as a single visual unit. To overcome this problem, some encoding projects took refuge in defining new
+                     code points in the area of the Unicode code space set aside for private usage and created fonts accordingly. This will make
+                     it easier for encoders to work with these characters, but care should be taken to convert these private-use characters back
+                     to the standard representation of Unicode prior to electronic publication of the texts.
+                  </p>
+                  
+                  
+                  <a name="ss1-6-12_h9"></a><h3 class="normal">How to find Unicode characters?</h3>
+                  
+                  <p>Unicode characters are identified by their names; these names are in turn mapped to the numeric values used to encode them.
+                     The best strategy to find a character is therefore to search through the list of characters, also called the Unicode Character
+                     Database (UCD). As the examples of Unicode character names given so far will have shown, an individual name is usually derived
+                     by assigning names to the components of a character and then combining them if necessary in a systematic way. While the specific
+                     names for some of the diacritical marks may not be obvious, a look at the section where these are defined (U+0300 to U+0362) will quickly reveal how they are named in Unicode.
+                  </p>
+                  
+                  <p>Not all characters, however, do have individual names. Han characters used for Chinese, Japanese, Korean, and old Vietnamese,
+                     and precomposed Hangul forms do only have generic names which do not allow identification of characters. However, there are
+                     still a large number of characters that are identified by individual names. Such characters can be looked up in the character
+                     tables of TUS5 or ISO 10646, but this process tends to be rather cumbersome. Unicode provides an online version of its character
+                     database, which can be downloaded from the Unicode Consortium's website at &lt;<a href="http://www.unicode.org">http://www.unicode.org</a>&gt; by following the link to "Unicode Code Charts." There is also an online query form provided by the Institute of the Estonian language (&lt;<a href="http://www.eki.ee/letter">http://www.eki.ee/letter</a>&gt;), which allows more convenient searches.
+                  </p>
+                  
+                  
+                  <a name="ss1-6-12_h10"></a><h3 class="normal">Encoding forms of Unicode</h3>
+                  
+                  <p>Understanding how Unicode is encoded and stored in computer files requires a short treatment of some technical details. This
+                     section is especially intended for those who run into trouble with the default mechanism of their favorite software platform,
+                     usually designed to hide these details.
+                  </p>
+                  
+                  <p>Unicode allows the encoding of about one million characters — the theoretical upper limit — but at present less than 10 percent of this code space is actually used. As noted above, the code space is arranged in 17
+                     "planes" of 65,536 code points each, of which only 4 are used at the moment, with Plane 0, the "Basic Multilingual Plane (BMP)," being the one where most characters are defined. This architecture was finalized in Unicode 2.1. Before that, Unicode was
+                     considered to be limited to the BMP. Unicode 3.1, released in March 2001, was the first version to assign characters to code
+                     points outside of the BMP. Modern operating systems like Mac OS X (since version 10.3) or Windows (since version Vista) do
+                     provide full support even for the additional planes; in some cases there are patches available for older versions. It should
+                     be noted, however, that this provides only the basic foundation for handling these code points; in addition to this, applications
+                     and fonts have to be updated to allow actual display of the characters.
+                  </p>
+                  
+                  <p>The numeric values of the code points have to be serialized in order to store them in a computer. Unicode defines three encoding
+                     forms for serialization: <i>UTF-8</i>, <i>UTF-16</i>, and <i>UTF-32</i>. UTF-16 simply stores the numerical value as a 16-bit integer, while characters with higher numerical values are expressed
+                     using two UTF-16 values from a range of the BMP set aside for this purpose, called "Surrogate Pairs." UTF-32, on the other hand, simply stores the whole 32-bit integer value for every single character. Since most computers
+                     store and retrieve numeric values in bundles of 8 bits ("bytes"), the 16 bits of UTF-16 and UTF-32 values have to be stored in two separate bytes. Preferences for the byte with the higher
+                     value ("Big-Endian") or the lower value ("Little-Endian") differ in the same way and for the same reasons as the egg openers in Jonathan Swift's <i>Gulliver's Travels</i>. There are thus two storage forms of UTF-16 and UTF-32: UTF-16-LE or UTF-32-LE and UTF-16-BE or UTF-32-BE. If they are used
+                     without any further specification, it is usually the *-BE form, which is the default, for example, on Microsoft Windows platforms.
+                  </p>
+                  
+                  <p>UTF-8 avoids the whole issue of endian-ness by serializing the numbers in chunks of single bytes. In so doing, it uses sequences
+                     of multiple single bytes to encode a Unicode numeric value. The length of such sequences depends on the value of the Unicode
+                     character; values less than 128 (the range of the ASCII or ISO 646 characters) are just one byte in length, <i>hence identical to ASCII</i>. This means that English text and also the tags used for markup do not differ in UTF-8 and ASCII, one of the reasons why
+                     UTF-8 is rather popular. It is also the default encoding for XML files in the absence of a specific encoding declaration and
+                     is for most cases the recommended encoding to use. Most accented characters require a sequence of two bytes, East-Asian characters
+                     need three, and the characters beyond the BMP need four or more bytes.
+                  </p>
+                  
+                  
+                  <a name="ss1-6-12_h11"></a><h3 class="normal">Characters not in Unicode</h3>
+                  
+                  <p>Even with close to 100,000 characters in the current version, there are bound to be cases where some of the symbols found
+                     in a text cannot be readily transcribed into digital form. In anticipation of this problem, Unicode has set aside a rather
+                     large portion (of more than 137,000 characters) that can be used for private purposes.
+                  </p>
+                  
+                  <p>This comes in useful in many cases, especially for in-house processing, data preparation, and print. However, as has been
+                     said in the beginning, the whole point of digital text is information interchange, which in turn requires a common character
+                     set as the basis. These private characters are thus <i>not</i> suitable for use in texts published digitally.
+                  </p>
+                  
+                  <p>A frequent way to work around this problem is to use small graphics that represent the characters and are added to the text
+                     inline; if they resemble the selected font style and size, they can serve as a very good substitute. In the pre-publication
+                     workflow, a mechanism like the "TEI Gaiji module" (see <i>TEI P5. Guidelines for Electronic Text Encoding and Interchange</i>, chapter 25: Representation of non-standard characters and glyphs, at &lt;<a href="http://www.tei-c.org/P5/Guidelines/WD.html">http://www.tei-c.org/P5/Guidelines/WD.html</a>&gt;) can be used to encode these characters.
+                  </p>
+                  
+                  
+                  
+                  <a name="ss1-6-12_h12"></a><h2 class="normal">Representing Characters in Digital Documents</h2>
+                  
+                  <p>As discussed above, there are different encoding forms of Unicode for different purposes. In digital documents, it is best
+                     practice to indicate what encoding is being used, otherwise a software processing these will need to fall back to default
+                     values or use heuristics to determine what was being used, which might cause the documents to become unreadable. Since there
+                     are too many document formats in use today, it would make no sense to try to mention them all. I will only discuss some aspects
+                     of character representation in XML documents (and, only in passing, also SGML documents) here; for more information see Harold
+                     1999 and Harold and Means 2001. In XML documents there is the optional encoding part of the xml declaration like &lt;?xml version="1.0" encoding="utf-8" ?/&gt;. The values allowed for encoding are not limited to the Unicode encoding forms mentioned above, but can also include other
+                     character encodings, provided they are a proper subset of Unicode. XML processors are only <i>required</i> to recognize Unicode encoding forms, but most <i>do</i> support a wide range of widely used character encodings.
+                  </p>
+                  
+                  <p>The declaration &lt;?xml version="1.0" encoding="ISO-8859-1" ?/&gt; would thus declare that the characters used in the document are only a subset of Unicode, namely those defined in ISO-8859-1.
+                     This does not change the fact that all XML documents use Unicode as their internal encoding and will be converted to this
+                     upon being parsed. All Unicode characters can still be used in such a document, but they cannot be represented directly, that
+                     is, typed into the document as such. Instead, they have to use an escape mechanism to represent these characters, which is
+                     built into XML, the "numerical character references" (NCR). They take a form similar to entity references (see <a href="#ss1-6-12_b7">Harold and Means 2001</a>: 18) in SGML and XML, but do not refer to something else; instead they contain a number which identifies the Unicode character
+                     represented with this NCR. For example, the character NON-BREAKING HYPHEN (U+2011) mentioned above could be represented in such a document by the sequence &amp;#8209; or &amp;#x2011;. Although this is a sequence of seven or eight characters when written like this, to any XML processor this is just
+                     one character. Like entity references, NCRs start with a "#" and end with a ";" character. The "#" character identifies this sequence as an NCR, rather than a standard entity reference. What follows is either a decimal integer
+                     indicating the Unicode code point or the "x" for "Hex," indicating that the integer is represented in hexadecimal notation. Since the latter is commonly used in code tables, a rarely
+                     used character can be looked up in a code table and inserted into the document with this mechanism, even on systems that do
+                     not support the wide range of Unicode characters available.
+                  </p>
+                  
+                  <p>XML's predecessor SGML did define a special type of entity references called SDATA (for "system data," see <a href="#ss1-6-12_b5">Goldfarb 1990</a>: 341) to allow the separation of system-specific and generic representations; however, this mechanism has not been carried
+                     over to XML and is thus rarely used today.
+                  </p>
+                  
+                  <p>HTML, an SGML application, defines "entity references" (they are called "character entity references" in HTML:1997, Section 5.3.3, but this is not a formal designation) for a number of characters (a full list is here: &lt;<a href="http://www.w3.org/TR/html4/sgml/entities.html">http://www.w3.org/TR/html4/sgml/entities.html</a>&gt;). This allows the use of mnemonic references like £ to refer to the currency symbol for pound Sterling £. Since this requires a list of characters predefined as part of a document's DTD (document type definition) and is thus not
+                     available for all XML documents, it is gradually falling out of use outside HTML documents; this trend is further accelerated
+                     by the increasing availability of systems capable of editing and displaying Unicode directly.
+                  </p>
+                  
+                  
+                  <a name="ss1-6-12_h13"></a><h2 class="normal">Conclusions</h2>
+                  
+                  <p>Character encoding literally lies at the very basis of any digital text. While it is now technically well understood and has
+                     a stable foundation with Unicode 5.0, the history of earlier character encoding standards continues to play a role through
+                     legacy encodings and will continue to do so for some years to come.
+                  </p>
+                  
+                  <p>This chapter has attempted to clarify some of the underlying concepts and show how to deal with them in practice. It should
+                     have become clear that even the most modest project involving digital texts needs to make informed use of the character encodings
+                     available, which in most cases will be Unicode encoded as UTF-8.
+                  </p>
+                  
+                  
+                  
+                  
+                  <a name="ss1-6-12_h14"></a><h2 class="normal">Selected References</h2>
+                  <a name="ss1-6-12_b1"></a><p class="hang">Coulmas, Florian (2003 [1989]). <i><span class="title">The Writing Systems of the World</span></i>. Malden, MA: Blackwell Publishing.
+                  </p>
+                  <a name="ss1-6-12_b2"></a><p class="hang">Coulmas, Florian (2004 [1996]). <i><span class="title">The Blackwell Encyclopedia of Writing Systems</span></i>. Malden, MA: Blackwell Publishing.
+                  </p>
+                  <a name="ss1-6-12_b3"></a><p class="hang">deFrancis, John (1989). <i><span class="title">Visible Speech: the Diverse Oneness of Writing Systems</span></i>. University of Hawaii Press: Honolulu.
+                  </p>
+                  <a name="ss1-6-12_b4"></a><p class="hang">Gelb, I. J. (1952). <i><span class="title">A Study of Writing: the Foundations of Grammatology</span></i>. London: Routledge and Kegan Paul.
+                  </p>
+                  <a name="ss1-6-12_b5"></a><p class="hang">Goldfarb, Charles (1990). <i><span class="title">The SGML Handbook</span></i>. Oxford: Clarendon Press.
+                  </p>
+                  <a name="ss1-6-12_b6"></a><p class="hang">Harold, Elliotte Rusty (1999). <i><span class="title">XML Bible</span></i>. Foster City, CA: IDG Books Worldwide.
+                  </p>
+                  <a name="ss1-6-12_b7"></a><p class="hang">Harold, Elliotte Rusty, and W. Scott Means (2001). <i><span class="title">XML in a Nutshell: A Desktop Quick Reference</span></i>. Sebastopol, CA: O'Reilly &amp; Associates.
+                  </p>
+                  <a name="ss1-6-12_b8"></a><p class="hang">ISO (International Organization for Standardization). (1986). <i><span class="title">ISO 8879 Information processing –Text and Office Systems – Standard Generalized Markup Language (SGML)</span></i>, 1st edn. Geneva: ISO.
+                  </p>
+                  <a name="ss1-6-12_b9"></a><p class="hang">ISO (International Organization for Standardization) (2000). <i><span class="title">ISO/IEC 10646 Information technology – Universal Multiple-Octet Coded Character Set (UCS)</span></i>. Geneva: ISO.
+                  </p>
+                  <a name="ss1-6-12_b10"></a><p class="hang">Sperberg-McQueen, Michael, and Lou Burnard (Eds.) (2002). <i><span class="title">Guidelines for Text Encoding and Interchange (TEI P4)</span></i>. Oxford: Text Encoding Initiative Consortium.
+                  </p>
+                  <a name="ss1-6-12_b11"></a><p class="hang">The Unicode Consortium (2006). <i><span class="title">The Unicode Standard 5.0</span></i>. Boston: Addison Wesley.
+                  </p>
+                  <a name="ss1-6-12_b12"></a><p class="hang">World Wide Web Consortium (1999). <i><span class="title">HTML 4.01 Specification</span></i>. Boston: World Wide Web Consortium. &lt;<a href="http://www.w3.org/TR/html4/">http://www.w3.org/TR/html4/</a>&gt;.
+                  </p>
+                  
+                  
+                  
+               </div>
+            

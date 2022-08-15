@@ -1,0 +1,566 @@
+<div class="content">
+                  <h2 class="normal">30. 
+                     <h2 class="normal">Practice and Preservation — Format Issues</h2>
+                  </h2>
+                  <span style="font-weight:bold;">Marc Bragdon</span>, 
+                  <span style="font-weight:bold;">Alan Burk</span>, 
+                  <span style="font-weight:bold;">Lisa Charlong</span> and 
+                  <span style="font-weight:bold;">Jason Nugent</span>, 
+                  
+                  <a name="_h69"></a><a name="_h70"></a>
+                  
+                  
+                  
+                  <a name="ss1-6-11_h0"></a><h2 class="normal">Introduction</h2>
+                  
+                  <p>Text analyses, project collaborations, and the myriad other research activities of humanities computing center largely on
+                     the use of artifacts in various digital formats. As containers through which content is engaged and transformed, these formats
+                     are currencies for scholarly trade. They must inspire confidence, evidenced by broad use, in their ability to meet present
+                     and future research needs. To each format its purpose, though, regardless of respective uses, they must meet common criteria
+                     to be considered appropriate to a given task. Not surprisingly, these criteria are very much identified with standard application
+                     support. Community and cross-community use of artifacts, and the long-term preservation of digital content, demand of formats
+                     a high level of interoperability across platforms and applications as well as the sort of version compatibility identified
+                     with industry-based standards.
+                  </p>
+                  
+                  <p>The formats discussed herein — eXtensible Markup Language (XML), Portable Document Format (PDF), Tagged Image File Format (TIFF), Joint Photographic Experts
+                     Group (JPEG), and JPEG 2000 — are all either de facto or emerging standards for formatting many of the digital objects employed in humanities computing
+                     research. Each is discussed in light of their facility in promoting associated discipline goals.
+                  </p>
+                  
+                  <p>XML is a file format used by many humanist researchers and scholars for the creation, description, and exchange of textual
+                     materials. While use of XML is often in the areas of text description, text analysis, and processing, XML is also used for
+                     methods of storing or preserving texts. It is this point, XML as a text storage or archival format, which is the focus of
+                     XML in this chapter.
+                  </p>
+                  
+                  <p>Unlike XML, PDF and PDF/A are not formats that digital humanists normally employ for capturing and distributing literary texts
+                     or other genres. Still, examining the strengths and weaknesses of PDF is important because of its prevalence on the web and
+                     for assessing its place relative to the use of other formats for digital humanities.
+                  </p>
+                  
+                  <p>TIFF and JPEG are the de facto standards for digitally representing visual matter —the former for preservation and the latter for access enablement. JPEG 2000 is an emerging standard that strives to combine
+                     the richness of TIFF with the portability of JPEG to create a single standard that accommodates multiple purposes on multiple
+                     platforms.
+                  </p>
+                  
+                  
+                  <a name="ss1-6-11_h1"></a><h2 class="normal">XML</h2>
+                  
+                  <p>Discussion about XML as a file format for preservation generally refers to two distinct yet overlapping contexts: XML as a
+                     file format for describing text and XML as a format and mechanism for describing information <i>about</i> that text or <i>metadata</i>. Both contexts are addressed in this section.
+                  </p>
+                  
+                  <p>Before discussing preservation and XML as a preservation file format, it may be useful to look at XML's predecessor, SGML,
+                     as well as the syntax and general principles within each language. SGML (SGML, ISO 8879:1986) is a descendant of Generalized
+                     Markup Language (GML), developed in the 1960s at IBM by Charles Goldfarb, Edward Mosher, and Raymond Lorie. A fundamental
+                     feature of GML was its separation of a document's <i>structure</i> from its <i>presentation</i>. In word processing software, for example, a text's structure, such as title, paragraphs, and bibliography, is implicitly
+                     recognized through presentation styles. Titles are generally separated from paragraphs with line breaks as well as font style
+                     and size. In descriptive markup such as SGML and, later, XML, textual elements such as titles are marked or encoded <i>as</i> titles. Any presentation information is separated from the document and is expressed in a stylesheet using Cascading Style
+                     Sheets (CSS) or eXtensible Stylesheet Language (XSL), to name but two. In focusing on structure and semantics and not formatting,
+                     XML enables re-purposing of texts to multiple output scenarios. For example, one XML text can be converted to PDF for printing
+                     or distributing over the web in HTML. In the same way, a bibliography encoded using XML can be presented according to a number
+                     of different styles of documenting sources. The original XML does not change; a different stylesheet is applied for different
+                     purposes or audiences.
+                  </p>
+                  
+                  <p>SGML is not a markup language in itself but is instead "meta" language used for defining markup languages such as Text Encoding Initiative (TEI) and Hypertext Markup Language (HTML).
+                     User communities such as the TEI define sets of tags based on user needs as well as guidelines for using those tags. Tags
+                     are declared and described in Document Type Definitions or DTDs, a second distinct feature of SGML besides descriptive markup.
+                     By introducing the concept of a document <i>type</i>, texts can be more easily processed and checked for errors in structural descriptions. A program called a <i>parser</i> checks the validity of a document or document instance against the definition of the document's structure as defined in the
+                     DTD. A third feature of SGML essential for preservation, character entities and data independence, or data that is not tied
+                     to proprietary software, will be examined later.
+                  </p>
+                  
+                  <p>XML is a simplified subset of SGML. Like SGML, XML's primary purpose is to facilitate the description and sharing of data
+                     across different systems and across the web. It has some of the same features of SGML. However, where SGML requires that structured
+                     documents reference a DTD to be "valid," XML allows for "well-formed" data and can be delivered without a DTD. With XML new associated standards evolved, such as XML Schema and associated technologies
+                     including: XSL, XML Linking Language (XLink) for creating hyperlinks in XML texts, XML Path Language (XPath) for addressing
+                     points in an XML document, and XML Pointer Language (XPointer) which allows XLink hyperlinks to point to more specific parts
+                     in the XML document. It is outside the scope of this chapter to go into these technologies and their associated parts in detail
+                     here. For more information on the status, use, and development of these technologies see the World Wide Web Consortium (W3C)
+                     (&lt;www.w3c.org&gt;). However, it may be useful to describe the differences between a DTD and Schema. It is also useful to identify
+                     the consistent mechanisms or conventions that SGML and XML use to encode or mark up various textual features or units.
+                  </p>
+                  
+                  <p>Here is an example of poetry, "Every Man In His Humour," expressed using TEI Lite. For those unfamiliar with TEI Lite, it is manageable subset of the full TEI encoding scheme. (See
+                     Cummings, Chapter 25, The Text Encoding Initiative and the Study of Literature, in this volume.) The example is taken from the working files of <i>The Cambridge Edition of the Works of Ben Jonson</i>:
+                  </p>
+                  
+                  <p><br><a name="ss1-6-11_fu1"></a>
+                     <img src="9781405148641_chapter_30_fu1.gif">
+                     <br></p>
+                  
+                  <p>In this example the following textual structures are encoded: a division &lt;div1&gt;, a stage direction &lt;stage&gt;, graphically distinct
+                     text &lt;hi&gt;, speeches &lt;sp&gt;, paragraphs &lt;p&gt;, verse lines &lt;l&gt;, critical apparatus &lt;app&gt;, and readings within textual variations
+                     &lt;rdg&gt;. Each of these structures is called an "element," demarcated by start tags and end tags using angle brackets. The above example also shows that elements can be further described
+                     using "attributes." For example, the &lt;stage&gt; element can take the attribute "character" or "entrance" and if one of the goals of text encoding is to express the structural reality of a text, using attributes enables a granular
+                     description of a number of properties of particular elements.
+                  </p>
+                  
+                  <p>The element &lt;div&gt; has a declaration in the DTD that lists elements and attributes that the &lt;div&gt; element can contain as well
+                     as their relationship to one another. The syntax used in DTDs is not XML. XML Schemas, on the other hand, are expressed in
+                     XML grammar. One of the most significant differences between XSD and DTDs is that a Schema is expressed using XML syntax whereas
+                     a DTD uses an entirely different grammar. In addition, XSD has the capability to create and use data types in conjunction
+                     with element and attribute declarations. A date like: "08-11-2004" can be interpreted as the 8th of November. However, an XML element with this data type &lt;date type="date"&gt;2004-08-11&lt;/date&gt; enables an agreed-on understanding of the content, because the XML data type "date" requires the format "YYYY-MM-DD." No matter what the preservation strategy employed by scholars or institutions, a cornerstone of that strategy should be the
+                     reliance on standard and open file formats. As was mentioned in the introduction, formats should also be backward compatible
+                     in their versions, enjoy widespread use, encourage interoperability, and lead to a range of platform- and device-independent
+                     applications that use the format.
+                  </p>
+                  
+                  <p>XML is an ideal file format in each of these respects and is used by many literary scholars in text creation, preservation,
+                     and interchange. It is an open standard, supported by the World Wide Web Consortium as well as by community-led standards,
+                     such as the TEI and HTML. It is also portable and non-proprietary. All XML documents, whatever language or writing system
+                     they employ, use the same underlying character encoding, known as Unicode. Texts can move from one hardware and software environment
+                     to another without loss of information, and because XML is stored in plain text files it is not tied to any proprietary software.
+                     Finally, XML documents are self-describing and human readable, as evident in the Jonson example. These are XML's most significant
+                     strengths in a preservation and storage context.
+                  </p>
+                  
+                  <p>A large number of digital projects and collections transform propriety formats to XML for both text processing and preservation
+                     purposes. One project at the University of New Brunswick, <i>The Atlantic Canada Virtual Archives</i> (&lt;<a href="http://atlanticportal.hil.unb.ca/">http://atlanticportal.hil.unb.ca/</a>&gt;), has developed a series of scripts that converts texts in word processing formats to TEI XML. The XML is then stored in
+                     a MySQL database and is transformed to HTML using XSL on the fly for web distribution. For this or other digital projects
+                     at UNB, XML-based tools are used for editing, transformations, indexing, and searching.
+                  </p>
+                  
+                  <p>In addition to the factors listed above, long-term stability of any file format should be assessed in terms of metadata support.
+                     Metadata can have enormous value both during the subsequent active use of the data and for long-term preservation, where it
+                     can provide information on both the provenance and technical characteristics of the data. Many text-focused XML applications
+                     such as HTML, TEI, and DocBook have metadata elements as central components of their markup tag sets. In the case of TEI,
+                     the metadata element set in the TEI Header is robust, as seen in Cummings, Chapter 25, The Text Encoding Initiative and the Study of Literature, in this volume. In others, such as HTML, it is less so.
+                  </p>
+                  
+                  <p>There are metadata applications that have been developed expressly for preservation such as the Metadata Encoding &amp; Transmission
+                     Standard (METS) and the Dublin Core Metadata Initiative (DCMI), expressed in XML. The Encoded Archival Description (EAD) is
+                     another XML-based metadata application, describing the structure(s) of archival finding aids. METS is a flexible XML framework
+                     designed for storing administrative, structural, and descriptive metadata about digital objects. In addition to encapsulating
+                     the metadata itself, the framework provides elements for describing the relationship among the metadata and the pieces of
+                     the complex objects. In short, it is an XML-based container for all types of metadata, for the relationships among them and
+                     the objects they are about, and for the behaviors associated with the objects.
+                  </p>
+                  
+                  <p>The Modernist Journals Project at Brown University (&lt;<a href="http://dl.lib.brown.edu:8080/exist/mjp/index.xml">http://dl.lib.brown.edu:8080/exist/mjp/index.xml</a>&gt;) recently moved to a metadata-driven architecture, employing METS to describe its digital serials. The full architecture
+                     includes storage of text files in TEI XML, and use of the Metadata Object Description Schema (MODS) for encoding bibliographic
+                     elements for each resource as well as the Metadata Authority Description Schema (MADS) for describing named authorities. The
+                     Berkeley Art Museum and Pacific Film Archive (&lt;<a href="http://www.bampfa.berkeley.edu/">http://www.bampfa.berkeley.edu/</a>&gt;) has developed a software tool that has as one of its primary functions, the ability to export EAD and METS XML documents
+                     that include metadata about museum collections. The California Digital Library (&lt;<a href="http://www.cdlib.org/">http://www.cdlib.org/</a>&gt;) has developed a simple content management system that is based on METS. There are four profiles of METS in production:
+                     EAD finding aids, simple image objects extracted from EAD, and two profiles of TEI text objects.
+                  </p>
+                  
+                  <p>In terms of limitations for using XML as a preservation file format, some would say XML applications are too time-consuming
+                     or complicated, especially where deep, granular encoding is required. However, a number of tools and initiatives are available
+                     today to lessen the complexity of using XML. A second limitation is with regards to presentation. While XML describes the
+                     structural and semantic aspects of a text, its ability to represent the physical appearance of a text is more challenging.
+                     For this reason, a number of collections and repositories choose to store an XML copy of a text for preservation and processing
+                     as well as a PDF or other image-based version for physical presentation and printing.
+                  </p>
+                  
+                  
+                  <a name="ss1-6-11_h2"></a><h2 class="normal">Portable Document Format (PDF)</h2>
+                  
+                  <p>PDF texts are ubiquitous in the web environment. Just about everyone who frequents the web has used Adobe's Acrobat Reader
+                     or a web plug-in to display a PDF text and has probably employed one of a number of utilities to convert documents to PDF.
+                     PDF is a format for the capture, display, and now, through a version of PDF known as PDF/A, the preservation of texts. PDF/A
+                     is a recently published International Standards Organization (ISO) standard, ISO 19005-1. However, unlike XML, TIFF, and some
+                     other open formats, PDF and PDF/A are not formats that digital humanists normally employ for capturing and distributing literary
+                     texts or other genres. Some humanities scholarly journals published electronically and large text repositories may be the
+                     exception. But, these initiatives tend to be associated more with the digital library and publishing communities than with
+                     digital humanities. Still, understanding the strengths and weaknesses of PDF is important if for no other reasons than its
+                     prevalence on the web and gauging its place relative to the use of other more accepted formats for digital humanities. Some
+                     digital humanities applications may warrant the use of PDF and several of these applications will be looked at in this chapter
+                     segment. For the purposes of this discussion of the PDF format, the term "text" is being used in a broad sense to include images and texts as both simple and complex documents, comprised of text and other
+                     media objects. The term "document" is used interchangeably with "text."
+                  </p>
+                  
+                  <p>The PDF format was developed by Adobe in the early 1990s in order to solve the fundamental problem of communicating texts
+                     and other visual material between different computer operating systems and applications. At that time, there was no common
+                     way of viewing these electronic resources across different computer hardware. In developing the PDF format, Abobe based it
+                     on their already released PostScript language, a hardware-independent page description language for printing (<a href="#ss1-6-11_b23">Warnock 1991</a>). By Adobe's estimates, there are currently greater than 200 million PDF documents available on the web, and since its release,
+                     users have downloaded over 500 million copies of the company's free PDF Acrobat Reader. PDF is an open format by virtue of
+                     its published specification, <i>PDF Reference: Adobe Portable Document Format Version 1.6</i> (Adobe 2005). This Specification provides the necessary information for understanding and interpreting the format and for
+                     building PDF applications and plug-ins. Adobe allows the creation of applications that read, write, and transform PDF files
+                     and makes use of certain of its patents for this purpose royalty free. However, PDF is not completely open. Adobe authors
+                     the specification and decides what will go into each release, including functionality of the format.
+                  </p>
+                  
+                  <p>PDF is a complex but versatile format. A PDF document is comprised of one file, yet that file may be any document from a simple
+                     one-page text to a multi-part text, comprised of chapters and other segments, along with a range of fonts, images, and other
+                     subordinate digital objects. Using one of Adobe's proprietary editors it is relatively easy to transform a mixed set of digital
+                     objects, including images and texts, into one document of properly arranged segments, such as an image appearing in the upper
+                     right-hand corner of the first page of a text. PDF also currently supports interactive features, such as hyperlinks, and the
+                     inclusion of metadata and XML markup for describing document structure, semantics, and layout. A PDF file may be either image
+                     or character based. For example, a book may be scanned, producing a series of TIFF images. These images can then be transformed
+                     into PDF images and wrapped into one document. Like TIFF or any other image format, individual characters are neither differentiated
+                     nor encoded in image PDF. This means that the text cannot be manipulated or even searched unless optical character recognition
+                     is first applied to the document. A PDF document can also be text where the text is defined by such properties as character
+                     strings, font, and point size. In theory PDF text documents can be transformed into character-based formats such as Word,
+                     HTML, or ASCII. In reality, given the design of PDF, a transformation may not be completely accurate in character representation
+                     or layout. This can be problematic in situations where it is necessary to deconstruct a PDF text for machine analysis or for
+                     other purposes, including editing.
+                  </p>
+                  
+                  <p>Given the large amount of digital information being web published each year, a number of organizations with publishing and
+                     preservation mandates, such as electronic publishers, government departments, and libraries, are employing PDF as a storage,
+                     archival, and presentation format. A Berkeley information science research project looking at the information explosion estimates
+                     that on a yearly basis upwards of 1,986,000 terabytes of new information is being stored on hard disks alone (UC Berkeley
+                     2003). In this ever-expanding web environment, PDF offers, in addition to being an extremely portable format, an easy and
+                     inexpensive solution to publishing extremely large numbers of texts. In the 1990s, many were dismissive of PDF as a proprietary,
+                     complex format and one that was unsuitable for purposes of long-term preservation. But, the format has evolved with the development
+                     of PDF/A for document preservation, as has PDF software for rendering and creating PDF documents, including editors, readers,
+                     and browser plug-ins.
+                  </p>
+                  
+                  <p>Most digital humanists are working on relatively contained, focused research projects that require limited digitization of
+                     source materials, not on massive digitization projects, which cry out for the use of a format supporting low production costs.
+                     Digital humanists are instead focusing on formats that are open, promote information interchange, textual analysis and interpretation,
+                     and the preservation of electronic texts. PDF supports all these desiderata but only to a limited degree. PDF is a proprietary
+                     format but with an open specification. However, the specification is complex and, unlike XML, the PDF code is not human readable.
+                     PDF supports information interchange by being device independent and having an open metadata protocol. PDF/A may in the future
+                     provide a practical, standards-based preservation path once the necessary conversion applications are developed and become
+                     available. PDF texts can be used with some text analysis tools once the PDF text is extracted into an ASCII format. Nevertheless,
+                     the format will see limited use in the future by digital humanities centers and digital humanists for building and publishing
+                     electronic literary collections. This is in light of the strengths of XML and the image formats TIFF and JPG2000 and the relatively
+                     small numbers of texts being digitized by digital humanists, which allow a more labor-intensive approach to text creation.
+                     However, PDF may be used by humanists as a secondary and supplementary approach to distributing and rendering texts in a collection.
+                  </p>
+                  
+                  <p>The interplay between PDF and more accepted formats for digital humanities are explored briefly in the two case studies below.</p>
+                  
+                  <p><b>Early Canadiana Online (ECO)</b> (&lt;http://www.canadiana.org/eco.php?doc= <b>home</b>&gt;<b>)</b>: ECO is a large Canadian digital library project with over two million pages scanned in a 1-bit compressed TIFF format. The
+                     images were originally scanned from Canadian heritage materials on microfiche, dating from the sixteenth up to the early twentieth
+                     century. ECO includes a number of literary texts. Because the source material for this project was microfiche or photographic
+                     images, project administrators needed to develop a cost-effective approach to making the texts highly searchable, both within
+                     the text and bibliographically, at a work level. One approach would have been to make accurate transcriptions of the texts
+                     but the cost was prohibitive, given the number of pages involved. As an alternative, optical character recognition software
+                     was used to automatically scan the texts and create searchable texts. The OCR text was found to be approximately 90% free
+                     of errors or have a 90% confidence level. Because the OCR texts were to be used only for searching and the costs of correcting
+                     the OCR were not affordable within the parameters of the project, the OCR was left uncorrected and not published. It was used
+                     only for creating indexes for searching. Metadata was also created for searching at a work level. Once a licensed ECO user
+                     selects a text for viewing through the ECO interface, he or she has the choice of retrieving any of its pages in GIF, in image
+                     PDF, or retrieving the entire volume in PDF. The PDF for a page or volume and the GIF page images are created on the fly for
+                     delivery to the desktop. The GIF images are converted from the archival TIFF images, using an open-source utility. There are
+                     a number of these image conversion utilities available. ImageMagick (&lt;<a href="http://netpbm.sourceforge.net/">http://netpbm.sourceforge.net/</a>&gt;) is one that is widely used, an open-source software suite for editing images and converting them to any of approximately
+                     100 formats, including PDF, GIF, JPEG, JPEG 2000, PNG, PhotoCD, and Tiff. ImageMagick runs on most operating systems. For
+                     converting the TIFF images to image PDF, ECO employs a series of filters for UNIX. In the process, the requested TIFF images
+                     are converted to PBM or the Portable Bitmap Format, then in turn to PostScript and finally to PDF, with PDF providing a cost-effective
+                     way of delivering electronic volume surrogates to the desktop. The Acrobat reader plug-in for browsers offers extra functionality,
+                     such as the ability to navigate pages within a multi-page work and for increasing or decreasing the size of a page or pages.
+                     This functionality can also be provided for the delivery of TIFF or JPEG images, but this necessitates server-side programming.
+                  </p>
+                  
+                  <p>Digital humanities initiatives focusing on different editions of a single work or on a much smaller number of works than ECO
+                     in all likelihood would employ XML and XSLT to deliver in XHTML pages and volumes to the desktop. In such applications, if
+                     there were no acceptable electronic versions of the works in a text format, this would call for making accurate transcriptions
+                     of the original texts and then adding markup to a predetermined level in TEI. But, these projects could, with little additional
+                     overhead, offer readers a choice of XHTML or PDF. PDF would give readers a facsimile of the original work and the ability
+                     to size and navigate through the text.
+                  </p>
+                  
+                  <p><b>PDF and Humanities Scholarly Journal Publishing:</b> The digital world is opening up rich possibilities for scholarly journal publishing. These include reaching a larger, worldwide
+                     audience for print journals struggling with declining print subscriptions; by reducing production costs, allowing journals
+                     to move to an open-access model of publishing; and, offering new publishing models, like the use of citation linking, incorporation
+                     of multimedia into articles, and providing rich searching across aggregations of journals. Many journals in the humanities
+                     are small operations, cash strapped and struggling with their evolution to the electronic. Editors realize that if their journals
+                     are to survive, they will need a digital presence. To assist editors and publishers in this transformation process, there
+                     is a wide range of open source software available, from journal-specific DTDs, such as the Journal Publishing Document Type
+                     Definition (&lt;<a href="http://dtd.nlm.nih.gov/publishing/">http://dtd.nlm.nih.gov/publishing/</a>&gt;), developed by the National Library of Medicine, to complete systems for the management, distribution, and archiving of
+                     journals, for example the Open Journal Systems (OJS) (&lt;<a href="http://pkp.sfu.ca/?q=ojs">http://pkp.sfu.ca/ q ojs</a>&gt;) and the Digital Publishing System (DPuBS) (&lt;<a href="http://dpubs.org/">http://dpubs.org/</a>&gt;). OJS, one example of an open source solution to journal publishing, currently has 550 installations worldwide. OJS is part
+                     of a wider initiative known as the Public Knowledge Project and is a collaborative research and development project by the
+                     University of British Columbia, the Canadian Center for Studies in Publishing, and the Simon Fraser University Library. The
+                     software allows journal editors with minimal technical support to customize the look of their journal and to configure and
+                     manage the peer review process, online submission and management of the content. OJS also provides a number of services, basic
+                     Dublin Core (&lt;<a href="http://dublincore.org/">http://dublincore.org/</a>&gt;) metadata, full text article searching, and reading tools. Like DPuBS and other similar packages, OJS does have a limitation.
+                     The journal management system does not provide the software necessary to transform word processing files into HTML or PDF
+                     for web delivery. That processing is left to the layout editor to do outside the system. PDF rather than HTML appears to be
+                     the format of choice for a large proportion of the journals which are employing OJS or a similar system. It is extremely easy
+                     to convert from an article in, say, Word to PDF, proof the result, and then upload it into OJS. A majority of these journals
+                     do not have the necessary expertise or financial support to invoke a production cycle using XML as opposed to PDF.
+                  </p>
+                  
+                  <p>Journal publishing in PDF does have its drawbacks. PDF is an excellent format for print on demand or for rendering a text
+                     on a screen in a print layout. It is much less amenable to supporting new publishing models that are taking advantage of the
+                     possibilities of the electronic medium. PDF does support hyperlinks and there are some journals that use this feature. PDF
+                     also allows incorporating multimedia, such as video and sound, into an article, but these features are not often employed
+                     in scholarly journals because of the extra overhead involved. There are also concerns about the PDF generated by Acrobat and
+                     by other conversion tools as a preservation format. PDF/A theoretically addresses this problem but PDF/A will not be widely
+                     adopted until there are the utilities necessary for efficiently transforming documents and images into PDF/A.
+                  </p>
+                  
+                  <p>There are options open to humanities journals for managing and distributing a journal in PDF other than establishing a self-managed
+                     local site with an OJS or DPubS implementation behind it. A scholarly communication initiative at the University of New Brunswick
+                     is one example. This multi-million-dollar research publishing project is part of a larger Pan-Canadian initiative known as
+                     Synergies (&lt;<a href="http://www.synergies.umontreal.ca/">http://www.synergies.umontreal.ca/</a>&gt;). It is being funded by the Canada Innovation Fund (&lt;<a href="http://dtd.nlm.nih.gov/publishing/">http://dtd.nlm.nih.gov/publishing/</a>&gt;). For this project, five institutions, along with fifteen partner institutions, will be establishing five regional publishing
+                     and research nodes across Canada for scholarly journals and other forms of scholarly communication in the humanities and social
+                     sciences. The nodes will feed the research texts and data produced at these nodes into a national distribution portal. The
+                     purpose of the initiative is ambitious, to effect on a national scale a transformation of scholarly publishing in the humanities
+                     and social sciences from print to digital.
+                  </p>
+                  
+                  <p>Like a number of initiatives, such as Project Muse (&lt;<a href="http://muse.jhu.edu/">http://muse.jhu.edu/</a>&gt;), Euclid (&lt;<a href="http://projecteuclid.org/Dienst/UI/1.0/Home">http://projecteuclid.org/Dienst/UI/1.0/Home</a>&gt;), and Erudit (&lt;<a href="http://www.erudit.org/">http://www.erudit.org/</a>&gt;), the Electronic Text Centre at the University of New Brunswick offers a range of electronic publishing services to journal
+                     editors, primarily, in the humanities. One aspect of its publishing efforts is the production and delivery of back files of
+                     journal articles. Many of these retrospective issues do not have surviving digital copies. This presents challenges. Echoing
+                     the situation of Early Canadiana Online, neither the Centre nor the journals is in the financial position to produce accurate,
+                     marked-up transcriptions of the print copies to support delivery of XHTML to users and for full text searching.
+                  </p>
+                  
+                  <p>The Centre's approach to a solution is two-fold, to build XML files for search purposes and PDF for document delivery. The
+                     production process begins with scanning the original print issues and converting articles and other contributions to PDF,
+                     employing a flatbed scanner with built-in conversion software. The resulting PDF documents are then run through an optical
+                     character recognition package. The uncorrected OCR is marked up in an established XML document structure or DTD developed
+                     by the <sup>É</sup> rudit publishing consortium. This is used for encoding an article's basic structure along with extensive, journal-specific
+                     metadata. The XML files are then used to build within an Open Journals System or OJS implementation search indices for searching
+                     metadata elements, such as &lt;title&gt;, &lt;author&gt;, and &lt;abstract&gt; which describe the articles and for searching full text within
+                     multiple issues and journals. Employing scripts, the metadata and structured content is extracted and uploaded into OJS. Currently,
+                     a full text search will only take readers to the start of an article and not to a page or line. However, the XML markup performed
+                     on the OCR could provide that capability in the future.
+                  </p>
+                  
+                  <p>This approach of combining uncorrected OCR with an image-based format, like image PDF, has several advantages over PDF alone
+                     for large collections of print texts. Full search capability is one benefit, and this has been discussed. The other is preservation.
+                     A very simple XML encoding scheme can be used to mark up an OCR text's basic structure, including, for example, Sections,
+                     Pages, and Paragraphs. This encoded content combined with a metadata header into one XML file provides valuable archiving
+                     and preservation information to accompany the image PDF file. The files can then be bundled together and archived in a repository,
+                     whether it be a trusted institutional repository based at a university, a LOCKSS (Lots Of Copies Keep Stuff Safe) (&lt;<a href="http://www.lockss.org/lockss/Home">http://www.lockss.org/lockss/Home</a>&gt;) solution, or a repository service like Portico (&lt;<a href="http://www.portico.org/about/">http://www.portico.org/about/</a>&gt;).
+                  </p>
+                  
+                  
+                  <a name="ss1-6-11_h3"></a><h2 class="normal">TIFF and JPEG</h2>
+                  
+                  <p>In building digital still images, one tries to match and, in some cases, exceed the functionality afforded by analog. The
+                     first step is to assess source characteristics —color, detail, and dimensions — and then weigh mapping options for output to target media. Since media ultimately drive benchmarks for output, working with
+                     formats has everything to do with striking the right balance between fidelity and portability. This often means generating
+                     files in a number of formats to represent a single document since media — and uses — will differ.
+                  </p>
+                  
+                  <p>Digital image formats are distinguished principally by: (1) how they represent color, detail, and size, and (2) application
+                     support. Choice of formats depends on understanding how these factors bear on particular image management scenarios. Using
+                     a combination of encoding and compression techniques, digital image formats bend visual matter to particular purposes. Though
+                     purposes may differ, the imperative for standard application support is universal. Standards ensure mobility, and mobility
+                     is everything to a digital object. The more applications that support a given format, the more likely will its content be
+                     usable now and in the future.
+                  </p>
+                  
+                  <a name="ss1-6-11_h4"></a><h3 class="normal">TIFF</h3>
+                  
+                  <p>For over a decade now, the Tagged Image File Format (TIFF) has been the de facto standard for producing photographic-quality
+                     digital image master files. TIFF was developed in the middle of the 1980s by the document imaging industry in a successful
+                     bid to develop a common standard for desktop scanning. It is perhaps the most widely supported format for image processing
+                     applications across platforms —whether Windows, Mac, or UNIX. TIFF offers exhaustive color support (up to 64 bit) and supports a variety of standard color
+                     working spaces in both RGB and CMYK varieties.
+                  </p>
+                  
+                  <p>TIFF is the format of choice for creating preservation-quality digital master files true to the original document's color,
+                     detail, and dimensions. Detail-intensive optical character recognition and high-quality printing applications often require
+                     source documents in TIFF format in order to function optimally. When storage space is not an issue, uncompressed TIFFs are
+                     the best choice for archiving to long-term storage media.
+                  </p>
+                  
+                  <p><i>Image compression</i>: Compression techniques run the full range of the fidelity—portability spectrum. These are algorithmic processes whereby images are transformed and bundled for optimum portability.
+                     Compression works by detecting what it considers either irrelevant or redundant data patterns and then expresses them more
+                     efficiently via mathematical formulae. Compression techniques come in lossless or lossy varieties, the latter amounting to
+                     better space savings. While there is a compression option for TIFF (the notorious patented LZW compression process usually
+                     identified with GIF), preservation imperatives and document characteristics limit the use of compression in TIFF to documents
+                     with minimal tonal variance.
+                  </p>
+                  
+                  <p>Another strength of TIFF, particularly for long-term preservation, is its header option. The TIFF header accommodates technical,
+                     structural, and descriptive meta-data about the component image and provides some flexibility in their elaboration. Encoded
+                     in ASCII format, TIFF header metadata is potentially useful in providing a record of conversion decisions specific to the
+                     image. While certain technical data fields are required for baseline processing, there are provisions for creating custom
+                     tags (courtesy of its Image File Directory framework) for project- or institution-specific purposes. Application support for
+                     editing headers is not extensive, however, particularly when generating tags that fall outside the standard.
+                  </p>
+                  
+                  <p>While application support for reading and writing TIFF is extensive, actual manipulation — especially in batches — demands higher-end processing and memory capacities. File sizes, especially for larger items with extensive color information
+                     and detail, can climb into the several Gigabytes. TIFF files do, however, work well as authoritative sources from which any
+                     number of purpose-specific surrogates can be derived. For example, they often act as master files for web delivery where monitor,
+                     processing, and bandwidth constraints necessitate less discriminating encoding and compression techniques.
+                  </p>
+                  
+                  
+                  <a name="ss1-6-11_h5"></a><h3 class="normal">JPEG</h3>
+                  
+                  <p>JPEG is a popular standard for transforming source files into portable, photographic-quality images for networked applications.
+                     Strictly speaking, JPEG is a compression technique upon which a format is based. Around the time TIFF was standardized, a
+                     consortium of photographic industry players, known collectively as the Joint Photographic Experts Group, developed the JPEG
+                     compression standard (and corresponding JFIF—Jpeg File Interchange Format) for use in photographic digital image production and interchange.
+                  </p>
+                  
+                  <p>JPEG's lossy compression employs an irrelevancy reduction algorithm based on the characteristics of human visual perception.
+                     Since brightness is more important than color in determining visibility, JPEG focuses its compression on the color aspects
+                     of an image. Building a JPEG image is a three-part process beginning with a lossless mathematical transformation known as
+                     Discrete Cosine Transform (DCT) and a subsequent compression process known as quantization. Together they simplify and round
+                     an image's color values in 8$8 pixel blocks. The higher the desired output quality, the less simplification and rounding are applied, and the less blockiness
+                     (visible boundaries between 8$8 blocks) is introduced in the output.
+                  </p>
+                  
+                  <p>JPEG is important primarily for delivering images over the web, for previewing master files, and for printing at lower sizes
+                     and resolutions. It supports 24-bit color depth, which is more than adequate in preserving important color information in
+                     a photographic image. Since some detail is bound to be lost in translating images for network delivery and monitor display,
+                     JPEG's tremendous space-saving transformations offer an acceptable compromise between image fidelity and network portability.
+                     Software support for writing and reading JPEG is near universal.
+                  </p>
+                  
+                  <p><i>Evolving technologies, expanding promise: JPEG 2000</i>: As bandwidth, processing power, and network delivery models evolve, so too do demands for suitable digital formats. Less
+                     encumbered by technical limitations, developers and end users alike are very interested in image coding systems that suit
+                     multiple purposes and can combine rather than just balance fidelity and portability.
+                  </p>
+                  
+                  <p>The JPEG 2000 compression standard is JPEG's effort to create such a coding system. The main motivator for a new standard
+                     was a desire to accommodate a much broader range of image data types with different color, resolution, and dimensional characteristics
+                     (such as medical, scientific, remote sensing, text, etc.) and to incorporate several delivery models (client/server, real-time
+                     transmission, image archiving, limited buffer and bandwidth resources, etc.) under a single system.
+                  </p>
+                  
+                  <p>JPEG 2000 relies on wavelet compression technology to produce high-quality, scalable output. Wavelet-based compression transforms
+                     images into continuous waves or signals. The waves are iteratively decomposed into simplified versions by averaging the distances
+                     between adjacent points of the wave along a plotted median. The result is a multi-resolved image. JPEG 2000's wavelet transformations
+                     are applied to individual tiles or blocks, the sizes of which are largely user-defined. Tiling reduces memory load and can
+                     be used for later decoding sections rather than an entire image. All the information necessary to reconstruct the original
+                     is efficiently stored in the image
+                  </p>
+                  
+                  <p>A crucial side effect to JPEG 2000's implementation of the wave transform process is that progressive decomposition in the
+                     forward transform allows for progressive display in the inverse. The parsable bit stream and file format allow regions, resolution
+                     levels, quality layers, color channels, or combinations of these to be extracted from a master file <i>without</i> having to decode the entire file.
+                  </p>
+                  
+                  <p>In decompressing a single image, one can have it either grow in size or increase in specific detail without necessarily affecting
+                     bit transfer rates. A full color map, for example, measuring one meter in height by two meters in length, at a resolution
+                     of 300 dots per inch (dpi), could exceed sizes of 75 Gigabytes in uncompressed TIFF format. The resultant high-fidelity image
+                     may be excellent for archival purposes, but is practically useless for real-time processing. Though a JPEG 2000 version will
+                     still be of little practical use and may only halve storage requirements at similar resolution, a server-side extraction process
+                     could deliver a monitor-ready full image sample at 800 × 600 dpi that takes up no more than a few Megabytes, and then build incrementally higher resolution data for zooming in on
+                     or panning across image regions, all the while maintaining constant image transfer and display sizes.
+                  </p>
+                  
+                  <p>The implications of progressive transformation for image use and management are compelling. From an end-user standpoint, content
+                     previously unsuitable for network and computing environments is easily manipulated. From an archival perspective, JPEG 2000's
+                     capacity for selective transformation would enable detailed study without risk of damaging fragile originals. The key advantage
+                     from a workflow perspective is that target bit rates/sizes need not be specified at the time of compression. Optimized master
+                     files can serve as the basis for thumbnails, real-time web versions, archival versions, and print masters.
+                  </p>
+                  
+                  <p>JPEG 2000 also offers interesting encoding options that afford a good deal of control over the compression process. One can
+                     single out regions of interest (ROI) for special handling during the decomposition process, so that areas of particular concern
+                     are not subject to as much transformation. In the case of progressive image transmission, such regions can be transmitted
+                     at a higher priority. The process can amount to significant space savings for applications where storage is at a premium.
+                  </p>
+                  
+                  <p>All features discussed above are part of the baseline JPEG 2000 implementation, known as Part 1. Parts 2 and 3, currently
+                     in use but still under development, provide support for basic and advanced forms of image metadata, including intellectual
+                     property rights, embedded full-text (in either XML or PDF), audio files, etc. They include advanced color profiling options,
+                     and there are plans for a moving image implementation for Part 3. Coupled with the control JPEG 2000 affords over encoding
+                     and decoding, the advanced management features of Parts 2 and 3 could effect significant changes in how images are described,
+                     stored, and transmitted in the near future.
+                  </p>
+                  
+                  <p><i>Reality check</i>: Does JPEG 2000 sound too good to be true? Then it probably is — for now. Though an ISO standard since 2000, application support for JPEG 2000 is limited. Its inherent features and functionality
+                     mean little if software to encode them is not readily available.
+                  </p>
+                  
+                  <p>For web delivery, JPEG 2000 requires special software on the server side (and, depending on the implementation, on the client
+                     side as well) to manipulate files. To date, there are no standard delivery mechanisms or open source tools to facilitate networked
+                     manipulation. Built on an open architecture, the JPEG 2000 development model encourages specialized development efforts that
+                     optimize the system for different image types and applications. But the development process, inclusive as it may be, is very
+                     slow and the resultant applications do not necessarily implement all features, nor do they implement features in the same
+                     manner.
+                  </p>
+                  
+                  <p>To further complicate matters, Parts 2 and 3 contain patented technologies that may prohibit implementation except under very
+                     specialized circumstances. Ironically, although standards with patented and/or proprietary technologies are potential barriers
+                     to interoperability and to the temporal mobility one associates with preservation imperatives, commercial interest and accompanying
+                     investments are often sufficient to deliver impressive application support. With sufficient industry buy-in, such standards
+                     as Adobe's PDF can overtake well-intentioned rivals to become a preferred receptacle for serving certain digital ends.
+                  </p>
+                  
+                  <p>Evidently there are standards, and then there are <i>standards</i>. For now, TIFF remains the standard format for photograph-quality master images and will still require postprocessing transformation
+                     to other formats, including JPEG, for specialized delivery purposes. JPEG 2000 will likely continue to develop and expand
+                     in use as applications exploit the format's potential. Cautious adopters will not want to throw away their TIFFs just yet,
+                     as the appeal of any format rests as much on buy-in — the sine qua non of portability — as it does on functionality.
+                  </p>
+                  
+                  
+                  
+                  
+                  
+                  <a name="ss1-6-11_h6"></a><h2 class="normal">Selected References</h2>
+                  <a name="ss1-6-11_b1"></a><p class="hang">Acharya, Tinky, and Ping-Sing Tsai (2005). <i><span class="title">JPEG 2000 Standard for Image Compression: Concepts, Algorithms, and VLSI Architectures</span></i>. Hoboken, NJ: Wiley-Interscience. &lt;<a href="http://proxy.hil.unb.ca/login?url=http://site.ebrary.com/lib/unblib/Doc?id=10114023">http://proxy.hil.unb.ca/login?url http://site.ebrary.com/lib/unblib/Doc?id 10114023</a>&gt;. Accessed June 12, 2006.
+                  </p>
+                  <a name="ss1-6-11_b2"></a><p class="hang">Adams, Michael David (1998). <i><span class="title">Reversible Wavelet Transforms and Their Application to Embedded Image Compression</span></i>. MSc. Thesis. <i><span class="title">The University of Victoria Department of Electrical and Computer Engineering website</span></i>. &lt;<a href="http://www.ece.uvic.ca/-mdadams/publications/mascthesis.pdf">http://www.ece.uvic.ca/-mdadams/publications/mascthesis.pdf</a>&gt;. Accessed May 22, 2006.
+                  </p>
+                  <a name="ss1-6-11_b3"></a><p class="hang">Adobe Developers Association.. <i><span class="title">TIFF Revision 6.0</span></i>. &lt;<a href="http://partners.adobe.com/public/developer/en/tiff/TIFF6.pdf">http://partners.adobe.com/public/developer/en/tiff/TIFF6.pdf</a>&gt;. Accessed May 12, 2006.
+                  </p>
+                  <a name="ss1-6-11_b4"></a><p class="hang">Adobe Systems Incorporated (2005). <i><span class="title">PDF Reference: Adobe Portable Document Format Version 1.6</span></i>, 5th edn. <i><span class="title">Adobe Systems Incorporated</span></i>. &lt;<a href="http://partners.adobe.com/public/developer/en/pdf/PDFReference16.pdf">http://partners.adobe.com/public/developer/en/pdf/PDFReference16.pdf</a>&gt;.
+                  </p>
+                  <a name="ss1-6-11_b5"></a><p class="hang">Anderson, Richard et al. (2005). "<i><span class="title">The AIHT at Stanford University Automated Preservation Assessment of Heterogeneous Digital Collections</span></i>." <i><span class="title">D-Lib Magazine</span></i> 11.12 (December). &lt;<a href="http://www.dlib.org/dlib/december05/johnson/12johnson.html">http://www.dlib.org/dlib/december05/johnson/12johnson.html</a>&gt;. Accessed June 8, 2006.
+                  </p>
+                  <a name="ss1-6-11_b6"></a><p class="hang">Brown, Adrian. <i><span class="title">Digital Archives Analyst, Digital Preservation Guidance Note 1: Selecting file formats for long-term preservation. The National
+                           Archives</span></i> (2003) <i><span class="title">The National Archives of England, Wales and the United Kingdom</span></i>. &lt;<a href="http://www.nationalarchives.gov.uk/documents/selecting_file_formats.rtf">http://www.nationalarchives.gov.uk/documents/selecting_file_formats.rtf</a>&gt;. Accessed June 1, 2006.
+                  </p>
+                  <a name="ss1-6-11_b7"></a><p class="hang">Boucheron, Laura E., and Charles D. Creusere (2005). "<i><span class="title">Lossless Wavelet-based Compression of Digital Elevation Maps for Fast and Efficient Search and Retrieval.</span></i>" <i><span class="title">IEEE Transaction of Geoscience and Remote Sensing</span></i> 43.5: 1210–14.
+                  </p>
+                  <a name="ss1-6-11_b8"></a><p class="hang">Clark, James (1997). <i><span class="title">World Wide Web Consortium</span></i>. <i><span class="title">Comparison of SGML and XML. World Wide Web Consortium Note 15-December-1997</span></i>. &lt;<a href="http://www.w3.org/TR/NOTE-sgml-xml-971215">http://www.w3.org/TR/NOTE-sgml-xml-971215</a>&gt;.
+                  </p>
+                  <a name="ss1-6-11_b9"></a><p class="hang">Cornell University Department of Preservation and Conservation. <i><span class="title">Digital Preservation Management – Implementing Short-term Strategies for Long-term Problems</span></i>. &lt;<a href="http://www.library.cornell.edu/iris/tutorial/dpm/index.html">http://www.library.cornell.edu/iris/tutorial/dpm/index.html</a>&gt;. Accessed June 1, 2006.
+                  </p>
+                  <a name="ss1-6-11_b10"></a><p class="hang">Cornell University Library (2003). <i><span class="title">Digital Preservation Management. Obsolescence: File Formats and Software</span></i>. &lt;<a href="http://www.library.cornell.edu/iris/tutorial/dpm/oldmedia/obsolescence1.html">http://www.library.cornell.edu/iris/tutorial/dpm/oldmedia/obsolescence1.html</a>&gt;. Accessed June 19, 2006.
+                  </p>
+                  <a name="ss1-6-11_b11"></a><p class="hang">Cover Pages (2002). <i><span class="title">Standard Generalized Markup Language (SGML). SGML and XML as (Meta-) Markup Languages</span></i>. &lt;<a href="http://xml.coverpages.org/sgml.html)">http://xml.coverpages.org/sgml.html)</a>&gt;. Accessed June 17, 2006.
+                  </p>
+                  <a name="ss1-6-11_b12"></a><p class="hang">Janosky, James S., and Rutherford W. Witthums (2003). <i><span class="title">Using JPEG 2000 for Enhanced Preservation and Web Access of Digital Archives – A Case Study</span></i>. Accessed from The University of Con-necticut Libraries website: &lt;<a href="http://charlesolson.uconn.edu/Works_in_the_Collection/Melville_Project/IST_Paper3.pdf">http://charlesolson.uconn.edu/Works_in_the_Collection/Melville_Project/IST_Paper3.pdf</a>&gt;.
+                  </p>
+                  <a name="ss1-6-11_b13"></a><p class="hang">Kenney, Anne R., and Stephen Chapman (1995). <i><span class="title">Tutorial: Digital Resolution Requirements for Replacing Text-Based Material: Methods for Benchmarking Image Quality</span></i>. Council on Library and Information Resources.
+                  </p>
+                  <a name="ss1-6-11_b14"></a><p class="hang">Kenney, Anne R., and Oya Y. Rieger (2000). <i><span class="title">Moving Theory into Practice: Digital Imaging for Libraries and Archives</span></i>. Research Libraries Group, Mountain View, California.
+                  </p>
+                  <a name="ss1-6-11_b15"></a><p class="hang">LeFurgy, William G. (2003). "<i><span class="title">PDF/A: Developing a File Format for Long-term Preservation.</span></i>" <i><span class="title">RGL DigiNews</span></i> 7.6 (December 15). &lt;<a href="http://www.rlg.org/preserv/diginews/v7_n6_feature1.html#congress">http://www.rlg.org/preserv/diginews/v7_n6_feature1.html#congress</a>&gt;. Accessed June 25, 2006.
+                  </p>
+                  <a name="ss1-6-11_b16"></a><p class="hang">Padova, Ted (2005). <i><span class="title">Adobe Acrobat 7 PDF Bible</span></i>. Indianapolis: Wiley Publishing, Inc.
+                  </p>
+                  <a name="ss1-6-11_b17"></a><p class="hang">Technical Committee ISO/TC 171 (2005). <i><span class="title">Document Management – Electronic Document File Format for Long-term Preservation – Part 1: Use of PDF 1.4 (PDF/A-1)</span></i>. Geneva: ISO.
+                  </p>
+                  <a name="ss1-6-11_b18"></a><p class="hang"><i><span class="title">Text Encoding Guidelines (TEI) to Document Creation and Interchange. "A Gentle Introduction to XML.</span></i>" &lt;<a href="http://www.tei-c.org/P4X/SG.html">http://www.tei-c.org/P4X/SG.html</a>&gt;. Accessed June 19, 2006.
+                  </p>
+                  <a name="ss1-6-11_b19"></a><p class="hang">Ramesh, Neelamani, RicardoDe Queiroz, Zhigang Fan, Sanjeeb Dash, and Richard G. Baraniuk (2006). "<i><span class="title">JPEG Compression History Estimation for Color Images.</span></i>" <i><span class="title">IEEE Transactions on Image Processing</span></i> 15.6: 1365–78.
+                  </p>
+                  <a name="ss1-6-11_b20"></a><p class="hang">UC Berkeley, School of Information Management and Systems (2003). <i><span class="title">Website: <i>How Much Information? 2003 – Executive Summary</i></span></i>. &lt;<a href="http://www2.sims.berkeley.edu/research/projects/how-much-info-2003/execsum.htm">http://www2.sims.berkeley.edu/research/projects/how-much-info-2003/execsum.htm</a>&gt;. Accessed July 2006.
+                  </p>
+                  <a name="ss1-6-11_b21"></a><p class="hang">Van Horik, Rene (2004). "<i><span class="title">Image Formats, Practical Experiences.</span></i>" <i><span class="title">ERPANET Training File Formats for Preservation, Vienna, May 10–11, 2004</span></i>. &lt;<a href="http://www.erpanet.org/events/2004/vienna/presentations/erpaTrainingVienna_Horik.ppt">http://www.erpanet.org/events/2004/vienna/presentations/erpaTrainingVienna_Horik.ppt</a>&gt;. Accessed June 11, 2006.
+                  </p>
+                  <a name="ss1-6-11_b22"></a><p class="hang">Walker, F., and G. Thomas (2005). "<i><span class="title">Image Preservation through PDF/A.</span></i>" <i><span class="title">Proceedings of IS&amp;T's 2005 Archiving Conference</span></i>. Washington, DC, pp. 259–63. &lt;<a href="http://docmorph.nlm.nih.gov/docmorph/publicationsmymorph.htm">docmorph.nlm.nih.gov/docmorph/publicationsmymorph.htm</a>&gt;.
+                  </p>
+                  <a name="ss1-6-11_b23"></a><p class="hang">Warnock, John (1991). <i><span class="title">White Paper: <i>The Camelot Project. Adobe Systems Incorporated</i></span></i>. &lt;<a href="http://www.planetpdf.com/planetpdf/pdfs/warnock_camelot.pdf">http://www.planetpdf.com/planetpdf/pdfs/warnock_camelot.pdf</a>&gt;. Accessed April 20, 2006.
+                  </p>
+                  
+                  <a name="ss1-6-11_h7"></a><h3 class="normal">About Referenced Standards</h3>
+                  <a name="ss1-6-11_b24"></a><p class="hang"><i><span class="title">DocBook</span></i> &lt;<a href="http://www.docbook.org/">http://www.docbook.org/</a>&gt;.
+                  </p>
+                  <a name="ss1-6-11_b25"></a><p class="hang"><i><span class="title">EAD</span></i> &lt;<a href="http://www.loc.gov/ead/">http://www.loc.gov/ead/</a>&gt;.
+                  </p>
+                  <a name="ss1-6-11_b26"></a><p class="hang"><i><span class="title">JPEG</span></i> &lt;<a href="http://www.jpeg.org/">http://www.jpeg.org/</a>&gt;.
+                  </p>
+                  <a name="ss1-6-11_b27"></a><p class="hang"><i><span class="title">JPEG 2000</span></i> &lt;<a href="http://www.jpeg.org/jpeg2000/">http://www.jpeg.org/jpeg2000/</a>&gt;.
+                  </p>
+                  <a name="ss1-6-11_b28"></a><p class="hang"><i><span class="title">MADS</span></i> &lt;<a href="http://www.loc.gov/standards/mads/">http://www.loc.gov/standards/mads/</a>&gt;.
+                  </p>
+                  <a name="ss1-6-11_b29"></a><p class="hang"><i><span class="title">METS</span></i> &lt;<a href="http://www.loc.gov/standards/mets/">http://www.loc.gov/standards/mets/</a>&gt;.
+                  </p>
+                  <a name="ss1-6-11_b30"></a><p class="hang"><i><span class="title">MODS</span></i> &lt;<a href="http://www.loc.gov/standards/mods/">http://www.loc.gov/standards/mods/</a>&gt;.
+                  </p>
+                  <a name="ss1-6-11_b31"></a><p class="hang"><i><span class="title">PDF/A</span></i> &lt;<a href="http://www.digitalpreservation.gov/formats/fdd/fdd000125.shtml">http://www.digitalpreservation.gov/formats/fdd/fdd000125.shtml</a>&gt;.
+                  </p>
+                  <a name="ss1-6-11_b32"></a><p class="hang"><i><span class="title">TEI</span></i> &lt;<a href="http://www.tei-c.org/">http://www.tei-c.org/</a>&gt;.
+                  </p>
+                  <a name="ss1-6-11_b33"></a><p class="hang"><i><span class="title">TIFF</span></i> &lt;<a href="http://home.earthlink.net/-ritter/tiff/">http://home.earthlink.net/-ritter/tiff/</a>&gt;.
+                  </p>
+                  <a name="ss1-6-11_b34"></a><p class="hang"><i><span class="title">XML</span></i> &lt;<a href="http://www.w3.org/XML/">http://www.w3.org/XML/</a>&gt;.
+                  </p>
+                  <a name="ss1-6-11_b35"></a><p class="hang"><i><span class="title">XSL</span></i> &lt;<a href="http://www.w3.org/Style/XSL/">http://www.w3.org/Style/XSL/</a>&gt;.
+                  </p>
+                  
+                  
+                  
+                  
+               </div>
+            

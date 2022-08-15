@@ -1,0 +1,1005 @@
+<div class="content">
+                  <h2 class="normal">25. 
+                     <h2 class="normal">The Text Encoding Initiative and the Study of Literature</h2>
+                  </h2>
+                  <span style="font-weight:bold;">James Cummings</span>
+                  
+                  <a name="_h59"></a><a name="_h60"></a>
+                  
+                  
+                  
+                  <a name="ss1-6-6_h0"></a><h2 class="normal">Introduction</h2>
+                  
+                  <p>The Text Encoding Initiative (TEI) is an international consortium which is dedicated to maintaining the TEI Guidelines as
+                     a recommended standard for textual markup (see TEI website). The TEI grew out of a recognized need for the creation of international
+                     standards for textual markup that resulted in a conference at Vassar College, Poughkeepsie, in November 1987. Participants
+                     representing text archives, scholarly societies, research projects, and academic institutions met at this conference to examine
+                     the existing methods of text encoding, to discuss the feasibility of an international standard for such encoding, and to make
+                     recommendations for its scope, structure, content, and drafting (<a href="#ss1-6-6_b11">Ide and Sperberg-McQueen 1995</a>). The initial sponsors of the TEI as a project were the Association of Computers in the Humanities (ACH), the Association
+                     for Computational Linguistics (ACL), and the Association of Literary and Linguistic Computing (ALLC). Although the TEI is
+                     now mostly maintained as an international consortium by four institutional hosts, as well as institutional members and individual
+                     subscribers, over the years it has received support from sources including the US National Endowment for the Humanities (NEH),
+                     the European Union, the Andrew W. Mellon Foundation, and the Social Science and Humanities Research Council of Canada (SSHRCC).
+                     The overall purpose of the project was to produce a set of guidelines for the creation and use of electronic texts in the
+                     majority of linguistic and literary disciplines (<a href="#ss1-6-6_b19">Renear, Mylonas, and Durand 2004</a>: 232–5). Now, a couple of decades later, the TEI Guidelines are used for many text-encoding projects, especially in the Arts and
+                     Humanities. Moreover, as the TEI existed before the World Wide Web its recommendations have influenced the development of
+                     a number of web standards, most notably XML and XML-related standards. This chapter will examine some of the history and theoretical
+                     and methodological assumptions embodied in the text-encoding framework recommended by the TEI. It is not intended to be a
+                     general introduction to the TEI or XML markup more generally, nor is it exhaustive in its consideration of issues concerning
+                     the TEI. The first the TEI does admirably itself, the second would take much more space than is allowed here. Instead, this
+                     chapter includes a sampling of some of the history, a few of the issues, and some of the methodological assumptions, for the
+                     most part unavoidable, that the TEI makes.
+                  </p>
+                  
+                  <p>The TEI Guidelines, officially titled <i>Guidelines for Electronic Text Encoding and Interchange</i>, are a continually revised set of proposals of suggested methods for text encoding (see TEI Guidelines). At time of writing
+                     they have reached their fifth major version, "P5," and provide recommendations for methods of markup for a broad range of textual, physical, literary, and linguistic phenomena
+                     of interest to those in the TEI community. The TEI Guidelines are not only a guide to best practice, but are also an evolving
+                     historical record of the concerns of the field of Humanities Computing.
+                  </p>
+                  
+                  <p>The TEI Guidelines are divided into chapters and cover a wide range of topics, beginning with four introductory chapters:
+                     a description of the Guidelines themselves, a gentle introduction to XML, an overview of the TEI infrastructure, and a discussion
+                     of the use of languages and character sets. Following these introductory materials are chapters on the structure of TEI documents,
+                     the manner in which metadata is stored in a TEI document's header, and a description of the large number of elements which
+                     are available for use in any TEI document. These are followed by chapters on more specific topics such as TEI elements for
+                     verse, performance texts, transcriptions of speech, print dictionaries, terminological databases, manuscript description,
+                     methods of linking, segmenting or aligning texts, simple analytic mechanisms, and feature structures. Further chapters make
+                     recommendations on the encoding of certainty and responsibility, the transcription of primary sources, the creation of a critical
+                     apparatus, the recording of names and dates, the creation of language corpora, as well as methods for recording graphs, networks,
+                     trees, tables, formulae, and graphics. In addition, there are chapters on the relationship of the TEIs Header elements with
+                     other metadata standards, the representation of non-standard characters and glyphs, feature system declarations, and elements
+                     for documentation used in the creation of the TEI Guidelines (the Guidelines are themselves a valid TEI document). Finally,
+                     there are chapters on what conformance to the TEI Guidelines implies, how one can modify the TEI schema to suit individual
+                     needs, rules for the interchange of documents, and methods for overcoming the problem of overlapping XML hierarchies. All
+                     these chapters are supplemented by various appendices of reference material.
+                  </p>
+                  
+                  <p>In addition to publishing the TEI Guidelines, the TEI consortium also provides a method for projects to produce customized
+                     schemas (currently in RelaxNG, W3C, and DTD formats) in order to validate their TEI documents. Moreover, they produce various
+                     free software packages, including a set of XSLT Stylesheets to transform TEI XML into HTML and PDF (see TEI Stylesheets).
+                  </p>
+                  
+                  <p>The TEI Guidelines have gained a reputation for having both broad coverage, addressing the needs of many fields in the humanities
+                     generally, as well as in-depth coverage for more specialized concerns/applications. TEI XML is, where applicable, the format
+                     recommended for preservation and interchange of electronic textual resources by a number of funding bodies for arts and humanities
+                     projects (for example, the UK's Arts and Humanities Research Council). As such, it is important for us not only to understand
+                     the TEI Guidelines as an evolving set of recommendations, but also to understand the technological and theoretical background,
+                     assumptions, and biases that have influenced this evolution.
+                  </p>
+                  
+                  
+                  <a name="ss1-6-6_h1"></a><h2 class="normal">Principles of the TEI</h2>
+                  
+                  <p>As mentioned above, TEI was formed as a project at a conference at Vassar College, Poughkeepsie, in November 1987. The conference
+                     participants drafted an initial set of principles to guide the project, titled "The Poughkeepsie Principles." What is surprising is that very few of the concerns expressed in this document now seem dated in the face of technological
+                     advances. Instead, many of the goals of the TEI Guidelines remain the same, if slightly expanded, from what is found in this
+                     early manifesto. Overall, it is these principles that form the theoretical and methodological basis from which the TEI has
+                     developed.
+                  </p>
+                  
+                  <p><b>The Poughkeepsie Principles</b></p>
+                  
+                  <p><b>Closing Statement of Vassar Conference</b></p>
+                  
+                  <p><b>The Preparation of Text Encoding Guidelines</b></p>
+                  
+                  <p>      Poughkeepsie, New York 13 November 1987</p>
+                  
+                  
+                  <p> <b>1. </b> The guidelines are intended to provide a standard format for data interchange in humanities research.
+                  </p>
+                  
+                  <p> <b>2. </b> The guidelines are also intended to suggest principles for the encoding of texts in the same format.
+                  </p>
+                  
+                  <p> <b>3. </b> The guidelines should
+                  </p>
+                  
+                  
+                  
+                  <p> <b>1. </b> define a recommended syntax for the format,
+                  </p>
+                  
+                  <p> <b>2. </b> define a metalanguage for the description of text-encoding schemes,
+                  </p>
+                  
+                  <p> <b>3. </b> describe the new format and representative existing schemes both in that metalanguage and in prose.
+                  </p>
+                  
+                  
+                  
+                  <p> <b>4. </b> The guidelines should propose sets of coding conventions suited for various applications.
+                  </p>
+                  
+                  <p> <b>5. </b> The guidelines should include a minimal set of conventions for encoding new texts in the format.
+                  </p>
+                  
+                  <p> <b>6. </b> The guidelines are to be drafted by committees on
+                  </p>
+                  
+                  
+                  
+                  <p> <b>1. </b> text documentation
+                  </p>
+                  
+                  <p> <b>2. </b> text representation
+                  </p>
+                  
+                  <p> <b>3. </b> text interpretation and analysis
+                  </p>
+                  
+                  <p> <b>4. </b> metalanguage definition and description of existing and proposed schemes, coordinated by a steering committee of representatives
+                     of the principal sponsoring organizations.
+                  </p>
+                  
+                  
+                  
+                  <p> <b>7. </b> Compatibility with existing standards will be maintained as far as possible.
+                  </p>
+                  
+                  <p> <b>8. </b> A number of large text archives have agreed in principle to support the guidelines in their function as an interchange format.
+                     We encourage funding agencies to support development of tools to facilitate this interchange.
+                  </p>
+                  
+                  <p> <b>9. </b> Conversion of existing machine-readable texts to the new format involves the translation of their conventions into the syntax
+                     of the new format. No requirements will be made for the addition of information not already coded in the texts.
+                  </p>
+                  
+                  
+                  <p>(see TEI EDP01)</p>
+                  
+                  <p>While the scope of the TEI has certainly evolved outside of the four committees suggested above (point 6), and it has succeeded
+                     in proposing widely used "sets of coding conventions suited for various applications" (point 4), there is much which is still germaneto theTEI's centralmission.While manyofthesegoals have beenaccomplished, it
+                     is interesting to note that twenty years later we are still encouraging "funding agencies to support development of tools to facilitate" (point 8) the interchange, interoperability, creation, and analysis of TEI-encoded texts. Certainly some tools have been
+                     developed for the creation, editing, and presentation of TEI documents, but many of these have evolved from very specific
+                     uses relating to the projects for which they have been created.
+                  </p>
+                  
+                  <p>The most beneficial decision, with regard to the availability of tools, has been the migration of the TEI from Standard Generalized
+                     Markup Language (SGML) to Extensible Markup Language (XML) as the TEI format for TEI P4 (and later versions). Since XML has
+                     received worldwide support from all manner of disciplines, many commercial applications exist for the creation of XML in general,
+                     and tools which support XML also are usable for TEI XML. It is indeed true that a "number of large text archives have agreed in principle to support the Guidelines in their function as an interchange format" (point 8), and the Oxford Text Archive and the University of Virginia's Electronic Text Center are two such archives which
+                     have helped to establish TEI as a standard for interchange and preservation. A number of data services, set up to preserve
+                     the outcomes of funded digital projects, list TEI XML as one of their preferred archival formats and encourage its use as
+                     suitable for long-term preservation.<a href="#ss1-6-6_fn1"><sup>1</sup></a></p>
+                  
+                  <p>Although the history of the TEI has been driven by the needs of its members, it has also been directed by, and taken on the
+                     assumptions inherent in, the technologies it employs. The TEI Guidelines are the prime deliverable of the TEI (see TEI Guidelines).
+                     They describe the principles to use in marking up texts, and these principles can be expressed in electronic schemas or document
+                     type definitions (DTDs) which can be used to validate a document instance against this form of these principles. While the
+                     formulation of the Guidelines into machine-readable schemas is an extremely useful by-product created from the same files
+                     which also produce the Guidelines, it is the Guidelines themselves that take priority. Likewise, the technologies involved
+                     are also secondary to the recommendations. There are suggestions detailed in the prose of the Guidelines that are unable to
+                     be constrained adequately in some schema languages; in these cases, the prose of the Guidelines always takes precedence. Currently
+                     the TEI Guidelines express the description of what elements are allowed in any particular location, that is, the content models
+                     of elements, in RelaxNG Compact Syntax; previously they used DTD language. These are both accepted electronic formulations
+                     of the more abstract concepts codified within the Guidelines. Technologies continue to develop, and the manner in which the
+                     concerns of the TEI Guidelines are expressed will evolve as well.
+                  </p>
+                  
+                  <p>That the TEI Guidelines currently use XML is simply a reflection that "compatibility with existing standards will be maintained as far as possible" (point 7). Previous to P4, the TEI recommended the use of SGML, an ISO standard (ISO 8879:1986). In a family tree of markup
+                     languages, SGML is often thought of as the parent of both HTML and XML. SGML is itself a descendant of IBM's Generalized Markup
+                     Language (GML) which was a milestone system based on character flagging, enabling basic structural markup of electronic documents
+                     for display and printing (<a href="#ss1-6-6_b19">Renear 2004</a>: 225–31). SGML was originally intended for the sharing of documents throughout large organizations, especially governmental, and
+                     in the legal and aerospace industries which were required to preserve and provide access to documents for at least a few decades.
+                     As solutions for creating and printing these documents developed, SGML was increasingly adopted in the printing and publishing
+                     industries. However, the support for the processing of SGML documents existed in relatively few applications, and specialism
+                     in learning SGML markup meant that it was not the universal answer for the markup of texts that many hoped it would become.
+                     XML, however, has become an international success in a very short period of time. It is used in many fields, academic and
+                     commercial, for documents, data files, configuration information, temporary and long-term storage, for transmitting information
+                     locally or remotely, by new start-ups and multinational conglomerates. It is used as a storage format for almost everything,
+                     including word processing documents, installation scripts, news articles, product information, and web pages. More recently
+                     XML has been increasingly popular as a temporary storage format for web-based user interfaces. Its all-pervasive applicability
+                     has meant not only that there are numerous tools which read, write, transform, or otherwise manipulate XML as an application-,
+                     operating-system- and hardware-independent format, but also that there is as much training and support available. The contrast
+                     with SGML is significant. It should also be noted that one of the editors of the XML specification, Sperberg-McQueen, was
+                     prior to this an editor of the TEI Guidelines, and that his experience with the TEI helped to shape the format which the TEI
+                     now uses.
+                  </p>
+                  
+                  <p>While the TEI Guidelines will inevitably change, they will overall stay true to the initial design goals:</p>
+                  
+                  <p><b>4. Design Goals</b></p>
+                  
+                  
+                  <p>The following design goals are to govern the choices to be made by the working committees in drafting the guidelines. Higher-ranked
+                     goals should count more than lower-ranked goals. The guidelines should
+                  </p>
+                  
+                  <p> <b>1. </b> suffice to represent the textual features needed for research
+                  </p>
+                  
+                  <p> <b>2. </b> be simple, clear, and concrete
+                  </p>
+                  
+                  <p> <b>3. </b> be easy for researchers to use without special-purpose software
+                  </p>
+                  
+                  <p> <b>4. </b> allow the rigorous definition and efficient processing of texts
+                  </p>
+                  
+                  <p> <b>5. </b> provide for user-defined extensions
+                  </p>
+                  
+                  <p> <b>6. </b> conform to existing and emergent standards
+                  </p>
+                  
+                  
+                  <p>Throughout the changes and revisions the TEI makes to the recommendations, the versions of the TEI Guidelines themselves chronicle
+                     the development of methodologies and assumptions concerning the nature of text encoding more broadly. These have been not
+                     only influenced by, but intentionally shaped to answer, the needs of the text encoding community at the time. But this TEI
+                     community is in itself extremely broad and diverse, ranging across all disciplines in the Arts and Humanities and even extending
+                     into more scientific domains (see TEI Projects). This reach has resulted in a deliberate design decision to enable, wherever
+                     possible, the most general of encoding structures, but often complementing these with more detailed data models intended for
+                     specialist use. The TEI caters to these specialized areas either where there has been a belief in their centrality to the
+                     mission of the TEI in developing standards for text encoding, or where the TEI community has lobbied for improvement in these
+                     areas. For examples, basic textual modules exist for drama, verse, and prose, but more specialized modules exist for print
+                     dictionaries, corpus linguistics, and manuscript description.
+                  </p>
+                  
+                  <p>At its heart the TEI is a community-led organization, and this is reflected in all areas of its activity. It is members (whether
+                     institutional hosts, funded projects, or individuals) who pay for the consortium's continuation, and a desire to further the
+                     goals of the TEI prompts members to stand for election to the Board or Technical Council. Likewise, members working in particular
+                     areas, or with specific technological solutions or concerns, often gather themselves together into special interest groups
+                     which may eventually produce suggestions for improving the TEI Guidelines.
+                  </p>
+                  
+                  <p>That the nature of the TEI is to be directed by the needs of its users is not surprising given that it is as a result of the
+                     need for standardization and interoperability that the TEI was formed. However, this community-led focus does have certain
+                     theoretical implications. Aside from the areas which seem to the TEI to be central to most forms of text encoding and so covered
+                     by the Guidelines early on, the most sophisticated developments have taken place in those areas where there are active users
+                     wanting to use the TEI Guidelines for their specific discipline. For example, in developing recommendations for the creation
+                     of linguistic corpora, the TEI defined a &lt;person&gt; element to record information about the participants in a linguistic interaction.
+                     However, once it existed it began to be used by others to record information about the people mentioned in texts. Moreover,
+                     the extended use highlighted several limitations with the data model of &lt;person&gt;. Since it was originally intended for people
+                     whose speech had been transcribed, while there was a &lt;birth&gt;element to record details of the speaker's birth, there was no
+                     &lt;death&gt; element since the conversations are assumed to have taken place while the speaker was alive. And yet, as soon as people
+                     started to use the &lt;person&gt; element to record more detailed prosopographical information, having a &lt;death&gt; element to record
+                     the date and place of the subject's (not necessarily speaker's) death became an obvious addition. That the TEI did not include
+                     this to begin with is entirely understandable given that they had created the &lt;person&gt; element solely with speech corpora
+                     in mind (see TEI CC).
+                  </p>
+                  
+                  <p>This example highlights both the drawbacks and benefits of a community-led standards organization. In response to a perceived
+                     need, the TEI created elements for metadata relating to linguistic corpora for a particular community, when a different community
+                     adopted these elements for a different use the TEI generalized and developed the Guidelines to make the elements more applicable
+                     to a greater number of users. That the TEI has added a much more detailed prosopographical markup in their P5 release is only
+                     partly the point. More importantly, it has created a mixture of the specialized elements retained from its use with linguistic
+                     corpora (such as &lt;socecStatus&gt; to record socio-economic status) while adding newer, more generalized elements (such as &lt;persTrait&gt;
+                     to record personal traits) — extending from the specific to the general. The community helped develop a specialized tag-set and then later decided to
+                     generalize it for applicability in other areas. This is only one example out of many. Over the years this method of development
+                     has produced an extremely useful, but occasionally erratic set of recommendations with multiple ways to solve some problems,
+                     and only a single generalized solution for others. While this is generally perceived to be one of the strengths of the TEI,
+                     it can make it confusing for new users who may be uncertain when to use the specialized or more generalized forms of markup
+                     described in the TEI Guidelines.
+                  </p>
+                  
+                  <p>The continued development of the TEI to become more useful to various disciplines will only continue this process of simultaneous
+                     specialization and generalization. While this is not necessarily a bad thing, it can encourage methodological inequality where
+                     detailed specialized markup is used for some aspects of a project, while more generalized solutions are used for others. This
+                     in turn can lead to inaccurate or otherwise skewed impressions of the content of the document. While this should, of course,
+                     be avoided with detailed document analysis and careful schema creation, the willingness of projects to seize on whichever
+                     elements seem to provide the most detail for their immediate concerns can lead to inequalities that (even when properly documented)
+                     may escape the notice of later users. To guard against this, rigorous local encoding guidelines should be developed to increase
+                     overall consistency.
+                  </p>
+                  
+                  <p>The theoretical implications of the application of markup to a text are a subject of much discussion and too large to treat
+                     in depth here (see <a href="#ss1-6-6_b12">Landow 2006</a>; <a href="#ss1-6-6_b9">Hayles 2005</a>; <a href="#ss1-6-6_b16">McGann 2001</a>). It is needless to say that many involved with the very earliest efforts to create systems of markup for computer systems
+                     were not literary theorists, but this is not the case with the development of the TEI, which has often benefited from rigorous
+                     debate on the very nature of what constitutes a text (<a href="#ss1-6-6_b16">McGann 2001</a>: 187). While the history of textual markup obviously pre-dates computer systems, its application to machine-readable text
+                     was partly influenced by simultaneous developments in literary theory and the study of literature. Textual theories from Barthes,
+                     Foucault, Bakhtin, and Derrida all have a concept of interlinking which both pre-dates and almost anticipates the later development
+                     of hypertextual linking in electronic documents (<a href="#ss1-6-6_b12">Landow 2006</a>: 53–68). New Criticism was intent on the close reading of a text with a rejection of any extra-textual information as a source
+                     for one's understanding of that text. Authorial biography or information understood by comparative analysis with other texts
+                     could not be relied upon to illuminate the text under consideration. This matches well with the notion of textual markup providing
+                     interpretative information about the structure and content of the text. What might jar slightly is the notion of a text's
+                     ambiguity that informs most of New Critical thought; it is inconceivable from such a theoretical position that a text might
+                     have a single incontrovertible meaning or indeed structure.
+                  </p>
+                  
+                  <p>That the intelligent application of markup to a text is itself an interpretative act is quite straightforward. And while this
+                     occasionally has to be re-emphasized, it is less theoretically interesting than what the application of that markup tells
+                     us about our understanding of a text (<a href="#ss1-6-6_b18">Renear 1999</a>). One of the TEI's enduring legacies has been in being a catalyst for the development of many, sometimes conflicting, understandings
+                     of what constitutes a text.
+                  </p>
+                  
+                  <blockquote>
+                     <p>This crucial understanding — that print textuality is not language but an operational (praxis-based) theory of language — has stared us in the face for a long time, but seeing we have not seen. It has taken the emergence of electronic textualities,
+                        and in particular operational theories of natural language like TEI, to expose the deeper truth about print and manuscript
+                        texts.
+                     </p>(<a href="#ss1-6-6_b17">McGann 2004</a>: 205)
+                  </blockquote>
+                  
+                  <p>That the TEI has helped us to greater understanding concerning the nature of text is unsurprising given its nature. Although
+                     the structure of any text is open to debate, it is questionable how much this understanding of markup as interpretation should
+                     apply to the basic structural markup applied to an electronic text. The problematic notion is whether marking a paragraph
+                     with the TEI element for paragraphs (the &lt;p&gt; element) does anything more than mark that there is a structural unit of some
+                     sort there. It is arguable that the application of structural markup does not necessarily imply specific semantic meaning,
+                     that &lt;p&gt; does not necessarily mean a paragraph or that while &lt;title&gt; may mark a title, it does not say what constitutes a
+                     title. A possible problem with such arguments in relation to the TEI Guidelines is that the meaning of these elements is indeed
+                     defined in the prose of the Guidelines. The &lt;title&gt; element is said to contain "the full title of a work of any kind," but since it does not further define what a "title" means, this only strengthens the argument of markup as an act of interpretation. It is up to the researcher applying the
+                     markup to decide what portion of the text to wrap a &lt;title&gt; element around. It could be argued that what the TEI provides
+                     is phenomenology, not ontology (cf. <a href="#ss1-6-6_b25">Sartre 1943</a>: 40–3):
+                  </p>
+                  
+                  <blockquote>
+                     <p>Texts do not have an unproblematic objective existence; they are not self-identical, even if more-or-less transparent page
+                        designs have traditionally catered to the illusion that they are. Their encoding for computer analysis and presentation is
+                        therefore doomed to remain problematic, incomplete, and perspectival. In a sense, a phenomenology of texts has replaced an
+                        ontology.
+                     </p>(<a href="#ss1-6-6_b4">Eggert 2005</a>: 429)
+                  </blockquote>
+                  
+                  <p>The TEI does not tell us what a "title" is, it simply gives us a means of recording the current beliefs and practices about what a title may be through indicating
+                     how and where they are used. While this may indeed doom the TEI to continue to remain "problematic, incomplete, and perspectival," to do otherwise, while remaining useful in an age of increasing internationalization and diversification of semantic concepts
+                     for the creation of electronic resources intended for a wide range of end purposes, would be impossible.
+                  </p>
+                  
+                  <p>While the application of markup to computerized text may have been influenced by New Critical thought, there are many later
+                     developments in literary theory which have influenced, most likely unintentionally, the development of the TEI's understanding
+                     of markup. In reacting against the structuralism and the new critical concentration on the text itself, the poststructuralist
+                     movement's destabilization of meaning placed the act of interpretation on the reader and viewed the text as a cultural product
+                     necessarily embedded in the culture from which it originates. It could be argued that the TEI's development of text encoding
+                     standards is an attempt to enable greater comparative study between such texts. But, with deconstructionist analysis especially
+                     critiquing the assumptions of structuralist binary opposition and ultimately rejecting that a text can have a consistent structure,
+                     it would be more sensible to view the TEI's assumptions of markup theory as basically structuralist in nature as it pairs
+                     record (the text) with interpretation (markup and metadata).
+                  </p>
+                  
+                  <blockquote>
+                     <p>Although most of these researchers thought of themselves as practitioners rather than theorists, their decisions […] constituted a de facto theory of textuality that was reinforced by their tacit assumptions that the "Platonic reality" of a text really is its existence as an ordered hierarchy of content objects.</p>(<a href="#ss1-6-6_b9">Hayles 2005</a>: 95)
+                  </blockquote>
+                  
+                  <p>The belief that texts are able to be divided into consistent understandable structures is central to the TEI Guidelines. While,
+                     for the purpose of text encoding, the units the TEI suggests are hardly controversial, they do imply a particular theoretical
+                     understanding of what constitutes a text.
+                  </p>
+                  
+                  <blockquote>
+                     <p>A text is not an undifferentiated sequence of words, much less of bytes. For different purposes, it may be divided into many
+                        different units, of different types or sizes. A prose text such as this one might be divided into sections, chapters, paragraphs,
+                        and sentences. A verse text might be divided into cantos, stanzas, and lines. Once printed, sequences of prose and verse might
+                        be divided into volumes, gatherings, and pages.
+                     </p>(See TEI SG)
+                  </blockquote>
+                  
+                  <p>This very literal view of what constitutes a text derives partly from the notion that text is hierarchical, more specifically
+                     that it is "an ordered hierarchy of content objects" (<a href="#ss1-6-6_b20">Renear 1993</a>). While the original authors may have retreated from this position slightly, it still underlies much of the theoretical background
+                     to the TEI. This holds that the hierarchy of these content objects "is essential to the production of the text and so must occupy centre stage in transforming print text into digital code" (<a href="#ss1-6-6_b9">Hayles 2005</a>: 95). Yet others have argued that this treatment reduces imaginative works solely to computational data:
+                  </p>
+                  
+                  <blockquote>
+                     <p>TEI is now a standard for humanities encoding practices. Because it treats the humanities corpus — typically works of imagination — as informational structures, it ipso facto violates some of the most basic reading practices of the humanities community,
+                        scholarly as well as popular.
+                     </p>(<a href="#ss1-6-6_b16">McGann 2001</a>: 139)
+                  </blockquote>
+                  
+                  <p>But it could equally be argued that any process of creating texts in their physical embodiment has always involved this treatment
+                     of the text. Whether with medieval scribes or modern publishing, the text itself is accommodated, shaped, and treated as a
+                     separate structure from the work of imagination that it is in order to complete the process of the creation of its physical
+                     manifestation.
+                  </p>
+                  
+                  <p>While the TEI Guidelines clearly recognizes both that major structural divisions are not the only phenomena of interest and
+                     that there are problematic text structures such as those which overlap with their physical manifestations, they are less concerned
+                     with the theoretic understanding of these structures than with the interplay between them:
+                  </p>
+                  
+                  <blockquote>
+                     <p>These textual structures overlap with each other in complex and unpredictable ways. Particularly when dealing with texts as
+                        instantiated by paper technology, the reader needs to be aware of both the physical organization of the book and the logical
+                        structure of the work it contains. Many great works (Sterne's <i>Tristram Shandy</i> for example) cannot be fully appreciated without an awareness of the interplay between narrative units (such as chapters
+                        or paragraphs) and page divisions. For many types of research, it is the interplay between different levels of analysis which
+                        is crucial: the extent to which syntactic structure and narrative structure mesh, or fail to mesh, for example, or the extent
+                        to which phonological structures reflect morphology. (See TEI SG)
+                     </p>
+                  </blockquote>
+                  
+                  <p>The desire to have markup be of use in helping to elucidate the nature of the text is entirely reasonable. While XML allows
+                     the easy marking of most textual structures of interest to the study of literature, the specification which defines XML creates
+                     certain limitations with regard to the encoding of multiple overlapping hierarchies. This is problematic when one structure
+                     runs concurrently with another and the encoder wishes to record both of these structures simultaneously. These can be quite
+                     common, for example where paragraphs run over pages and the both the intellectual structure of the document and its physical
+                     structure are to be marked up. The markup for paragraphs may split over pages, or in verse drama different characters' speeches
+                     may truly be one metrical line. For example one cannot do:
+                  </p>
+                  
+                  <p><br><a name="ss1-6-6_fu1"></a><img src="9781405148641_chapter_25_fu1.gif"><br></p>
+                  
+                  <p>This is illegal XML because it is not well-formed, that is, the elements are not properly nested, but it also concentrates
+                     on the physical structure of the document. In most cases, the hierarchy which constitutes the physical structure conflicts
+                     or overlaps with the intellectual structure of the document. The usual method of dealing with this is simply to decide which
+                     is most important for the reasons you are encoding the document and prioritize one hierarchy over another, and this is sufficient
+                     for many users. Usually, in an ordered hierarchy of content objects (OHCO) model it is the understood intellectual structure
+                     of the document that is thought to be more important than the physical structure of the work.
+                  </p>
+                  
+                  <blockquote>
+                     <p>The model in question postulates that text consists of objects of a certain sort, structured in a certain way. The nature
+                        of the objects is best suggested by example and contrast. They are chapters, sections, paragraphs, titles, extracts, equations,
+                        examples, acts, scenes, stage directions, stanzas, (verse) lines, and so on. But they are <i>not</i> things like pages, columns, (typographical) lines, font shifts, vertical spacing, horizontal spacing, and so on. The objects
+                        indicated by descriptive markup have an intrinsic direct connection with the intellectual content of the text; they are the
+                        underlying "logical" objects, components that get their identity directly from their role in carrying out and organizing communicative intention.
+                     </p>(<a href="#ss1-6-6_b19">Renear 2004</a>: 224–5)
+                  </blockquote>
+                  
+                  <p>But the assumptions made in this model are that such an intellectual structure exists separately from its physical embodiment.
+                     Others have argued against this:
+                  </p>
+                  
+                  <blockquote>
+                     <p>There is no Platonic reality of texts. There are only physical objects such as books and computers, foci of attention, and
+                        codes that entrain attention and organize material operations.
+                     </p>(<a href="#ss1-6-6_b9">Hayles, 2005</a>: 97)
+                  </blockquote>
+                  
+                  <p>However, most encoding practice finds it useful to de-prioritize the physicality of texts, even their electronic texts, and
+                     understand the primacy of an intellectual structure reflecting this Platonic ideal. In the example above, of encoding paragraphs
+                     which break over pages, the TEI uses so-called "empty" elements. Although these are restricted to attribute content only, as opposed to element content, to refer to them as empty
+                     — implying they have no content whatsoever — is theoretically dangerous. In the TEI's case these are milestone pointers which indicate where a change of state happens
+                     in the text, for example that the text runs from one page to another, but these milestones do not enclose the content of that
+                     page itself. The above example would be shown as:
+                  </p>
+                  
+                  <p><br><a name="ss1-6-6_fu2"></a><img src="9781405148641_chapter_25_fu2.gif"><br></p>
+                  
+                  <p>This, as a solution to competing hierarchies, is perfectly feasible and has had much support (Barnard 1995). The use of empty
+                     milestone-like elements to indicate the start of a phenomenon, and then later to mark its end, mimics the similar use of specialized
+                     characters in certain forms of printed editions. For example, differentiating between areas of the text written by different
+                     scribes — areas that may overlap with the intellectual structure of the text. The Records of Early English Drama project uses a small
+                     superscript circle in this manner to indicate the change of hand in its printed volumes. And, indeed, the TEI also enables
+                     this with an empty element &lt;handShift/&gt;. What is interesting about the use of this for page-breaks (as opposed to line or
+                     column breaks) is that one is marking up a break or gap in the physical media. That is, marking an absence through the use
+                     of a presence — an element in the document itself (<a href="#ss1-6-6_b25">Sartre 1943</a>: 30–6). And yet, it is just as reasonable to see such a page or folio break as a very real structure. Certainly, it can be seen
+                     to be so when one moves away from codex-based forms and look, for example, at inscribed tablets, sectioned wall decoration,
+                     and other text-bearing objects where the physical break itself may also contain data. But the physicality of an object could
+                     be described or recorded in an infinite number of ways:
+                  </p>
+                  
+                  <blockquote>
+                     <p>The physical instantiation of a text will in this sense always be indeterminate. What matters for the understanding of literature,
+                        however, is how the text creates possibilities for meaning by mobilizing certain aspects of its physicality. These will necessarily
+                        be a small subset of all possible characteristics.
+                     </p>(<a href="#ss1-6-6_b9">Hayles 2005</a>: 103)
+                  </blockquote>
+                  
+                  <p>It is this small subset of characteristics, those most common in the physical representation of source texts, which the TEI
+                     attempts to encode. In any case, the transformation of TEI-encoded documents from one hierarchy of encoding to another, as
+                     long as both have been recorded, is certainly possible, though not always easy depending on what features overlap.
+                  </p>
+                  
+                  <p>The TEI in its most recent version includes recommendations for encoding conflicting hierarchies in an expanded milestone
+                     method. There has been a great deal of discussion recently among markup experts concerning both the problems of overlapping
+                     hierarchies and solutions for them in XML and other possible options. While this is a very real problem, and concurrent hierarchies
+                     are certainly needed in some specialized applications, the majority of projects using TEI get along just fine without using
+                     complicated solutions for resolving these conflicts. Why is this? Simply, they are content to prioritize one hierarchy over the other. In most cases they have the creation of an end resource
+                     in mind, which will be easier with one of these hierarchies and simply refers to the other as an extra source of information.
+                     For example, most projects encode the intellectual structure of the document and simply record its physical manifestation
+                     as milestone references, but if their end product needs individual pages they would choose to prioritize this hierarchy instead.
+                     Relying on milestone elements does not necessarily mean that one hierarchy is inaccessible, but certainly makes it marginally
+                     less prominent than the enclosing hierarchy. There are, however, many disciplines, such as corpus and computational linguistics,
+                     where the problems of overlap for annotation cannot be so easily ignored.
+                  </p>
+                  
+                  <p>If the prioritization of one hierarchy over another is unsuitable, some of the possible methods to mark up overlapping hierarchies
+                     are noted by the TEI (See TEI NH). These include:
+                  </p>
+                  
+                  
+                  <p> <b>•</b> redundantly encoding the same information in multiple forms;
+                  </p>
+                  
+                  <p> <b>•</b> remodeling the document structure to merge the competing hierarchies into a non-TEI form;
+                  </p>
+                  
+                  <p> <b>•</b> element fragmentation and virtual re-creation of single elements into multiple parts, with each properly nested;
+                  </p>
+                  
+                  <p> <b>•</b> boundary marking of starting and ending element locations using milestones to form a non-nesting structure;
+                  </p>
+                  
+                  <p> <b>•</b> stand-off markup where the text is separated from the annotation and virtual re-creation of elements;
+                  </p>
+                  
+                  <p> <b>•</b> a number of competing non-XML solutions.
+                  </p>
+                  
+                  
+                  <p>Basic element fragmentation (where attributes then indicate the other parts of the element) is perhaps the most straightforward
+                     for encoding and processing. However, there is more theoretical interest in the use of forms of boundary marking or stand-off
+                     markup, or various non-XML solutions (such as LMNL or MECS).
+                  </p>
+                  
+                  <p>Although there is no standardized solution to this problem, that possible methods of encoding this information (where it is
+                     deemed necessary) exist is a good sign. The creation of these methods, however, has involved a great deal of theoretical debate,
+                     and indeed it is an interesting theoretical problem which raises numerous issues about how we understand text and our relationship
+                     to it. In addition, because of the popular adoption of XML as such a worldwide markup system in many different disciplines,
+                     it is a problem which will continue to affect XML use. However, that there is an interesting problem with many intriguing
+                     possible solutions should not itself detract from the use of XML, as many users will find it entirely unproblematic in prioritizing
+                     one hierarchy over another, or make use of one of the existing solutions.
+                  </p>
+                  
+                  <p>The concentration on structural encoding is understandable given that TEI markup is a form of structural descriptive markup.
+                     However, this concentration on structure could be seen to be in preference to thematic interpretation of the text itself.
+                     Although the TEI provides recommendations for encoding interpretations of a passage's meaning, importance, or other thematic
+                     analysis of a part of a text in relation to its whole, these are less frequently used compared to the basic structural information.
+                     Partly this is because some amount of structure is always necessary and the TEI has chosen a book-like infrastructure for
+                     its basic recommendations, but overall the encoding is used by many to provide a basic electronically searchable text, which
+                     they then use to assist them in their research. They use it to speed up a manual form of analysis by hard-coding the basic
+                     aspects (structure, names, dates, etc.) that they want to retrieve quickly. It is more unusual for someone to encode the interpretative
+                     understanding of passages and use the electronic version to retrieve an aggregation of these (<a href="#ss1-6-6_b10">Hockey 2000</a>: 66–84). It is unclear whether this is a problem with the TEI's methods for indicating such aspects, the utility of encoding such
+                     interpretations, or the acceptance of such methodology by those conducting research with literature in a digital form (<a href="#ss1-6-6_b9">Hayles 2005</a>: 94–6).
+                  </p>
+                  
+                  
+                  <a name="ss1-6-6_h2"></a><h2 class="normal">Textual Criticism and the Electronic Edition</h2>
+                  
+                  <p>The theoretical movements which have had a more direct influence on the development of the TEI are those which more directly
+                     involve either computational linguistics or textual (so-called "lower") criticism (<a href="#ss1-6-6_b26">Sperberg-McQueen 1994</a>). This is understandable given the nature and uses of electronic texts when the TEI was founded — long before the World Wide Web and the revolution in computing technology that accompanied it. Aggregating electronic texts
+                     to form corpora is central to computational linguistics and that the TEI caters for this with an alternative corpus structure
+                     (the &lt;teiCorpus&gt; element) and other specialized elements for linguistic analysis and metadata is unsurprising.
+                  </p>
+                  
+                  <p>The notion that text encoding can help to explicate our understanding of a document is generally attractive to various branches
+                     of textual criticism. The TEI provides a set of critical apparatus elements to record varying witnesses to any single text.
+                     The methodological assumption here is that usually there is a single text from which all these witnesses diverge. Textual
+                     criticism is often seen to have three basic parts: cladistics, eclecticism, and stemmatics (<a href="#ss1-6-6_b21">Van Reenen and Van Mulken 1996</a>). Cladistics involves the use of statistical analysis to attempt to determine which readings are more likely to be correct
+                     (<a href="#ss1-6-6_b24">Salemans 1996</a>: 3–51). Textual eclecticism consists of an editor choosing those readings as the critical text which explains with the least
+                     complexity the other extant variants. Another branch of textual criticism is that of stemmatics, where the more likely readings
+                     of a text are determined through the classification of the witnesses into groupings or "family trees" based on perceived phylogenetic relationships of the readings they contain (<a href="#ss1-6-6_b21">Robinson 1996</a>: 71–101). The TEI enables the markup of texts with the aims of facilitating such forms of textual criticism. It is implicit in
+                     the critical apparatus markup that it is intended to enable a greater understanding of the text, even if initially this is
+                     to problematize readings through avoiding settling on one reading as a preferred reading. Partly this is inherent with a move
+                     from the assumptions of print culture to that of digital textuality:
+                  </p>
+                  
+                  <blockquote>
+                     <p>It is particularly ironic or simple poetic justice — take your pick — that digital technology so calls into question the assumptions of print-associated editorial theory that it forces us to
+                        reconceive editing texts originally produced for print as well as those created within earlier information regimes.
+                     </p>(<a href="#ss1-6-6_b12">Landow 2006</a>: 104)
+                  </blockquote>
+                  
+                  <p>A consideration of the nature of textual criticism and its relationship to electronic markup, and indeed the TEI, is nothing
+                     new. At the Modern Language Association (MLA) conference in 2002, at an announcement of a volume of essays entitled "Electronic Textual Editing" John Unsworth introduced two sessions on "Electronic Textual Editing and the TEI" (<a href="#ss1-6-6_b41">Unsworth 2002</a>). In his examination not only of the need for such a volume, but the history of the TEI's interaction with textual criticism,
+                     he referred to an even more seminal presentation given at the same conference in 1994 by Michael Sperberg-McQueen examining
+                     how appropriate the recommendations of the TEI were for the production of electronic scholarly editions (<a href="#ss1-6-6_b26">Sperberg-McQueen 1994</a>). As the assumptions that he makes concerning the nature of such editions are crucial in understanding not only the assumptions
+                     behind the text-critical provision by the TEI but also the foundations of modern electronic scholarly editions, like Unsworth
+                     I quote them in full here:
+                  </p>
+                  
+                  
+                  <p> <b>1. </b> Electronic scholarly editions are worth having. And therefore it is worth thinking about the form they should take.
+                  </p>
+                  
+                  <p> <b>2. </b> Electronic scholarly editions should be accessible to the broadest audience possible. They should not require a particular
+                     type of computer, or a particular piece of software: unnecessary technical barriers to their use should be avoided.
+                  </p>
+                  
+                  <p> <b>3. </b> Electronic scholarly editions should have relatively long lives: at least as long as printed editions. They should not become
+                     technically obsolete before they are intellectually obsolete.
+                  </p>
+                  
+                  <p> <b>4. </b> Printed scholarly editions have developed their current forms in order to meet both intellectual requirements and to adapt
+                     to the characteristics of print publication. Electronic editions must meet the same intellectual needs. There is no reason
+                     to abandon traditional intellectual requirements merely because we are using a different medium to publish them.
+                  </p>
+                  
+                  <p> <b>5. </b> On the other hand, many conventions or requirements of traditional print editions reflect not the demands of readers or scholarship,
+                     but the difficulties of conveying complex information on printed pages without confusing or fatiguing the reader, or the financial
+                     exigencies of modern scholarly publishing. Such requirements need not be taken over at all, and must not be taken over thoughtlessly,
+                     into electronic editions.
+                  </p>
+                  
+                  <p> <b>6. </b> Electronic publications can, if suitably encoded and suitably supported by software, present the same text in many forms:
+                     as clear text, as diplomatic transcript of one witness or another, as critical reconstruction of an authorial text, with or
+                     without critical apparatus of variants, and with or without annotations aimed at the textual scholar, the historian, the literary
+                     scholar, the linguist, the graduate student, or the undergraduate. They can provide many more types of index than printed
+                     editions typically do. And so electronic editions can, in principle, address a larger audience than single print editions.
+                     In this respect, they may face even higher intellectual requirements than print editions, which typically need not attempt
+                     to provide annotations for such diverse readers.
+                  </p>
+                  
+                  <p> <b>7. </b> Print editions without apparatus, without documentation of editorial principles, and without decent typesetting are not acceptable
+                     substitutes for scholarly editions. Electronic editions without apparatus, without documentation of editorial principles,
+                     and without decent provision for suitable display are equally unacceptable for serious scholarly work.
+                  </p>
+                  
+                  <p> <b>8. </b> As a consequence, we must reject out of hand proposals to create electronic scholarly editions in the style of Project Gutenberg,
+                     which objects in principle to the provision of apparatus, and almost never indicates the sources, let alone the principles
+                     which have governed the transcription, of its texts.
+                  </p>
+                  
+                  <p>In sum: I believe electronic scholarly editions must meet three fundamental requirements: accessibility without needless technical
+                     barriers to use; longevity; and intellectual integrity. (<a href="#ss1-6-6_b26">Sperberg-McQueen 1994</a>)
+                  </p>
+                  
+                  
+                  <p>These three requirements, accessibility, longevity, and integrity, are the foundation of many of the intentions behind the
+                     creation of electronic scholarly editions and repositories of knowledge to disseminate them. Sadly, there are still many electronic
+                     editions produced to this day which fail to meet modern standards of accessibility: they often require a particular operating
+                     system and version of software (e.g., editions which function properly only in the Microsoft Internet Explorer web browser).
+                     This in turn jeopardizes their longevity as, being dependent on market forces for continued support, there is no guarantee
+                     that they shall continue to function in the future. This is slowly improving as funding bodies realize the need for proper
+                     accessibility and longevity from those resources produced with public money.
+                  </p>
+                  
+                  <p>The need for intellectual integrity is highlighted in several of the points above. Sperberg-McQueen reminds us that the point
+                     of producing a scholarly edition —whether electronic or otherwise — is to meet the intellectual needs of those who will be using the edition. The quality and academic credibility which one
+                     finds in reputable print editions are just as important (if not arguably more so) in an electronic edition. While certain
+                     conventions have developed in print editions solely because of the limitations of the media, we do not need to perpetuate
+                     those in our digital editions (<a href="#ss1-6-6_b10">Hockey 2000</a>: 124–45). However, a note of caution should be sounded here: although we do not need to adopt the scholarly traditions enforced
+                     by media-dependent requirements, we must be careful not to just depart from them without reflection. Instead we should be
+                     careful to build upon them to exploit the benefits of the chosen media in a manner which furthers the goals of a scholarly
+                     edition. One of the most salient points above (number 7) reminds us that just as printed editions without proper apparatus,
+                     editorial documentation, and reasonable publication should not be considered a substitute for a proper scholarly edition,
+                     neither should an electronic edition without similar equivalents.
+                  </p>
+                  
+                  <p>Sperberg-McQueen's list of assumptions is partly intended to suggest how the TEI facilitates the creation and preservation
+                     of such electronic editions. He further expands on this by suggesting the kinds of apparatus and editorial documentation that
+                     should be a basic requirement for any such edition. In doing so he lists the textual phenomena which editors of such editions
+                     have been interested in recording in printed editions. It is unsurprising that these items can all be successfully encoded
+                     in TEI markup. In addition to the elements necessary to create a multi-source critical edition, the TEI also reflects the
+                     scholarly concerns in the transcription of primary sources. The elements provided include (with the TEI element also supplied),
+                     abbreviations (&lt;abbr&gt;), expansions (&lt;expan&gt;), additions (&lt;add&gt;), deletions (&lt;del&gt;), corrections (&lt;corr&gt;), apparent errors
+                     (&lt;sic&gt;), omitted material (&lt;gap&gt;), previously deleted text restored (&lt;restore&gt;), editorially supplied text (&lt;supplied&gt;), highlighted
+                     material (&lt;hi&gt;), changes of scribal hand (&lt;handShift&gt;), damage in the source (&lt;damage&gt;), illegibility (&lt;unclear&gt;), and unexpected
+                     spaces (&lt;space&gt;) amongst others. There are of course more elements to deal with other issues, and that the TEI is an appropriate
+                     choice for the textual encoding of such material is hardly in doubt (see TEI PH).
+                  </p>
+                  
+                  <p>When it comes to transcription of primary sources, however, there is a significant new development in the TEI P5 version of
+                     the Guidelines in the removal of attributes containing textual data. There had been a misplaced notion by some that only text
+                     which was in the original should form element content proper, and that all metadata relating to that element (if outside the
+                     header) should be contained in that element as attributes. In a major move in their modification of the TEI Guidelines for
+                     their P5 version, the TEI recognized that many attributes contained text (rather than specific datatypes such as dates), and
+                     furthermore that this text might have elements inside it which an editor may wish to further mark up. One good example of
+                     this is that this text may contain non-Unicode characters which have need of the &lt;g&gt; element to record them properly. As a
+                     result the TEI made a large number of these elements into children of the elements to which they used to be attributes.
+                  </p>
+                  
+                  <p>At the same time the TEI introduced the &lt;choice&gt; element as a method to indicate a divergence of possibilities in the original
+                     text-stream at a given point. This "groups a number of alternative encodings for the same point in a text," but is a significant editorial departure from previous versions of the recommendations (see TEI CO). This allowed the simultaneous
+                     encoding of abbreviations along with their expansions, or combinations of original, corrected readings, regularized, incorrect
+                     or unclear readings. Previously one might have used so-called janus tags, which allowed one to foreground one of the two pairs
+                     of abbr/expan, orig/reg, corr/sic. So while one might have done this by prioritizing either the original:
+                  </p>
+                  
+                  <p><br><a name="ss1-6-6_fu3"></a><img src="9781405148641_chapter_25_fu3.gif"><br></p>
+                  
+                  <p>or the regularized form:</p>
+                  
+                  <p><br><a name="ss1-6-6_fu4"></a><img src="9781405148641_chapter_25_fu4.gif"><br></p>
+                  
+                  <p>in TEI P4, under TEI P5 one is allowed to indicate both of these simultaneously. And, more importantly, without necessarily
+                     judging which of these is to be preferred by an end application or user. The first line of this poem above would now be encoded
+                     as:
+                  </p>
+                  
+                  <p><br><a name="ss1-6-6_fu5"></a><img src="9781405148641_chapter_25_fu5.gif"><br></p>
+                  
+                  <p>This enables not only for the simultaneous encoding of the original and regularized version, but also the possibility of further
+                     markup of these items which would be impossible if one of them was forced to be an attribute. Moreover, a single &lt;choice&gt;
+                     could contain an abbreviation, an expansion and different forms of regularization among other possibilities. In addition,
+                     &lt;choice&gt; is self-nestable, that is, it can contain itself as a child in order to allow for choices between sets of possible
+                     alternatives.
+                  </p>
+                  
+                  <p>The use of &lt;choice&gt; should not be confused with the ability to indicate variant readings between witnesses and thus construct
+                     a scholarly critical apparatus with the &lt;app&gt; element. Although there are some similarities, in that the linear text-stream
+                     is split at this point to provide a number of alternatives, with &lt;choice&gt; these are different possible interpretations or
+                     variants of a single witness, whereas &lt;app&gt; is a more specialized encoding of a point of divergence between various witnesses.
+                     The intention with one is to provide a clearer understanding of a single text, and with the other the reconciliation of a
+                     number of witnesses to that text. That the chapter on transcription from primary sources and that on the creation of a critical
+                     apparatus follow each other in the Guidelines is no mere coincidence. Although not explicitly stated, the transcription from
+                     primary sources could be seen to encompass the foundation of "non-critical editing," which they intentionally set aside from the creation of a critical edition in stating at the outset that it "is expected that this module will also be useful in the preparation of critical editions, but the module defined here is distinct
+                     […] and may be used independently of it" (see TEI PH).
+                  </p>
+                  
+                  <p>Those examining the influence of the theoretical schools of textual editing on the TEI's methodology have noticed that this
+                     may indicate that the TEI feels this form of editing could be considered less important or interpretative than the creation
+                     of critical apparatus, and that this in turn indicates the influence of conservative textual editing theories on the TEI (<a href="#ss1-6-6_b43">Vanhoutte 2006</a>: 170). Whether this is the case or not, the use of these tags separately is certainly less powerful than when they are used
+                     in combination.
+                  </p>
+                  
+                  <p>In indicating the variant readings of different sources for a text, the TEI enables the ability to construct a full critical
+                     apparatus in a straightforward manner. In a fictitious set of manuscripts referred to as manuscripts A, B, C, D, and E, the
+                     first line of the poem used earlier could present the readings for each of these manuscripts:
+                  </p>
+                  
+                  <p><br><a name="ss1-6-6_fu6"></a><img src="9781405148641_chapter_25_fu6.gif"><br></p>
+                  
+                  <p>As the manuscripts B and C (the "wit" attribute simply points to the document's header where more information concerning these manuscripts is stored) have the
+                     same reading, these &lt;rdg&gt; tags could be merged into one, with multiple values for the wit attribute. Or indeed, since this
+                     is our preferred reading we could use the lemma (&lt;lem&gt;) element to indicate that this is the base text we are working from
+                     to create our critical edition.
+                  </p>
+                  
+                  <p><br><a name="ss1-6-6_fu7"></a><img src="9781405148641_chapter_25_fu7.gif"><br></p>
+                  
+                  <p>The benefit here is that the TEI enables an editor to foreground a particular reading as a lemma, or not. Moreover, the variant
+                     readings can be grouped for whatever theoretical reason, here suggesting possible relationships in the history of their textual
+                     transmission. This is an extremely flexible system which enables encoding according to a variety of theoretical perceptions
+                     as to the purpose and nature of a critical edition (<a href="#ss1-6-6_b2">Cover and Robinson 1995</a>). The avoidance of the suggestion of a base-text here is important because it allows a variety of user interactions with
+                     this text. Any reading based on these can be seen as only one synchronous structure that is unprivileged in comparison with
+                     any other possible reading (<a href="#ss1-6-6_b6">Gabler 1981</a>). The amount of power and flexibility inherent in a system which simultaneously encodes the textual variants along with possibility
+                     of indicating editorial treatment of these texts is what will allow for the creation of significantly more enhanced and flexible
+                     scholarly editions.
+                  </p>
+                  
+                  <p><br><a name="ss1-6-6_fu8"></a><img src="9781405148641_chapter_25_fu8.gif"><br></p>
+                  
+                  <p>One of the continual arguments in textual criticism concerns our relationship with a possible base-text and its relationship
+                     to putative copy-texts. Whether it is "the old fallacy of the 'best text"' (<a href="#ss1-6-6_b7">Greg 1950</a>: 24), the necessity of the process "being appreciated with the finished and familiar product" (<a href="#ss1-6-6_b3">Eggert 1990</a>: 21), that a study should not be constrained only to authorial changes, but also posthumous editing by publishers (<a href="#ss1-6-6_b14">McGann 1992</a>), possibly as a form of continuous production text (<a href="#ss1-6-6_b13">McGann 1991</a>: 20–1), or that developments in text encoding have coincided with a paradigm shift away from the concept of a definitive edition
+                     (<a href="#ss1-6-6_b26">Finneran 1996</a>: ix—xi), the encoding provided by the TEI enables the creation of a sophisticated textual resource which is of use to the end
+                     user. After all, this is one of the intended goals in creating a scholarly edition. As a result, some have argued that it
+                     is not a critical mass of variants that we need to display to the users, rather we should return to the practice of providing
+                     a logical edited text which rationalizes the differences, we should re-create a reading text from whatever (possibly fragmentary)
+                     witnesses remain. This in no way does away with the need for detailed text critical markup; if this is done properly, of course,
+                     a reading text can be created from a base of critical editorial decisions which should also be available for further consultation
+                     by readers if they desire:
+                  </p>
+                  
+                  <blockquote>
+                     <p>There is a theoretical purity in unedited, unreconstructed texts that is comforting to editors. But our aim as editors should
+                        not be to achieve our own comfort. It should be to make editions that will be useful to the readers: editions that will help
+                        them read. Parker's <i>Living Text of the Gospels</i> is an eloquent plea for a connection between textual criticism (treating texts as editorial problems to be solved) and cultural
+                        criticism (treating the texts as resources for our knowledge of the culture from which they came). This is a division that
+                        runs very deep in textual scholarship.
+                     </p>(<a href="#ss1-6-6_b22">Robinson 2000</a>: 13)
+                  </blockquote>
+                  
+                  <p>That this divide exists in textual scholarship is undeniable. The creation of editions which fully embody the text, both as
+                     output of editorial decisions and as variants which also act as a method of access for historical knowledge, will be useful
+                     to anyone studying that text and its time-period. The reason some editors shy away from this idea is in an attempt to preserve
+                     the perception of some mythical editorial objectivity.
+                  </p>
+                  
+                  <blockquote>
+                     <p>By highlighting the most crucial points of textual variation, and by leading the reader into an understanding of how and why
+                        this variation arose at these points, we can make this connection between variation and meaning in the most useful way. In
+                        the context of electronic editions, with all their variant texts, a single reconstructed, and eclectic text may provide the
+                        best means to do just this.
+                     </p>(<a href="#ss1-6-6_b22">Robinson 2000</a>: 13)
+                  </blockquote>
+                  
+                  <p>If we view the TEI as interested in enabling the codification of texts for the benefit of creating such textual editions,
+                     then it certainly is beneficial in creating such a reconstructed text while fully conscious that this is not the "original" text but a reading edition for the benefit of the user of the resource. However, increasingly there is not necessarily a
+                     non-digital source text from which the resource has been digitized, but the text is a modern born-digital text which may still
+                     be subject to many of the textual phenomena that the TEI enables editors to encode. Likewise, TEI-encoded texts should not
+                     necessarily be viewed as static, for there is the possibility that the text may undergo not only successive revisions but
+                     annotations and comments by readers, all of which could be displayed as a single evolving resource. One possible model for
+                     this was proposed as an ongoing collaborative "work-site":
+                  </p>
+                  
+                  <blockquote>
+                     <p>The work-site is text-construction site for the editor and expert reader; and it is the site of study of the work (of its
+                        finished textual versions and their annotation) for the first-time reader, as well as any position in between. Because the
+                        building of such textual and interpretative work-sites will be piece by piece, collaborative and ongoing, we are starting
+                        to look at a future for humanities, work-oriented research that is, if not scientific exactly, then more <i>wissenschaftlich</i>, in the German sense, than what literary critics, historians, and others are used to.
+                     </p>(<a href="#ss1-6-6_b4">Eggert 2005</a>: 433)
+                  </blockquote>
+                  
+                  <p>Such as system would be dependent on stand-off markup to provide the annotations and alternative readings on any aspect of
+                     the text (or indeed the ongoing annotations). It would certainly possible to encode the texts and annotations produced in
+                     the study of digital literature as TEI, and indeed given the provision for stand-off markup in the TEI Guidelines, the TEI
+                     would be a good choice for such an application.
+                  </p>
+                  
+                  
+                  <a name="ss1-6-6_h3"></a><h2 class="normal">Customization: Fragmentation or Consolidation?</h2>
+                  
+                  <p>The increasing popularity of the TEI as a system for text encoding in humanities projects does bring with it certain problematic
+                     aspects. Since the TEI is conceived as a generalized system, it contains much more than any individual project will ever need
+                     to accomplish its goals. It is not that the TEI seeks to become monolithic, having an encoding recommendation for all possibilities
+                     — that is naturally impossible — but it intends to be customized and modified. Indeed, it is expected that, especially in creation of a local encoding format,
+                     individual projects will remove elements, constrain attribute value lists, add new elements, and even import schemas from
+                     other namespaces. And yet, this aspect of the TEI has often been ignored or misunderstood. John Unsworth, in comparing the
+                     MLA's Committee on Scholarly Editing (CSE) and the TEI, noted that one of the central missions of the TEI is to cope with
+                     the differing needs of scholars:
+                  </p>
+                  
+                  <blockquote>
+                     <p>While it would be foolish to assert that the CSE and the TEI are without critics, sceptics, and detractors, they do in fact
+                        represent a broad, community-based consensus, and they are, in their respective arenas, the only credible institutions attempting
+                        to develop, disseminate and maintain general (rather than project-specific) guidelines. Both organizations have been accused,
+                        at various points in the past, of promoting a monologic orthodoxy, but in fact each organization has devoted significant time
+                        and effort to accommodating difference — the CSE in the evolution of its guidelines over the last decade to accommodate a greater variety of editorial methods and
+                        a broader range of materials and periods, as well as editions in electronic media, and the TEI, most importantly, in its extension
+                        mechanism, as well in its consistent insistence, over its fifteen-year history, on international and interdisciplinary representation
+                        in its governing bodies, its workgroups, its funding sources, and its membership.
+                     </p>(<a href="#ss1-6-6_b41">Unsworth 2002</a>)
+                  </blockquote>
+                  
+                  <p>Indeed, the extension and customization of the TEI is listed earlier in this chapter as one of its original design goals.
+                     In promoting the need for individual customization of the TEI, they have created examples of such customization (see TEI Custom).
+                     It is in some ways unfortunate that one of these, so-called TEI-Lite, has been adopted wholesale by many projects who do not
+                     need the entirety of the TEI Guidelines, and which instead simply adopt this subset of the TEI (see TEI Lite). While this
+                     is very useful for large-scale projects which need a basic light encoding, it is equally unfortunate, because the intellectual
+                     integrity which Sperberg-McQueen hoped for in the creation of electronic editions (<a href="#ss1-6-6_b26">Sperberg-McQueen 1994</a>) benefits greatly from the constraint of a schema to just the needs of the project. The advantages of customizing the TEI
+                     for the needs of the project in question is that greater consistency and less human error find their way into the resulting
+                     files.
+                  </p>
+                  
+                  <p>The method by which the TEI allows the customization of the overall TEI schema is through the use of a specialized form of
+                     TEI document referred to as a TEI ODD, "One Document Does (it all)." ODD uses TEI descriptive markup to produce a file which can then be used as a base to generate not only a schema to validate
+                     document instances (in RelaxNG compact or XML format, W3C Schema, or DTD language), but a variety of accompanying subset of
+                     the descriptive documentation concerning the elements it describes. The TEI Guidelines themselves are written in this TEI
+                     ODD XML format, and this generates the overall TEI schemas, the prose of the Guidelines themselves, as well as the element
+                     references available. This would be an extremely beneficial format for any project to use in producing a set of local encoding
+                     Guidelines based on the TEI. An additional benefit is that the documentation produced reflects any changes of name, added
+                     or deleted elements, or changes of content model. More information concerning ODD is available as part of the Guidelines in
+                     the chapter on "Documentation Elements" (see TEI TD).
+                  </p>
+                  
+                  <p>One can either write these documents directly in XML (the TEI provides a number of example customizations (see TEI Custom)),
+                     or use the web front-end to Roma, the TEI's ODD processor (see TEI Roma). Roma provides a user-friendly method of selecting
+                     modules, adding, removing, or customizing the elements they contain, and producing schemas and the accompanying documentation.
+                     In addition, this front-end allows you to save the TEI ODD file you have created for further modification at a later date.
+                  </p>
+                  
+                  <p>Although customization and extension of the TEI are a necessary reality because the needs of the community they serve is so
+                     vast and disparate, it does bring with it some theoretical complications. The very first of the Poughkeepsie Principles, never
+                     mind the use of the word in the Guidelines' full title, indicates that the TEI as an interchange format is one of the prime
+                     goals for its existence. And yet, the continual divergence from the TEI through customization and modification of the schema
+                     inherently problematizes this. If one makes very minor changes to the TEI through limiting the elements which are available,
+                     or providing a fixed list of attribute values, then there are no implications for the interchange of a document encoded according
+                     to this schema. It will validate against the tei_all schema which contains all available TEI elements. Even if some of the
+                     elements or attributes are renamed, but follow the recommended methods to do so and provide TEI equivalences for them, then
+                     the document is still suitable for interchange because there is a documented method of returning it to a state where it would
+                     validate against tei_all. However, once new elements with no TEI equivalences are added, the content model of elements is
+                     significantly changed, or elements are imported from another XML namespace, then the document instance which validates against
+                     this schema will not necessarily be able to be transformed into a document which could validate against the tei_all schema.
+                     Thus, these kinds of changes — although encouraged and considered TEI documents — must necessarily be viewed as significantly different from those which leave a pure subset of the TEI.
+                  </p>
+                  
+                  <p>The importance of this point is reflected in the fear that instead of encouraging community and interoperability, the ease
+                     of customization that the TEI now allows may in fact result in greater divergence and fragmentation of the document instances
+                     created by projects using the TEI. If, however, we accept that it is a necessarily evil for projects to customize their schemas,
+                     then this is not as problematic as it first appears. Although the customization will result in document instances that are
+                     not directly interoperable, they retain the benefit of having diverged from a common source. At least the documents will have
+                     some relationship to the TEI as a standard encoding format. Moreover, if they have followed the instructions on creating conformant
+                     customizations given in the Guidelines, then the accompanying TEI ODD file will provide an electronic record of exactly how
+                     the new schema differs from standard TEI. If customization is a necessary evil, then the recording of the details of a customization
+                     in a standardized format is the best one can hope for, and even if this causes problems for interchange, it still has appreciable
+                     benefits for long-term preservation. Whether this will result in a greater fragmentation of the compatibility of TEI documents,
+                     or a consolidation around specific customizations, will be seen with time.
+                  </p>
+                  
+                  <p>While there is no reason necessarily to customize the TEI if one of the publicly available schemas will suffice for the needs
+                     of the project, the temptation to customize, and in particular extend the TEI is difficult to resist. When presented with
+                     an encoding problem it is far easier to simply add a new element to deal with the problem than it is to undertake the proper
+                     document analysis and see if there is an applicable existing solution. For those less familiar with the TEI Guidelines, this
+                     temptation for unbridled customization can be overwhelming, yet should be avoided if possible.
+                  </p>
+                  
+                  
+                  <a name="ss1-6-6_h4"></a><h2 class="normal">Conclusions</h2>
+                  
+                  <p>The TEI provides a substantial framework upon which scholars and editors can undertake the study of literature through digital
+                     means. It is inevitable that more digital editions will continue to be produced, and that the TEI has a role in assisting
+                     these to be accessible and interoperable. It is, however, a duty of those creating them to ensure their intellectual integrity.
+                     If the study of literature is increasingly to become digital then we have an academic duty to ensure as much as possible that
+                     this is based on truly scholarly electronic editions which not only uphold the quality and reliability expected from such
+                     editions, but simultaneously capitalize upon the advantages that publication in a more flexible media affords:
+                  </p>
+                  
+                  <blockquote>
+                     <p>It follows then that all major series of scholarly editions, including those now published by the major academic presses,
+                        also will become digital. There will be exceptions: there always will be a place for a printed "reader's edition" or similar. But we should expect that for most of the purposes for which we now use editions, the editions we use will be
+                        electronic. We should do this not just to keep up with the rest of the world, but because indeed electronic editions make
+                        possible kinds of reading and research never before available and offer valuable insights into and approaches to the texts
+                        they cover.
+                     </p>(<a href="#ss1-6-6_b23">Robinson 2005</a>)
+                  </blockquote>
+                  
+                  <p>We are not yet at the point where the creation of digital editions is either unproblematic or fully exploits the benefits
+                     of the media in which they are published. We still need to encourage funding bodies to produce better tools to enable the
+                     digital study of literature, as the TEI foresaw in point 8 of the Poughkeepsie Principles (see TEI EDP01). This period of
+                     digital incunabula will eventually pass, and the efforts of organizations like the TEI are laudable in attempting to produce
+                     a standard base on top of which increasingly sophisticated software, publication frameworks, and virtual research environments
+                     designed specifically for the study of literature can be, and hopefully will soon be, created.
+                  </p>
+                  
+                  
+                  <a name="ss1-6-6_h5"></a><h2 class="normal">Note</h2>
+                  
+                  <p> <b>1 </b> For example: the Oxford Text Archive &lt;<a href="http://www.ota.ox.ac.uk/">http://www.ota.ox.ac.uk/</a>&gt;, the Electronic Text Center at University of Virginia &lt;<a href="http://etext.lib.virginia.edu/">http://etext.lib.virginia.edu/</a>&gt;, and the United Kingdom's Arts and Humanities Data Service &lt;<a href="http://www.ahds.ac.uk/">http://www.ahds.ac.uk/</a>&gt;.
+                  </p>
+                  
+                  
+                  
+                  
+                  <a name="ss1-6-6_h6"></a><h2 class="normal">References and Further Reading</h2>
+                  <a name="ss1-6-6_b1"></a><p class="hang">Barnard, David, Lou Burnard, Jean-Pierre Gas-part, et al. (1995). "<i><span class="title">Hierarchical Encoding of Text: Technical Problems and SGML Solutions.</span></i>" In Nancy Ide and Jean Véronis (Eds.). <i><span class="title">Text Encoding Initiative: Background and Context</span></i>. Dordrecht: Kluwer Academic Publishers.Repr. from (1995) <i>Computers and the Humanities</i> 29: 211–231.
+                  </p>
+                  <a name="ss1-6-6_b2"></a><p class="hang">Cover, Robin, and Robinson, Peter M. W. (1995). "<i><span class="title">Encoding Textual Criticism.</span></i>" In Nancy Ide and Jean Véronis (Eds.). <i><span class="title">Text Encoding Initiative: Background and Context</span></i>. Dordrecht: Kluwer Academic Publishers.<i><span class="title">Repr. from (1995) <i>Computers and the Humanities</i> 29: 123–36</span></i>.
+                  </p>
+                  <a name="ss1-6-6_b3"></a><p class="hang">Eggert, Paul (1990) "<i><span class="title">Textual Product or Textual Process: Procedures and Assumptions of Critical Editing.</span></i>" In P. Eggert (Ed.). <i><span class="title">Editing in Australia</span></i>. Canberra: University College ADFA, pp. 19–40. 
+                  </p>
+                  <a name="ss1-6-6_b4"></a><p class="hang">Eggert, Paul (2005). "<i><span class="title">Text-encoding, Theories of the Text and the 'Work-site.'</span></i>" <i><span class="title">Literary and Linguistic Computing</span></i> 20.4: 425–35.
+                  </p>
+                  <a name="ss1-6-6_b5"></a><p class="hang">Finneran, R. J. (Ed.) (1996). <i><span class="title">The Literary Text in the Digital Age</span></i>. Editorial Theory and Literary Criticism. Ann Arbor: University of Michigan Press.
+                  </p>
+                  <a name="ss1-6-6_b6"></a><p class="hang">Gabler, H. W. (1981). "<i><span class="title">The Synchrony and Diachrony of Texts: Practice and Theory of the Critical Edition of James Joyce's <i>Ulysses</i>.</span></i>" <i><span class="title">TEXT</span></i> 1: 305–26.
+                  </p>
+                  <a name="ss1-6-6_b7"></a><p class="hang">Greg, W. W. (1950–1). "<i><span class="title">The Rationale of Copy-text.</span></i>" <i><span class="title">Studies in Bibliography</span></i> 3: 19–37.
+                  </p>
+                  <a name="ss1-6-6_b8"></a><p class="hang">Hayles, N. Katherine. (2002). <i><span class="title">Writing Machines</span></i>. Cambridge. MA: MIT Press.
+                  </p>
+                  <a name="ss1-6-6_b9"></a><p class="hang">Hayles, N. Katherine. (2005). <i><span class="title">My Mother Was a Computer: Digital Subjects and Literary Texts</span></i>. Chicago: University of Chicago Press.
+                  </p>
+                  <a name="ss1-6-6_b10"></a><p class="hang">Hockey, Susan (2000). <i><span class="title">Electronic Texts in the Humanities: Principles and Practices</span></i>. Oxford: Oxford University Press.
+                  </p>
+                  <a name="ss1-6-6_b11"></a><p class="hang">Ide, Nancy, and C. M. Sperberg-McQueen (1995). "<i><span class="title">The Text Encoding Initiative: Its History, Goals, and Future Development.</span></i>" In Nancy Ide and Jean Véronis (Eds.). <i><span class="title">Text Encoding Initiative: Background and Context</span></i>. Dordrecht: Kluwer Academic Publishers.<i><span class="title">Repr. from (1995) <i>Computers and the Humanities</i> 29: 5–15.</span></i></p>
+                  <a name="ss1-6-6_b12"></a><p class="hang">Landow, George P. (2006). <i><span class="title">Hypertext 3.0: Critical Theory and New Media in an Era of Globalization</span></i>, 3rd edn. Baltimore: John Hopkins University Press.
+                  </p>
+                  <a name="ss1-6-6_b13"></a><p class="hang">McGann, J. J. (1991). <i><span class="title">The Textual Condition</span></i>. Princeton: Princeton University Press.
+                  </p>
+                  <a name="ss1-6-6_b14"></a><p class="hang">McGann, J. J. (1992). <i><span class="title">Critique of Modern Textual Criticism</span></i>. Chicago: University of Chicago Press. Repr. (1992). Charlottesville, VA: University Press of Virginia
+                  </p>
+                  <a name="ss1-6-6_b15"></a><p class="hang">McGann, J. J. (1996). <i><span class="title">The rationale of hypertext</span></i>. &lt;<a href="http://www.iath.virginia.edu/public/jjm2f/rationale.html">http://www.iath.virginia.edu/public/jjm2f/rationale.html</a>&gt;; repr. TEXT 9: 11–32;. repr. (1997) Electronic Text: Investigations in Method and Theory (Kathryn Sutherland, Ed.). Oxford: Clarendon Press,
+                     pp. 19–46; repr. (2001). Radiant Textuality: Literature after the World Wide Web. New York: Palgrave, pp. 53–74.
+                  </p>
+                  <a name="ss1-6-6_b16"></a><p class="hang">McGann, J. J. (2001). <i><span class="title">Radiant Textuality: Literature after the World Wide Web</span></i>. New York: Palgrave.
+                  </p>
+                  <a name="ss1-6-6_b17"></a><p class="hang">McGann, J. J. (2004). "<i><span class="title">Marking Texts of Many Dimensions.</span></i>" In Susan Schreibman, Ray Siemens, and John Unsworth (Eds.). <i><span class="title">A Companion to Digital Humanities</span></i>. Oxford: Blackwell Publishing, pp. 98–217. 
+                  </p>
+                  <a name="ss1-6-6_b18"></a><p class="hang">Renear A. (1999). Paper abstract for panel participation on: "What is text? A debate on the philosophical and epistemological nature of text in the light of humanities computing research" at the conference of the Association of Computing in the Humanities/Association of Literary and Linguistic Computing.</p>
+                  <a name="ss1-6-6_b19"></a><p class="hang">Renear A. (2004). "<i><span class="title">Text Encoding.</span></i>" In Susan Schreib-man, Ray Siemans and John Unsworth (Eds.). <i><span class="title">A Companion to Digital Humanities</span></i>. Oxford: Blackwell Publishing, pp. 218–39. 
+                  </p>
+                  <a name="ss1-6-6_b20"></a><p class="hang">Renear A., E. Mylonas, and D. Durand (1993). <i><span class="title">Refining our Notion of What Text Really Is: The Problem of Overlapping Hierarchies</span></i>. &lt;<a href="http://www.stg.brown.edu/resources/stg/monographs/ohco.html">http://www.stg.brown.edu/resources/stg/monographs/ohco.html</a>&gt;. Accessed August 1, 2006.
+                  </p>
+                  <a name="ss1-6-6_b21"></a><p class="hang">Robinson, Peter M. W. (1996). "<i><span class="title">Computer-Assisted Stemmatic Analysis and 'Best-Text' Historical Editing.</span></i>" In Pieter Van Reenen and Margot van Mulken (Eds). <i><span class="title">Studies in Stemmatology</span></i>. Amsterdam: John Benjamins, pp. 71–104. 
+                  </p>
+                  <a name="ss1-6-6_b22"></a><p class="hang">Robinson, P. (2000). "<i><span class="title">The One and the Many Text.</span></i>" <i><span class="title">Literary and Linguistic Computing</span></i> 15.1: 5–14.
+                  </p>
+                  <a name="ss1-6-6_b23"></a><p class="hang">Robinson, P. (2005). "<i><span class="title">Current Issues in Making Digital Editions of Medieval Texts – or, Do Electronic Scholarly Editions Have a Future?</span></i>" <i><span class="title">Digital Medievalist</span></i> 1:1. &lt;<a href="http://www.digitalmedievalist.org/article.cfm?RecID=6">http://www.digitalmedievalist.org/article.cfm?RecID 6</a>&gt;. Accessed August 1, 2006.
+                  </p>
+                  <a name="ss1-6-6_b24"></a><p class="hang">Salemans, Ben J. P. (1996). "<i><span class="title">Cladistics or the Resurrection of the Method of Lachmann.</span></i>" In Pieter Van Reenen and Margot van Mulken (Eds.). <i><span class="title">Studies in Stemmatology</span></i>. Amsterdam: John Benjamins, pp. 3–70. 
+                  </p>
+                  <a name="ss1-6-6_b25"></a><p class="hang">Sartre, J-P. (1943). <i><span class="title">Being and Nothingness: an Essay on Phenomenological Ontology (</span></i>H. E. Barnes, Trans.1956. NY: Philosophical Library..
+                  </p>
+                  <a name="ss1-6-6_b26"></a><p class="hang">Sperberg-McQueen, C. M. (1994). <i><span class="title">Textual Criticism and the Text Encoding Initiative. Annual Convention of the Modern Language Association</span></i>. &lt;<a href="http://www.tei-c.org/Vault/XX/mla94.html">http://www.tei-c.org/Vault/XX/mla94.html</a>&gt;. Accessed August 1, 2006.Repr. in Finneran, R. J. (Ed.) (1996) <i>The Literary Text in the Digital Age</i>. Editorial Theory and Literary Criticism. Ann Arbor: University of Michigan Press, pp. 37–62.
+                  </p>
+                  <a name="ss1-6-6_b27"></a><p class="hang">TEI CC. "<i><span class="title">Language Corpora.</span></i>" In C. M. Sperberg-McQueen and L. Burnard (Eds.). <i><span class="title">TEI P5: Guidelines for Electronic Text Encoding and Interchange</span></i>. Oxford: Text Encoding Initiative Consortium. &lt;<a href="http://www.tei-c.org/P5/Guidelines/CC.html">http://www.tei-c.org/P5/Guidelines/CC.html</a>&gt;. Accessed August 1, 2006.
+                  </p>
+                  <a name="ss1-6-6_b28"></a><p class="hang">TEI CO. "<i><span class="title">Elements Available in All TEI Documents.</span></i>" In C. M. Sperberg-McQueen and L. Burnard (Eds.). <i><span class="title">TEI P5: Guidelines for Electronic Text Encoding and Interchange</span></i>. Oxford: Text Encoding Initiative Consortium. &lt;<a href="http://www.tei-c.org/P5/Guidelines/CO.html">http://www.tei-c.org/P5/Guidelines/CO.html</a>&gt;. Accessed August 1, 2006.
+                  </p>
+                  <a name="ss1-6-6_b29"></a><p class="hang">TEI Custom. <i><span class="title">TEI Example Customizations</span></i>. &lt;<a href="http://www.tei-c.org/release/xml/tei/custom">http://www.tei-c.org/release/xml/tei/custom</a>&gt;. Accessed August 1, 2006.
+                  </p>
+                  <a name="ss1-6-6_b30"></a><p class="hang">TEI EDP01. <i><span class="title">New Draft of Design Principles</span></i>. &lt;<a href="http://www.tei-c.org/Vault/ED/edp01.gml">http://www.tei-c.org/Vault/ED/edp01.gml</a>&gt;. Accessed August 1, 2006.
+                  </p>
+                  <a name="ss1-6-6_b31"></a><p class="hang">TEI Guidelines. (2005). C. M. Sperberg-McQueen and L. Burnard (Eds.). <i><span class="title">TEI P5: Guidelines for Electronic Text Encoding and Interchange</span></i>. Oxford: Text Encoding Initiative Consortium. &lt;<a href="http://www.tei-c.org/P5">http://www.tei-c.org/P5</a>&gt;. Accessed August 1, 2006.
+                  </p>
+                  <a name="ss1-6-6_b32"></a><p class="hang">TEI NH.. "<i><span class="title">Multiple Hierarchies.</span></i>" In C. M. Sperberg-McQueen and L. Burnard (Eds.). <i><span class="title">TEI P5: Guidelines for Electronic Text Encoding and Interchange</span></i>. Oxford: Text Encoding Initiative Consortium. &lt;<a href="http://www.tei-c.org/P5/Guidelines/USE.html#NH">http://www.tei-c.org/P5/Guidelines/USE.html#NH</a>&gt;. Accessed August 1, 2006.
+                  </p>
+                  <a name="ss1-6-6_b33"></a><p class="hang">TEI PH.. "<i><span class="title">Transcription of Primary Sources.</span></i>" In C. M. Sperberg-McQueen and L. Burnard (Eds.). <i><span class="title">TEI P5: Guidelines for Electronic Text Encoding and Interchange</span></i>. Oxford: Text Encoding Initiative Consortium. &lt;<a href="http://www.tei-c.org/P5/Guidelines/PH.html">http://www.tei-c.org/P5/Guidelines/PH.html</a>&gt;. Accessed August 1, 2006.
+                  </p>
+                  <a name="ss1-6-6_b34"></a><p class="hang">TEI Projects. <i><span class="title">Projects using the TEI</span></i>. &lt;<a href="http://www.tei-c.org/Applications/">http://www.tei-c.org/Applications/</a>&gt;. Accessed August 1, 2006.
+                  </p>
+                  <a name="ss1-6-6_b35"></a><p class="hang">TEI Roma. <i><span class="title">Roma: Generating Validators for the TEI (A. Mittlebach and S. P. Q. Rahtz, Creators and Maintainers)</span></i>. &lt;<a href="http://www.tei-c.org/Roma/">http://www.tei-c.org/Roma/</a>&gt;. Accessed August 1, 2006.
+                  </p>
+                  <a name="ss1-6-6_b36"></a><p class="hang">TEI SG. "<i><span class="title">A Gentle Introduction to XML.</span></i>" In C. M. Sperberg-McQueen and L. Burnard (Eds.). <i><span class="title">TEI P5: Guidelines for Electronic Text Encoding and Interchange</span></i>. Oxford: Text Encoding Initiative Consortium. &lt;<a href="http://www.tei-c.org/P5/Guidelines/SG.html">http://www.tei-c.org/P5/Guidelines/SG.html</a>&gt;. Accessed August 1, 2006.
+                  </p>
+                  <a name="ss1-6-6_b37"></a><p class="hang">TEI Stylesheets.. <i><span class="title">XSL Stylesheets for TEI XML (S. P. Q. Rahtz, Maintainer)</span></i>. &lt;<a href="http://www.tei-c.org/Stylesheets/teic/">http://www.tei-c.org/Stylesheets/teic/</a>&gt;. Accessed August 1, 2006.
+                  </p>
+                  <a name="ss1-6-6_b38"></a><p class="hang">TEI TC.. "<i><span class="title">Critical Apparatus.</span></i>" In C. M. Sperberg-McQueen and L. Burnard (Eds.). <i><span class="title">TEI P5: Guidelines for Electronic Text Encoding and Interchange</span></i>. Oxford: Text Encoding Initiative Consortium. &lt;<a href="http://www.tei-c.org/P5/Guidelines/TC.html">http://www.tei-c.org/P5/Guidelines/TC.html</a>&gt;. Accessed August 1, 2006.
+                  </p>
+                  <a name="ss1-6-6_b39"></a><p class="hang">TEI TD.. "<i><span class="title">Documentation Elements.</span></i>" In C. M. Sperberg-McQueen and L. Burnard (Eds.). <i><span class="title">TEI P5: Guidelines for Electronic Text Encoding and Interchange</span></i>. Oxford: Text Encoding Initiative Consortium. &lt;<a href="http://www.tei-c.org/P5/Guidelines/TD.html">http://www.tei-c.org/P5/Guidelines/TD.html</a>&gt;. Accessed August 1, 2006.
+                  </p>
+                  <a name="ss1-6-6_b40"></a><p class="hang">TEI Website.. <i><span class="title">TEI: Yesterday's Information Tomorrow</span></i>. &lt;<a href="http://www.tei-c.org/">http://www.tei-c.org/</a>&gt;. Accessed August 1, 2006.
+                  </p>
+                  <a name="ss1-6-6_b41"></a><p class="hang">Unsworth, J. (2002). <i><span class="title">Electronic Textual Editing and the TEI. Annual Convention of the Modern Language Association</span></i>. &lt;<a href="http://www3.isrl.uiuc.edu/-unsworth/mla-cse.2002.html">http://www3.isrl.uiuc.edu/-unsworth/mla-cse.2002.html</a>&gt;. Accessed August 1, 2006.
+                  </p>
+                  <a name="ss1-6-6_b42"></a><p class="hang">Unsworth, J., K. O'Keefe, and L. Burnard (Eds.) (2006). <i><span class="title">Electronic Textual Editing</span></i>. New York: Modern Language Association of America.
+                  </p>
+                  <a name="ss1-6-6_b43"></a><p class="hang">Vanhoutte, E. (2006). "<i><span class="title">Prose Fiction and Modern Manuscripts: Limitations and Possibilities of Text-encoding for Electronic Editions.</span></i>" In J. Unsworth, K. O'Keefe, and L. Burnard (Eds.). <i><span class="title">Electronic Textual Editing</span></i>. New York: Modern Language Association of America, pp. 161–80. 
+                  </p>
+                  <a name="ss1-6-6_b44"></a><p class="hang">Van Reenen, Pieter, and Margot van Mulken (Eds) (1996). <i><span class="title">Studies in Stemmatology</span></i>. Amsterdam: John Benjamins, pp. 3–70. 
+                  </p>
+                  
+                  
+                  
+               </div>
+            
