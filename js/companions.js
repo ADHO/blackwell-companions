@@ -2,13 +2,14 @@ const loadPage = (filePath, targetElem = document.querySelector("main")) => {
   return fetch(filePath).then((file) =>
     file.text().then((textContent) => {
       // update relative image paths before appending to the DOM
-      const contentElem = document.createElement("div");
+      const contentElem = document.createElement("template");
       contentElem.innerHTML = textContent;
-      for (let img of contentElem.querySelectorAll(".content img")) {
+      const contentFrag = contentElem.content;
+      for (let img of contentFrag.querySelectorAll(".content img")) {
         img.src = `content/${img.getAttribute("src")}`;
       }
       targetElem.innerHTML = "";
-      targetElem.appendChild(contentElem);
+      targetElem.appendChild(contentFrag);
     }),
   );
 };
