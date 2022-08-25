@@ -29,7 +29,7 @@ header {
 
   display: grid;
   align-items: center;
-  grid-template-columns: 65px auto 220px;
+  grid-template-columns: 75px auto 220px;
   grid-template-rows: 40px 30px;
   grid-template-areas:
     "img title bw"
@@ -37,6 +37,7 @@ header {
 
   > img {
     grid-area: img;
+    border-radius: 15px;
   }
 
   h1 {
