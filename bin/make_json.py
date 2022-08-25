@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
-""" Module Description """
+""" Super-crude script to extract the text from HTML files and output
+    it in JSON format where the keys are the HTML filenames. """
 
 import argparse
 import json
