@@ -2,7 +2,7 @@ let idx;
 let results;
 
 // Load the pre-built index
-const getIndex = fetch("data/idx.json")
+const getIndex = fetch("./idx.json")
   .then((response) => response.json())
   .then((json) => (idx = lunr.Index.load(json)));
 
@@ -55,7 +55,7 @@ const markupArticle = (result) => {
 
 const clearSearchResults = () => {
   document.getElementById("match-counts").innerHTML = "";
-  [...document.querySelectorAll(`nav a[href^="DH_html/"]`)].forEach((link) => {
+  [...document.querySelectorAll(`nav a[href^="content/"]`)].forEach((link) => {
     link.closest("tr").firstElementChild.innerHTML = "";
   });
   unMarkupArticle();
@@ -69,7 +69,7 @@ const doSearch = (/* event */) => {
   let totalHitCount = 0;
   results.forEach((result) => {
     if (
-      `DH_html/${result.ref}` ==
+      `content/${result.ref}` ==
       document.querySelector("main").getAttribute("data-current-chapter")
     ) {
       markupArticle(result);
@@ -80,7 +80,7 @@ const doSearch = (/* event */) => {
       0,
     );
 
-    const link = document.querySelector(`nav a[href="DH_html/${result.ref}"]`);
+    const link = document.querySelector(`nav a[href="content/${result.ref}"]`);
     link.closest(
       "tr",
     ).firstElementChild.innerHTML = `<span class="hit-count">${hitCount}</span>`;
@@ -101,7 +101,7 @@ document.querySelector("#search").addEventListener("keypress", (event) => {
 window.addEventListener("articleLoaded", ({ detail: chapter_href }) => {
   if (!results) return;
   const result = results.find(
-    (result) => `DH_html/${result.ref}` == chapter_href,
+    (result) => `content/${result.ref}` == chapter_href,
   );
   if (result) markupArticle(result);
 });

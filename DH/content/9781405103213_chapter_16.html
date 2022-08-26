@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<div class="content">
+                  <h2 class="normal">16. 
+                     <h2 class="normal">Marking Texts of Many Dimensions</h2>
+                  </h2>
+                  <span style="font-weight:bold;">Jerome McGann</span>
+                  
+                  <a name="_h38"></a><a name="_h39"></a>
+                  
+                  
+                  
+                  
+                  <blockquote>
+                     <p>Bring out number weight &amp; measure in a year of death</p>
+                     William Blake
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>A sign is something by knowing which we know something more.</p>
+                     C. S. Peirce
+                  </blockquote>
+                  
+                  
+                  <a name="ss1-3-4_h0"></a><h2 class="normal">Introduction: What is Text?</h2>
+                  
+                  <p>Although "text" has been a "Keyword" in clerical and even popular discourse for more than fifty years, it did not find a place in Raymond Williams's important
+                     (1976) book <i>Keywords.</i> This strange omission may perhaps be explained by the word's cultural ubiquity and power. In that lexicon of modernity Williams
+                     called the "Vocabulary of Culture and Society", "text" has been the "one word to rule them all." Indeed, the word "text" became so shape-shifting and meaning-malleable that we should probably label it with Tolkien's full rubrication: "text" has been, and still is, the "one word to rule them all and in the darkness bind them."
+                  </p>
+                  
+                  <p>We want to keep in mind that general context when we address the issues of digitized texts, text markup, and electronic editing,
+                     which are our specialized concerns here. As we lay foundations for translating our inherited archive of cultural materials,
+                     including vast corpora of paper-based materials, into digital depositories and forms, we are called to a clarity of thought
+                     about textuality that most people, even most scholars, rarely undertake.
+                  </p>
+                  
+                  <p>Consider the phrase "marked text", for instance. How many recognize it as a redundancy? All text is marked text, as you may see by reflecting on the very text you are now reading. As you follow this conceptual
+                     exposition, watch the physical embodiments that shape the ideas and the process of thought. Do you see the typeface, do you
+                     recognize it? Does it <i>mean</i> anything to you, and if not, why not? Now scan away (as you keep reading) and take a quick measure of the general page layout: the font sizes, the characters per
+                     line, the lines per page, the leading, the headers, footers, margins. And there is so much more to be seen, registered, understood
+                     simply at the documentary level of your reading: paper, ink, book design, or the markup that controls not the documentary
+                     status of the text but its linguistic status. What would you be seeing and reading if I were addressing you in Chinese, Arabic,
+                     Hebrew – even Spanish or German? What would you be seeing and reading if this text had been printed, like Shakespeare's sonnets, in 1609?
+                  </p>
+                  
+                  <p>We all know the ideal reader of these kinds of traditional documents. She is an actual person, like the texts this person
+                     reads and studies. He writes about her readings and studies under different names, including Randall McLeod, Randy Clod, Random
+                     Cloud, etc. She is the Dupin of the textual mysteries of our exquisite and sophisticated bibliographical age.
+                  </p>
+                  
+                  <p>Most important to realize, for this book's present purposes, is that digital markup schemes do not easily – perhaps do not even <i>naturally -</i> map to the markup that pervades paper-based texts. Certainly this is the case for every kind of electronic markup currently
+                     in use: from simple ASCII, to any inline SGML derivative, to the recent approaches of standoff markup (see Berrie website;
+                     <a href="#ss1-3-4_b38">Thompson and McKelvie 1997</a>). The symptoms of this discrepancy are exemplified in the AI (Artificial Intelligence) community's struggles to simulate
+                     the complex processes of natural language and communicative exchange. Stymied of success in achieving that goal, these efforts
+                     have nonetheless been singularly fruitful for giving us a clearer view of the richness and flexibility of traditional textual
+                     machineries.
+                  </p>
+                  
+                  <p>How, then, are traditional texts marked? If we could give an exhaustive answer to that question we would be able to simulate them in digital forms. We cannot complete
+                     an answer for two related reasons: first, the answer would have to be framed from within the discourse field of textuality
+                     itself; and second, that framework is dynamic, a continually emerging function of its own operations, including its explicitly
+                     self-reflexive operations. This is not to say that markup and theories of markup must be "subjective." (It is also not to say – see below – that they must <i>not be</i> subjective.) It <i>is</i> to say that they are and must be social, historical, and dialectical, and that some forms have greater range and power than
+                     others, and that some are useful exactly because they seek to limit and restrict their range for certain special purposes.
+                  </p>
+                  
+                  
+                  <a name="ss1-3-4_h1"></a><h2 class="normal">Autopoietic Systems and Co-dependency</h2>
+                  
+                  <p>Describing the problems of electronic texts in her book <i>Electronic Texts in the Humanities</i>, Susan Hockey laconically observes that "There is no obvious unit of language" (2000: 20). Hockey is reflecting critically on the ordinary assumption that this unit is the word. Language scholars know
+                     better. Words can be usefully broken down into more primitive parts and therefore understood as constructs of a second or
+                     even higher order. The view is not unlike the one continually encountered by physicists who search out basic units of matter.
+                     Our analytic tradition inclines us to understand that forms of all kinds are "built up" from "smaller" and more primitive units, and hence to take the self-identity and integrity of these parts, and the whole that they comprise,
+                     for objective reality.
+                  </p>
+                  
+                  <p>Hockey glances at this problem of the text-unit in order to clarify the difficulties of creating electronic texts. To achieve
+                     that, we instruct the computer to identify (the) basic elements of natural language text and we try to ensure that the identification
+                     has no ambiguities. In natural language, however, the basic unit – indeed, all divisioning of any kind – is only procedurally determinate. The units are arbitrary. More, the arbitrary units themselves can have no absolute self-identity.
+                     Natural language is rife with redundancy and ambiguity at every unit and level and throughout its operating relations. A long
+                     history of analytic procedures has evolved certain sets of best practices in the study of language and communicative action,
+                     but even in a short run, terms and relations of analysis have changed.
+                  </p>
+                  
+                  <p>Print and manuscript technology represent efforts to mark natural language so that it can be preserved and transmitted. It
+                     is a technology that constrains the shapeshiftings of language, which is itself a special-purpose system for coding human
+                     communication. Exactly the same can be said of electronic encoding systems. In each case constraints are installed in order
+                     to facilitate operations that would otherwise be difficult or impossible. In the case of a system like the Text Encoding Initiative
+                     (TEI), the system is designed to "disambiguate" entirely the materials to be encoded.
+                  </p>
+                  
+                  <p>The output of TEI's markup constraints differs radically from the output generated by the constraints of manuscript and print
+                     technology. Whereas redundancy and ambiguity are expelled from TEI, they are preserved – are <i>marked -</i> in manuscript and print. While print and manuscript markups don't "copy" the redundancies of natural language, they do construct systems that are sufficiently robust to develop and generate equivalent
+                     types of redundancy. This capacity is what makes manuscript and print encoding systems so much more resourceful than any electronic
+                     encoding systems currently in use. ("Natural language" is the most complex and powerful reflexive coding system that we know of.)<a href="#ss1-3-4_fn1"><sup>1</sup></a></p>
+                  
+                  <p>Like biological forms and all living systems, not least of all language itself, print and manuscript encoding systems are
+                     organized under a horizon of co-dependent relations. That is to say, print technology – I will henceforth use that term as shorthand for both print and manuscript technologies – is a system that codes (or simulates) what are known as autopoietic systems. These are classically described in the following
+                     terms:
+                  </p>
+                  
+                  <blockquote>
+                     <p>If one says that there is a machine <i>M</i> in which there is a feedback loop through the environment so that the effects of its output affect its input, one is in fact
+                        talking about a larger machine <i>M</i><sup><i>1</i></sup> which includes the environment and the feedback loop in its defining organization.
+                     </p>
+                     (<a href="#ss1-3-4_b21">Maturana and Varela 1980</a>: 78)
+                  </blockquote>
+                  
+                  <p>Such a system constitutes a closed topological space that "continuously generates and specifies its own organization through its operation as a system of production of its own components,
+                     and does this in an endless turnover of components" (<a href="#ss1-3-4_b21">Maturana and Varela 1980</a>: 79). Autopoietic systems are thus distinguished from allopoietic systems, which are Cartesian and which "have as the product of their functioning something different from themselves" (1980: 80).
+                  </p>
+                  
+                  <p>In this context, all coding systems appear to occupy a peculiar position. Because "coding … represents the interactions of [an] observer" with a given system, the mapping stands apart from "the observed domain" (<a href="#ss1-3-4_b21">Maturana and Varela 1980</a>: 135). Coding is a function of "the space of human design" operations, or what is classically called "hetero-poietic" space. Positioned thus, coding and markup appear allopoietic.
+                  </p>
+                  
+                  <p>As machines of simulation, however, coding and markup (print or electronic) are not like most allopoietic systems (cars, flashlights,
+                     a road network, economics). Coding functions emerge <i>as code</i> only within an autopoietic system that has evolved those functions as essential to the maintenance of its life (its dynamic
+                     operations). Language and print technology (and electronic technology) are second- and third-order autopoietic systems – what McLuhan famously, expressively, if also somewhat mislead-ingly, called "extensions of man." Coding mechanisms – proteins, print technology – are generative components of the topological space they serve to maintain. They are folded within the autopoietic system
+                     like membranes in living organisms, where distinct components realize and execute their extensions of themselves.
+                  </p>
+                  
+                  <p>This general frame of reference is what makes Maturana and Varela equate the "origin" of such systems with their "constitution" (1980: 95). This equation means that co-dependency pervades an autopoietic structure of relations. All components of the
+                     system arise (so to speak) simultaneously and they perform integrated functions. The system's life is a morphogenetic passage
+                     characterized by various dynamic mutations and transformations of the local system components. The purpose or goal of these
+                     processes is autopoietic – self-maintenance through self-transformation – and their basic element is not a system component but the relation (co-dependence) that holds the mutating components in
+                     changing states of dynamic stability. The states generate measurable co-dependency functions both in their periods (or basins)
+                     of stability and in their unique moments of catastrophic change.
+                  </p>
+                  
+                  
+                  <a name="ss1-3-4_h2"></a><h2 class="normal">Marking the Text: A Necessary Distinction</h2>
+                  
+                  <p>At the 2002 Extreme Markup Conference, Michael Sperberg-McQueen offered these observations on the problem of overlapping structures
+                     for SGML-based markup systems.
+                  </p>
+                  
+                  <blockquote>
+                     <p>It is an interesting problem because it is the biggest problem remaining in the residue. If we have a set of quantitative
+                        observations, and we try to fit a line to them, it is good practice to look systematically at the difference between the values
+                        predicted by our equation (our theory) and the values actually observed; the set of these differences is the residue …. In the context of SGML and XML, overlap is a residual problem.<a href="#ss1-3-4_fn2"><sup>2</sup></a></p>
+                  </blockquote>
+                  
+                  <p>But in any context <i>other than</i> SGML and XML, this formulation is a play of wit, a kind of joke – as if one were now to say that the statistical deviations produced by Newtonian mathematical calculations left a "residue" of "interesting" matters to be cleared up by further, deeper calculations. But those matters are not <i>residual</i>, they are the hem of a quantum garment.
+                  </p>
+                  
+                  <p>My own comparison is itself a kind of joke, of course, for an SGML model of the world of textualities pales in comprehensiveness
+                     before the Newtonian model of the physical world. But the outrageousness of the comparison in each case helps to clarify the
+                     situation. No autopoietic process or form can be simulated under the horizon of a structural model like SGML, not even topic
+                     maps. We see this very clearly when we observe the inability of a derivative model like TEI to render the forms and functions
+                     of traditional textual documents. The latter, which deploy markup codes themselves, supply us with simulations of language
+                     as well as of many other kinds of semeiotic processes, as Peirce called them. Textualized documents restrict and modify, for
+                     various kinds of reflexive purposes, the larger semeiotic field in which they participate. Nonetheless, the procedural constraints
+                     that traditional textualities lay upon the larger semeiotic field that they model and simulate are far more pragmatic, in
+                     a full Peircean sense, than the electronic models that we are currently deploying.
+                  </p>
+                  
+                  <p>Understanding how traditional textual devices function is especially important now when we are trying to imagine how to optimize
+                     our new digital tools. Manuscript and print technologies – graphical design in general – provide arresting models for information technology tools, especially in the context of traditional humanities research and
+                     education needs. To that end we may usefully begin by making an elementary distinction between the archiving and the simulating
+                     functions of textual (and, in general, semeiotic) systems. Like gene codes, traditional textualities possess the following
+                     as one of their essential characteristics: that as part of their simulation and generative processes, they make (of) themselves
+                     a record of those processes. Simulating and record keeping, which are co-dependent features of any autopoietic or semeiotic
+                     system, can be distinguished for various reasons and purposes. A library processes traditional texts by treating them strictly
+                     as records. It saves things and makes them accessible. A poem, by contrast, processes textual records as a field of dynamic
+                     simulations. The one is a machine of memory and information, the other a machine of creation and reflection. Each may be taken
+                     as an index of a polarity that characterizes all semeoitic or autopoietic systems. Most texts – for instance, this chapter you are reading now – are fields that draw upon the influence of both of those polarities.
+                  </p>
+                  
+                  <p>The power of traditional textualities lies exactly in their ability to integrate those different functions within the same
+                     set of coding elements and procedures.
+                  </p>
+                  
+                  <p>SGML and its derivatives are largely, if not strictly, coding systems for storing and accessing records. They possess as well
+                     certain analytic functions that are based in the premise that text is an "ordered hierarchy of context objects." This conception of textuality is plainly non-comprehensive. Indeed, its specialized understanding of "text" reflects the pragmatic goal of such a markup code: to store objects (in the case of TEI, textual objects) so that they can
+                     be quickly accessed and searched for their informational content – or more strictly, for certain parts of that informational content (the parts that fall into a hierarchical order modeled
+                     on a linguistic analysis of the structure of a book).
+                  </p>
+                  
+                  <p>These limitations of electronic markup codes are not to be lamented, but for humanist scholars they are to be clearly understood.
+                     A markup code like TEI creates a record of a traditional text in a certain form. Especially important to see is that, unlike
+                     the textual fields it was designed to mark up, TEI is an allopoietic system. Its elements are unambiguously delimited and
+                     <i>identified a priori</i>, its structure of relations is precisely fixed, it is non-dynamical, and it is focused on objects that stand apart from itself.
+                     Indeed, it defines what it marks not only <i>as</i> objective, but as objective in exactly the unambiguous terms of the system's <i>a priori</i> categories. This kind of machinery will therefore serve only certain, very specific, purposes. The autopoietic operations
+                     of textual fields – operations especially pertinent to the texts that interest humanities scholars – lie completely outside the range of an order like the TEI.
+                  </p>
+                  
+                  <p>For certain archival purposes, then, structured markup will serve. It does not unduly interfere with, or forbid implementing,
+                     some of the searching and linking capacities that make digital technology so useful for different types of comparative analysis.
+                     Its strict formality is abstract enough to permit implementation within higher-order formalizations. In these respects it
+                     has greater flexibility than a stand-off approach to text markup, which is more difficult to integrate into a dispersed online
+                     network of different kinds of materials. All that having been recognized and said, however, these allopoietic text-process
+                     ing systems cannot access or display the autopoietic character of textual fields. Digital tools have yet to develop models
+                     for displaying and replicating the self-reflexive operations of bibliographical tools, which alone are operations for thinking
+                     and communicating – which is to say, for transforming data into knowledge.
+                  </p>
+                  
+                  <p>We have to design and build digital environments for those purposes. A measure of their capacity and realization will be whether
+                     they can integrate data-function mechanisms like TEI into their higher-order operations. To achieve that will entail, I believe,
+                     the deployment of dynamic, topological models for mapping the space of digital operations. But these models will have to be
+                     reconceived, as one can see by reflecting on a remark about textual interpretation that Stanley Fish liked to make years ago.
+                     He would point out that he was able to treat even the simplest text – road signage, for example – as a poem and thus develop from his own "response" and commentary its autopoietic potential. The remark underscores a basic and almost entirely neglected (undertheorized) feature
+                     of discourse fields: that to "read" them – to read "in" them at any point – one must regard what we call "the text" and "the reader" as co-dependent agents in the field. You can't have one without the other.
+                  </p>
+                  
+                  <p>Fish's observation, therefore, while true, signals a widespread theoretical and methodological weakness in our conceptions
+                     of textuality, traditional or otherwise. This approach figures "text" as a heuristic abstraction drawn from the larger field of discourse. The word "text" is used in various ways by different people – Barthes's understanding is not the same as a TEI understanding – but in any case the term frames attention on the linguistic dimension of a discourse field. Books and literary works, however,
+                     organize themselves along multiple dimensions of which the linguistic is only one.
+                  </p>
+                  
+                  <p>Modeling digital simulations of a discourse field requires that a formal set of dimensions be specified for the field. This
+                     is what TEI provides <i>a priori</i>, though the provision, as we know, is minimal. Our received scholarly traditions have in fact passed down to us an understanding
+                     of such fields that is both far more complex and reasonably stable. Discourse fields, our textual condition, regularly get
+                     mapped along six dimensions (see below, and Appendix B). Most important of all in the present context, however, are the implications
+                     of cognizing a discourse field as autopoietic. In that case the field measurements will be taken by "observers" positioned within the field itself. That intramural location of the field interpreter is in truth a logical consequence of
+                     the co-dependent character of the field and its components. "Interpretation" is not undertaken from a position outside the field; it is an essential part of a field's emergence and of any state that
+                     its emergence might assume.
+                  </p>
+                  
+                  <p>This matter is crucial to understand when we are reaching for an adequate formalizing process for textual events like poetry
+                     or other types of orderly but discontinuous phenomena. Rene Thorn explains very clearly why topological models are preferable
+                     to linear ones in dynamic systems:
+                  </p>
+                  
+                  <blockquote>
+                     <p>it must not be thought that a linear structure is necessary for storing or transmitting information (or, more precisely, significance);
+                        it is possible that a language, a semantic model, consisting of topological forms could have considerable advantages from
+                        the point of view of deduction, over the linear language that we use, although this idea is unfamiliar to us. Topological
+                        forms lend themselves to a much richer range of combinations…than the mere juxtaposition of two linear sequences.
+                     </p>
+                     (<a href="#ss1-3-4_b37">Thorn 1975</a>: 145)
+                  </blockquote>
+                  
+                  <p>These comments distinctly recall Peirce's exploration of existential graphs as sites of logical thinking. But Thorn's presentation
+                     of topological models does not conceive field spaces that are autopoietic, which seems to have been Peirce's view. Although
+                     Thorn's approach generally eschews practical considerations in favor of theoretical clarity, his models assume that they will
+                     operate on data carried into the system from some external source. If Thorn's "data" come into his studies in a theoretical form, then, they have been theorized in traditional empirical terms. The topological
+                     model of a storm may therefore be taken either as the description of the storm and/or a prediction of its future behavior. But when a model's data are taken to arise co-dependently with all the other components
+                     of its system, a very different "result" ensues. Imagined as applied to textual autopoiesis, a topological approach carries itself past an analytic description or
+                     prediction over to a form of demonstration or enactment.
+                  </p>
+                  
+                  <p>The view taken here is that no textual field can exist as such without "including" in itself the reading or measurement of the field, which specifies the field's dataset from within. The composition of a
+                     poem is the work's first reading, which <i>in that event</i> makes a call upon others. An extrinsic analysis designed to specify or locate a poetic field's self-reflexiveness commonly
+                     begins from the vantage of the rhetorical or the social dimension of the text, where the field's human agencies (efficient
+                     causes) are most apparent. The past century's fascination with structuralist approaches to cultural phenomena produced, as
+                     we know, a host of analytic procedures that chose to begin from a consideration of formal causation, and hence from either
+                     a linguistic or a semiotic vantage. Both procedures are analytic conventions based in empirical models.
+                  </p>
+                  
+                  <p>Traditional textuality provides us with autopoietic models that have been engineered as effective analytic tools. The codex
+                     is the greatest and most famous of these. Our problem is imagining ways to recede them for digital space. To do that we have
+                     to conceive formal models for autopoietic processes that can be written as computer software programs.
+                  </p>
+                  
+                  
+                  <a name="ss1-3-4_h3"></a><h2 class="normal">Field Autopoiesis: from IVANHOE to 'Patacriticism</h2>
+                  
+                  <p>Let's recapitulate the differences between book markup and TEI markup. TEI defines itself as a two-dimensional generative
+                     space mapped as (1) a set of defined "content objects" (2) organized within a nested tree structure. The formality is clearly derived from an elementary structuralist model of
+                     language (a vocabulary + a syntax, or a semantic + a syntagmatic dimension). In the SGML/TEI extrusion, both dimensions are fixed and their relation to each other is defined as arbitrary rather than co-dependent.
+                     The output of such a system is thus necessarily symmetrical with the input (cf. Curie's principle of causes and effects).
+                     Input and output in a field of traditional textuality works differently. Even in quite restricted views, as we know, the operations
+                     of natural language and communicative exchange generate incommensurable effects. The operations exhibit behavior that topolo-gists
+                     track as bifurcation or even generalized catastrophe, whereby an initial set of structural stabilities produces morphogenetic
+                     behaviors and conditions that are unpredictable.<a href="#ss1-3-4_fn3"><sup>3</sup></a> This essential feature of "natural language" – which is to say, of the discourse fields of communicative exchange – is what makes it so powerful, on one hand, and so difficult to model and formalize, on the other.
+                  </p>
+                  
+                  <p>In these circumstances, models like TEI commend themselves to us because they can be classically quantified for empirical
+                     – numerable – results. But as Thorn observed long ago, there is no such thing as "a quantitative theory of catastrophes of a dynamical system" like natural language. To achieve such a theory, he went on to say, "it would be necessary to have a good theory of integration on function spaces" (<a href="#ss1-3-4_b37">Thorn 1975</a>: 321), something that Thorn could not conceive.
+                  </p>
+                  
+                  <p>That limitation of qualitative mathematical models did not prevent Thorn from vigorously recommending their study and exploration.
+                     He particularly criticized the widespread scientific habit of "tak[ing] the main divisions of science, the[ir] taxonomy… as given a priori" rather than trying to re-theorize taxonomies as such (1975: 322). In this frame of reference we can see (1) that textualization
+                     in print technology is a qualitative (rather than a taxonomic) function of natural language, and (2) that textualization integrates
+                     function spaces through demonstrations and enactments rather than descriptions. This crucial understanding – that print textuality is not language but an operational (praxis-based) theory of language – has stared us in the face for a long time, but seeing we have not seen. It has taken the emergence of electronic textualities,
+                     and in particular operational theories of natural language like TEI, to expose the deeper truth about print and manuscript
+                     texts. SGML and its derivatives freeze (rather than integrate) the function spaces of discourse fields by reducing the field
+                     components to abstract forms – what Coleridge called "fixities and definites." This approach will serve when the object is to mark textual fields for storage and access.
+                  </p>
+                  
+                  <p>Integration of dynamic functions will not emerge through such abstract reductions, however. To develop an effective model
+                     of an autopoietic system requires an analysis that is built and executed "in the same spirit that the author writ." That formulation by Alexander Pope expresses, in an older dialect, what we have called in this century "the uncertainty principle", or the co-dependent relation between measurements and phenomena. An agent defines and interprets a system from within the
+                     system itself – at what Dante Gabriel Rossetti called "an inner standing point." What we call "scientific objectivity" is in one sense a mathematical function; in another, it is a useful method for controlling variables. We use it when we study
+                     texts as if they were objective things rather than dynamic autopoietic fields.
+                  </p>
+                  
+                  <p>Traditional textual conditions facilitate textual study at an inner standing point because all the activities can be carried
+                     out – can be represented – in the same field space, typically, in a bibliographical field. Subject and object meet and interact in the same dimensional
+                     space – a situation that gets reified for us when we read books or write about them. Digital operations, however, introduce a new
+                     and more abstract space of relations into the study-field of textuality. This abstract space brings the possibility of new
+                     and in certain respects greater analytic power to the study of traditional texts. On the downside, however, digitization – at least to date, and typically – situates the critical agent outside the field to be mapped and re-displayed. Or – to put this crucial point more precisely (since no measurement has anything more than a relative condition of objectivity)
+                     – digitization situates the critical agent within levels of the textual field's dimensionalities that are difficult to formalize
+                     bibliographically.
+                  </p>
+                  
+                  <p>To exploit the power of those new formalizations, a digital environment has to expose its subjective status and operation.
+                     (Like all scientific formalities, digital procedures are "objective" only in relative terms.) In the present case – the digital marking of textual fields – this means that we will want to build tools that foreground the subjectivity of any measurements that are taken and displayed.
+                     Only in this way will the autopoietic character of the textual field be accurately realized. The great gain that comes with
+                     such a tool is the ability to specify – to measure, display, and eventually to compute and transform – an autopoietic structure at what would be, in effect, quantum levels.
+                  </p>
+                  
+                  <p>A series of related projects to develop such tools is under way at University of Virginia's Speculative Computing Laboratory
+                     (Speclab). The first of these, <i>IVANHOE</i>, is an online gamespace being built for the imaginative reconstruction of traditional texts and discourse fields. Players
+                     enter these works through a digital display space that encourages players to alter and transform the textual field. The game
+                     rules require that transformations be made as part of a discourse field that emerges dynamically through the changes made
+                     to a specified initial set of materials.<a href="#ss1-3-4_fn4"><sup>4</sup></a></p>
+                  
+                  <p>As the <i>IVANHOE</i> project was going forward, a second, related project called <i>Time Modelling</i> was being taken up by Bethany Nowviskie and Johanna Drucker. The project was begun "to bring visualization and interface design into the early content modeling phase" of projects like IVANHOE, which pursue interpretation through transformational and even deformative interactions with the
+                     primary data. IVANHOE's computer is designed to store the game players' performative interpretational moves and then produce
+                     algorithmically generated analyses of the moves after the fact. The chief critical function thus emerges after-the-fact, in
+                     a set of human reflections on the differential patterns that the computerized analyses expose. In the <i>Time Modelling</i> device, however, the performative and the critical actions are much more closely integrated because the human is actively
+                     involved in a deliberated set of digital transformations. The <i>Time Modelling</i> device gives users a set of design functions for reconstructing a given lineated timeline of events in terms that are subjective
+                     and hypothetical. The specified field of event-related data is brought forward for transformation through editing and display
+                     mechanisms that emphasize the malleability of the initial set of field relations. The project stands, conceptually, somewhere
+                     between design programs (with their sets of tools for making things) and complex websites like <i>The Rossetti Archive</i> (with their hypertextual datasets organized for on-the-fly search and analysis). It is a set of editing and display tools
+                     that allows users to design their own hypothetical (re)formulations of a given dataset.
+                  </p>
+                  
+                  <p>The frankly experimental character of <i>Time Modelling's</i> data (re)constructions has led to an important reimagining of the original IVANHOE project. From the outset of that project
+                     we intended to situate the "interpreter" within the discourse field that was the subject of interpretive transformation. Our initial conception was toward what we
+                     called "Ultimate IVANHOE", that is, toward a playspace that would be controlled by emergent consciousness software. With the computer an active agent
+                     in an IVANHOE session, players could measure and compare their own understandings of their actions against a set of computer
+                     generated views. This prospect for IVANHOE's development remains, but the example of <i>Time Modelling</i> exposed another way to situate the human interpreter at an inner standing point of an autopoietic system.
+                  </p>
+                  
+                  <p>If'Pataphysics is, in the words of its originator, "the science of exceptions", the project here is to reconceive IVANHOE under the rubric of'Patacriticism, or the theory of subjective interpretation. The theory is implemented through what is here called the dementianal
+                     method, which is a procedure for marking the autopoietic features of textual fields. The method works on the assumption that
+                     such features characterize what topolo-gists call a field of general catastrophe. The dementianal method marks the dynamic
+                     changes in autopoietic fields much as Thorn's topological models allow one to map forms of catastrophic behavior. The'Patacritical model differs from Thorn's models because the measurements of the autopoietic field's behaviors are generated
+                     from within the field itself, which only emerges as a field through the action of the person interpreting – that is to say, marking and displaying – the field's elements and sets of relations. The field arises co-dependently with the acts that mark and measure it. In this
+                     respect we wish to characterize its structure as dementianal rather than dimensional.
+                  </p>
+                  
+                  <p>As the device is presently conceived, readers engage autopoietic fields along three behavior dementians: <i>transaction, connection, resonance.</i> A common <i>transaction</i> of a page space moves diagonally down the page, with regular deviations for horizontal line transactions left to right margin,
+                     from the top or upper left to the bottom at lower right. Readers regularly violate that pattern in indefinite numbers of ways,
+                     often being called to deviance by how the field appears marked by earlier agencies. <i>Connections</i> assume, in the same way, multiple forms. Indeed, the primal act of autopoietic connection is the identification or location
+                     of a textual element to be "read." In this sense, the <i>transaction</i> of an autopoietic field is a function of the marking of <i>connections</i> of various kinds, on one hand, and of <i>resonances</i> on the other. <i>Resonances</i> are signals that call attention to a textual element as having a field value – a potential for connectivity – that appears <i>and</i> appears unrealized.
+                  </p>
+                  
+                  <p>Note that each of these behavior dementians exhibit co-dependent relations. The field is transacted as connections and resonances
+                     are marked; the connections and resonances are continually emergent functions of each other; and the marking of dementians
+                     immediately reorders the space of the field, which itself keeps re-emerging under the sign of the marked alteration of the
+                     dynamic fieldspace and its various elements.
+                  </p>
+                  
+                  <p>These behavioral dementians locate an autopoietic syntax, which is based in an elementary act or agenting event: G. Spencer
+                     Brown's "law of calling", which declares that a distinction can be made. From that law comes the possibility that elements of identities can be defined.
+                     They emerge with the co-dependent emergence of the textual field's control dimensions, which are the field's autopoietic semantics.
+                     (For further discussion of these matters see below, Appendix A and Appendix B.)
+                  </p>
+                  
+                  
+                  <a name="ss1-3-4_h4"></a><h2 class="normal">Writing and Reading in Autopoietic Fields</h2>
+                  
+                  <p>This'Patacritical approach to textual dementians is a meta-theory of textual fields, a pragmatistic conception of how to expose
+                     discontinuous textual behaviors ("natural language" so called, or what <a href="#ss1-3-4_b16">Habermas (1984)</a> has better called "communicative action"). Integration of the dynamic functions begins not by abstracting the theory away from a target object – that is, the method of a taxonomic methodology – but by integrating the meta-theoretical functions within the discourse space itself.
+                  </p>
+                  
+                  <p>Informational discourse fields function well precisely by working to limit redundancy and concurrent textual relations. Because
+                     poetry – or imaginative textuality broadly conceived – postulates much greater freedom of expressive exchange, it exhibits a special attraction for anyone wishing to study the
+                     dynamics of textuality. Aristotle's studies of semiotic systems preserve their foundational character because they direct
+                     their attention to autopoietic rather than allopoietic discourse fields. His studies pursue a taxonomy for the dynamic process
+                     of making and exchanging (remaking) simulations.
+                  </p>
+                  
+                  <p>Plato's dialogues, by contrast, situate – or, more precisely, generate – their critical reflections at a standing point inside the textualities they are themselves unfolding. In this respect they
+                     have much in common with Wittgenstein's critical colloquies in the <i>Philosophical Investigations</i> or with Montaigne's <i>Essais.</i> But the dynamic play of even these textual fields remain, from the point of view of their readers, exemplary exercises. This
+                     situation prevails in all modes of critical reflection which assume to preserve the integrity and self-identity of the textual
+                     fields they study. Two forms of critical reflection regularly violate the sanctity of such self-contained textual spaces:
+                     translation and editing. The idea that an object of criticism like a textual field <i>is</i> an object can be maintained either as an heuristic procedure or as an ontological illusion. Consequently, acts of translation
+                     and editing are especially useful forms of critical reflection because they so clearly invade and change their subjects in
+                     material ways. To undertake either, you can scarcely <i>not</i> realize the performative – even the <i>deformative -</i> character of your critical agency.
+                  </p>
+                  
+                  <p>At this point let me exemplify the general markup model for autopoietic textualities. This comes as the following hypothetical
+                     passage through an early poem by Robert Creeley, "The Innocence." Because imaginative textuality is, in this view, an exemplary kind of autopoietic process, any poetical work would do for
+                     a narrative demonstration. I choose "The Innocence" because it illustrates what Creeley and others called "field poetics." As such, it is especially apt for clarifying the conception of the autopoietic model of textuality being offered here. "Composition by field" poetics has been much discussed, but for present purposes it suffices to say that it conceives poetry as a self-unfolding
+                     discourse. "The poem" is the "field" of action and energy generated in the poetic transaction of the field that the poem itself exhibits. "Composition by field", whose theoretical foundations may be usefully studied through Charles Olson's engagements with contemporary philosophy and
+                     science, comprised both a method for understanding (rethinking) the entire inheritance of poetry, and a program for contemporary
+                     and future poetic discourse (its writing and its reading).
+                  </p>
+                  
+                  <p>The text chosen is taken from Donald Allen's famous anthology (first published in 1960) <i>The New American Poetry</i> in its 1999 University of California Press reprinting.
+                  </p>
+                  
+                  <a name="ss1-3-4_h5"></a><h3 class="normal">The Innocence</h3>
+                  
+                  <blockquote>
+                     
+                     <p class="stanza">
+                        Looking to the sea, it is a line<br>
+                        of unbroken mountains.<br>
+                        
+                     </p>
+                     
+                     <p class="stanza">
+                        It is the sky.<br>
+                        It is the ground. There<br>
+                        we live, on it.<br>
+                        
+                     </p>
+                     
+                     <p class="stanza">
+                        It is a mist<br>
+                        now tangent to another<br>
+                        quiet. Here the leaves<br>
+                        come, there<br>
+                        is the rock in evidence<br>
+                        
+                     </p>
+                     
+                     <p class="stanza">
+                        or evidence.<br>
+                        What I come to do<br>
+                        is partial, partially kept<br>
+                        
+                     </p>
+                     
+                  </blockquote>
+                  
+                  <p>Before tracing a model for this poetic field we want to bear two matters in mind. First, the field we are transacting is localized
+                     in relation to this documentary instance of "the text." One of the most persistent and misleading procedures in traditional hermeneutics is to take the object of study as something
+                     not only abstract and disembodied, but as something lying outside the field space – itself specific and material – of the act of critical representation. Second, the sequence of readings (below) consciously assumes a set of previous readings
+                     whereby certain elementary forms of order – by no means insignificant forms – have been integrated into the respective textual dementians. All such forms are extrusions from the elementary semiotic move,
+                     which is Spencer Brown's basic law of form: that a distinction can be drawn <i>(as</i> a dementian, or within and between dementians). Thus the readings below assume that each dementian is oriented to a set of
+                     established formal objects which get called and then crossed (transformed) in the transaction of the field.
+                  </p>
+                  
+                  <p>That said, let me transact the poetic field through the initial textual model supplied above.</p>
+                  
+                  <a name="ss1-3-4_h6"></a><h3 class="normal">A First Reading:</h3>
+                  
+                  <p>I mark the following elements in the first line group (and in that act I mark as well the presence of (a) lines and (b) line
+                     groups): "Looking" as a dangling participle; "it" (line 1) as ambiguously pronominal; "line" as a word play referencing (first) this line of verse I am transacting, and (second) a landscape of "unbroken mountains" (to be marked as such only with the marking of the final line in the group). All of these are defined (connected to the fieldspace)
+                     as textual elements with marked resonances (anticipations and clear if inchoate recollections) as well as several manifest,
+                     second-order connections (e.g., "sea", "line", and "mountains" as objects in a landscape).
+                  </p>
+                  
+                  <p>Line group 2 emerges to connect a network of "it" words as well as to settle the dominance of a linguistic gravity field centered in the initially marked "landscape" (a linguistic dementian subdomain). As line group 3 continues to elaborate the "landscape field", several distinctly new elements emerge and get marked. They center in the words "tangent", "quiet", "evidence", the notable enjambment at the end of the line group, and the deictics "Here and "there." The first four resonate by the differences they make with the previous elements I had defined in my transaction of the field.
+                     The deictics connect back to the second linguistic dementian subdomain (the self-reflexive set of textual elements marked
+                     in line 1 as the dangling participle and the final word "line"). The fourth and last line group is itself marked as strongly resonant in itself because of the emergence within it of the
+                     unique "I" and the startling repetitions ("evidence", "partial"/ "partially").
+                  </p>
+                  
+                  <p>So the field transaction is marked geometrically as a complete and continuous passage from upper left to lower right and proceeding
+                     line by line left to right. That passage of the textspace marks out two control dementians, linguistic and graphical, as well
+                     as several distinct basins of order within them. In the graphical dementian we see an array of marked words, lines, and line
+                     groups. In the linguistic dementian I have marked two distinct subdomains, one referential (the set of "landscape" semantics), one a subdomain of pure signifiers (proliferating from line 1 through the deictic markers "Here" and "there."
+                  </p>
+                  
+                  
+                  <a name="ss1-3-4_h7"></a><h3 class="normal">A Second Reading:</h3>
+                  
+                  <p>I mark the title as strongly resonant and I find myself scanning the poem rather than reading it linearly, and marking elements
+                     unnoticed in the first reading. I re-mark the array of "it" words and connect all of them to the title, marking thereby another linguistic subdomain. I mark as resonant the striking
+                     idea of "a mist / now tangent to another / quiet", and I mark a distinction in the linguistic subdomain (of "landscape") between different sensory aspects of a "landscape." I mark as resonant the equally striking final sentence and the phrase "the rock in evidence / or evidence."
+                  </p>
+                  
+                  
+                  <a name="ss1-3-4_h8"></a><h3 class="normal">A Third Reading:</h3>
+                  
+                  <p>This is a sequential transaction through the poem as in the first reading. It is largely devoted to marking connections between
+                     the various elements already marked with resonance values. The wordplay in "line" is marked as a strongly resonant locus of fieldspace connections across the several linguistic subdomains. This connective
+                     fieldspace is especially resonant as the connection between the words "line" and "tangent." I mark all of the previously marked textual elements as connected to each other in a broadly dispersed semiotic dementian
+                     because I am seeing that elements in different fieldspace dementians and domains (e.g., "mist" and "quiet") are connected to each other.
+                  </p>
+                  
+                  
+                  <a name="ss1-3-4_h9"></a><h3 class="normal">A Fourth Reading:</h3>
+                  
+                  <p>A sequential reading leads to marking the final sentence as a dramatic locus of a rhetorical dementian in the fieldspace.
+                     The construction of the textspace is "What I come to do." The emergence of this idea allows me to mark the poem as a deliberated sequential organization that exposes itself in certain
+                     telling (marked) moments and textual elements: "Looking", "line", "tangent", the deictic words, the previously unmarked "we" (line 5), the enjambment between the third and fourth line groups. In all these I mark a rhetorical organization tied most
+                     centrally to the phrase "What I come to do." I mark that these marks unfold as a relation that must be seen as sequenced: "I" in the present tense here is always the present tense in the linguistic dementian of this work. Marking the verb tense in
+                     that way immediately produces the first, remarkable emergence in this reading process of the work's social dementian. "I" comes to write this poem, which is marked thereby as an event in the world and as objective as any material thing (these
+                     material things, the "landscape" things, first marked in the linguistic dementian). In that rhetorical dementian I mark as well a key element of this work's
+                     social dementian first marked in the linguistic dementian: the relation between the "we" and the "I." The phrase "is partial, partially kept" is marked now as an element in the social dementian of the textspace – as if one were to say, interpretatively, that the "doing" of the poem is only one event in a larger field that the poem is part of and points toward. My acts of marking the poem fall
+                     into both the local fieldspace and the larger discourse field marked by this local poetical field. And I further mark the
+                     social space by connecting the textspace to the book in which the text is printed – for that book (the polemic it made) marks this specific text in the strongest way. At this point the sixth dementian of the
+                     fieldspace begins to get marked, the material dementian. I mark three documentary features in particular: the placement of
+                     the text in the book, the organ of publication, the date of publication. I mark as well the fact that these material features
+                     of the work are, like the word "line", double-meaninged (or double dementianed), having as well a clear placement in the work's social dementian as well.
+                  </p>
+                  
+                  
+                  <a name="ss1-3-4_h10"></a><h3 class="normal">A Fifth Reading:</h3>
+                  
+                  <p>I mark new elements in the six marked dementians that emerge in a widespread process of subdividing and proliferating. Elements
+                     defined in one dementian or subdomain get marked in another (for instance, "I" began in the rhetorical, reappeared in the social, and now gets marked in all the other dementians as well); unmarked textual
+                     features, like the letter "t", get marked as resonant; the shape of the textspace from word to line to word group is marked as a linked set of spare elements.
+                     These additional markings lead to other, previously unseen and unmarked relations and elements. The spare graphical dementian
+                     gets linked to the linguistic dementian ("The Innocence") and to the social and rhetorical dementians (the graphical spareness is only markable in relation to the absent/present discourse field in which this poetical work stands and declares its comparative allegiance.
+                  </p>
+                  
+                  
+                  <a name="ss1-3-4_h11"></a><h3 class="normal">A Sixth Reading:</h3>
+                  
+                  <p>This is a reading that poses significant theoretical and practical issues. Time-stamped two weeks after the previous readings,
+                     this reading was negotiated in my mind as I recalled the history of my readings of the poem. It is thus a reading to be digitally
+                     marked after-the-fact. Focused on the final line group, it also marks the entirety of the autopoietic field. The reading marks
+                     the "I" as a figure in the social dementian, the poet (Creeley) who composed the poem. In that linking, however, I as reader become
+                     linked to the linguistic "I" that is also a social "I." This linkage gets enforced by marking a set of "partial" agents who "come to do" part of the continuous marking of the autopoietic field. (Creeley does what he does, I do what I do, and we both inhabit
+                     a space resonant with other, as yet unspecified, agents.)
+                  </p>
+                  
+                  
+                  
+                  
+                  <a name="ss1-3-4_h12"></a><h2 class="normal">Conclusion</h2>
+                  
+                  <p>What we theorize here and propose for a digital practice is a science of exceptions, a science of imaginary (subjective) solutions.
+                     The markup technology of the codex has evolved an exceedingly successful instrument for that purpose. Digital technology ought
+                     to be similarly developed. Organizing our received humanities materials as if they were simply information depositories, computer
+                     markup as currently imagined handicaps or even baffles altogether our moves to engage with the well-known dynamic functions
+                     of textual works. An alternative approach to these matters through a formal reconception of textspace as topological offers
+                     distinct advantages. Because this space is autopoietic, however, it does not have what mathematicians would normally call
+                     dimensionality. As autopoietic, the model we propose establishes and measures its own dimensions auto-telically, as part of
+                     its self-generative processes. Furthermore, space defined by pervasive co-dependencies means that any dimension specified
+                     for the system might be formally related to any other. This metamorphic capacity is what translates the concept of a dimension
+                     into the concept of a dementian.
+                  </p>
+                  
+                  <p>This model of text-processing is open-ended, discontinuous, and non-hierarchical. It takes place in a fieldspace that is exposed
+                     when it is mapped by a process of "reading." A digital processing program is to be imagined and built that allows one to mark and store these maps of the textual fields
+                     and then to study the ways they develop and unfold and how they compare with other textual mappings and transactions. Constructing
+                     textualities as field spaces of these kinds short-circuits a number of critical predilections that inhibit our received, commonsense
+                     wisdom about our textual condition. First of all, it escapes crippling interpretative dichotomies like text and reader, or
+                     textual "subjectivity" and "objectivity." Reader-response criticism, so-called, intervened in that space of problems but only succeeded in reifying even further the
+                     primary distinctions. In this view of the matter, however, one sees that the distinctions are purely heuristic. The "text" we "read" is, in this view, an autopoietic event with which we interact and to which we make our own contributions. Every textual event
+                     is an emergence imbedded in and comprising a set of complex histories, some of which we each partially realize when we participate
+                     in those textual histories. Interestingly, these histories, in this view, have to be grasped as fields of action rather than
+                     as linear unfoldings. The fields are topological, with various emergent and dynamic basins of order, some of them linear and
+                     hierarchical, others not.
+                  </p>
+                  
+                  
+                  
+                  
+                  <a name="ss1-3-4_h13"></a><h2 class="normal">Appendix A: The 'Pataphysics of Text and Field Markup</h2>
+                  
+                  <p>Texts and their field spaces are autopoietic scenes of co-dependent emergence. As such, their primal state is dynamic and
+                     has been best characterized by G. Spencer Brown's <a href="#ss1-3-4_b6"><i>Laws of Form</i> (1969)</a>, where "the form of distinction" – the act of making indications by drawing a distinction – is taken as "given" and primal (1). This means that the elementary law is not the law of identity but the law of non-identity (so that we must
+                     say that "<i>a</i> equals <i>a</i> if and only if <i>a</i> does not equal <i>a).</i>" Identities emerge as distinctions are drawn and redrawn, and the acts of drawing out distinctions emerge as co-dependent
+                     responses to the field identities that the form of distinction calls to attention.
+                  </p>
+                  
+                  <p>Spencer Brown supplies a formal demonstration of what Alfred Jarry called'pataphysics and that he and his OULIPian inheritors demonstrated in forms of traditional textual practice (i.e., in forms
+                     of "literature").'Pataphysics is a general theory of autopoietic systems (i.e., a general theory of what we traditionally call "imaginative literature"), and <i>Laws of Form</i> is a specifically <i>'patapbysical</i> event because it clearly gives logical priority to the unique act and practice of its own theoretical thought. The fifth
+                     "Chant" of Lautrea-mont's <i>Les chants de Maldoror</i>, Jarry's <i>Gestes et opinions du docteur Faustroll,'patapbysicien</i>, and all the descendants of those self-conscious works – Laura Riding's stories are the earliest English-language examples – are the "literary" equivalents of Spencer Brown's <i>Laws of Form.</i></p>
+                  
+                  <p>In this view of any systematics, the taxonomy of a system is a derivation of what Peirce called an initial abduction. The
+                     abduction is an hypothesis of the total semeiotic integrity of the system. The hypothesis is tested and transformed (internally
+                     as well as externally) in a dialectical process – ultimately endless – of representation and reflection.
+                  </p>
+                  
+                  
+                  <a name="ss1-3-4_h14"></a><h2 class="normal">Appendix B: Control Dementians for a 'Patacriticism of Textualities</h2>
+                  
+                  <p>The transaction of textual fields proceeds by a series of moves (field behaviors) that proliferate from an elementary modal
+                     distinction between what have been specified (above) as <i>connections</i> and <i>resonances</i>, which are the elementary behavioral forms of the textual <i>transaction.</i> These modes correspond to what traditional grammarians define as an indicative and a subjunctive verbal mood. (In this view,
+                     interrogative and interjective moods are derivatives of these two primary categories.) Emerging co-dependently with these
+                     behavioral dementians is an elementary taxonomy of control dementians that are called into form and then internally elaborated.
+                  </p>
+                  
+                  <p>The history of textual studies has evolved a standard set of field formalities that may be usefully analyzed in six distinct
+                     parts. These correspond to an elemental set of dimensions for textual fields (or, in fields conceived as autopoietic systems,
+                     an elemental set of six dementians). These control dementians locate what grammarians designate as the semantics of a language.
+                  </p>
+                  
+                  <p>Let it be said here that these behavioral and control dementians, like their allopoietic dimensions, comprise a set of categories
+                     that recommend themselves through an evolved history of previous use. Other dimensions (and dementians) might be proposed
+                     or imagined. However, since the proposals being advanced here are all conceived within a pragmatistic frame of reference,
+                     the categories bring with them the strong authority of a habitual usefulness.
+                  </p>
+                  
+                  <p><i>The Linguistic Dimension/Dementian.</i> This aspect of the textual condition has been the principal focus of attention in the West. It represents a high-order framework
+                     of conceptual markers or distinctions that unfold and multiply from an initial pair of categories, the semantic and the grammatical.
+                     The former is an elemental category, the latter is a relational one, and the two together epitomize the structure of co-dependency
+                     that pervades and in a sense defines all textual processes at every dimension. That is to say, neither marker or category
+                     has conceptual priority over the other, they generate meaning together in a co-dependent and dialectical process. However,
+                     to specify their co-dependence requires that one adopt a pragmatistic or performative approach such as we see in Maturana,
+                     Spencer Brown, and Peirce.
+                  </p>
+                  
+                  <p><i>The Graphical/Auditional Dimension/Dementian.</i> Some kind of graphical and/or audi-tional state of affairs is a prerequisite for any appearance or functional operation of a Linguistic Dimension, and
+                     that state must be formally constrained. In Western attempts to clarify language and textuality, these forms are defined in
+                     the systematic descriptors of morphology and phonology, which are co-dependent subcategories of the Linguistic Dimension.
+                  </p>
+                  
+                  <p>This Graphical/Auditional Dimension comprises the set of a text's codes of materiality (as opposed to the specific material state of a particular
+                     document). In print and manuscript states, the dimension includes various subsets of bibliographical codes and paratexts:
+                     typography, layout, book design, and the vehicular components of those forms. (If we are considering oral texts, the material
+                     assumes auditional forms, which can have visual components as well.)
+                  </p>
+                  
+                  <p><i>Documentary Dimension/Dementian.</i> This comprises the physical incarnation – the "real presence", so to speak – of all the formal possibilities of the textual process. We recognize it as a bibliographical or palaeographical description
+                     of some specific object, or as a library or archival record of an object's historical passage (transmission history).
+                  </p>
+                  
+                  <p>Note that this dimension does not simply constitute some brute chemical or physical thing – what Coleridge referred to when he spoke as the "object as object", which he called "fixed and dead." Coleridge's "object as object" is a negative abstraction – that's to say, a certain formal conception of the documentary dimension that sets it apart <i>(a priori)</i> from any place in a study or interpretation of textuality. A document can and – in any comprehensive approach to textuality – should be maintained as an integral function of the textual process.
+                  </p>
+                  
+                  <p>A document is a particular object that incarnates and constrains a specific textual process. In terms of print and manuscript
+                     texts, it is a specific actualized state of the Graphical/Auditional Dimension.
+                  </p>
+                  
+                  <p><i>Semiotic Dimension/Dementian.</i> This dimension defines the limit state of any text's formal possibilities. It postulates the idea of the complete integration
+                     of all the elements and dynamic relations in a field of discourse. In this dimension we thus cognize a textual process in
+                     holistic terms. It is a purely formal perspective, however, and as such stands as the mirrored antithesis of the document
+                     <i>per se</i>, whose integrity is realized as a phenomenal event. The document is the image of the hypothesis of total form; it appears
+                     at (or as) a closure of the dynamic process set in perpetual motion by the hypothesis at the outset.
+                  </p>
+                  
+                  <p>We register the semiotic dimension as a pervasiveness of patterned relations throughout the textual system – both within each part of the system and among the parts. The relations emerge in distinct types or modes: elements begin
+                     and end; they can be accumulated, partitioned, and replicated; they can be anchored somewhere, linked to other elements, and
+                     relayed through the system
+                  </p>
+                  
+                  <p>The first of those late systems of analysis called by Herbert Simon "Sciences of the Artificial", the science of semiotics, labels itself as an heuristic mechanism. The pervasive order of a textual process's semiotic dimension
+                     thus emerges as a function of the formal categories, both system elements and system processes, that are consciously specified
+                     by the system's agents. Order is constructed from the systemic demand for order. As a result, the forms of order can be of
+                     any type – hierarchical or non-hierarchical, continuous or discontinuous.
+                  </p>
+                  
+                  <p><i>Rhetorical Dimension/Dementian.</i> The dominant form of this dimension is genre, which is a second-order set of textual forms. Genre calls into play poems,
+                     mathematical proofs, novels, essays, speeches, dramas, and so forth. The function of this dimension is to establish forms
+                     of readerly attention – to select and arrange textual materials of every kind in order to focus the interest of the reader (audience, user, listener)
+                     and establish a ground for response.
+                  </p>
+                  
+                  <p>Readers and writers (speakers and listeners) are rhetorical functions. (Writers' first readers are themselves in their act
+                     of composition.) Bakhtin's celebrated studies of textual polyvalence and heteroglossia exemplify the operative presence of
+                     this textual dimension.
+                  </p>
+                  
+                  <p><i>Social Dimension/Dementian.</i> This is the dimension of a textual production and of reception histories. It is the dimension of the object as subject: that
+                     is to say, of a determinate set of textual elements arrayed under names like "writer", "printer", "publisher", "reader", "audience", "user." It is the dimension that exposes the temporality function which is an inalienable feature of all the dimensions of the textual
+                     condition.
+                  </p>
+                  
+                  <p>The social dimension of textuality unfolds a schedule of the uses to which its works are put beyond what New Critics liked
+                     to call "the poem itself." It is the dimension in which the dynamic and non-self-identical character of textual works is most plainly disclosed.
+                  </p>
+                  
+                  <p>In most traditional theories of textuality, the social dimension is not considered an intrinsic textual feature or function.
+                     Framed under the sign "context", it is seen as the environment in which texts and documents stand. Until the recent emergence of more holistic views of environments
+                     – notably in the work of Donald McKenzie – this way of seeing textuality's social dimension forced severe restrictions on our ability to comprehend and study the dynamic
+                     character of textual processes.
+                  </p>
+                  
+                  
+                  <a name="ss1-3-4_h15"></a><h2 class="normal">Acknowledgment</h2>
+                  
+                  <p>"The Innocence" by Robert Creeley is reprinted from <i>The Collected Poems of Robert Creeley, 1945–1975</i> with kind permission of the University of California Press and Robert Creeley.
+                  </p>
+                  
+                  
+                  <a name="ss1-3-4_h16"></a><h2 class="normal">Note</h2>
+                  <a name="ss1-3-4_fn1"></a><p> <b>1</b> See <a href="#ss1-3-4_b22">Maturana and Varela (1992)</a>.
+                  </p>
+                  <a name="ss1-3-4_fn2"></a><p> <b>2</b> "What Matters?" (at: <a href="http://www.w3.org/People/cmsmcq/2002/whatmatters.html">http://www.w3.org/People/cmsmcq/2002/whatmatters.html</a>).
+                  </p>
+                  <a name="ss1-3-4_fn3"></a><p> <b>3</b> As the terms in this sentence indicate, I am working in terms laid down thirty years ago by Rene Thorn in his classic study
+                     <i>Structural Stability and Morphogenesis</i> (1975).
+                  </p>
+                  <a name="ss1-3-4_fn4"></a><p> <b>4</b> For essays describing IVANHOE see the Special issue <i>of TEXT Technology</i> devoted to it (vol. 12, no. 2, 2003).
+                  </p>
+                  
+                  
+                  <a name="ss1-3-4_h17"></a><h2 class="normal">References for Further Reading</h2>
+                  <a name="ss1-3-4_b1"></a><p class="hang">Allen, Donald, (ed.) (1999). <i><span class="title">The New American Poetry 1945–1960, with a new Foreword</span></i>. Berkeley and Los Angeles: University of California Press.
+                  </p>
+                  <a name="ss1-3-4_b2"></a><p class="hang">Bellman, Rickard (1961). <i><span class="title">Adaptive Control Processes: A Guided Tour</span></i>. Princeton, NJ: Princeton University Press.
+                  </p>
+                  <a name="ss1-3-4_b3"></a><p class="hang">Berrie, Phillip William (1999). <i><span class="title">Just in Time Markup for Electronic Editions</span></i>. Accessed April 19, 2004. At <a href="http://idun.itsc.adfa.edu.au/ASEC/PWB_REPORT/Index.html">http://idun.itsc.adfa.edu.au/ASEC/PWB_REPORT/Index.html</a>.
+                  </p>
+                  <a name="ss1-3-4_b4"></a><p class="hang">Birnbaum, David J. (2001). <i><span class="title">The Relationship between General and Specific DTDs: Criticizing TEI Critical Editions</span></i>. <i><span class="title">Markup Languages: Theory and Practice</span></i> 3, 1: 17–53.
+                  </p>
+                  <a name="ss1-3-4_b5"></a><p class="hang">Bornstein, George and Teresa Tinkle, (eds.) (1998). <i><span class="title">The Iconic Page in Manuscript, Print, and Digital Culture</span></i>. Ann Arbor: University of Michigan Press.
+                  </p>
+                  <a name="ss1-3-4_b6"></a><p class="hang">Brown, G. Spencer (1969). <i><span class="title">Laws of Form</span></i>. London: George Allen and Unwin.
+                  </p>
+                  <a name="ss1-3-4_b7"></a><p class="hang">Buzzetti, Dino (2002). <i><span class="title">Digital Representation and the Text Model</span></i>. <i><span class="title">New Literary History</span></i> 33, 1: 61–88.
+                  </p>
+                  <a name="ss1-3-4_b8"></a><p class="hang">Casati, Roberto and Achille C. Varzi (1999). <i><span class="title">Parts and Places: The Structures of Spatial Representation</span></i>. Cambridge, MA: MIT Press.
+                  </p>
+                  <a name="ss1-3-4_b9"></a><p class="hang">Caton, Paul (2001). <i><span class="title">Markup's Current Imbalance</span></i>. <i><span class="title">Markup Languages: Theory and Practice</span></i> 3, 1: 1–13.
+                  </p>
+                  <a name="ss1-3-4_b10"></a><p class="hang">Chandrasekaran, B., J. Glasgow, and N. H. Narayanan, (eds.) (1995). <i><span class="title">Diagrammatic Reasoning: Cognitive and Computational Perspective</span></i>. Cambridge, MA: MIT Press, and Menlo Park: AAAI Press.
+                  </p>
+                  <a name="ss1-3-4_b11"></a><p class="hang">Drucker, Johanna (1998). <i><span class="title">Figuring the Word: Essays on Books, Writing, and Visual Poetics</span></i>. New York: Granary Books.
+                  </p>
+                  <a name="ss1-3-4_b12"></a><p class="hang">Elkins, James (1998). <i><span class="title">On Pictures and Words that Fail Them</span></i>. Cambridge: Cambridge University Press.
+                  </p>
+                  <a name="ss1-3-4_b13"></a><p class="hang">Elkins, James (1999). <i><span class="title">The Domain of Images</span></i>. Ithaca, NY: Cornell University Press.
+                  </p>
+                  <a name="ss1-3-4_b14"></a><p class="hang">Engell, James and W. Jackson Bate (1983). <i><span class="title">Samuel Taylor Coleridge. Biographia Literaria</span></i>, 2 vols. Princeton, NJ: Princeton University Press.
+                  </p>
+                  <a name="ss1-3-4_b15"></a><p class="hang">Fraenkel, Ernest (1960). <i><span class="title">Les dessins trans-conscients de Stéphane Mallarmé, à propos de la typographic de Un coup de dés, <i>avant-propos par Étienne Souriau</i> [Subconscious Drawings of Stephane Mallarmé, in connection with the typography of <i>Un coup de dés</i>, foreword by Étienne Souriau]</span></i>. Paris: Librairie Nizet.
+                  </p>
+                  <a name="ss1-3-4_b16"></a><p class="hang">Habermas, Jiirgen (1984). <i><span class="title">The Theory of Communicative Action</span></i>, tr. Thomas McCarthy. Boston: Beacon Press.
+                  </p>
+                  <a name="ss1-3-4_b17"></a><p class="hang">Hardwick, Charles, (ed.) (1977). <i><span class="title">Semiotic and Signifies: The Correspondence between Charles S. Peirce and Victoria, Lady Welby</span></i>. Bloomington: Indiana University Press.
+                  </p>
+                  <a name="ss1-3-4_b18"></a><p class="hang">Hauser, Nathan and Christian Kloesel, (eds.) (1992). <i><span class="title">The Essential Peirce: Selected Philosophical Writings</span></i>, 2 vols. Bloomington: Indiana University Press.
+                  </p>
+                  <a name="ss1-3-4_b19"></a><p class="hang">Hockey, Susan (2000). <i><span class="title">Electronic Texts in the Humanities</span></i>. Oxford: Oxford University Press.
+                  </p>
+                  <a name="ss1-3-4_b20"></a><p class="hang">Luhmann, Niklas (1998). <i><span class="title">Observations on Modernity</span></i>, tr. William Whobrey. Stanford, CA: Stanford University Press.
+                  </p>
+                  <a name="ss1-3-4_b21"></a><p class="hang">Maturana, Humberto and Francisco Varela (1980). <i><span class="title">Autopoiesis and Cognition: The Realization of Living</span></i>. Boston: D. Reidel.
+                  </p>
+                  <a name="ss1-3-4_b22"></a><p class="hang">Maturana, Humberto and Francisco Varela (1992). <i><span class="title">The Tree of Knowledge: Biological Roots of Human Understanding</span></i>, tr. Robert Paolucci. New York: Random House.
+                  </p>
+                  <a name="ss1-3-4_b23"></a><p class="hang">McCarty, Willard (2002a). <i><span class="title">Computing the Embodied Idea: Modeling in the Humanities</span></i>. <i>Körper - Verkörperung - Entkörperung I Body - Embodiment - Disembodiment.</i> 10. Internationaler Kongress, Deutsche Gesellschaft fur Semiotik, Universität Kassel, July 19, 2002. At (<a href="http://www.kcl.ac.uk/humanities/cch/wlm/essays/kassel/">http://www.kcl.ac.uk/humanities/cch/wlm/essays/kassel/</a>).
+                  </p>
+                  <a name="ss1-3-4_b24"></a><p class="hang">McCarty, Willard (2002b). <i><span class="title">Humanities Computing: Essential Problems, Experimental Practice</span></i>. Accessed April 19, 2004. At <a href="http://www.kcl.ac.uk/humanities/cch/wlm/essays/stanford/">http://www.kcl.ac.uk/humanities/cch/wlm/essays/stanford/</a>.
+                  </p>
+                  <a name="ss1-3-4_b25"></a><p class="hang">McDonald, Peter D. and Suarez, SJ Michael, (eds.) (2002). <i><span class="title">Making Meaning: "Printers of the Mind" and Other Essays</span></i>. D. F. McKenzie. Amherst: University of Massachusetts Press.
+                  </p>
+                  <a name="ss1-3-4_b26"></a><p class="hang">McGann, Jerome (2001). <i><span class="title">Radiant Textuality: Literature after the World Wide Web</span></i>. New York and London: Palgrave/St Martins.
+                  </p>
+                  <a name="ss1-3-4_b27"></a><p class="hang">McGann, Jerome, (ed.) (2004). <i><span class="title">The Complete Writings and Pictures of Dante Gabriel Rossetti</span></i>. A Hypermedia Research Archive. Accessed April 19, 2004. At <a href="http://jefferson.village.virginia.edu/rossetti/">http://jefferson.village.virginia.edu/rossetti/</a>.
+                  </p>
+                  <a name="ss1-3-4_b28"></a><p class="hang">McKenzie, D. F. (1986). <i><span class="title">Bibliography and the Sociology of Texts: The Panizzi Lectures, 1985</span></i>. London: British Library.
+                  </p>
+                  <a name="ss1-3-4_b29"></a><p class="hang">McLuhan, Marshall (1964). <i><span class="title">Understanding Media: The Extensions of Man</span></i>. New York: McGraw-Hill.
+                  </p>
+                  <a name="ss1-3-4_b30"></a><p class="hang">Mineau, G., B. Moulin, and J. Sowa, (eds.) (1993). <i><span class="title">Conceptual Graphs for Knowledge Representation</span></i>. Berlin: Springer-Verlag.
+                  </p>
+                  <a name="ss1-3-4_b31"></a><p class="hang">Omnès, Roland (1999). <i><span class="title">Understanding Quantum Mechanics</span></i>. Princeton, NJ: Princeton University Press.
+                  </p>
+                  <a name="ss1-3-4_b32"></a><p class="hang">Shin, Sun-Joo (2002). <i><span class="title">The Iconic Logic of Peirce's Graphs</span></i>. Cambridge, MA: MIT Press.
+                  </p>
+                  <a name="ss1-3-4_b33"></a><p class="hang">Simon, Herbert (1981). <i><span class="title">The Sciences of the Artificial</span></i>, 2nd edn., rev. and enlarged. Cambridge, MA: MIT Press.
+                  </p>
+                  <a name="ss1-3-4_b34"></a><p class="hang">Sontag, Susan, (ed.) (1982). <i><span class="title">A Barthes Reader</span></i>. New York: Noonday Press.
+                  </p>
+                  <a name="ss1-3-4_b35"></a><p class="hang">Sperberg-McQueen, C. M. (2002). <i><span class="title">What Matters</span></i>? At <a href="http://www.w3.org/People/cmsmcq/2002/whatmatters.html">http://www.w3.org/People/cmsmcq/2002/whatmatters.html</a>.
+                  </p>
+                  <a name="ss1-3-4_b36"></a><p class="hang">Sperberg-McQueen, C. M., Claus Huitfeldt, and Allen Renear (2000). <i><span class="title">Meaning and Interpretation of Markup</span></i>. <i><span class="title">Markup Languages</span></i> 2, 3: 215–34.
+                  </p>
+                  <a name="ss1-3-4_b37"></a><p class="hang">Thorn, Rene (1975). <i><span class="title">Structural Stability and Morphogenesis: An Outline of a General Theory of Models</span></i>, tr. D. H. Fowler, with a Foreword by C. H. Waddington. Reading, MA: W. A. Benjamin.
+                  </p>
+                  <a name="ss1-3-4_b38"></a><p class="hang">Thompson, Henry S. and David McKelvie (1997). Hyperlink Semantics for Standoff Markup of Read-Only Documents. At <a href="http://www.ltg.ed.ac.uk/~ht/sgmleu97.html">http://www.ltg.ed.ac.uk/~ht/sgmleu97.html</a>.
+                  </p>
+                  <a name="ss1-3-4_b39"></a><p class="hang">Varela, Francisco J., Evan Thompson, and Eleanor Rosch (1991). <i><span class="title">The Embodied Mind: Cognitive Science and Human Experience</span></i>. Cambridge, MA: MIT Press.
+                  </p>
+                  
+                  
+                  
+               </div>
+            

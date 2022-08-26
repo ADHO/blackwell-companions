@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<div class="content">
+                  <h2 class="normal">14. 
+                     <h2 class="normal">Classification and its Structures</h2>
+                  </h2>
+                  <span style="font-weight:bold;">C. M. Sperberg-McQueen</span>
+                  
+                  <a name="_h34"></a><a name="_h35"></a>
+                  
+                  
+                  
+                  
+                  <p>Classification is, strictly speaking, the assignment of some thing to a class; more generally, it is the grouping together
+                     of objects into classes. A <i>class</i>, in turn, is a collection (formally, a set) of objects which share some property.
+                  </p>
+                  
+                  <p>For example, a historian preparing an analysis of demographic data transcribed from census books, parish records, and city
+                     directories might classify individuals by sex, age, occupation, and place of birth. Places of birth might in turn be classified
+                     as large or small cities, towns, villages, or rural parishes. A linguist studying a text might classify each running word
+                     of text according to its part of speech, or each sentence according to its structure. Linguists, literary scholars, or social
+                     scientists might classify words occurring in a text by semantic category, organizing them into semantic nets. Classification
+                     serves two purposes, each important: by grouping together objects which share properties, it brings like objects together
+                     into a class; by separating objects with unlike properties into separate classes, it distinguishes between things which are
+                     different in ways relevant to the purpose of the classification. The classification scheme itself, by identifying properties
+                     relevant for such judgments of similarity and dissimilarity, can make explicit a particular view concerning the nature of
+                     the objects being classified.
+                  </p>
+                  
+                  
+                  <a name="ss1-3-2_h0"></a><h2 class="normal">Scope</h2>
+                  
+                  <p>Since a classification may be based on any set of properties that can be attributed to the objects being classified, classification
+                     in the broad sense involves the correct identification of the properties of the objects of study and is hardly distinguishable
+                     from coherent discourse in general. (Like coherence, systematic classification is sometimes eschewed for aesthetic or ideological
+                     reasons and if overrated may descend into pedantry.) Information retrieval systems may be regarded, and are often described,
+                     as classifying records into the classes "relevant" and "not relevant" each time a user issues a query. Norms and standards like the XML 1.0 specification or Unicode may be understood as classification
+                     schemes which assign any data stream or program either to the class "conforming" or to the class "non-conforming." Laws may be interpreted as classifying acts as legal or illegal, censors as classifying books, records, performances, and
+                     so on. Any characteristic of any kind of thing, using any set of concepts, may be viewed as classifying things of that kind
+                     into classes corresponding to those concepts. In the extreme case, the property associated with a class may be vacuous: the
+                     members may share only the property of membership in the class. In general, classification schemes are felt more useful if
+                     the classes are organized around properties relevant to the purpose of the classification. Details of the concepts, categories,
+                     and mechanisms used in various acts of classification may be found in other chapters in this volume: see, for example, chapters
+                     1, 7, 15, and 17.
+                  </p>
+                  
+                  <p>In the narrower sense, for computer applications in the humanities classification most often involves either the application
+                     of pre-existing classification schemes to, or the <i>post hoc</i> identification of clusters among a sample of, for example, texts (e.g. to describe the samples in language corpora), parts
+                     of texts (e.g., to mark up the structural constituents or non-structural features of the text), bibliography entries (for
+                     subject description in enumerative bibliographies or specialized libraries), words (for semantic characterization of texts),
+                     or extra-textual events or individuals (e.g., for historical work). The best known of these among the readers of this work
+                     are perhaps the classification systems used in libraries and bibliographies for classifying books and articles by subject;
+                     in what follows, examples drawn from these will be used where possible to illustrate important points, but the points are
+                     by no means relevant only to subject classification.
+                  </p>
+                  
+                  <p>Since classification relies on identifying properties of the object being classified, perfect classification would require,
+                     and a perfect classification scheme would exhibit, perfect knowledge of the object. Because a perfect subject classification,
+                     for example, locates each topic in a field in an <i>n</i>-dimensional space near other related topics and distant from unrelated topics, a perfect subject classification represents
+                     a perfect map of the intellectual terrain covered in the area being classified. For this reason, classification schemes can
+                     carry a great deal of purely theoretical interest, in addition to their practical utility. Classification schemes necessarily
+                     involve some theory of the objects being classified, if only in asserting that the objects possess certain properties. Every
+                     ontology can be interpreted as providing the basis for a classification of the entities it describes. And conversely, every
+                     classification scheme can be interpreted with more or less ease, as the expression of a particular ontology. In practice,
+                     most classification schemes intended for general use content themselves with representing something less than a perfect image
+                     of the intellectual structure of their subject area and attempt with varying success to limit their theoretical assumptions
+                     to those most expected users can be expected to assent to. At the extreme, the assumptions underlying a classification scheme
+                     may become effectively invisible and thus no longer subject to challenge or rethinking; for purposes of scholarly work, such
+                     invisibility is dangerous and should be avoided.
+                  </p>
+                  
+                  <p>This chapter first describes the abstract structures most often used in classification, and describes the rules most often
+                     thought to encourage useful classification schemes. It then gives a purely formal account of classification in terms of set
+                     theory, in order to establish that no single classification scheme can be exhaustive, and indeed that there are infinitely
+                     more ways of classifying objects than can be described in any language. Finally, it turns to various practical questions involved
+                     in the development and use of classification systems.
+                  </p>
+                  
+                  
+                  <a name="ss1-3-2_h1"></a><h2 class="normal">One-dimensional Classifications</h2>
+                  
+                  <p>Very simple classification schemes (sometimes referred to as <i>nominal</i> classifications, because the class labels used are typically nouns or adjectives) consist simply of a set of categories:
+                     male and female; French, German, English, and other; noun, verb, article, adjective, adverb, etc. In cases like these, some
+                     characteristic of the object classified may take any one of a number of discrete values; formally, the property associated
+                     with the class is that of having some one particular value for the given characteristic. The different classes in the scheme
+                     are not ordered with respect to each other; they are merely discrete classes which, taken together, subdivide the set of things
+                     being classified.
+                  </p>
+                  
+                  <p>In some classifications (sometimes termed <i>ordinal)</i>, the classes used fall into some sort of sequencing or ordering with respect to each other: first-year, second-year, third-year
+                     student; folio, quarto, octavo, duodecimo; upper-class, middle-class, lower-class.
+                  </p>
+                  
+                  <p>In still other cases, the underlying characteristic may take a large or even infinite number of values, which have definite
+                     quantitative relations to each other: age, height, number of seats in parliament, number of pages, price, etc. For analytic
+                     purposes, it may be convenient or necessary to clump (or <i>aggregate)</i> sets of distinct values into single classes, as when age given in years is reduced to the categories infant, child, adult,
+                     or to under-18, 18–25, 25–35, over-35.
+                  </p>
+                  
+                  <p>All of the cases described so far classify objects based on the value of a single characteristic attributed to the object.
+                     In the ideal case, the characteristic can be readily and reliably evaluated, and the values it can take are discrete. The
+                     more borderline cases there are, the harder it is likely to be to apply the classification scheme, and the more information
+                     is likely to be lost by analyses which rely on the classified data rather than the original data.
+                  </p>
+                  
+                  
+                  <a name="ss1-3-2_h2"></a><h2 class="normal">Classification Schemes as <i>N</i>-dimensional Spaces
+                  </h2>
+                  
+                  <p>In less simple classification schemes, multiple characteristics may be appealed to. These may often be described as involving
+                     a hierarchy of increasingly fine distinctions. The Dewey Decimal Classification, for example, assigns class numbers in the
+                     800s to literary works. Within the 800s, it assigns numbers in the 820s to English literature, in the 830s to German literature,
+                     the 840s to French, etc. Within the 820s, the number 821 denotes English poetry, 822 English drama, 823 English fiction, and
+                     so on. Further digits after the third make even finer distinctions; as a whole, then, the classification scheme may be regarded
+                     as presenting the classifier and the user with a tree-like hierarchy of classes and subclasses, with smaller classes branching
+                     off from larger ones.
+                  </p>
+                  
+                  <p>In the case of the Dewey classification of literature, however, the second and third digits are (almost) wholly independent
+                     of each other: a third digit 3 denotes fiction whether the second digit is 1 (American), 2 (English), 3 (German), 4 (French),
+                     5 (Italian), 6 (Spanish), <i>7</i> (Latin), or 8 (Classical Greek), and 2 as a third digit similarly denotes drama, independent of language.
+                  </p>
+                  
+                  <p>We can imagine the literature classification of the Dewey system as describing a plane, with the second digit of the Dewey
+                     number denoting positions on the <i>x</i> axis, and the third digit denoting values along the <i>y</i> axis. Note that neither the sequence and values of the genre numbers, nor those of the language numbers, have any quantitative
+                     significance, although the sequence of values is in fact carefully chosen.
+                  </p>
+                  
+                  <p>Generalizing this idea, classification schemes are often regarded as identifying locations in an <i>n</i>-dimensional space. Each dimension is associated with an <i>axis</i>, and the set of possible values along any one axis is sometimes referred to as an <i>array.</i> Many salient characteristics of classification schemes may be described in terms of this <i>n</i>-dimensional spatial model.
+                  </p>
+                  
+                  <p>It should be noted that, unlike the dimensions of a Cartesian space, the different characteristics appealed to in a classification
+                     scheme are not always wholly independent of each other. A medical classification, for example, may well subdivide illnesses
+                     or treatments both by the organ or biological system involved and by the age, sex, or other salient properties of the patient.
+                     Since some illnesses afflict only certain age groups or one sex or the other, the two axes are not wholly independent. A classification
+                     of dialects based on the pronunciation of a given lexical item can only apply to dialects in which that lexical item exists.
+                     A facet in a social classification that distinguishes hereditary from non-hereditary titles is only relevant to that part
+                     of the population which bears titles, and only in countries with a nobility. The digits 2 for drama and 3 for fiction have
+                     these meanings in the Dewey classification for literature, but they are not applicable to the 900s (history) or the 100s (philosophy).
+                     And so on.
+                  </p>
+                  
+                  <p>The idea of a classification as describing an n-dimensional Cartesian space is thus in many cases a dramatic simplification.
+                     It is nonetheless convenient to describe each characteristic or property appealed to in a classification as determining a
+                     position along an axis, even if that axis has no meaning for many classes in the scheme. Those offended by this inexactitude
+                     in the metaphor may amuse themselves by thinking of the logical space defined by such a classification not as a Cartesian
+                     or Newtonian one but as a relativistic space with a non-Euclidean geometry.
+                  </p>
+                  
+                  
+                  <a name="ss1-3-2_h3"></a><h2 class="normal">Some Distinctions among Classification Schemes</h2>
+                  
+                  <p>When the axes of the logical space are explicitly identified in the description of the classification scheme, the scheme is
+                     commonly referred to as a <i>faceted</i> classification, and each axis (or the representation of a given class's value along a specific axis) as a <i>facet.</i> The concept of facets in classification schemes was first systematized by Ranganathan, though the basic phenomena are visible
+                     in earlier systems, as the example from the Dewey classification given above illustrates.
+                  </p>
+                  
+                  <p>Faceted schemes are typically contrasted with <i>enumerative</i> schemes, in which all classes in the system are exhaustively enumerated in the classification handbook or <i>schedule.</i> In a typical faceted scheme, a separate schedule is provided for each facet and the facets are combined by the classifier
+                     according to specified rules; because the classifier must create or <i>synthesize</i> the class number, rather than looking it up in an enumeration, faceted schemes are sometimes also called <i>synthetic</i> (or, to emphasize that the task of synthesis must be preceded by analysis of the relevant properties of the object, <i>analytico-synthetic)</i> schemes. Both because of their intellectual clarity and because they can readily exploit the strengths of electronic database
+                     management systems, faceted classification schemes have become increasingly popular in recent years.
+                  </p>
+                  
+                  <p>Some classification schemes provide single expressions denoting regions of the logical space; in what follows these are referred
+                     to as <i>(class) formulas.</i> Formulas are convenient when the objects classified must be listed in a single one-dimensional list, as on the shelves of
+                     a library or the pages of a classified bibliography. In such schemes, the order in which axes are represented may take on
+                     great importance, and a great deal of ingenuity can be devoted to deciding whether a classification scheme ought to arrange
+                     items first by language, then by genre, and finally by period, or in some other order.
+                  </p>
+                  
+                  <p>In computerized systems, however, particularly those using database management systems, it is normally easier to vary the
+                     order of axes and often unnecessary to list every object in the collection in a single sequence, and so the order of axes
+                     has tended to become somewhat less important in multidimensional classification schemes intended for computer use. The provision
+                     of unique class formulas for each point in the scheme's logical space has correspondingly declined in importance, and much
+                     of the discussion of notation in pre-electronic literature on classification has taken on an increasingly quaint air. For
+                     those who need to devise compact symbolic formulas for the classes of a scheme, the discussions of notation in Ranganathan's
+                     <i>Prolegomena</i> (1967) are strongly recommended.
+                  </p>
+                  
+                  <p>When each axis of the logical space can be associated with a particular part of the formula denoting a class, and vice versa,
+                     the notation is <i>expressive</i> (as in the portion of the Dewey system mentioned above). Fully expressive notations tend to be longer than would otherwise
+                     be necessary, so some classification schemes intentionally use inexpressive or incompletely expressive notation, as in most
+                     parts of the Library of Congress classification system. Expressive notations are advantageous in computer-based applications,
+                     since they make it easy to perform searches in the logical space by means of searches against class symbols. A search for
+                     dramas in any language, for example, can be performed by searching for items with a Dewey class number matching the regular
+                     expression "8.2." No similarly simple search is possible in inexpressive notations.
+                  </p>
+                  
+                  <p>Some classification systems describe classes using natural-language phrases, rather than by assigning them to specific locations
+                     in a class hierarchy; library subject headings are a well-known example, but there are many others. (Some classification theorists
+                     distinguish such alphabetical systems as <i>indexing systems</i>, as opposed to <i>classification systems</i> in the strict sense, restricting the latter term to systems that provide a formal notation other than natural language for
+                     their class formulas.) Typically, such systems arrange topics in alphabetical order, rather than a systematic order imposed
+                     by the structure of the classification scheme. At one extreme, such a system may use free-form textual descriptions of objects
+                     to "classify" them. Most alphabetically organized classification systems, however, differ from wholly free-form indices in one or more
+                     ways. First, in order to avoid or minimize the inconsistencies caused by the use of different but synonymous descriptions,
+                     such systems normally use <i>controlled vocabularies</i> rather than unconstrained natural-language prose: descriptors other than proper nouns must be chosen from a closed list.
+                     In the ideal case, the controlled vocabulary has exactly one representative from any set of synonyms in the scope of the classification
+                     scheme. Second, as part of the vocabulary control alphabetic systems often stipulate that certain kinds of phrases should
+                     be "inverted", so that the alphabetical listing will place them near other entries. In some schemes, particular types of descriptors may
+                     be subdivided by other descriptors in a hierarchical fashion. Thus the Library of Congress subject heading for <i>Beowulf</i> will be followed by <i>"Beowulf -</i> Adaptations", <i>"Beowulf -</i> Bibliography", <i>"Beowulf -</i> Criticism, textual", <i>"Beowulf -</i> Study and teaching", <i>"Beowulf -</i> Translations – Bibliographies", <i>"Beowulf-</i> Translations – History and criticism", and so on. The phrases after the dashes are, in effect, an array of possible subdivisions for anonymous literary works;
+                     the <i>Library of Congress Subject Headings</i> (LCSH) provide a prescribed set of such expansions for a variety of different kinds of object: anonymous literary works,
+                     individuals of various kinds, theological topics, legislative bodies, sports, industries, chemicals, and so on. Third, most
+                     systems which use controlled vocabularies also provide a more or less systematic set of cross-references among terms. At a
+                     minimum, these cross-references will include <i>see</i> references from unused terms to preferred synonyms. In more elaborate cases, <i>see-also</i> references will be provided to broader terms, narrower terms, coordinate terms (i.e., other terms with the same broader term),
+                     partial synonyms, genus/species terms, and so on. The links to broader and narrower terms allow the alphabetically arranged scheme to provide at least
+                     some of the same information as a strictly hierarchical scheme. Like the LCSH, the <i>New York Times Thesaurus of Descriptors</i> (1983) described by Mills provides a useful model for work of this kind.
+                  </p>
+                  
+                  <p>The fineness of distinction carried by the classification – that is, the size of the regions in the logical space that the classification allows us to distinguish – is called (mixing metaphors) the <i>depth</i> of the classification scheme. Some classification schemes provide a fixed and unvarying depth; others allow variable depth.
+                     Depth may be added either by adding more axes to the classification, as when a library using the Dewey system subdivides 822
+                     (English drama) by period, or by adding more detail to the specification of the value along an axis already present. Faceted
+                     classification schemes often allow facets to vary in length, so as to allow the depth of classification to be increased by
+                     providing a more precise value for any facet. Notations with fixed-length facets, by contrast, like the part of Dewey described
+                     above, cannot increase the specificity of facets other than the last without creating ambiguity.
+                  </p>
+                  
+                  <p>Whether they use expressive notation or not, some classification schemes provide notations for each node in their hierarchy
+                     (e.g., one formula for "literature" and another for "English literature", and so on); in such cases, the categories of the classification are not, strictly speaking, disjoint: the broader classes
+                     necessarily subsume the narrower classes arranged below them. One advantage of expressive notation is that it makes this relationship
+                     explicit. Other schemes provide notations only for the most fully specified nodes of the hierarchy: the hierarchical arrangement
+                     may be made explicit in the description of the scheme, but is collapsed in the definition of the notation, so that the classification
+                     gives the impression of providing only a single array of values. Commonly used part-of-speech classification systems often
+                     collapse their hierarchies in this way: each tag used to denote word-class and morphological information denotes a complete
+                     packet of such information; there is no notation for referring to more general classes like "noun, without regard for its specific morphology." Markup languages similarly often provide names only for the "leaves" of their tree-like hierarchies of element types; even when a hierarchy of classes is an explicit part of the design, as in
+                     the Text Encoding Initiative (TEI), there may be no element types which correspond directly to classes in the hierarchy.
+                  </p>
+                  
+                  <p>When combinations of terms from different axes are specified in advance, as part of the process of classifying or indexing
+                     an object, we speak of a <i>pre-coordinate</i> system. When a classification system limits itself to identifying the appropriate values along the various axes, and values
+                     may be combined at will during a search of the classification scheme, we speak <i>of</i> <i>a</i> <i>post-coordinate</i> system. Printed indices that list all the subject descriptors applied to the items in a bibliography, in a fixed order of
+                     axes, for example, present a kind of pre-coordinate classification scheme. Online indices that allow searches to be conducted
+                     along arbitrary combinations of axes, by contrast, provide a post-coordinate scheme. It is possible for printed indices to
+                     provide free combination of terms, but post-coordinate indexing is easier for computer systems. Post-coordinate indexing allows
+                     greater flexibility and places greater demands on the intelligence of the user of the index.
+                  </p>
+                  
+                  <p>When the axes and the values along each axis are specified in advance, and items are classified in terms of them, we can speak
+                     of an <i>a priori</i> system. When the axes and their values are derived <i>post hoc</i> from the items encountered in the collection of objects being classified, we may speak of an <i>a posteriori</i> or <i>data-driven</i> system. Author-specified keywords and free-text searching are simple examples of data-driven classification. Citation analysis,
+                     and in particular the study of co-citation patterns in scholarly literature, as described by Garfield, is another.
+                  </p>
+                  
+                  <p>In some cases, the identification of axes in a data-driven system may involve sophisticated and expensive statistical analysis
+                     of data. The technique of latent semantic analysis is an example: initially, the occurrence or non-occurrence of each word
+                     in the vocabulary of all the documents in the collection being indexed is treated as an axis, and a statistical analysis is
+                     performed to collapse as many of these axes together as possible and identify a useful set of axes which are as nearly orthogonal
+                     to each other as the data allow. In a typical application, latent-semantic analysis will identify documents in a space of
+                     200 or so dimensions. It is sometimes possible to examine the dimensions and associate meaning with them individually, but
+                     for the most part data-driven statistical methods do not attempt to interpret the different axes of their space individually.
+                     Instead, they rely on conventional measures of distance in n-dimensional spaces to identify items which are near each other;
+                     when the classification has been successful, items which are near each other are similar in ways useful for the application,
+                     and items which are distant from each other are dissimilar.
+                  </p>
+                  
+                  <p><i>A priori</i> systems may also be interpreted as providing some measure of similarity among items, but it is seldom given a numerical value.
+                  </p>
+                  
+                  <p>Unconscious, naive, or pre-theoretic classification (as seen, for example, in natural-language terminology for colors) may
+                     be regarded as intermediate between the <i>a priori</i> and <i>a posteriori</i> types of classification systems described above.
+                  </p>
+                  
+                  <p>Some data-driven systems work by being given samples of pre-classified training material and inducing some scheme of properties
+                     which enables them to match, more or less well, the classifications given for the training material. Other data-driven systems
+                     work without overt supervision, inducing classifications based solely on the observed data.
+                  </p>
+                  
+                  <p><i>A priori</i> systems require more effort in advance than data-driven systems, both in the definition of the classification scheme and
+                     in its application by skilled classifiers. The costs of data-driven systems are concentrated later in the history of the classification
+                     effort, and tend to involve less human effort and more strictly computational effort. Data-driven classification schemes may
+                     also appeal to scholars because they are free of many of the obvious opportunities for bias exhibited by <i>a priori</i> schemes and thus appear more nearly theory-neutral. It must be stressed, therefore, that while the theoretical assumptions
+                     of data-driven systems may be less obvious and less accessible to inspection by those without a deep knowledge of statistical
+                     techniques, they are nonetheless necessarily present.
+                  </p>
+                  
+                  
+                  <a name="ss1-3-2_h4"></a><h2 class="normal">Rules for Classification</h2>
+                  
+                  <p>Some principles for constructing classification schemes have evolved over the centuries; they are not always followed, but
+                     are generally to be recommended as leading to more useful classification schemes.
+                  </p>
+                  
+                  <p>The first of these is to avoid <i>cross-classification:</i> a one-dimensional classification should normally depend on the value of a single characteristic of the object classified,
+                     should provide for discrete (non-overlapping) values, and should allow for all values which will be encountered: perhaps the
+                     best-known illustration of this rule lies in its violation in the fictional Chinese encyclopedia imagined by Jorge Luis Borges,
+                     in which
+                  </p>
+                  
+                  <blockquote>
+                     <p>it is written that animals are divided into: (a) those that belong to the Emperor, (b) embalmed ones, (c) those that are trained,
+                        (d) suckling pigs, (e) mermaids, (f) fabulous ones, (g) stray dogs, (h) those that are included in this classification, (i)
+                        those that tremble as if they were mad, (j) innumerable ones, (k) those drawn with a very fine camel's-hair brush, (1) others,
+                        (m) those that have just broken a flower vase, (n) those that resemble flies from a distance.
+                     </p>
+                     (<a href="#ss1-3-2_b4">Borges 1981</a>)
+                  </blockquote>
+                  
+                  <p>One apparent exception to this rule is often found in schemes which seek to minimize the length of their class formulas: often
+                     two characteristics are collapsed into a single step in the classification hierarchy, as when a demographic classification
+                     has the classes infant (sex unspecified), infant male, infant female, child (sex unspecified), boy, girl, adult (sex unspecified),
+                     man, woman.
+                  </p>
+                  
+                  <p>Other desirable attributes of a classification scheme may be summarized briefly (I abbreviate here the "canons" defined by Ranganathan). Each characteristic used as the basis for an axis in the logical space should:</p>
+                  
+                  
+                  <p> <b>1</b> distinguish some objects from others: that is, it should give rise to at least two subclasses;
+                  </p>
+                  
+                  <p> <b>2</b> be relevant to the purpose of the classification scheme (every classification scheme has a purpose; no scheme can be understood
+                     fully without reference to that purpose);
+                  </p>
+                  
+                  <p> <b>3</b> be definite and ascertainable; this means that a classification scheme cannot be successfully designed or deployed without
+                     taking into account the conditions under which the work of classification is to be performed;
+                  </p>
+                  
+                  <p> <b>4</b> be permanent, so as to avoid the need for constant reclassification;
+                  </p>
+                  
+                  <p> <b>5</b> have an enumerable list of possible values which exhausts all possibilities. Provision should normally be made for cases where
+                     the value is not ascertainable after all: it is often wise to allow values like <i>unknown</i> or <i>not specified.</i> In many cases several distinct special values are needed; among those sometimes used are: <i>unknown</i> (but applicable), <i>does-not-apply, any</i> (data compatible with all possible values for the field), <i>approximate</i> (estimated with some degree of imprecision), <i>disputed, uncertain</i> (classifier is not certain whether this axis is applicable; if it is applicable, the value is unknown).
+                  </p>
+                  
+                  
+                  <p>In classification schemes which provide explicit class symbols, it is useful to provide a consistent sequence of axes in the
+                     construction of the class symbol (if the subject classification for literature divides first by country or language and then
+                     by period, it is probably wise for the subject classification for history to divide first by country and then by period, rather
+                     than vice versa). The sequence of values within an array of values for a given axis should also be made helpful, and consistent
+                     in different applications. Patterns often suggested include arranging the sequence for increasing concreteness, increasing
+                     artificiality, increasing complexity, increasing quantity, chronological sequence, arrangement by spatial contiguity, arrangement
+                     from bottom up, left-to-right arrangement, clockwise sequence, arrangement following a traditional canonical sequence, arrangement
+                     by frequency of values (in bibliographic contexts this is called <i>literary warrant)</i>, or as a last resort alphabetical sequence.
+                  </p>
+                  
+                  <p>Many classification schemes appeal, at some point, to one of a number of common characteristics in order to subdivide a class
+                     which otherwise threatens to become too large (in bibliographic practice, it is often advised to subdivide a class if it would
+                     otherwise contain more than twenty items). Subdivision by chronology, by geographic location, or by alphabetization are all
+                     commonly used; standard schedules for subdivision on chronological, geographic, linguistic, genre, and other grounds can be
+                     found in standard classification schemes and can usefully be studied, or adopted wholesale, in the creation of new schemes.
+                  </p>
+                  
+                  <p>Classification schemes intended for use by others do well to allow for variation in the depth of classification practiced.
+                     Library classification schemes often achieve this by allowing class numbers to be truncated (for coarser classification) or
+                     extended (for finer); markup languages may allow for variable depth of markup by making some markup optional and by providing
+                     element types of varying degrees of specificity.
+                  </p>
+                  
+                  <p>It is also desirable, in schemes intended for general use, to provide for semantic extension and the addition of new concepts;
+                     this is not always easy. Library classification schemes often attempt to achieve this by providing standard schedules for
+                     subdividing classes by chronology, geographic distribution, and so on, to be applied according to the judgment of the classifier;
+                     the Colon Classification goes further by defining an array of abstract semantic concepts which can be used when subdivision
+                     by other standard axes is not feasible or appropriate. It provides a good illustration of the difficulty of providing useful
+                     guidance in areas not foreseen by the devisers of the classification scheme:
+                  </p>
+                  
+                  
+                  <p> <b>1</b> unity, God, world, first in evolution or time, one-dimension, line, solid state, …
+                  </p>
+                  
+                  <p> <b>2</b> two dimensions, plane, cones, form, structure, anatomy, morphology, sources of knowledge, physiography, constitution, physical
+                     anthropology, …
+                  </p>
+                  
+                  <p> <b>3</b> three dimensions, space, cubics, analysis, function, physiology, syntax, method, social anthropology, …
+                  </p>
+                  
+                  <p> <b>4</b> heat, pathology, disease, transport, interlinking, synthesis, hybrid, salt, …
+                  </p>
+                  
+                  <p> <b>5</b> energy, light, radiation, organic, liquid, water, ocean, foreign land, alien, external, environment, ecology, public controlled
+                     plan, emotion, foliage, aesthetics, woman, sex, crime, …
+                  </p>
+                  
+                  <p> <b>6</b> dimensions, subtle, mysticism, money, finance, abnormal, phylogeny, evolution, …
+                  </p>
+                  
+                  <p> <b>7</b> personality, ontogeny, integrated, holism, value, public finance, …
+                  </p>
+                  
+                  <p> <b>8</b> travel, organization, fitness.
+                  </p>
+                  
+                  
+                  <p>In markup languages, semantic extension can take the form of allowing <i>class</i> or <i>type</i> attributes on elements: for any element type <i>e</i>, an element instance labeled with a <i>class</i> or <i>type</i> attribute can be regarded as having a specialized meaning. In some markup languages, elements with extremely general semantics
+                     are provided (such as the TEI <i>div, ab</i>, or <i>seg</i> elements, or the HTML <i>div</i> and <i>span</i> elements), in order to allow the greatest possible flexibility for the use of the specialization attributes.
+                  </p>
+                  
+                  <p>Any new classification scheme, whether intended for general use or for use only by a single project, will benefit from clear
+                     documentation of its purpose and (as far as they can be made explicit) its assumptions. For each class in the scheme, the
+                     scope of the class should be clear; sometimes the scope is sufficiently clear from the name, but very often it is essential
+                     to provide <i>scope notes</i> describing rules for determining whether objects fall into the class or not. Experience is the best teacher here; some projects,
+                     like many large libraries, keep master copies of their classification schemes and add annotations or additional scope notes
+                     whenever a doubtful case arises and is resolved.
+                  </p>
+                  
+                  
+                  <a name="ss1-3-2_h5"></a><h2 class="normal">A Formal View</h2>
+                  
+                  <p>From a purely formal point of view, classification may be regarded as the partition of some set of objects (let us call this
+                     set<i>0</i>) into some set of classes (let us call this set of classes <i>C</i>, or the <i>classification scheme).</i></p>
+                  
+                  <p>In simple cases (nominal classifications), the classes of <i>C</i> have no identified relation to each other but serve merely as bins into which the objects in <i>0</i> are sorted. For any finite 0, there are a finite number of possible partitions of <i>0</i> into non-empty pair-wise disjoint subsets of <i>0.</i> As a consequence, there are at most a finite number of extensionally distinct ways to classify any finite set <i>0</i> into classes; after that number is reached, any new classification must reconstitute a grouping already made by some other
+                     classification and thus be extensionally equivalent to it. Such extensionally equivalent classifications need not be intensionally
+                     equivalent: if we classify the four letters <i>a, b, l, e</i> according to their phonological values, we might put <i>a</i> and <i>e</i> together as vowels, and <i>b</i> and <i>l</i> as consonants. If we classed them according to whether their letter forms have ascenders or not, we would produce the same
+                     grouping; the two classifications are thus extensionally equivalent, though very different in intension. In practice, the
+                     extensional equivalence of two classifications may often suggest some relation among the properties appealed to, as when classifying
+                     the syllables of German according to their lexicality and according to their stress.
+                  </p>
+                  
+                  <p>In some cases, the classes of <i>C</i> can be related by a proximity measure of some kind. In such a classification, any two adjacent classes are more similar to
+                     each other than, say, a pair of non-adjacent classes. If such a classification scheme relies on a single scalar property,
+                     its classes may be imagined as corresponding to positions on, or regions of, a line. If the classification schema relies on
+                     two independent properties, the classes will correspond to points or regions in a plane. In practice, practical classification
+                     schemes often involve arbitrary numbers of independent properties; if <i>n</i> properties are used by a classification scheme, individual classes may be identified with positions in an n-dimensional space.
+                     The rules of Cartesian geometry may then be applied to test similarity between classes; this is simplest if the axes are quantitative,
+                     or at least ordered, but suitably modified distance measures can be used for purely nominal (unordered, unquantitative) classifications
+                     as well: the distance along the axis may be 0, for example, if two items have the same value for that axis, and 1 otherwise.
+                  </p>
+                  
+                  <p>If we imagine some finite number of classes, and conceive of a classification scheme as being defined by some finite-length
+                     description (say, in English or any other natural language) of how to apply those classes to some infinite set of objects,
+                     then it may be noted that there are an infinite number of possible groupings which will not be generated by any classification
+                     scheme described in our list. The proof is as follows:
+                  </p>
+                  
+                  
+                  <p> <b>1</b> Let us label the classes with the numbers 1 to <i>n</i>, where <i>n</i> is the number of classes.
+                  </p>
+                  
+                  <p> <b>2</b> Let us assume that the objects to be classified can be placed in some definite order; the means by which we do this need not
+                     concern us here.
+                  </p>
+                  
+                  <p> <b>3</b> Then let us place the descriptions of possible classifications also into a definite order; it is easy to see that the list
+                     of descriptions is likely to be infinite, but we can nevertheless place them into a definite order. Since we imagine the descriptions
+                     as being in English or some other natural language, we can imagine sorting them first by length and then alphabetically. In
+                     practice, there might be some difficulty deciding whether a given text in English does or does not count as a description
+                     of a classification scheme, but for purposes of this exercise, we need not concern ourselves with this problem: we can list
+                     all English texts, and indeed all sequences of letters, spaces, and punctuation, in a definite sequence. (If we cannot interpret
+                     the sequence of letters as defining a rule for assigning objects to classes, we can arbitrarily assign every object to class
+                     1.)
+                  </p>
+                  
+                  <p> <b>4</b> Now let us imagine a table, with one row for each description of a classification scheme and one column for each object to
+                     be classified. In the cell corresponding to a given scheme and object, we write the number of the class assigned to that object
+                     by that classification scheme. Each row thus describes a grouping of the objects into classes.
+                  </p>
+                  
+                  <p> <b>5</b> Now, we describe a grouping of the objects into classes which differs from every grouping in our list:
+                  </p>
+                  
+                  
+                  
+                  <p> <b>(a)</b> Starting in the first row and the first column, we examine the number written there. If that number is less than <i>n</i>, we add one to it; if it is equal to <i>n</i>, we subtract <i>n -</i> 1 from it.
+                  </p>
+                  
+                  <p> <b>(b)</b> Next, we go to the next row and the next column, and perform the same operation.
+                  </p>
+                  
+                  <p> <b>(c)</b> We thus describe a diagonal sequence of cells in the table, and for each column we specify a class number different from the
+                     one written there. The result is that we have assigned each object to a class, but the resulting grouping does not correspond
+                     to any grouping listed in the table (since it differs from each row in at least one position).
+                  </p>
+                  
+                  
+                  <p>We are forced, then, to conclude that even though our list of finite-length descriptions of classification schemes was assumed
+                     to be infinite, there is at least one assignment of objects to classes that does not correspond to any classification scheme
+                     in the list. (The list contains only the schemes with finite-length descriptions, but the classification we have just described
+                     requires an infinitely large table for its description, so it does not appear in the list.) There are, in fact, not just the
+                     one but an infinite number of such classifications which are not in the list.
+                  </p>
+                  
+                  <p>Since the list contains, by construction, every classification scheme that has a finite-length description, we must infer
+                     that the classifications described by the diagonal procedure outlined above do not have any finite-length description; let
+                     us call them, for this reason, <i>ineffable</i> classifications.
+                  </p>
+                  
+                  <p>The existence of ineffable classifications is not solely of theoretical interest; it may also serve as a salutary reminder
+                     that no single classification scheme can be expected to be "complete" in the sense of capturing every imaginable distinction or common property attributable to the members of <i>0. A</i> "perfect" classification scheme, in the sense described above of a scheme that perfectly captures every imaginable similarity among
+                     the objects of <i>0</i>, is thus a purely imaginary construct; actual classification schemes necessarily capture only a subset of the imaginable
+                     properties of the objects, and we must choose among them on pragmatic grounds.
+                  </p>
+                  
+                  
+                  <a name="ss1-3-2_h6"></a><h2 class="normal">Make or Find?</h2>
+                  
+                  <p>Whenever systematic classification is needed, the researcher may apply an existing classification scheme or else devise a
+                     new scheme for the purpose at hand. Existing schemes may be better documented and more widely understood than an <i>ad hoc</i> scheme would be; in some cases they will have benefited from more sustained attention to technical issues in the construction
+                     of a scheme than the researcher will be able to devote to a problem encountered only incidentally in the course of a larger
+                     research project. Being based on larger bodies of material, they may well provide better coverage of unusual cases than the
+                     researcher would otherwise manage; they may thus be more likely to provide an exhaustive list of possible values for each
+                     axis. And the use of a standard classification scheme does allow more direct comparison with material prepared by others than
+                     would otherwise be possible.
+                  </p>
+                  
+                  <p>On the other hand, schemes with broad coverage may often provide insufficient depth for the purposes of specialized research
+                     (just as the thousand basic categories of the Dewey Decimal System will seldom provide a useful framework for a bibliography
+                     of secondary literature on a single major work or author), and the studied theoretical neutrality of schemes intended for
+                     wide use may be uncongenial to the purpose of the research.
+                  </p>
+                  
+                  <p>In the preparation of resources intended for use by others, the use of standard existing classification schemes should generally
+                     be preferred to the <i>ad hoc</i> concoction of new ones. Note that some existing classification schemes are proprietary and may be used in publicly available
+                     material only by license; before using an established classification scheme, researchers should confirm that their usage is
+                     authorized.
+                  </p>
+                  
+                  <p>For work serving a particular research agenda, no general rule is possible; the closer the purpose of the classification to
+                     the central problem of the research, the more likely is a custom-made classification scheme to be necessary. Researchers should
+                     not, however, underestimate the effort needed to devise a coherent scheme for systematic classification of anything.
+                  </p>
+                  
+                  
+                  <a name="ss1-3-2_h7"></a><h2 class="normal">Some Existing Classification Schemes</h2>
+                  
+                  <p>Classification schemes may be needed, and existing schemes may be found, for objects of virtually any type. Those mentioned
+                     here are simply samples of some widely used kinds of classification: classification of documents by subject or language variety,
+                     classification of words by word class or semantics, classification of extra-textual entities by socio-economic and demographic
+                     properties, and classification of images.
+                  </p>
+                  
+                  <p>The best-known <i>subject classification</i> schemes are those used in libraries and in major periodical bibliographies to provide subject access to books and articles.
+                     The Dewey Decimal Classification (DDC) and its internationalized cousin the Universal Decimal Classification (UDC) are both
+                     widely used, partly for historical reasons (the Dewey system was the first widely promoted library classification scheme),
+                     partly owing to their relatively convenient decimal notation, and because their classification schedules are regularly updated.
+                     In the USA, the Library of Congress classification is now more widely used in research libraries, in part because its notation
+                     is slightly more compact than that of Dewey.
+                  </p>
+                  
+                  <p>Less widely used, but highly thought of by some, are the Bliss Bibliographic Classification, originally proposed by Henry
+                     Evelyn Bliss and now thoroughly revised, and the Colon Classification devised by Shiyali Ramamrita Ranganathan, perhaps the
+                     most important theorist of bibliographic classification in history (Melvil Dewey is surely more influential but can hardly
+                     be described as a theorist). Both are fully faceted classification schemes.
+                  </p>
+                  
+                  <p>The controlled vocabulary of the Library of Congress Subject Headings may also be useful; its patterns for the subdivision
+                     of various kinds of subjects provide useful arrays for subordinate axes.
+                  </p>
+                  
+                  <p>Researchers in need of specialized subject classification should also examine the subject classifications used by major periodical
+                     bibliographies in the field; Balay (1996) provides a useful source for finding such bibliographies.
+                  </p>
+                  
+                  <p>The creators of <i>language corpora</i> often wish to classify their texts according to genre, register, and the demographic characteristics of the author or speaker,
+                     in order to construct a stratified sample of the language varieties being collected and to allow users to select subcorpora
+                     appropriate for various tasks. No single classification scheme appears to be in general use for this purpose. The schemes
+                     used by existing corpora are documented in their manuals; that used by the Brown and the Lancaster-Oslo/Bergen (LOB) corpora is in some ways a typical example. As can be seen, it classifies samples based on a mixture of subject
+                     matter, genre, and type of publication:
+                  </p>
+                  
+                  
+                  <p> <b>• </b> <i>A</i> Press: reportage
+                  </p>
+                  
+                  <p> <b>• </b> <i>B</i> Press: editorial
+                  </p>
+                  
+                  <p> <b>• </b> <i>C</i> Press: reviews
+                  </p>
+                  
+                  <p> <b>• </b> <i>D</i> Religion
+                  </p>
+                  
+                  <p> <b>• </b> <i>E</i> Skills, trades, and hobbiesz
+                  </p>
+                  
+                  <p> <b>• </b> <i>F</i> Popular lore
+                  </p>
+                  
+                  <p> <b>• </b> <i>G</i> Belles lettres, biography, essays
+                  </p>
+                  
+                  <p> <b>• </b> <i>H</i> Miscellaneous (government documents, foundation reports, industry reports, college catalogue, industry house organ)
+                  </p>
+                  
+                  <p> <b>• </b> <i>J</i> Learned and scientific writings
+                  </p>
+                  
+                  <p> <b>• </b> <i>K</i> General fiction
+                  </p>
+                  
+                  <p> <b>• </b> <i>L</i> Mystery and detective fiction
+                  </p>
+                  
+                  <p> <b>• </b> <i>M</i> Science fiction
+                  </p>
+                  
+                  <p> <b>• </b> <i>N</i> Adventure and western fiction
+                  </p>
+                  
+                  <p> <b>• </b> <i>P</i> Romance and love story
+                  </p>
+                  
+                  <p> <b>• </b> <i>R</i> Humor
+                  </p>
+                  
+                  
+                  <p>Several recent corpus projects have produced, as a side effect, thoughtful articles on sampling issues and the classification
+                     of texts. <a href="#ss1-3-2_b3">Biber (1993)</a> is an example. (See also chapter 21, this volume.) Some recent corpora, for example the British National Corpus, have not
+                     attempted to provide a single text classification in the style of the Brown and LOB corpora. Instead, they provide descriptions
+                     of the salient features of each text, allowing users to select subcorpora by whatever criteria they choose, in a kind of post-coordinate
+                     system.
+                  </p>
+                  
+                  <p>Some language corpora provide word-by-word annotation of their texts, most usually providing a single flat classification
+                     of words according to a mixture of word-class and inflectional information (plural nouns and singular nouns, for example,
+                     thus being assigned to distinct classes). A variety of <i>word-class tagging</i> schemes is in use, but for English-language corpora the point of reference typically remains the tag set defined by the Brown
+                     Corpus of Modern American English, as refined by the Lancaster-Oslo/Bergen (LOB) Corpus, and further refined through several generations of the CLAWS (Constituent Likelihood Automatic Word-tagging
+                     System) tagger developed and maintained at the University of Lancaster (<a href="#ss1-3-2_b11">Garside and Smith 1997</a>). When new word-class schemes are devised, the detailed documentation of the tagged LOB corpus (<a href="#ss1-3-2_b12">Johansson 1986</a>) can usefully be taken as a model.
+                  </p>
+                  
+                  <p><i>Semantic classification</i> of words remains a topic of research; the classifications most frequently used appear to be the venerable work of Roget's
+                     <i>Thesaurus</i> and the newer more computationally oriented work of Miller and colleagues on WordNet (on which see <a href="#ss1-3-2_b7">Fellbaum 1998</a>) and their translators, imitators, and analogues in other languages (on which see <a href="#ss1-3-2_b20">Vossen 1998</a>).
+                  </p>
+                  
+                  <p>In <i>historical work</i>, classification is often useful to improve the consistency of data and allow more reliable analysis. When systematic classifications
+                     are applied to historical sources such as manuscript census registers, it is generally desirable to retain some account of
+                     the original data, to allow consistency checking and later reanalysis (e.g., using a different classification scheme). The
+                     alternative, <i>pre-coding</i> the information and recording only the classification assigned, rather than the information as given in the source, was widely
+                     practiced in the early years of computer applications in history, since it provides for more compact data files, but it has
+                     fallen out of favor because it makes it more difficult or impossible for later scholars to check the process of classification
+                     or to propose alternative classifications.
+                  </p>
+                  
+                  <p>Historians may find the <i>industrial, economic, and demographic classifications</i> of modern governmental and other organizations useful; even where the classifications cannot be used unchanged, they may
+                     provide useful models. Census bureaus and similar governmental bodies, and archives of social science data, are good sources
+                     of information about such classification schemes. In the anglophone world, the most prominent social science data archives
+                     may be the Inter-university Consortium for Political and Social Research (ICPSR) in Ann Arbor aa(<a href="http://www.icpsr.umich.edu/">http://www.icpsr.umich.edu/</a>) and the UK Data Archive at the University of Essex (<a href="http://www.data-archive.ac.uk/">http://www.data-archive.ac.uk/</a>). The Council of European Social Science Data Archives (<a href="http://www.nsd.uib.no/cessda/index.html">http://www.nsd.uib.no/cessda/index.html</a>) maintains a list of data archives in various countries both inside and outside Europe.
+                  </p>
+                  
+                  <p>With the increasing emphasis on image-based computing in the humanities and the creation of large electronic archives of images,
+                     there appears to be great potential utility in classification schemes for images. If the class formulas of an image classification
+                     scheme are written in conventional characters (as opposed, say, to being themselves thumbnail images), then collections of
+                     images can be made accessible to search and retrieval systems by indexing and searching the image classification formulas,
+                     and then providing access to the images themselves. Existing image classification schemes typically work with controlled natural-language
+                     vocabularies; some resources use detailed descriptions of the images in a rather formulaic English designed to improve the
+                     consistency of description and make for better retrieval. The Index of Christian Art at Princeton University (<a href="http://www.princeton.edu/~ica/">http://www.princeton.edu/~ica/</a>) is an example.
+                  </p>
+                  
+                  <p>The difficulties of agreeing on and maintaining consistency in keyword-based classifications or descriptions of images, however,
+                     have meant that there is lively interest in automatic recognition of similarities among graphic images; there is a great deal
+                     of proprietary technology in this area. Insofar as it is used for search and retrieval, image recognition may be thought of
+                     as a specialized form of data-driven classification, analogous to automatic statistically based classification of texts.
+                  </p>
+                  
+                  
+                  
+                  
+                  <a name="ss1-3-2_h8"></a><h2 class="normal">References for Further Reading</h2>
+                  <a name="ss1-3-2_b1"></a><p class="hang">Anderson, James D. (1979). <i><span class="title">Contextual Indexing and Faceted Classification for Databases in the Humanities</span></i>. In Roy D. Tally and Ronald R. Deultgen (eds.), <i><span class="title">Information Choices and Policies: Proceedings of the ASIS Annual Meeting</span></i>, vol. 16 (pp. 194–201). White Plains, NY: Knowledge Industry Publications.
+                  </p>
+                  <a name="ss1-3-2_b2"></a><p class="hang">Balay, Robert, (ed.) (1996). <i><span class="title">Guide to Reference Books</span></i>, 11th edn. Chicago, London: American Library Association.
+                  </p>
+                  <a name="ss1-3-2_b3"></a><p class="hang">Biber, Douglas (1993). <i><span class="title">Representativeness in Corpus Design</span></i>. <i><span class="title">Literary and Linguistic Computing</span></i> 8, 4: 243–57.
+                  </p>
+                  <a name="ss1-3-2_b4"></a><p class="hang">Borges, Jorge Luis (1981). <i><span class="title">The Analytical Language of John Wilkins</span></i>, tr. Ruth L. C. Simms. In E. R. Monegal and A. Reid (eds.), <i><span class="title">Borges: A Reader</span></i> (pp. 141–3). New York: Dutton.
+                  </p>
+                  <a name="ss1-3-2_b5"></a><p class="hang">Bowker, Geoffrey C. and Susan Leigh Star (1999). <i><span class="title">Sorting Things Out: Classification and its Consequences</span></i>. Cambridge, MA: MIT Press.
+                  </p>
+                  <a name="ss1-3-2_b6"></a><p class="hang">Deerwester, Scott et al. (1990). <i><span class="title">Indexing by Latent Semantic Analysis</span></i>. <i><span class="title">Journal of the American Society for Information Science</span></i> 41, 6: 391–407.
+                  </p>
+                  <a name="ss1-3-2_b7"></a><p class="hang">Fellbaum, Christiane, (ed.) (1998). <i><span class="title">WordNet: An Electronic Lexical Database</span></i>. Cambridge, MA: MIT Press.
+                  </p>
+                  <a name="ss1-3-2_b8"></a><p class="hang">Floud, Roderick (1979). <i><span class="title">An Introduction to Quantitative Methods for Historians</span></i>. London and New York: Methuen.
+                  </p>
+                  <a name="ss1-3-2_b9"></a><p class="hang">Foskett, A. C. (1996). <i><span class="title">The Subject Approach to Information</span></i>, [n.p.]: Linnet Books and Clive Bingley, 1969. (4th edn. 1982. 5th edn. London: Library Association).
+                  </p>
+                  <a name="ss1-3-2_b10"></a><p class="hang">Garfield, Eugene (1979). <i><span class="title">Citation Indexing: Its Theory and Application in Science, Technology, and Humanities</span></i>. New York: Wiley.
+                  </p>
+                  <a name="ss1-3-2_b11"></a><p class="hang">Garside, R. and N. Smith (1997). <i><span class="title">A Hybrid Grammatical Tagger: CLAWS4</span></i>. In R. Garside, G. Leech, and A. McEnery (eds.). <i><span class="title">Corpus Annotation: Linguistic Information from Computer Text Corpora</span></i> (pp. 102–21). London: Longman.
+                  </p>
+                  <a name="ss1-3-2_b12"></a><p class="hang">Johansson, Stig, in collaboration with Eric Atwell, Roger Garside, and Geoffrey Leech (1986). <i><span class="title">The Tagged LOB Corpus</span></i>. Bergen: Norwegian Computing Centre for the Humanities.
+                  </p>
+                  <a name="ss1-3-2_b13"></a><p class="hang">Kuhn, Thomas (1977). <i><span class="title">Second Thoughts on Paradigms</span></i>. In Frederick Suppe (ed.), <i><span class="title">The Structure of Scientific Theories</span></i>, 2nd edn. (pp. 459–82). Urbana: University of Illinois Press.
+                  </p>
+                  <a name="ss1-3-2_b14"></a><p class="hang">Library of Congress, Cataloging Policy and Support Office (1996). <i><span class="title">Library of Congress Subject Headings</span></i>, 19th edn., 4 vols. Washington, DC: Library of Congress.
+                  </p>
+                  <a name="ss1-3-2_b15"></a><p class="hang">Mills, Harlan (1983). <i><span class="title">The New York Times Thesaurus of Descriptors</span></i>. In Harlan Mills, <i><span class="title">Software Productivity</span></i> (pp. 31–55). Boston, Toronto: Little, Brown.
+                  </p>
+                  <a name="ss1-3-2_b16"></a><p class="hang">Mills, Jack, and Vanda Broughton (1977–). <i><span class="title">Bliss Bibliographic Classification</span></i>, 2nd edn. London: Butterworth.
+                  </p>
+                  <a name="ss1-3-2_b17"></a><p class="hang">Ranganathan, S[hiyali] R[amamrita] (1967). <i><span class="title">Prolegomena to Library Classification</span></i>, 3rd edn. Bombay: Asia Publishing House.
+                  </p>
+                  <a name="ss1-3-2_b18"></a><p class="hang">Ranganathan, Shiyali Ramamrita (1989). <i><span class="title">Colon Classification</span></i>, 7th edn. Basic and Depth version. Revised and edited by M. A. Gopinath. Vol. 1, Schedules for Classification. Bangalore: Sarada Ranganathan Endowment for Library Science.
+                  </p>
+                  <a name="ss1-3-2_b19"></a><p class="hang">Svenonius, Elaine (2000). <i><span class="title">The Intellectual Foundation of Information Organization</span></i>. Cambridge, MA: MIT Press.
+                  </p>
+                  <a name="ss1-3-2_b20"></a><p class="hang">Vossen, Piek (1998). <i><span class="title">Introduction to EuroWordNet</span></i>. <i><span class="title">Computers and the Humanities</span></i> 32: 73–89.
+                  </p>
+                  
+                  
+                  
+               </div>
+            

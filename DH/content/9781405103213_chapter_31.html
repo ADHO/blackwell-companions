@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<div class="content">
+                  <h2 class="normal">31. 
+                     <h2 class="normal">Designing Sustainable Projects and Publications</h2>
+                  </h2>
+                  <span style="font-weight:bold;">Daniel V. Pitti</span>
+                  
+                  <a name="_h72"></a><a name="_h73"></a>
+                  
+                  
+                  
+                  <a name="ss1-5-1_h0"></a><h2 class="normal">Introduction</h2>
+                  
+                  <p>Designing complex, sustainable digital humanities projects and publications requires familiarity with both the research subject
+                     and available technologies. It is essential that the scholar have a clear and explicit understanding of his intellectual objectives
+                     and the resources to be used in achieving them. At the same time, the scholar must have sufficient comprehension of available
+                     technologies, in order to judge their suitability for representing and exploiting the resources in a manner that best serves
+                     his intellectual objectives. Given the dual expertise required, scholars frequently find it necessary to collaborate with
+                     technologists in the design and implementation processes, who bring different understandings, experience, and expertise to
+                     the work. Collaboration in and of itself may present challenges, since most humanists generally work alone and share the research's
+                     results, not the process.
+                  </p>
+                  
+                  <p>Collaborative design involves iterative analysis and definition, frequently accompanied by prototype implementations that
+                     test the accuracy and validity of the analysis. While computers enable sophisticated data processing and manipulation to produce
+                     desired results, the scholar must analyze, define, and represent the data in detail. Each data component and each relation
+                     between data components needs to be identified, and, when represented in the computer, named and circumscribed. Data must
+                     not simply be entered into a computer, but be accompanied by additional data that identify the data components. This decomposition
+                     is necessary to instruct the computer, through programs or applications, to process the data to achieve the objectives, a
+                     process of locating, identifying, and manipulating the data.
+                  </p>
+                  
+                  <p>The data need not be endlessly analyzed and decomposed. It is only necessary to identify the data components and relations
+                     deemed essential to achieving desired results. To determine what is essential in reaching the objectives, it is necessary
+                     also to understand the objectives in detail and subject them to a rigorous analysis, defining and making explicit each important
+                     function. Analysis of the objectives informs analysis of the data, determining what data and features of the data will be
+                     required to meet the objectives, and thus what features will need to be identified and explicitly represented. Conversely,
+                     analysis of the data will inform analysis of the objectives.
+                  </p>
+                  
+                  <p>Analyzing objectives relies on identifying and defining the intended user community (or communities) and the uses. Are the
+                     intended users peers, sharing the same or similar research interests? Are they students, or perhaps the interested public? If the users are students, then at what level: K-12, K-16, 9–12, or 13–16? Perhaps they are a very focused group, such as high school literature or history classes? For the intended user community, is the project primarily intended to facilitate research, scholarly communication of research,
+                     reference, pedagogy, or perhaps a combination of one or more of these? The answers to these questions will assist in determining the functions that will be most likely to serve the perceived needs
+                     and at the appropriate level or levels.
+                  </p>
+                  
+                  <p>As important as users are, those responsible for creation and maintenance of the project must also be considered. In fact,
+                     they may be considered another class of users, as distinct from the so-called end users. Before a project begins to produce
+                     and publish data content, the project must have an infrastructure that will support its production and publishing. Someone
+                     – project manager, researcher, lead design person – needs to specify the steps or workflow and methods involved in the complex tasks of identifying, documenting, and digitizing
+                     artifacts; creating original digital resources; and the control and management of both the assets created and the methods
+                     used. The design must incorporate the creator's requirements. Control, management, and production methods are easily overlooked
+                     if the designer focuses exclusively on the publication and end user. Asset management does not present a particular problem
+                     in the early stages of a project, when there are only a handful of objects to track. As the number of files increases, though,
+                     it becomes increasingly difficult to keep track of file names, addresses and versions.
+                  </p>
+                  
+                  <p>Focusing on achieving particular short-term results may also lead to neglecting consideration of the durability or persistence
+                     of the content and its publication. Ongoing changes in computer technology present long-term challenges. Changes in both applications
+                     and the data notations with which they work will require replacing one version of an application with another, or with an
+                     entirely different application, and will eventually require migrating the data from one notation to another. Generally these
+                     changes do not have a major impact in the first four or five years of a project, and thus may not seem significant to projects
+                     that are intended to be completed within three or four years. Most researchers and creators, though, will want their work
+                     to be available for at least a few years after completion. If a project has or will have a publisher, the publisher will certainly
+                     want it to remain viable as long as it has a market. The cultural heritage community, important participants in scholarly
+                     communication, may judge a publication to have cultural value for future generations. Archivists, librarians, and museum curators,
+                     in collaboration with technologists, have been struggling seriously since at least the 1980s to develop methods for ensuring
+                     long-term access to digital information. Though many critical challenges remain, there is broad consensus that consistent
+                     and well-documented use of computer and intellectual standards is essential.
+                  </p>
+                  
+                  <p>Economy must also be considered. There are the obvious up-front costs of computer hardware and software, plus maintenance
+                     costs as these break or become obsolete. Human resources are also an important economic factor. Human resources must be devoted
+                     to the design, prototyping, and, ultimately, implementation. Once implemented, more resources are needed to maintain a project's
+                     infrastructure. Data production and maintenance also require human resources. Data needs to be identified, collected, and
+                     analyzed; created, and maintained in machine-readable form; and reviewed for accuracy and consistency. Realizing complex,
+                     detailed objectives requires complex, detailed implementations, production methods, and, frequently, a high degree of data
+                     differentiation. As a general rule, the more detailed and complex a project becomes, the more time it will take to design,
+                     implement, populate with data, and maintain. Thus every objective comes with costs, and the costs frequently have to be weighed
+                     against the importance of the objective. Some objectives, while worthwhile, may simply be too expensive.
+                  </p>
+                  
+                  <p>Design is a complex exercise: given this complexity, the design process is iterative, and each iteration leads progressively
+                     to a coherent, integrated system. It is quite impossible to simultaneously consider all factors. Both the whole and the parts
+                     must be considered in turn, and each from several perspectives. Consideration of each in turn leads to reconsideration of
+                     the others, with ongoing modifications and adjustments. Prototyping of various parts to test economic, intellectual, and technological
+                     feasibility is important. It is quite common to find an apparent solution to a particular problem while considering one or
+                     two factors but to have it fail when other factors are added, requiring it to be modified or even abandoned. Good design,
+                     then, requires a great deal of persistence and patience.
+                  </p>
+                  
+                  
+                  <a name="ss1-5-1_h1"></a><h2 class="normal">Disciplinary Perspective and Objects of Interest</h2>
+                  
+                  <p>Humanists study human artifacts, attempting to understand, from a particular perspective and within a specific context, what
+                     it means to be human. The term artifact is used here in the broadest sense: an artifact is any object created by humans. Artifacts
+                     may be primary objects of interest or serve as evidence of human activities, events, and intentions. Archivists make a useful
+                     distinction between an object intentionally created, as an end in itself, and an object that is a by-product of human activities,
+                     the object typically functioning instrumentally as a means or tool. Novels, poems, textbooks, paintings, films, sculptures,
+                     and symphonies are created as ends in themselves. Court records, birth certificates, memoranda, sales receipts, deeds, and
+                     correspondence facilitate or function as a means to other objectives, or as evidence or a record of particular actions taken.
+                     After serving their intended purpose, instrumental artifacts primarily function as evidence. Artifacts that are ends in themselves
+                     may of course also function as evidence. A novel, for example, may be viewed as a literary object, with particular aesthetic
+                     and intellectual qualities, or a source of evidence for language usage or for identifying important cultural values in a particular
+                     historical context. Many disciplines share an interest in the same or similar objects or have similar assumptions and methods.
+                     Linguists and students of literature may share an interest in written texts, perhaps even literary texts, but differ substantially
+                     in what characteristics of texts are of interest or considered significant. Socio-cultural historical studies, while differing
+                     widely in the phenomena studied, will nevertheless employ similar methods, with the shared objective of a historical understanding.
+                  </p>
+                  
+                  <p>In order to apply computer technology to humanities research, it is necessary to represent in machine-readable form the artifacts
+                     or objects of primary or evidentiary interest in the research, as well as secondary information used in the description, analysis,
+                     and interpretation of the objects. The representations must reflect the disciplinary perspective and methods of the researcher,
+                     and facilitate the analytic and communication objectives of the project. In addition to perspective and intended uses, the
+                     method of representation will depend upon the nature of the artifact to be represented. As modes of human communication, pictorial
+                     materials, printed texts, mathematical formulae, tabular data, sound, film, sculptures, buildings, and maps, to name a few
+                     possible artifact types, all have distinct observable characteristics or features, and representations will generally isolate
+                     and emphasize those deemed essential to the research.
+                  </p>
+                  
+                  <p>All information in computers exists in a coded form that enables it to be mechanically read and processed by the computer.
+                     Such codes are ultimately based on a binary system. Combinations of fixed sequences of 0s and 1s are used to create more complex
+                     representations, such as picture elements or pixels, sound samples, and alphabetic and numeric characters. Each of these is
+                     then combined to create more complex representations. For example, an array of pixels is used to form a picture, a sequence
+                     of alphabetic and numeric characters a text, and a sequence of sound samples a song. The codes so developed are used to represent
+                     both data and the programs that instruct the computer in reading and processing the data. There are a variety of ways of creating
+                     machine-readable texts. Text can be entered or transcribed from a keyboard. Some printed textual materials can be scanned
+                     and then rendered into machine-readable form using optical character recognition (OCR) software, although many texts, particularly
+                     in manuscript form, exceed the capability of current OCR technology. Either way, creating a sequence of machine-readable characters
+                     does not take advantage of major technological advances made in the representation and manipulation of written language and
+                     mathematics.
+                  </p>
+                  
+                  <p>Written language and mathematics are composed of character data, marks, or graphs. Characters include ideographs (such as
+                     Chinese characters) and phonographs (as in the Latin alphabet), as well as Arabic numbers and other logograms. The discrete
+                     codes used in writing are mapped or reduced to machine-readable codes when represented in computers. Unicode (defined in ISO/IEC 10646) represents the most extensive attempt to map the known repertoire of characters used by humans to machine-readable
+                     codes. While written language (text) and mathematics are not the only types of information represented in computers, text
+                     constitutes an essential component of all humanities projects. Many projects will use one or more historical texts, the literary
+                     works of an author or group of related authors, a national constitution, or a philosophical work as the principal subject.
+                     For other projects, particular texts and records may not be the object of study, but texts may still be used for information
+                     about individuals, families, and organizations; intellectual, artistic, political, or other cultural movements; events; and
+                     other socio-cultural phenomena. Projects employ text to describe and document resources and to communicate the results of
+                     analysis and research. Further, text is used to identify, describe, control, and provide access to the digital assets collected
+                     in any project, and is essential in describing, effecting, and controlling interrelations between entities and the digital
+                     assets used to represent them. Comparing, identifying, describing, and documenting such interrelations are essential components
+                     of all humanities research.
+                  </p>
+                  
+                  <p>The power and complexity of computer processing of textual data require complex representation of the text. A simple sequence
+                     of characters is of limited utility. In order to take full advantage of computing, textual data must be decomposed into their
+                     logical components, with each component identified or named, and its boundaries explicitly or implicitly marked. This decomposition
+                     and identification is necessary because sophisticated, accurate, and reliable processing of text is only possible when the
+                     computer can be unambiguously instructed to identify and isolate characters and strings of characters and to perform specified
+                     operations on them. There are a variety of specialized applications available for recording and performing mathematical operations
+                     on numerical data. There are also a variety of applications available for recording and processing textual data, though most
+                     do not have characteristics and features that make them appropriate for sustainable, intellectually complex humanities research.
+                  </p>
+                  
+                  <p>Database and markup technologies represent the predominant technologies available for textual information. Though they differ
+                     significantly, they have several essential characteristics and features in common. Both exist in widely supported standard
+                     forms. Open, community-based and widely embraced standards offer reasonable assurance that the represented information will
+                     be durable and portable. Database and markup technologies are either based on or will accept standard character encodings
+                     (ASCII or, increasingly, Unicode). Both technologies enable an explicit separation of the logical components of information
+                     from the operations that are applied to them. This separation is effected by means of two essential features. First, each
+                     requires user-assigned names for designating and delimiting the logical components of textual objects. While there are some
+                     constraints, given the available character repertoire, the number of possible names is unlimited. Second, each supports the
+                     logical interrelating and structuring of the data components.
+                  </p>
+                  
+                  <p>Though each of these technologies involves naming and structurally interrelating textual entities and components, each does
+                     so using distinctly different methods, and exploits the data in different ways. Deciding which technology to use will require
+                     analyzing the nature of the information to be represented and identifying those operations you would like to perform on it.
+                     With both technologies, the naming and structuring requires anticipating the operations. Each of these technologies is optimized
+                     to perform a set of well-defined operations. Though there is some overlap in functionality, the two technologies are best
+                     described as complementary rather than competitive. Information best represented in databases is characterized as "data-centric", and information best represented in markup technologies is characterized as "document-centric." Steve DeRose, in a paper delivered in 1995 at a conference devoted to discussing the encoding of archival finding aids, made
+                     much the same distinction, though he used the terms "document" and "form" to distinguish the two information types (see Steve DeRose, "Navigation, Access, and Control Using Structured Information", in <i>The American Archivist</i> (Chicago: Society of American Archivists), 60,3, Summer 1997, pp. 298–309).
+                  </p>
+                  
+                  <p>Information collected on many kinds of forms is data-centric. Job applications are a familiar example. Name, birth date, street
+                     address, city, country or state, postal codes, education, skills, previous employment, date application completed, name or
+                     description of a position sought, references, and so on, are easily mapped into a database and easily retrieved in a variety
+                     of ways. Medical and student records, and census data are other common examples of data-centric information. These familiar
+                     examples have the following characteristics in common:
+                  </p>
+                  
+                  
+                  <p> <b>•</b> Regular number of components or fields in each discrete information unit.
+                  </p>
+                  
+                  <p> <b>•</b> Order of the components or fields is generally not significant.
+                  </p>
+                  
+                  <p> <b>•</b> Each information component is restricted to data. That is, it has no embedded delimiters, other than the formal constraints
+                     of data typing (for example, a date may be constrained to a sequence of eight Arabic numbers, in the order year-month-day).
+                  </p>
+                  
+                  <p> <b>•</b> Highly regularized structure, possibly with a fixed, though shallow, hierarchy.
+                  </p>
+                  
+                  <p> <b>•</b> Relations between discrete information units have a fixed number of types (though the number of occurrences of each type may
+                     or may not be constrained).
+                  </p>
+                  
+                  <p> <b>•</b> Processing of data-centric information (such as accurate recall and relevance retrieval, sorting, value comparison, and mathematical
+                     computation) is highly dependent on controlled values and thus highly dependent on machine-enforced data typing, authority
+                     files, and a high degree of formality, accuracy, and consistency in data creation and maintenance.
+                  </p>
+                  
+                  
+                  <p>Common types of databases are hierarchical, network, relational, and object-oriented. Today, relational databases are by far
+                     the most prevalent. Structured Query Language (SQL), an ISO standard first codified in 1986 and substantially revised in 1992
+                     and again in 1999, is the major standard for relational databases. While compliance with the standard is somewhat irregular,
+                     most relational databases comply sufficiently to ensure the portability and durability of data across applications. There
+                     are only a few viable implementations of object-oriented databases, though the technology has contributed conceptual and functional
+                     models that influenced the 1999 revision of SQL. SQL is both a Data Definition Language (DDL) and a Data Manipulation Language
+                     (DML). As a DDL, it allows users to define and name tables of data, and to interrelate the tables. Such definitions are frequently
+                     called database schemas. Tables have rows and columns. Within the context of databases, rows are commonly called records,
+                     and columns called fields in the records. Each column or field is assigned a name, typically a descriptive term indicating
+                     the type of data to be contained in it. The DML facilitates updating and maintaining the data, as well as sophisticated querying
+                     and manipulating of data and data relations.
+                  </p>
+                  
+                  <p>Most historical or traditional documents and records are too irregular for direct representation in databases. Data in databases
+                     are rigorously structured and systematic and most historical documents and records simply are not. Nevertheless, some documents
+                     and records will be reducible to database structures, having characteristics approximating those listed above. Many traditional
+                     government, education, and business records may lend themselves to representation in databases, as will many ledgers and accounting
+                     books. But a doctoral dissertation, while a record, and generally quite regularized in structure, lacks other features of
+                     data that it would have to have to fit comfortably in a database architecture – for example, the order of the text components matters very much, and if they are rearranged arbitrarily, the argument will
+                     be rendered incoherent.
+                  </p>
+                  
+                  <p>While database technology may be inappropriate for representing most historical documents and records, it is very appropriate
+                     technology for recording analytic descriptions of artifacts and in systematically describing abstract and concrete phenomena
+                     based on analysis of evidence found in artifacts. Analytic descriptive surrogates will be useful in a wide variety of projects.
+                     Archaeologists, for example, may be working with thousands of objects. Cataloguing these objects involves systematically recording
+                     a vast array of details, frequently including highly articulated classification schemes and controlled vocabularies. Database
+                     technology will almost always be the most appropriate and effective tool for collecting, classifying, comparing, and evaluating
+                     artifacts in one or many media.
+                  </p>
+                  
+                  <p>Database technology is generally an appropriate and effective tool for documenting and interrelating records concerning people,
+                     events, places, movements, artifacts, or themes. Socio-cultural historical projects in particular may find databases useful
+                     in documenting and interrelating social and cultural phenomena. While we can digitize most if not all artifacts, many concrete
+                     and abstract phenomena are not susceptible to direct digitization. For example, any project that involves identifying a large
+                     number of people, organizations, or families will need to represent them using descriptive surrogates. A picture of a person,
+                     when available, might be very important, but textual identification and description will be necessary. In turn, if an essential
+                     part of the research involves describing and relating people to one another, to artifacts created by them or that provide
+                     documentary evidence of them, to events, to intellectual movements, and so on, then database technology will frequently be
+                     the most effective tool. Individuals, artifacts, places, events, intellectual movements, can each be identified and described
+                     (including chronological data where appropriate). Each recorded description can be associated with related descriptions. When
+                     populated, such databases enable users to locate individual entities, abstract as well as concrete, and to see and navigate
+                     relations between entities. If the database is designed and configured with sufficient descriptive and classificatory detail,
+                     many complex analytic queries will be possible, queries that reveal intellectual relations between unique entities, but also
+                     between categories or classes of entities based on shared characteristics.
+                  </p>
+                  
+                  <p>Textbooks, novels, poems, collections of poetry, newspapers, journals, and journal articles are all examples of document-centric
+                     data. These familiar objects have in common the following characteristics:
+                  </p>
+                  
+                  
+                  <p> <b>•</b> Irregular number of parts or pieces. Documents, even documents of a particular type, do not all have the same number of textual
+                     divisions (parts, chapters, sections, and so on), paragraphs, tables, lists, and so on.
+                  </p>
+                  
+                  <p> <b>•</b> Serial order is significant. It matters whether this chapter follows that chapter, and whether this paragraph follows that
+                     paragraph. If the order is not maintained, then intelligibility and sense break down.
+                  </p>
+                  
+                  <p> <b>•</b> Semi-regular structure and unbounded hierarchy.
+                  </p>
+                  
+                  <p> <b>•</b> Arbitrary intermixing of text and markup, or what is technically called mixed content.
+                  </p>
+                  
+                  <p> <b>•</b> Arbitrary number of interrelations (or references) within and among documents and other information types, and generally the
+                     types of relations are unconstrained or only loosely constrained.
+                  </p>
+                  
+                  
+                  <p>Extensible Markup Language (XML), first codified in 1998 by the World Wide Web Consortium (W3C), is the predominant markup
+                     technologies standard. XML is a direct descendant of Standard Generalized Markup Language (SGML), first codified in 1986 by
+                     the International Standards Organization (ISO). While the relationship between XML and SGML is quite complex, XML may be viewed
+                     as "normalized" SGML, retaining the essential functionality of SGML, while eliminating those features of SGML that were problematic for computer
+                     programmers.
+                  </p>
+                  
+                  <p>XML is a descriptive or declarative approach to encoding textual information in computers. XML does not provide an off-the-shelf
+                     tagset that one can simply take home and apply to a letter, novel, article, or poem. Instead, it is a standard grammar for
+                     expressing a set of rules according to which a class of documents will be marked up. XML provides conventions for naming the
+                     logical components of documents, and a syntax and metalanguage for defining and expressing the logical structure and relations
+                     among the components. Using these conventions, individuals or members of a community sharing objectives with respect to a
+                     particular type of document can work together to encode those documents.
+                  </p>
+                  
+                  <p>One means of expressing analytic models written in compliance with formal XML requirements is the document type definition,
+                     or DTD. For example, the Association of American Publishers has developed four DTDs for books, journals, journal articles,
+                     and mathematical formulae. After thorough revision, this standard has been released as an ANSI/NISO/ISO standard, 12083- A consortium of software developers and producers has developed a DTD for computer manuals and documentation
+                     called DocBook. The Text Encoding Initiative (TEI) has developed a complex suite of DTDs for the representation of literary
+                     and linguistic materials. Archivists have developed a DTD for archival description or finding aids called encoded archival
+                     description (EAD). A large number of government, education and research, business, industry, and other institutions and professions
+                     are currently developing DTDs for shared document types. DTDs shared and followed by a community can themselves become standards.
+                     The ANSI/NISO/ISO 12083, DocBook, TEI, and EAD DTDs are all examples of standards.
+                  </p>
+                  
+                  <p>The standard DTDs listed above have two common features. First, they are developed and promulgated by broad communities. For
+                     example, TEI was developed by humanists representing a wide variety of disciplines and interests. The development process
+                     (which is ongoing) requires negotiation and consensus-building. Second, each DTD is authoritatively documented, with semantics
+                     and structure defined and described in detail. Such documentation helps make the language public rather than private, open
+                     rather than closed, standard rather than proprietary, and thereby promotes communication. These two features – consensus and documentation – are essential characteristics of standards, but they are not sufficient in and of themselves to make standards successful
+                     (i.e., make them widely understood and applied within an acceptable range of uniformity).
+                  </p>
+                  
+                  <p>The distinction between document-centric and data-centric information, while useful, is also frequently problematic. It is
+                     a useful distinction because it highlights the strengths of markup languages and databases, although it does not reflect information
+                     reality, as such. Frequently any given instance of information is not purely one or the other, but a mixture of both. Predominantly
+                     data-centric information may have some components or features that are document-centric, and vice-versa. The distinction is
+                     of more than theoretical interest, as each information type is best represented using a different technology, and each technology
+                     is optimized to perform a specific set of well-defined functions and either does not perform other functions, or performs
+                     them less than optimally. When deciding the best method, it is unfortunately still necessary to weigh what is more and less
+                     important in your information and to make trade-offs.
+                  </p>
+                  
+                  <p>In addition to text representation. XML is increasingly used in realizing other functional objectives. Since the advent of
+                     XML in 1998, many database developers have embraced XML syntax as a data-transport syntax, that is, for passing information
+                     in machine-to-machine and machine-to-human communication, XML is also increasingly being used to develop standards for declarative
+                     processing of information. Rendering and querying are probably the two primary operations performed on XML-encoded textual
+                     documents. We want to be able to transform encoded documents into human-readable form, on computer screens, and on paper.
+                     We also want to be able to query individual documents and collections of documents. There are currently several related standards
+                     for rendering and querying XML documents that have been approved or are under development: Extensible Stylesheet Language
+                     – Transformation (XSLT), Extensible Stylesheet Language – Formatting Objects (XSLFO), and XQuery. These declarative standards are significant because they ensure not only the durability
+                     of encoded texts, but also the durability of the experienced presentation.
+                  </p>
+                  
+                  
+                  <a name="ss1-5-1_h2"></a><h2 class="normal">Users and Uses</h2>
+                  
+                  <p>Developing XML and database encoding schemes, as we have seen, involves consideration of the scholarly perspective, the nature
+                     and content of the information to be represented, and its intended use. For example, if we have a collection of texts by several
+                     authors, and we want users to be able to locate and identify all texts by a given author, then we must explicitly identify
+                     and delimit the author of each text. In the same way, all intended uses must be identified, and appropriate names and structures
+                     must be incorporated into the encoding schemes and into the encoded data. In a sense, then, XML and database encoding schemes
+                     represent the perspective and understanding of their designers, and each DTD or schema is an implied argument about the nature
+                     of the material under examination and the ways in which we can use it.
+                  </p>
+                  
+                  <p>Specifying an intended use requires identifying and defining users and user communities. The researcher is an obvious user.
+                     In fact, the researcher might be the only user, if the intention is to facilitate collection and analysis of data, with analytic
+                     results and interpretation published separately. Such an approach, though, deprives readers of access to the resources and
+                     methods used, and there is an emerging consensus that one of the great benefits of computers and networks is that they allow
+                     us to expose our evidence and our methods to evaluation and use by others. If that is considered desirable, design must then
+                     take other users into consideration. As a general rule, the narrower and more specific the intended audience, the easier it
+                     will be to identify and define the uses of the data. If the intended audience is more broadly defined, it is useful to classify
+                     the users and uses according to educational and intellectual levels and abilities. While there may be overlap in functional
+                     requirements at a broad level, there will generally be significant differences in the complexity and detail of the apparatus
+                     made available to users.
+                  </p>
+                  
+                  <p>We can divide user functions or operations into three types: querying, rendering, and navigation. This division is simply
+                     an analytic convenience. The categories are interrelated and interdependent, and some functions may involve combinations of
+                     other functions. Querying, simply characterized, involves users submitting words, phrases, dates, and the like, to be matched
+                     against data, with matched data or links to matched data returned, typically in an ordered list, to the user. Browsing is
+                     a type of querying, though the author of the research collection predetermines the query and thus the list of results returned.
+                     Rendering is the process by which machine-readable information is transformed into human-readable information. All information
+                     represented in computers, whether text, graphic, pictorial, or sound, must be rendered. Some rendering is straightforward,
+                     with a direct relation between the machine-readable data and its human-readable representation. Navigational apparatus are
+                     roughly analogous to the title page, table of contents, and other information provided in the preliminaries of a book. They
+                     inform the user of the title of the research collection, its intellectual content, scope, and organization, and provide paths
+                     or a means to access and traverse sub-collections and individual texts, graphics, pictures, videos, or sound files. The navigational
+                     apparatus will frequently employ both text and graphics, with each selectively linked to other navigational apparatus or directly
+                     to available items in the collection. Much like the design of the representation of digital artifacts, and necessarily related
+                     to it, designing the navigational apparatus requires a detailed analysis of each navigational function and steps to ensure
+                     that the underlying representation of the data will support it.
+                  </p>
+                  
+                  <p>Determining and defining the querying, rendering, and navigational functions to be provided to users should not be an exclusively
+                     abstract or imaginative exercise. Many designers of publicly accessible information employ user studies to inform and guide
+                     the design process. Aesthetics play an important role in communication. Much of the traditional role of publishers involves
+                     the aesthetic design of publications. The "look and feel" of digital publications is no less important. While content is undoubtedly more important than form, the effective communication
+                     of content is undermined when aesthetics are not taken sufficiently into consideration. Researchers may wish to enlist the
+                     assistance of professional designers. While formal, professionally designed studies may be beyond the means of most researchers,
+                     some attempt at gathering information from users should be made. Interface design should not be deferred to the end of the
+                     design process. Creating prototypes and mockups of the interface, including designing the visual and textual apparatus to
+                     be used in querying, rendering, and navigating the collection and its parts, will inform the analysis of the artifacts and
+                     related objects to be digitally collected, and the encoding systems used in representing them.
+                  </p>
+                  
+                  
+                  <a name="ss1-5-1_h3"></a><h2 class="normal">Creating and Maintaining Collections</h2>
+                  
+                  <p>Creating, maintaining, managing, and publishing a digital research collection requires an infrastructure to ensure that the
+                     ongoing process is efficient, reliable, and controlled. Building a digital collection involves a large number of interrelated
+                     activities. Using a variety of traditional and digital finding aids, researchers must discover and locate primary and secondary
+                     resources in private collections and in public and private archives, museums, and libraries. Intellectual property rights
+                     must be negotiated. The researcher must visit the repository and digitally capture the resource, or arrange for the resource
+                     to be digitally captured by the repository, or, when possible, arrange to borrow the resource for digital capture. After each
+                     resource is digitally captured, the capture file or files may be edited to improve quality and fidelity. One or more derivative
+                     files may also be created. Digital derivatives may be simply alternative versions. For example, smaller image files may be
+                     derived from larger image files through sampling or compression to facilitate efficient Internet transmission or to serve
+                     different uses. Derivatives also may involve alternative representational technologies that enhance the utility or functionality
+                     of the information, for example, an XML-encoded text rather than bitmap images of original print materials. Creation of enhanced
+                     derivatives may constitute the primary research activity, and typically will involve extended analysis and editing of successive
+                     versions of files. Finally, complex relations within and between files and file components may be identified and explicitly
+                     recorded or encoded, and must be managed and controlled to ensure their persistence. All of these activities will require
+                     documentation and management that in turn will require recording detailed information.
+                  </p>
+                  
+                  <p>The detailed information needed to intellectually and physically manage individual files and collections of interrelated files
+                     can be divided into four principal and interrelated categories: descriptive, administrative, file, and relations or structural
+                     data.
+                  </p>
+                  
+                  <p>These categories represent the prevailing library model for recording management and control data, commonly called metadata,
+                     and they have been formalized in the Metadata Encoding and Transmission Standard (METS). Each of these four areas addresses
+                     specific kinds of management and control data. Each is also dependent on the others. Only when they are related or linked
+                     to one another will they provide an effective means of intellectual, legal, and physical control over collections of digital
+                     materials. These sorts of data are primarily data-centric, and thus best represented using database technology.
+                  </p>
+                  
+                  <p>Descriptive data function as an intellectual surrogate for an object. Descriptive information is needed to identify the intellectual
+                     objects used in building as well as objects digitally represented in a research collection. Documenting and keeping track
+                     of the sources and evidence used in creating a research project is as important in digital research as it is in traditional
+                     research. For example, if particular sources are used to create a database that describes individuals and organizations, those
+                     sources need to be documented even though they may not be directly accessible in the collection. Typically, descriptive information
+                     includes author, title, and publisher information and may also contain subject information. When existing traditional media
+                     are digitized, it is necessary to describe both the original and its digital representation. While there may be overlapping
+                     information, the two objects are distinct manifestations of the same work. Traditional media will generally be held in both
+                     public repositories and private collections. This is particularly important for unique materials, such as manuscripts and
+                     archival records, but also important for copies, such as published books, as copies are in fact unique, even if only in subtle
+                     ways. The repositories and collections, even the private collection of the researcher, that hold the resources need to be
+                     recorded and related to the description of each resource used or digitized. When interrelated with administrative, file, and
+                     relations data, descriptive data serves the dual role of documenting the intellectual content, and attesting to the provenance
+                     and thus the authenticity of the sources and their digital derivatives.
+                  </p>
+                  
+                  <p>When linked to related descriptive and file data, administrative data enable several essential activities:</p>
+                  
+                  
+                  <p> <b>•</b> managing the agents, methods, and technology involved in creating digital files;
+                  </p>
+                  
+                  <p> <b>•</b> ensuring the integrity of those digital files;
+                  </p>
+                  
+                  <p> <b>•</b> tracking their intellectual relation to the sources from which they are derived;
+                  </p>
+                  
+                  <p> <b>•</b> managing the negotiation of rights for use;
+                  </p>
+                  
+                  <p> <b>•</b> controlling access based on negotiated agreements.
+                  </p>
+                  
+                  
+                  <p>A wide variety of hardware and software exists for capturing traditional media, and the environmental conditions and context
+                     under which capture takes place varies. Digital capture always results in some loss of information, even if it enhances access
+                     and analytic uses. An image of a page from a book, for example, will not capture the tactile features of the page. Hardware
+                     and software used in capture differ in quality. Each may also, in time, suffer degradation of performance. Hardware and software
+                     also continue to develop and improve. The environmental conditions that affect capture may also vary. For example, differences
+                     in lighting will influence the quality of photographs, ambient noise will influence sound recording. The knowledge and skill
+                     of the technician will also affect the results. Direct capture devices for image, sound, and video have a variety of options
+                     available that will affect both the quality and depth of information captured.
+                  </p>
+                  
+                  <p>Following capture, versions may be directly derived from the capture file or files, or alternative forms may be created using
+                     different representational methods. Versions of files are directly derived from the capture file, and represent the same kind
+                     of information (such as pixels or sound samples) but employ different underlying representations that facilitate different
+                     uses of the information. Tag Image File Format (TIFF), for example, is currently considered the most lossless capture format
+                     for pictorial or image data, but they are generally quite large. JPEG (Joint Photographic Experts Group), a compression technology,
+                     is generally used for creating smaller files that are more efficiently transmitted over the Internet. Such compression results
+                     in a loss of information, and thus impacts the image's intellectual content and its relation to the capture file and the original
+                     image. Other kinds of capture involve human judgment and intervention, as the underlying representations are fundamentally
+                     different. A bitmap page image differs fundamentally from an XML encoding of the text on the page, since the former is a pixel
+                     representation and the latter a character-based encoding. While OCR software can be used to convert pixel representations
+                     of characters to character representations, manual correction of recognition errors is still necessary. Accurate encoding
+                     of a text's components requires judgment and manual intervention, even if some encoding is susceptible to machine-assisted
+                     processing. The agents, methods, and technology used in deriving versions and alternative forms of data need to be recorded
+                     and related to each file in order to provide the information necessary to evaluate the authenticity and integrity of the derived
+                     data.
+                  </p>
+                  
+                  <p>Intellectual property law or contract law will protect many of the resources collected and published in a digital humanities
+                     research project. Use of these materials will require negotiating with the property owners, and subsequently controlling and
+                     managing access based on agreements. Currently there are several competing initiatives to develop standards for digital rights
+                     management, and it is too early to determine which if any will satisfy international laws and be widely embraced by users
+                     and developers. A successful standard will lead to the availability of software that will enable and monitor access, including
+                     fee-based access and fair use. It is essential for both legal and moral reasons that researchers providing access to protected
+                     resources negotiate use of such materials, record in detail the substance of agreements, and enforce, to the extent possible,
+                     any agreed-upon restrictions. It is equally important, however, that researchers assert fair use when it is appropriate to
+                     do so: fair use, like a right of way, is a right established in practice and excessive self-policing will eventually undermine
+                     that right. The Stanford University Library's site on copyright and fair use is a good place to look for guidance on when
+                     it is appropriate to assert this right (see &lt;<a href="http://fairuse.stanford.edu">http://fairuse.stanford.edu</a>&gt; for more information).
+                  </p>
+                  
+                  <p>File data enable management and control of the files used to store digital data. When linked to related descriptive data,
+                     the intellectual content of files can be identified, and when linked to administrative data, the authenticity, integrity,
+                     and quality of the files can be evaluated, and access to copyright-protected materials can be controlled. It is quite easy
+                     to overlook the need to describe and control files early on in projects. It is easy to simply create <i>ad hoc</i> file names and directory structures to address their management and control. As projects develop, however, the number of
+                     files increases and the use <i>of ad hoc</i> file names and directory structures begins to break down. It becomes difficult to remember file names, what exactly each
+                     file name designates, and where in the directory structure files will be located.
+                  </p>
+                  
+                  <p>On the other hand, it is quite common to create complex, semantically overburdened file names when using file names and directories
+                     to manage files. Such file names will typically attempt, in abbreviated form, to designate two or more of the following: source
+                     repository, identity of the object represented in a descriptive word, creator (of the original, the digital file, or both),
+                     version, date, and digital format. If the naming rules are not carefully documented, such faceted naming schemes generally
+                     collapse quite quickly, and even when well documented, are rarely effective as the number of files increases. Such information
+                     should be recorded in descriptive and administrative data linked to the address of the storage location of the file. A complete
+                     address will include the address of the server, the directory, and the file name. The name and structure of the directory
+                     and file name should be simple, and easily extensible as a collection grows.
+                  </p>
+                  
+                  <p>There are a wide variety of possible approaches to naming and addressing files. Completely arbitrary naming and addressing
+                     schemes are infinitely extensible, though it is possible to design simple, extensible schemes that provide some basic and
+                     useful clues for those managing the files. For example, most projects will collect representations of many artifacts from
+                     many repositories. Each artifact may be captured in one or more digital files, with one or more derivative files created from
+                     each capture file. In such scenarios, it is important to create records for each repository or collection source. Linked to
+                     each of these repository records will be records describing each source artifact. In turn, each artifact record will be linked
+                     to one or more records describing capture files, with each capture record potentially linked to one or more records describing
+                     derivative files. Given this scenario, a reasonable file-naming scheme might include an abbreviated identifier for the repository,
+                     followed by three numbers separated by periods identifying the artifact, the capture, and the derivative. Following file-naming
+                     convention, a suffix designating the notation or format of the file is appended to the end. Ideally, the numbers reflect the
+                     order of acquisition or capture. For example, the first artifact digitally acquired from the Library of Congress might have
+                     the base name "loc.OOOl", with "loc" being an abbreviated identifier for "Library of Congress." The second digital file capture of this artifact would have the base name "loc.0001.02" and the fourth derivative of the original capture "loc.0001.02.04." A suffix would then be added to the base to complete the file name. For example, if the capture file were in the TIFF notation
+                     and the derivative in the JPEG notation, then the file names would be "loc.0001.02.tif" and "loc.0001.02.04.jpg." Full identification of any file can be achieved by querying the database for the file name. The directory structure might
+                     simply consist of a series of folders for each repository.
+                  </p>
+                  
+                  <p>The file-naming scheme in this example is relatively simple, sustainable, and despite the weak semantics, very useful, even
+                     without querying the database. All files derived from artifacts in the same repository will be collocated when sorted, and
+                     all related versions of a file will also be collocated. In addition, the order in which artifacts are identified and collected
+                     will be reflected in the sorting order of each repository. The example provided here is not intended to be normative. Varying
+                     patterns of collecting, the nature of the artifacts collected, and other factors might lead to alternative and more appropriate
+                     schemes. The important lesson, though, is that database technology is ideally suited to management and control of intellectual
+                     and digital assets, and clever naming schemes and directory structures are not. Naming schemes should be semantically and
+                     structurally simple, with linked database records carrying the burden of detailed descriptive and administrative data.
+                  </p>
+                  
+                  <p>Interrelating information is important as both an intellectual and a management activity. Interrelating intellectual objects
+                     within and between files requires creating explicit machine-readable data that allow automated correlation or collocation
+                     of related resources. For our purposes, there are two types of relations: intrinsic and extrinsic. Intrinsic relation data
+                     support is a feature of the character-based database and markup technologies. Database technology enables the creation, maintenance,
+                     and use of relations between records or tables <i>within a particular database.</i> XML technology enables the creation, maintenance, and use of relations between components <i>within a particular encoded document.</i> Care must be taken in ensuring that the feature is properly employed to ensure the integrity of the relations.
+                  </p>
+                  
+                  <p>Extrinsic relations are external to databases and XML-encoded documents. Relations between one database and another, between
+                     a database and XML documents, between XML documents, between XML documents and files in other notations or encodings, and
+                     relations between image or sound files and other image or sound files are all types of extrinsic relations. Extrinsic relations
+                     are not currently well supported by standards and standard-based software. There are a large number of loosely connected or
+                     independent initiatives to address the standardization of extrinsic relations. Extrinsic relations thus present particular
+                     challenges in the design of digital research collections. Especially difficult are relations between resources in the collection
+                     under the control of the researcher, and resources under the control of others.
+                  </p>
+                  
+                  <p>In the absence of standard methods for recording and managing extrinsic relations, it is necessary to design <i>ad hoc</i> methods. Given the complexity of managing relations, it is difficult to provide specific guidance. Both database and markup
+                     technologies provide some support for extrinsic relations, but this support must be augmented to provide reasonable control
+                     of relations. Some databases support direct storage of Binary Large Objects (BLOBs). Despite the term, BLOBs may include not
+                     only binary data, such as image and sound files, but also complex character data such as XML documents, vector graphics, and
+                     computer programs. While not standardized, XML Catalog, a standard for mapping the extrinsic relations of XML documents, provides
+                     some support. XML catalogues, though, primarily represent a method for communicating data about relations and offer no direct
+                     support for managing them effectively. Database technology is reasonably effective in managing the relations data communicated
+                     in XML catalogues. XQuery offers a standardized but indirect way of articulating extrinsic relations, though it is not intended
+                     as a means of controlling them or ensuring referential integrity. According to the World Wide Web Consortium, XQuery is "designed to be a language in which queries are concise and easily understood. It is also flexible enough to query a broad
+                     spectrum of XML information sources, including both databases and documents" (see &lt;<a href="http://www.w3.org/TR/xquery/ttid-introduction">http://www.w3.org/TR/xquery/ttid-introduction</a>&gt;). However, at this point none of these approaches will be completely reliable and effective without care and vigilance on
+                     the part of the human editors and data managers.
+                  </p>
+                  
+                  
+                  <a name="ss1-5-1_h4"></a><h2 class="normal">Conclusion: Collaboration</h2>
+                  
+                  <p>In the late twentieth and early twenty-first centuries, the most significant impact of information technology may be increased
+                     collaboration. Collaboration, when successful, offers many intellectual, professional, and social benefits. A group of scholars
+                     working together can create research collections more intellectually complex and comprehensive than is possible for an individual
+                     working alone. Complementary and even competing disciplinary perspectives and specialties will support broader and richer
+                     analysis and understanding. Collaboration will enable greater productivity. Collaboration between humanists and technologists
+                     may lead to more profound understandings and more incisive tools than either would develop by working alone. The explicitness
+                     and logical rigor required to represent and use digital information exposes to criticism many of the traditional disciplinary
+                     assumptions, and often leads to a deeper understanding of our methods and the subjects to which they are applied.
+                  </p>
+                  
+                  <p>Despite these benefits, collaboration, whether with fellow humanists or technologists, also presents unfamiliar challenges,
+                     which require careful attention and time – often more time than is anticipated at the beginning. The most fundamental challenge of collaboration is balancing individual
+                     interests and shared objectives. Collaborators need to discuss, negotiate, and clearly document the research and publication
+                     objectives, a process that will require cooperation and compromise. Collaborators also need to recognize individual differences
+                     in aptitude for digital technology, and differences in expertise, methodology, and emphasis. Individual responsibilities,
+                     obligations, and production goals need to be negotiated and documented, and should reflect expertise and aptitude. Intellectual
+                     and social compatibility, trust, and mutual respect are essential characteristics of successful collaboration. Individual
+                     professional and intellectual needs and goals must also be recognized. The nature of the academic culture of recognition and
+                     rewards requires that individual scholars be productive and that the scholarship be of high quality. Individual contributions
+                     need to be clearly documented, in order to provide reliable evidence for reviewers. Depending upon the nature of the collaboration,
+                     individual contributions may be intermingled, and without careful project design it may be difficult or impossible to reliably
+                     indicate who is responsible for what. Such documentation is essential, for example, in the statements of responsibility incorporated
+                     into the descriptive data correlated with digital objects, and in bylines of digital objects, where this is possible.
+                  </p>
+                  
+                  <p>In collaborative projects, standards and guidelines or manuals will need to be augmented with training. Left alone, different
+                     people will interpret and apply guidelines differently. With respect to character-based technologies, in particular text encoding
+                     and database entry, but including geographic information systems (GIS), computer-assisted design (CAD), and many graphic systems,
+                     data entry and encoding will also involve analysis and interpretation of source materials. Because human judgment is involved,
+                     it will be impossible to entirely eliminate differences and to achieve absolute, complete intellectual and technological consistency.
+                     Happily, absolute consistency is rarely necessary – it is generally only necessary to have absolute consistency in those data components that are directly involved in automated
+                     processing. An acceptable range of consistency can generally be achieved with training. Typically such training, as in all
+                     education, will require both instruction and an initial period of intensive, thorough review, evaluation, and revision. After
+                     intellectual and technological quality reaches an acceptable level, periodic review will ensure that the level is sustained.
+                  </p>
+                  
+                  <p>Given the amount of communication involved, it is generally easier to collaborate when all or most of the participants work
+                     in the same location. One of the most attractive benefits of the Internet, though, is the ability to communicate with anyone
+                     else on the Internet, regardless of where they are connected, and to work remotely in the creation and maintenance of shared
+                     resources. As with all other aspects of designing a research collection, care must be taken to provide an infrastructure to
+                     support communication and shared editing of the database. It is advisable to set up an e-mail list for project communication
+                     (using software such as Mailman, Majordomo, or Listserv), and to archive the correspondence it distributes (software such
+                     as Hypermail can automatically produce a web-accessible version of this archive). An e-mail list will facilitate broadcasting
+                     messages to a group. Archiving the messages will serve the purpose of preserving discussions, negotiations, decisions, and
+                     other transactions that document the creation and maintenance of the collection. Among other things, such an archive will
+                     serve the important function of providing documentary evidence for reviewers of individual participation and contributions.
+                     Shared editing also needs to be managed, typically by a database, to control and manage workflow, tracking additions, changes,
+                     and deletions. As attractive and useful as remote collaboration can be, it frequently is still necessary to meet periodically
+                     in person for discussions, negotiations, and training.
+                  </p>
+                  
+                  <p>Collaboration with technologists may also present its own challenges. Although technologists who elect to participate in digital
+                     humanities projects may themselves have some background in the humanities, it will more often be the case that technologists
+                     have little training in humanities disciplines. Humanities methods, perspectives, and values may be strange to them, and unfamiliar
+                     terminology may hinder communication. Carefully negotiated and apparently shared understandings will frequently be illusory,
+                     requiring further discussion and renegotiation. Close and successful collaboration will require goodwill and persistence,
+                     and will rely on developing a shared language and an enduring mutual understanding.
+                  </p>
+                  
+                  <p>Depending upon the size and constitution of a collaborative group, it may be necessary to formally address issues of administration
+                     and supervision. A small number of peers who are comfortable working with one another may rely only on informal discussion
+                     and consensus. A project driven by one scholar who enlists graduate assistants will implicitly be led and managed by that
+                     scholar. Larger groups, involving scholars of various ranks and prestige and perhaps also graduate assistants, may require
+                     formal designation of a leader. Even when a particular individual is in charge, a project manager or administrative assistant
+                     may be beneficial, to tend to coordination and monitoring deadlines and the like.
+                  </p>
+                  
+                  <p>Finally, collaboration depends on sustainable project design. It is relatively easy for one person to work, in the short run,
+                     in an idiosyncratic framework of his or her own design: it is more difficult for two people to do this, and it becomes increasingly
+                     difficult the more people are involved, and the longer the project continues. If a project is collaborative, and if it is
+                     to succeed, it will require the attributes of standardization, documentation, and thoughtful, iterative design that have been
+                     recommended throughout this chapter, in different contexts.
+                  </p>
+                  
+                  
+                  
+               </div>
+            

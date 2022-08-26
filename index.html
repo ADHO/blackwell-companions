@@ -2,113 +2,128 @@
 <html lang="en">
 
 <head>
-  <title>A Companion to Digital Humanities</title>
+  <title>Blackwell Companions to Digital Humanities and Digital Literary Studies</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" type="text/css" href="DH_html/css/default/content.css">
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      margin: 0;
+      min-height: 100%;
+      padding: 1em;
+    }
+
+    main {
+      align-items: center;
+      display: flex;
+      flex-grow: 1;
+      flex-wrap: wrap;
+      gap: 2em 4em;
+      justify-content: center;
+    }
+
+    section {
+      border-radius: 1em;
+      box-shadow: 0 0 8px 2px rgba(0 0 0 / 0.2);
+      text-align: center;
+      padding: 1em;
+    }
+
+    section img {
+      max-height: 475px;
+      max-width: 100%;
+    }
+
+    footer {
+      align-items: center;
+      display: flex;
+      font-family: sans-serif;
+      gap: 1em;
+      justify-content: center;
+      padding: 0.5em;
+      width: 100vw;
+    }
+
+    /* Fancy hover effect */
+    section {
+      --border-thickness: 4px;
+      --color: #EDC951;
+      --corner-size: 60px;
+      --offset: 40px;
+      --half-offset: calc(var(--offset)/2);
+
+      background-image:
+        conic-gradient(from 90deg at top var(--border-thickness) left var(--border-thickness),
+          transparent 25%, var(--color) 0),
+        conic-gradient(from -90deg at bottom var(--border-thickness) right var(--border-thickness),
+          transparent 25%, var(--color) 0);
+      background-position:
+        var(--half-offset) var(--half-offset),
+        calc(100% - var(--half-offset)) calc(100% - var(--half-offset));
+      background-size: var(--corner-size) var(--corner-size);
+      background-repeat: no-repeat;
+      padding: calc(var(--border-thickness) + var(--offset));
+      transition:
+        background-position .3s .3s,
+        background-size .3s;
+    }
+
+    section:hover {
+      background-size: calc(100% - var(--offset)) calc(100% - var(--offset));
+    }
+
+  </style>
 </head>
 
 <body>
-  <header>
-    <img src="img/companion_to_dh.65x65.png" alt="Cover Image" height="65px" width="65px">
-    <h1><a href="/">A Companion to Digital Humanities</a></h1>
-    <h3>Edited by Susan Schriebman, Ray Siemens, and John Unsworth</h3>
-    <div id="publisher">
-      Presented with the permission of
-      <a href="http://www.blackwellpublishing.com/">
-        <img height="40" width="93" src="img/bw_logo.93x40.png" alt="Blackwell Publishing">
-      </a>
-      <a href="http://www.blackwellpublishing.com/" class="alt">Blackwell Publishing</a>
-    </div>
-  </header>
-
-  <input type="checkbox" id="open-sidebar" title="open-sidebar" checked>
-  <label for="open-sidebar">
-    <span class="spinner diagonal part-1">&nbsp;</span>
-    <span class="spinner horizontal">&nbsp;</span>
-    <span class="spinner diagonal part-2">&nbsp;</span>
-  </label>
-  <nav>
-    <div id="search">
-      <input type="text" id="query" title="query">
-      <button id="do-search" disabled>preparing search...</button>
-      <span id="match-counts"></span>
-    </div>
-    <div>
-      <include src="DH_html/9781405103213_toc.html">Loading...</include>
-    </div>
-  </nav>
-
   <main>
-    <include src="DH_html/9781405103213_title.html">Loading...</include>
+    <a href="DH/" title="A Companion to Digital Humanities">
+      <section>
+        <img src="DH/content/9781405103213_cover.jpg" alt="
+      A Companion to Digital Humanities
+      Editor(s):
+      SUSAN SCHREIBMAN,
+      RAY SIEMENS, AND
+      JOHN UNSWORTH
+      Blackwell Publishing Ltd
+      Oxford, UK
+      © Blackwell Publishing Ltd 2004">
+      </section>
+    </a>
+
+    <a href="DLS/" title="A Companion to Digital Literary Studies">
+      <section>
+        <img src="DLS/content/9781405148641_cover.jpg" alt="
+      A Companion to Digital Literary Studies
+      Editor(s):
+      Ray Siemens and 
+      Susan Schreibman
+
+      Blackwell Publishing Ltd
+      Oxford, UK
+      © Blackwell Publishing Ltd 2007">
+      </section>
+    </a>
   </main>
 
   <footer>
-    Cite as: A Companion to Digital Humanities, ed. Susan Schreibman, Ray Siemens, John Unsworth. Oxford: Blackwell,
-    2004. http://www.digitalhumanities.org/companion/
+    Presented with the permission of
+    <a href="http://www.blackwellpublishing.com/">
+      <img height="40" width="93" src="img/bw_logo.93x40.png" alt="Blackwell Publishing">
+    </a>
   </footer>
 
-  <script>
-    const loadPage = (filePath, targetElem = document.querySelector("main")) => {
-      return fetch(filePath).then(file =>
-        file.text().then(textContent => {
-          // update relative image paths before appending to the DOM
-          const contentElem = document.createElement("div");
-          contentElem.innerHTML = textContent;
-          for (let img of contentElem.querySelectorAll(".content img")) {
-            img.src = `DH_html/${img.getAttribute('src')}`;
-          }
-          targetElem.innerHTML = "";
-          targetElem.appendChild(contentElem);
-        })
-      );
-    };
-
-    window.addEventListener("articleWillLoad", ({ detail: chapter_href }) => {
-      document.querySelector("nav a.current")?.classList.remove("current");
-      document.querySelector(`nav a[href="${chapter_href}"]`).classList.add("current");
-    });
-
-    window.addEventListener("articleLoaded", ({ detail: chapter_href }) => {
-      document.querySelector("main").setAttribute("data-current-chapter", chapter_href);
-      document.querySelector("main").scrollTop = 0;
-    });
-
-    if (window.innerWidth <= 768) document.getElementById("open-sidebar").checked = false;
-
-    const urlParams = new URLSearchParams(window.location.search);
-    const chapter = urlParams.get("chapter");
-    if (chapter) document.querySelector("main include").setAttribute("src", chapter);
-
-    const includes = document.getElementsByTagName("include");
-    Promise.all(
-      [...includes].map((include) =>
-        loadPage(include.getAttribute("src"), include.parentElement)
-      )
-    ).then(() => {
-      for (let link of document.querySelectorAll("nav a[href^='DH_html/']")) {
-        link.addEventListener("click", (event) => {
-          event.preventDefault();
-          if (window.innerWidth <= 768) document.getElementById("open-sidebar").checked = false;
-          const href = link.getAttribute("href");
-          window.dispatchEvent(new CustomEvent("articleWillLoad", { detail: href }));
-          loadPage(href).then(() => {
-            window.dispatchEvent(new CustomEvent("articleLoaded", { detail: href }));
-            urlParams.set("chapter", href);
-            window.history.replaceState({}, '', `${location.pathname}?chapter=${urlParams.get("chapter")}`);
-          });
-        });
-      }
-      if (chapter) {
-        window.dispatchEvent(new CustomEvent("articleWillLoad", { detail: chapter }));
-        window.dispatchEvent(new CustomEvent("articleLoaded", { detail: chapter }));
-      }
-    });
-  </script>
-  <script src="js/lunr.min.js"></script>
-  <script src="js/search.js" defer async></script>
 </body>
 
 </html>

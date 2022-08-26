@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<div class="content">
+                  <h2 class="normal">7. 
+                     <h2 class="normal">Linguistics Meets Exact Sciences</h2>
+                  </h2>
+                  <span style="font-weight:bold;">Jan Hajič</span>
+                  
+                  <a name="_h18"></a><a name="_h19"></a>
+                  
+                  
+                  
+                  
+                  <p>Linguistics is a science that studies human language, both spoken and written. It studies the structure of language and its
+                     usage, the function of its elements, and its relation to other bordering sciences (psycholinguistics, sociolinguistics, etc.),
+                     of which the most important related field today is computer science. Diachronic linguistics studies language from the perspective
+                     of its development over time, whereas synchronic linguistics studies the function and structure of the current live language.
+                     General linguistics studies human language as a system, but particular languages (such as English, Mandarin, Tamil, or any
+                     other) are studied in detail as well. Due to its complexity, the study of language is often divided into several areas. Phonetics
+                     and phonology are related to speech (or more precisely, to the spoken language), whereas orthography deals with the standard
+                     written form of a particular language, including capitalization and hyphenation where appropriate. Morphology studies the
+                     composition of words by morphemes (prefixes, roots, suffixes, endings, segmentation in general, etc.) and its relation to
+                     syntax, which introduces structure into the description of language at the level of phrases, clauses, and sentences. Sentences
+                     are typically considered to be very important basic language units. Semantics and pragmatics study the relation of the lower
+                     levels to meaning and contents, respectively.
+                  </p>
+                  
+                  <p>A description of a (correct) behavior of a particular language is typically called a grammar. A grammar usually generalizes:
+                     it describes the language structurally and in terms of broad categories, avoiding the listing of all possible words in all
+                     possible clauses (it is believed that languages are infinite, making such a listing impossible). An English grammar, for example,
+                     states that a sentence consisting of a single clause typically contains a subject, expressed by a noun phrase, and a verb
+                     phrase, expressed by a finite verb form as a minimum. A grammar refers to a lexicon (set of lexical units) containing word-specific
+                     information such as parts of speech (noun, verb, adjective, particle, etc.) or syntactic subcategorization (e.g., that the
+                     verb "to attach" has a subject and an indirect object with the preposition "to").
+                  </p>
+                  
+                  <p>From the historic perspective, the scientific, economic, and political developments in the world before and during World War
+                     II were preparing the field of linguistics for what happened shortly thereafter. Natural language moved into the focus of
+                     people working in several scientific fields previously quite distant from linguistics (and other humanities as well): computer
+                     science, signal processing, and information theory, supported by mathematics and statistics. Today, we can say that one of
+                     the turning points for linguistics was Claude Shannon's work (1948). Shannon was an expert in communication theory, and his
+                     work belongs to what is known today as information theory, a probabilistic and statistical description of information contents.
+                     However, he was interested not only in the mathematical aspects of technical communication (such as signal transfer over telegraph
+                     wires), but he and Warren Weaver also tried to generalize this approach to human language communication. Although forgotten
+                     by many, this work was the first attempt to describe the use of natural language by strictly formal (mathematical and statistical,
+                     or stochastic) methods. The recent revival of stochastic methods in linguistics only underscores the historical importance
+                     of their work.
+                  </p>
+                  
+                  <p>Developments in theoretical linguistics that led to the use of strictly formal methods for language description were strongly
+                     influenced by Ferdinand de Saussure's work (1916). His work turned the focus of linguists to so-called synchronic linguistics
+                     (as opposed to diachronic linguistics). Based on this shift in paradigm, the language system as a whole began to be studied.
+                     Later, Noam Chomsky (even though his view differs from de Saussure's in many respects) came up with the first systematic formalization
+                     of the description of the sentences of natural language (1957). It should be noted, however, that Chomsky himself has always
+                     emphasized that his motivation for introducing formal grammar has never been connected with computerization. Moreover, he
+                     has renounced probabilistic and statistical approaches. For various reasons, most notably the lack of computer power needed
+                     for probabilistic and other computationally intensive approaches, his work stayed dominant in the field of computational linguistics
+                     for more than thirty years.
+                  </p>
+                  
+                  <p>In line with the formal means he proposed, Chomsky also adopted the view (introduced by the descriptivist school of American
+                     linguists) that sentence structure in natural language can be represented essentially by recursive bracketing, which puts
+                     together smaller, immediately adjacent phrases (or so-called constituents) to form bigger and bigger units, eventually leading
+                     to a treelike sentence structure. An alternative theory known in essence from the nineteenth century (<a href="#ss1-2-7_b2">Becker 1837</a>) but developed in its modern form by Tesniere (1959) and other European linguists states that the relation between two sentence
+                     constituents is not that of closeness but that of dependence. This theory offers some more flexibility in expressing relations
+                     among constituents that are not immediately adjacent, and it is also more adequate for a functional view of language structure.
+                  </p>
+                  
+                  <p>Other formal theories emerged during the 1960s, 1970s, and early 1980s. The generalized phrase structure grammars (Gazdar)
+                     are still close to the context-free grammar formalism as proposed by Chomsky. The formalism later developed into so-called
+                     head-driven phrase structure grammars, a formalism that has characteristics of both the immediate constituent structure and
+                     dependency structure. Similarly, the independently developed lexicalized functional grammar (<a href="#ss1-2-7_b16">Kaplan and Bresnan 1983</a>) explicitly separates the surface form, or constituent structure (so-called c-structure) from functional structure (f-structure,
+                     which is close to the predicate-argument structure) and uses lexical information heavily.
+                  </p>
+                  
+                  <p>Chomsky himself proposed a number of modifications of his original theory during the same period, most notably the government
+                     and binding theory (1981), later referred to as the principles and parameters theory, and recently the minimalist theory (1993).
+                     While substantially different from the previous theories and enthusiastically followed by some, they seem to contribute little
+                     to actual computational linguistics goals, such as building wide-coverage parsers of naturally occurring sentences. Chomsky's
+                     work is thus more widely used and respected in the field of computer science itself, namely in the area of formal languages,
+                     such as syntax of programming or markup languages.
+                  </p>
+                  
+                  <p>During the 1980s, stochastic methods (based largely on Shannon and Weaver's work, cf. above) re-emerged on a higher level,
+                     primarily thanks to the greatly increased power of computers and their widespread availability even for university-based research
+                     teams. First, the use of stochastic methods has led to significant advances in the area of speech recognition (<a href="#ss1-2-7_b1">Bahl et al. 1983</a>), then it was applied to machine translation (<a href="#ss1-2-7_b4">Brown et al. 1990</a>), and in the late 1990s, almost every field of computational linguistics was using stochastic methods for automatic text
+                     and speech processing. More complex, more sophisticated ways of using probability and statistics are now available, and formal
+                     non-probabilistic means of language descriptions are being merged with the classic information-theoretic methods, even though
+                     we are still waiting for a real breakthrough in the way the different methods are combined.
+                  </p>
+                  
+                  
+                  <a name="ss1-2-7_h0"></a><h2 class="normal">Computational Linguistics</h2>
+                  
+                  <p>Computational linguistics is a field of science that deals with computational processing of a natural language. On its theoretical
+                     side, it draws from modern (formal) linguistics, mathematics (probability, statistics, information theory, algebra, formal
+                     language theory, etc.), logic, psychology and cognitive science, and theoretical computer science. On the applied side, it
+                     uses mostly the results achieved in modern computer science, user studies, artificial intelligence and knowledge representation,
+                     lexicography (see chapter 6), and language corpora (see chapter 21). Conversely, the results of computational linguistics
+                     contribute to the development of the same fields, most notably lexicography, electronic publishing (see chapter 35), and access
+                     to any kind of textual or spoken material in digital libraries (see chapter 36).
+                  </p>
+                  
+                  <p>Computational linguistics can be divided (with many overlappings, of course) into several subfields, although there are often
+                     projects that deal with several of them at once.
+                  </p>
+                  
+                  <p>Theoretical computational linguistics deals with formal theories of language description at various levels, such as phonology,
+                     morphology, syntax (surface shape and underlying structure), semantics, discourse structure, and lexicology. Accordingly,
+                     these subfields are called computational phonology, computational semantics, etc. Definition of formal systems of language
+                     description also belongs here, as well as certain research directions combining linguistics with cognitive science and artificial
+                     intelligence.
+                  </p>
+                  
+                  <p>Stochastic methods provide the basis for application of probabilistic and stochastic methods and machine learning to the specifics
+                     of natural language processing. They use heavy mathematics from probability theory, statistics, optimization and numerical
+                     mathematics, algebra and even calculus – both discrete and continuous mathematical disciplines are used.
+                  </p>
+                  
+                  <p>Applied computational linguistics (not to be confused with commercial applications) tries to solve well-defined problems in
+                     the area of natural language processing. On the analysis side, it deals with phonetics and phonology (sounds and phonological
+                     structure of words), morphological analysis (discovering the structure of words and their function), tagging (disambiguation
+                     of part-of-speech and/or morphological function in sentential context), and parsing (discovering the structure of sentences; parsing can be purely
+                     structure-oriented or deep, trying to discover the linguistic meaning of the sentence in question). Word sense disambiguation
+                     tries to solve polysemy in sentential context, and it is closely related to lexicon creation and use by other applications
+                     in computational linguistics. In text generation, correct sentence form is created from some formal description of meaning.
+                     Language modeling (probabilistic formulation of language correctness) is used primarily in systems based on stochastic methods.
+                     Machine translation usually combines most of the above to provide translation from one natural language to another, or even
+                     from many to many (see <a href="#ss1-2-7_b24">Zarechnak 1979</a>). In information retrieval, the goal is to retrieve complete written or spoken documents from very large collections, possibly
+                     across languages, whereas in information extraction, summarization (finding specific information in large text collections)
+                     plays a key role. Question answering is even more focused: the system must find an answer to a targeted question not just
+                     in one, but possibly in several documents in large as well as small collections of documents. Topic detection and tracking
+                     classifies documents into areas of interest, and it follows a story topic in a document collection over time. Keyword spotting
+                     (or, flagging a document that might be of interest based on preselected keywords) has obvious uses. Finally, dialogue systems
+                     (for man-machine communication) and multi-modal systems (combining language, gestures, images, etc.) complete the spectrum.
+                  </p>
+                  
+                  <p>Development tools for linguistic research and applications are needed for quick prototyping and implementation of systems,
+                     especially in the area of applied computational linguistics as defined in the previous paragraph. Such support consists of
+                     lexicons for natural language processing, tools for morphological processing, tagging, parsing and other specific processing
+                     steps, creation and maintenance of language corpora (see chapter 21) to be used in systems based on stochastic methods, and
+                     annotation schemas and tools.
+                  </p>
+                  
+                  <p>Despite sharing many of the problems with written language processing, speech (spoken language) processing is usually considered
+                     a separate area of research, apart even from the field of computational linguistics. Speech processing uses almost exclusively
+                     stochastic methods. It is often referred to as automatic speech recognition (ASR), but the field is wider: it can be subdivided
+                     into several subfields, some of them dealing more with technology, some with applications. Acoustic modeling relates the digitized
+                     speech signal and phonemes as they occur in words, whereas language modeling for speech recognition shares many common features
+                     with language modeling of written language, but it is used essentially to predict what the speaker will utter next based on
+                     what she said in the immediate past. Speaker identification is another obvious application, but it is typically only loosely
+                     related to the study of language, since it relies more on acoustic features. Small-vocabulary speech recognition systems are
+                     the basis for the most successful commercial applications today. For instance, systems for recognizing digits, typically in
+                     difficult acoustic conditions such as when speaking over a telephone line, are widely used. Speaker-independent speech recognition
+                     systems with large vocabularies (sometimes called dictation) are the focus of the main research direction in automatic speech
+                     recognition. Speaker adaptation (where the speech recognizers are adapted to a particular person's voice) is an important
+                     subproblem that is believed to move today's systems to a new level of precision. Searching spoken material (information retrieval,
+                     topic detection, keyword spotting, etc.) is similar to its text counterpart, but the problems are more difficult due to the
+                     lack of perfect automatic transcription systems. A less difficult, but commercially very viable field is text-to-speech synthesis
+                     (TTS).
+                  </p>
+                  
+                  <p>It is clear however that any such subdivision can never be exact; often, a project or research direction draws upon several
+                     of the above fields, and sometimes it uses methods and algorithms even from unrelated fields, such as physics or biology,
+                     since more often than not their problems share common characteristics.
+                  </p>
+                  
+                  <p>One very important aspect of research in computational linguistics, as opposed to many other areas in humanities, is its ability
+                     to be <i>evaluated.</i> Usually, a gold-standard result is prepared in advance, and system results are compared (using a predefined metric) to such
+                     a gold-standard (called also a test) dataset. The evaluation metric is usually defined in terms of the number of errors that
+                     the system makes; when this is not possible, some other measure (such as test data probability) is used. The complement of
+                     error rate is accuracy. If the system produces multiple results, recall (the rate at which the system hits the correct solution
+                     by at least one of its outputs) and precision (the complement of false system results) have to be used, usually combined into
+                     a single figure (called F-measure). Objective, automatic system evaluation entered computational linguistics with the revival
+                     of statistical methods and is considered one of the most important changes in the field since its inception – it is believed that such evaluation was the driving force in the fast pace of advances in the recent past.
+                  </p>
+                  
+                  
+                  <a name="ss1-2-7_h1"></a><h2 class="normal">The Most Recent Results and Advances</h2>
+                  
+                  <p>Given the long history of research in computational linguistics, one might wonder what the state-of-the-art systems can do
+                     for us today, at the beginning of the twenty-first century. This section summarizes the recent results in some of the subfields
+                     of computational linguistics.
+                  </p>
+                  
+                  <p>The most successful results have been achieved in the speech area. Speech synthesis and recognition systems are now used even
+                     commercially (see also the next section). Speech recognizers are evaluated by using so-called word error rate, a relatively
+                     simple measure that essentially counts how many words the system missed or confused. The complement of word error rate is
+                     the accuracy, as usual. The latest speech recognizers can handle vocabularies of 100,000 or more words (some research systems
+                     already contain million-word vocabularies). Depending on recording conditions, they have up to a 95 percent accuracy rate
+                     (with a closely mounted microphone, in a quiet room, speaker-adapted). Broadcast news is recognized at about 75–90 percent accuracy. Telephone speech (with specific topic only, smaller vocabulary) gives 30–90 percent accuracy, depending on vocabulary size and domain definition; the smaller the domain, and therefore the more restricted
+                     the grammar, the better the results (very tiny grammars and vocabularies are usually used in successful commercial applications).
+                     The worst situation today is in the case of multi-speaker spontaneous speech under, for example, standard video recording
+                     conditions: only 25–45 percent accuracy can be achieved.
+                  </p>
+                  
+                  <p>It depends very much on the application whether these accuracy rates are sufficient or not; for example, for a dictation system
+                     even 95 percent accuracy might not be enough, whereas for spoken material information retrieval an accuracy of about 30 to
+                     40 percent is usually sufficient.
+                  </p>
+                  
+                  <p>In part-of-speech tagging (morphological disambiguation), the accuracy for English (<a href="#ss1-2-7_b3">Brants 2000</a>) has reached 97–98 percent (measuring the tag error rate). However, current accuracy is substantially lower (85–90 percent) for other languages that are morphologically more complicated or for which not enough training data for stochastic
+                     methods is available. Part-of-speech tagging is often used for experiments when new analytical methods are considered because
+                     of its simplicity and test data availability.
+                  </p>
+                  
+                  <p>In parsing, the number of crossing brackets (i.e., wrongly grouped phrases) is used for measuring the accuracy of parsers
+                     producing a constituent sentence structure, and a dependency error rate is used for dependency parsers. Current state-of-the-art
+                     English parsers (<a href="#ss1-2-7_b10">Collins 1999</a>; <a href="#ss1-2-7_b6">Charniak 2001</a>) achieve 92–94 percent combined precision and recall in the crossing-brackets measure (the number would be similar if dependency accuracy
+                     is measured). Due to the lack of training data (treebanks) for other languages, there are only a few such parsers; the best-performing
+                     published result of a foreign-language parser (on Czech, see <a href="#ss1-2-7_b11">Collins et al. 1999</a>) achieves 80 percent dependency accuracy.
+                  </p>
+                  
+                  <p>Machine translation (or any system that produces free, plain text) is much more difficult (and expensive) to evaluate. Human
+                     evaluation is subjective, and it is not even clear what exactly should be evaluated, unless a specific task and environment
+                     of the machine translation system being evaluated is known. Machine translation evaluation exercises administered by DARPA
+                     (Defense Advanced Research Projects Agency) in the 1990s led to about 60 percent subjective translation quality of both the
+                     statistical machine translation (MT) systems as well as the best commercial systems. Great demand for an automatic evaluation
+                     of machine translation systems by both researchers and users has led to the development of several automated metrics (most
+                     notably, those of Papineni, see <a href="#ss1-2-7_b18">Papineni et al. 2001</a>) that try to simulate human judgment by computing a numeric match between the system's output and several reference (i.e.,
+                     human) translations. These numbers cannot be interpreted directly (current systems do not go over 0.30–0.35 even for short sentences), but only in relation to a similarly computed distance between human translations (for example,
+                     that number is about 0.60 with 4 reference translations; the higher the number, the better).
+                  </p>
+                  
+                  
+                  <a name="ss1-2-7_h2"></a><h2 class="normal">Successful Commercial Applications</h2>
+                  
+                  <p>The success of commercial applications is determined not so much by the absolute accuracy of the technology itself, but rather
+                     by the relative suitability to the task at hand. Speech recognition is currently the most successful among commercial applications
+                     of language processing, using almost exclusively stochastic methods. But even if there are several dictation systems on the
+                     market with accuracy over 95 percent, we are for the most part still not dictating e-mails to our computers, because there
+                     are many other factors that make dictation unsuitable: integration with corrections is poor, noisy environments decrease the
+                     accuracy, sometimes dramatically. On the other hand, scanning broadcast news for spotting certain topics is routinely used
+                     by intelligence agencies. Call routing in the customer service departments of major telephone companies (mostly in the USA)
+                     is another example of a successful application of speech recognition and synthesis: even if the telephone speech recognition
+                     is far from perfect, it can direct most of the customer's calls correctly, saving hundreds of frontline telephone operators.
+                     Directory inquiries and call switching in some companies are now also handled automatically by speech recognition; and we
+                     now have cell phones with ten-number voice dialing – a trivial, but fashionable application of speech recognition technology – not to mention mass-market toys with similar capabilities.
+                  </p>
+                  
+                  <p>Successful applications of non-speech natural language processing technology are much more rare, if we do not count the ubiquitous
+                     spelling and grammar checkers in word processing software. The most obvious example is machine translation. General machine
+                     translation systems, an application that has been being developed at many places for almost fifty years now, is still lousy
+                     in most instances, even if it sort of works for rough information gathering (on the Web for example); most translation bureaus
+                     are using translation memories that include bilingual and multilingual dictionaries and previously translated phrases or sentences
+                     as a much more effective tool. Only one system – SYSTRAN – stands out as a general machine translation system, now being used also by the European Commission for translating among
+                     many European languages (<a href="#ss1-2-7_b23">Wheeler 1984</a>). Targeted, sharply constrained domain-oriented systems are much more successful: an excellent example is the Canadian METEO
+                     system (<a href="#ss1-2-7_b13">Grimaila and Chandioux 1992</a>), in use since May 24, 1977, for translating weather forecasts between English and French. Research systems using stochastic
+                     methods do surpass current general systems, but a successful commercial system using them has yet to be made.
+                  </p>
+                  
+                  <p>Searching on the Web is an example of a possible application of natural language processing, since most of the Web consists
+                     of natural language texts. Yet most of the search engines (with the notable exception of Askjeeves and its products &lt;<a href="www.ask.com">www.ask.com</a>&gt;, which allows queries to be posted in plain English) still use simple string matching, and even commercial search applications
+                     do not usually go beyond simple stemming. This may be sufficient for English, but with the growing proportion of foreign-language
+                     web pages the necessity of more language-aware search techniques will soon become apparent.
+                  </p>
+                  
+                  
+                  <a name="ss1-2-7_h3"></a><h2 class="normal">Future Perspectives</h2>
+                  
+                  <p>Due to the existence of corpora, to the ascent of stochastic methods and evaluation techniques, computational linguistics
+                     has become mostly an experimental science – something that can hardly be said about many other branches of humanities sciences. Research applications are now invariably
+                     tested against real-world data, virtually guaranteeing quick progress in all subfields of computational linguistics. However,
+                     natural language is neither a physical nor a mathematical system with deterministic (albeit unknown) behavior; it remains
+                     a social phenomenon that is very difficult to handle automatically and explicitly (and therefore, by computers), regardless
+                     of the methods used. Probability and statistics did not solve the problem in the 1950s (weak computer power), formal computational
+                     linguistics did not solve the problem in the 1960s and 1970s (language seems to be too complex to be described by mere introspection),
+                     and stochastic methods of the 1980s and 1990s apparently did not solve the problem either (due to the lack of data needed
+                     for current data-hungry methods). It is not unreasonable to expect that we are now, at the beginning of the twenty-first century,
+                     on the verge of another shift of research paradigm in computational linguistics. Whether it will be more linguistics (a kind
+                     of return to the 1960s and 1970s, while certainly not leaving the new experimental character of the field), or more data (i.e.,
+                     the advances in computation – statistics plus huge amounts of textual data which are now becoming available), or neural networks (a long-term promise and
+                     failure at the same time), a combination of all of those, or something completely different, is an open question.
+                  </p>
+                  
+                  
+                  
+                  
+                  <a name="ss1-2-7_h4"></a><h2 class="normal">References for Further Reading</h2>
+                  
+                  <p>There are excellent textbooks now for those interested in learning the latest developments in computational linguistics and
+                     natural language processing. For speech processing, <a href="#ss1-2-7_b14">Jelinek (2000)</a> is the book of choice; for those interested in (text-oriented) computational linguistics, <a href="#ss1-2-7_b5">Charniak (1996)</a>, Manning and Schutze (1999), and <a href="#ss1-2-7_b15">Jurafsky and Martin (2000)</a> are among the best.
+                  </p>
+                  <a name="ss1-2-7_b1"></a><p class="hang">Bahl, L. R., F. Jelinek, and R. L. Mercer (1983). <i><span class="title">A Maximum Likelihood Approach to Continuous Speech Recognition</span></i>. <i><span class="title">IEEE Transactions on Pattern Analysis and Machine Intelligence</span></i> 5, 2: 179–220.
+                  </p>
+                  <a name="ss1-2-7_b2"></a><p class="hang">Becker, K. F. (1837). <i><span class="title">Ausfürliche Deutsche Grammatik als Kommentar der Shulgrammatik</span></i>. <i><span class="title">Zweite Abtheilung [Detailed Grammar of German as Notes to the School Grammar]</span></i>. Frankfurt am Main: G. F. Kettembeil.
+                  </p>
+                  <a name="ss1-2-7_b3"></a><p class="hang">Brants, T. (2000). <i><span class="title">TnT - A Statistical Part-of-Speech Tagger</span></i>. In S. Nirenburg, <i><span class="title">Proceedings of the 6th ANLP</span></i> (pp. 224–31). Seattle, WA: ACL.
+                  </p>
+                  <a name="ss1-2-7_b4"></a><p class="hang">Brown, P. F., J. Cocke, S. A. Della Pietra, V. J. Della Pietra, F. Jelinek, J. D. Lafferty, R. L. Mercer, and P. S. Roossin (1990). <i><span class="title">A Statistical Approach to Machine Translation</span></i>. <i><span class="title">Computational Linguistics</span></i> 16, 2: 79–220.
+                  </p>
+                  <a name="ss1-2-7_b5"></a><p class="hang">Charniak, E. (1996). <i><span class="title">Statistical Language Learning</span></i>. Cambridge, MA: MIT Press.
+                  </p>
+                  <a name="ss1-2-7_b6"></a><p class="hang">Charniak, E. (2001). <i><span class="title">Immediate-head Parsing for Language Models</span></i>. In N. Reithinger and G. Satta, <i><span class="title">Proceedings of the 39th Annual Meeting of the Association for Computational Linguistics</span></i> (pp. 116–23). Toulouse: ACL.
+                  </p>
+                  <a name="ss1-2-7_b7"></a><p class="hang">Chomsky, A. N. (1957). <i><span class="title">Syntactic Structures</span></i>. The Hague: Mouton.
+                  </p>
+                  <a name="ss1-2-7_b8"></a><p class="hang">Chomsky, A. N. (1981). <i><span class="title">Lectures on Government and Binding (The Pisa Lectures)</span></i>. Dordrecht and Cinnaminson, NJ: Foris.
+                  </p>
+                  <a name="ss1-2-7_b9"></a><p class="hang">Chomsky, A. N. (1993). <i><span class="title">A Minimalist Program for Linguistic Theory</span></i>. In K. Hale and S. J. Keyser (eds.), <i><span class="title">The View from Building 20: Essays in Linguistics in Honor of Sylvain</span></i> (pp. 1–52). Cambridge, MA: Bromberger.
+                  </p>
+                  <a name="ss1-2-7_b10"></a><p class="hang">Collins, M. (1999). <i><span class="title">Head-driven Statistical Models for Natural Language Parsing</span></i>. PhD dissertation, University of Pennsylvania.
+                  </p>
+                  <a name="ss1-2-7_b11"></a><p class="hang">Collins, M., J. Hajič, L. Ramshaw, and C. Tillmann (1999). <i><span class="title">A Statistical Parser for Czech</span></i>. In R. Dale and K. Church, <i><span class="title">Proceedings of ACL 99</span></i> (pp. 505–12). College Park, MD: ACL.
+                  </p>
+                  <a name="ss1-2-7_b12"></a><p class="hang">Gazdar, G. et al. (1985). <i><span class="title">Generalized Phrase Structure Grammar</span></i>. Oxford: Blackwell.
+                  </p>
+                  <a name="ss1-2-7_b13"></a><p class="hang">Grimaila, A. and J. Chandioux (1992). <i><span class="title">Made to Measure Solutions</span></i>. In J. Newton (ed.), <i><span class="title">Computers in Translation, A Practical Appraisal</span></i> (pp. 33–45). New York: Routledge.
+                  </p>
+                  <a name="ss1-2-7_b14"></a><p class="hang">Jelinek, F. (2000). <i><span class="title">Statistical Methods for Speech Recognition</span></i>. Cambridge, MA: MIT Press.
+                  </p>
+                  <a name="ss1-2-7_b15"></a><p class="hang">Jurafsky, D. and J. H. Martin (2000). <i><span class="title">Speech and Language Processing</span></i>. New York: Prentice Hall.
+                  </p>
+                  <a name="ss1-2-7_b16"></a><p class="hang">Kaplan, R. M., and J. Bresnan (1983). <i><span class="title">Lexical-functional Grammar: A Formal System for Grammatical Representation</span></i>. In J. Bresnan, <i><span class="title">The Mental Representation of Grammatical Relations</span></i> (pp. 173–381). Cambridge, MA: MIT Press.
+                  </p>
+                  <a name="ss1-2-7_b17"></a><p class="hang">Manning, C. D. and H. Schütze (1999). <i><span class="title">Foundations of Statistical Natural Language Processing</span></i>. Cambridge, MA: MIT Press.
+                  </p>
+                  <a name="ss1-2-7_b18"></a><p class="hang">Papineni, K., S. Roukos, T. Ward, and Wei-Jing Zhu (2001). <i><span class="title">Bleu: A Method for Automatic Evaluation of Machine Translation</span></i>. Published as IBM Report RC22176. Yorktown Heights, NY: IBM T. J. Watson Research Center.
+                  </p>
+                  <a name="ss1-2-7_b19"></a><p class="hang">Pollard, C. and I. Sag (1992). <i><span class="title">Head-driven Phrase Structure Grammar</span></i>. Chicago: University of Chicago Press.
+                  </p>
+                  <a name="ss1-2-7_b20"></a><p class="hang">Saussure de, F. (1949). <i><span class="title">Court de linguistique générale</span></i>, 4th edn. Paris: Libraire Payot.
+                  </p>
+                  <a name="ss1-2-7_b21"></a><p class="hang">Shannon, C. (1948). <i><span class="title">The Mathematical Theory of Communication</span></i>. <i><span class="title">Bell Systems Technical Journal</span></i> 27: 398–403.
+                  </p>
+                  <a name="ss1-2-7_b22"></a><p class="hang">Tesnière, L. (1959). <i><span class="title">Elements de Syntaxe Structural</span></i>. Paris: Editions Klincksieck.
+                  </p>
+                  <a name="ss1-2-7_b23"></a><p class="hang">Wheeler, P. J. (1984). <i><span class="title">Changes and Improvements to the European Comission's SYSTRAN MT System, 1976–1984</span></i>. <i><span class="title">Terminologie Bulletin</span></i> 45: 25–37. European Commission, Luxembourg.
+                  </p>
+                  <a name="ss1-2-7_b24"></a><p class="hang">Zarechnak, M. (1979). <i><span class="title">The History of Machine Translation</span></i>. In B. Henisz-Dostert, R. Ross Macdonald, and M. Zarechnak (eds.), <i><span class="title">Machine Translation</span></i>. Trends in Linguistics: Studies and Monographs, vol. 11 (pp. 20–8). The Hague: Mouton.
+                  </p>
+                  
+                  
+                  
+               </div>
+            

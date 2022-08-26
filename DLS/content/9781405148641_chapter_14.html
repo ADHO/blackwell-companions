@@ -1,0 +1,704 @@
+<div class="content">
+                  <h2 class="normal">14. 
+                     <h2 class="normal">Riddle Machines: The History and Nature of Interactive Fiction</h2>
+                  </h2>
+                  <span style="font-weight:bold;">Nick Montfort</span>
+                  
+                  <a name="_h35"></a><a name="_h36"></a>
+                  
+                  
+                  
+                  <a name="ss1-5-8_h0"></a><h2 class="normal">Introduction</h2>
+                  
+                  <p>The genre that has also been labeled "text adventure" and "text game" is stereotypically thought to offer dungeons, dragons, and the ability for readers to choose their own adventure. While there
+                     may be dragons here, interactive fiction (abbreviated "IF") also offers utopias, revenge plays, horrors, parables, intrigues, and codework, and pieces in this form resound with and
+                     rework Gilgamesh, Shakespeare, and Eliot as well as Tolkien. The reader types in phrases to participate in a dialogue with
+                     the system, commanding a character with writing. Beneath this surface conversation, and determining what the computer narrates,
+                     there is the machinery of a simulated world, capable of drawing the reader into imagining new perspectives and understanding
+                     strange systems.
+                  </p>
+                  
+                  <p>Interactive fiction works can be challenging for literary readers, even those interested in other sorts of electronic literature,
+                     because of the text-based interface and because of the way in which these works require detailed exploration, mapping, and
+                     solution. Works in this form are often less visually rewarding, and the rewards they do offer are only attained with time
+                     and effort. But text-based interactive fiction has provided some of the most the intricate and compelling literary simulations
+                     yet developed. Understanding how interactive fiction works, and how it has developed over the past three decades, is an essential
+                     part of the puzzle of literary computing.
+                  </p>
+                  
+                  <a name="ss1-5-8_h1"></a><h3 class="normal">Characteristics of interactive fiction</h3>
+                  
+                  <p>Formally, a work of interactive fiction (often called a "game," even if it does not exhibit the typical qualities of a game) is an interactive computer program. While some IF uses graphics,
+                     and, less often, sound or animation, the basis of the form is textual input and textual output. The interactor types a command
+                     to one of the characters, called the player character, such as "ask Galatea about her awakening," "enter the doorway," or "reboot the server." The program, in turn, describes whether or not the player character is able to perform this action and, if it is possible,
+                     narrates what happens in the simulated world as a result. Two important features of IF are some sort of language understanding,
+                     accomplished by the component called the parser, and some way of simulating the things that exist in a virtual world, along
+                     with their behaviors and interactions. This latter feature is provided by a program's world model.
+                  </p>
+                  
+                  <p>The world model simulates different areas, called "rooms," and the people, creatures, and objects that are in them. Rooms are connected in a graph, and the things they contain can
+                     themselves contain things. The output text is focalized by the player character. This simulation of an underlying world, from
+                     which the textual output is produced, makes it difficult to consider one's progress through interactive fiction as moving
+                     from one hypertextual lexia to another. Rather than imagining a fixed number of nodes of text, it is helpful to see the output
+                     text as being produced because of the simulation of the player character and the environment. Walking through a city may generate
+                     different texts depending upon the time of day, the events that are occurring in the city, the amount of light available,
+                     the state of mind of the player character, and the sensory abilities of that character.
+                  </p>
+                  
+                  <p>The parser and world model are essential to IF; there are also many conventions that works in this form follow. Typically,
+                     the player character is commanded to go to a new location by using compass directions or abbreviations of them: "go north" can be abbreviated "north" or simply "n." Some games use different sorts of directions or allow the interactor to refer to landmarks (e.g., "go to the coffee shop"), but the way of commanding a character to move is among the most widely recognized conventions in IF. Parodies and jokes
+                     in the form of interactive fiction transcripts will invariably use compass-direction commands.
+                  </p>
+                  
+                  <p>The instructions for the first interactive fiction, <i>Adventure</i>, declared "I will be your eyes and hands." While interactive fiction has been written in the first, second, and third person, it is conventional to refer to the player
+                     character in the second person, a feature of interactive fiction that is often remarked upon because it is so uncommon in
+                     other types of literary writing. The interactive fiction program itself, in its capacity as a narrator and an interface to
+                     the player character, is often referred to in the first person.
+                  </p>
+                  
+                  <p>The ability to converse with other characters is often provided in IF, and not always in the same way. The type of conversation
+                     that is possible with chatterbots such as <i>Eliza/Doctor</i>, <i>Parry</i>, and <i>Racter</i> is not an option in IF. In one format for conversation, the interactor can specify a topic by typing something like "ask Dunbar about the Loblo bottle." Some games change from the usual mode of input when it comes to conversation, having the interactor pick what to say from
+                     a menu of possible utterances. While chatterbots offer a more free-form interface for conversation, the interlocutors in interactive
+                     fiction, called non-player characters, also have the ability to take action within the simulated world and to affect the environment
+                     that the player character and the non-player characters share.
+                  </p>
+                  
+                  
+                  <a name="ss1-5-8_h2"></a><h3 class="normal">A sample transcript</h3>
+                  
+                  <p><i>Bronze</i> is a recent work of interactive fiction that is conventional in many ways (a fantasy setting, the use of compass directions
+                     for movement) but is also welcoming to beginners and plays with a well-known tale in an interesting way. This game, by Emily
+                     Short, was developed in part to serve as an example for a new interactive fiction development system, Inform 7.
+                  </p>
+                  
+                  <blockquote>
+                     <p>When the seventh day comes and it is time for you to return to the castle in the forest, your sisters cling to your sleeves.</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>"Don't go back," they say, and "When will we ever see you again?" But you imagine they will find consolation somewhere.</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>Your father hangs back, silent and moody. He has spent the week as far from you as possible, working until late at night.
+                        Now he speaks only to ask whether the Beast treated you "properly." Since he obviously has his own ideas about what must have taken place over the past few years, you do not reply beyond a
+                        shrug.
+                     </p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>You breathe more easily once you're back in the forest, alone.</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>Bronze</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>A fractured fairy tale by Emily Short</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>Release 9 / Serial number 060225 / Inform 7 build 3F37 (I6/v6.30 lib 6/10N)</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>Have you played interactive fiction before? &gt;yes</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>If you have not played Bronze before, you may still want to type HELP to learn about special commands unique to this game.</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>Drawbridge</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>Even in your short absence, the castle has come to look strange to you again. When you came here first, you stood a long while
+                        on the drawbridge, unready to cross the moat, for fear of the spells that might bind you if you did. This time it is too late
+                        to worry about such things.
+                     </p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>An iron-barred gate leads north.</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>&gt;open the gate</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>You shouldn't be able to open it, heavy as it is, but it swings aside lightly at your touch. The Beast said that it knows
+                        friend from enemy; and the castle, at least, still regards you as friend.
+                     </p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>&gt;go north</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>Entrance Hall</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>There is no fire in the big fireplace, and no one is waiting for you here; the air is very cold. Over the gate, the old familiar
+                        warning sign is painted.
+                     </p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>Nick Montfort</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>Various passages lead deeper into the castle: north towards the central courtyard, southwest to the guard tower, east and
+                        west into the libraries, the offices, the galleries. Somewhere in this maze, he waits; and he should be told as soon as possible
+                        that you did return.
+                     </p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>An iron-barred gate leads south to the drawbridge.</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>&gt;go east</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>Scarlet Gallery</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>You do not often come this way, into the older part of the castle, which is narrow and has a low roof. The walls, and the
+                        ceiling too, are deep scarlet, the color of the old king and queen that ruled here two hundred fifty years ago, when there
+                        was still a kingdom.
+                     </p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>&gt;go southeast</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>Scarlet Tower</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>A little hexagonal room, from whose narrow window you can see the moat, the lawn, and the beginning of the forest outside.</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>On the windowsill, a helmet waits, for the use of the sentry.</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>&gt;pick up the helmet</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>You acquire the helmet, and assess it curiously.</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>A very old helmet that you have seen the Beast wear (and quite foolish it looked, perched on a head it no longer fits: it
+                        would suit your head better). He told you once that the helmet was for night watchmen, scouts, and guards, to increase their
+                        vigilance and strengthen their hearing.
+                     </p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>Lines of writing arc over each ear, but you do not know the language in question.</p>
+                  </blockquote>
+                  
+                  <p>The commands above direct the player character to perform some of the most typical actions in an interactive fiction world:
+                     opening a gate, walking in a particular direction, and acquiring an object. The output from <i>Bronze</i> shows that these ordinary actions can reveal a back story, and that through the exploration of a virtual space, a well-known
+                     story — in this case, that of beauty and the beast — can be transformed and inflected in interesting ways.
+                  </p>
+                  
+                  <p>The interactor's progress through the world of <i>Bronze</i> can continue, after the player character walks back to the entrance hall, like so:
+                  </p>
+                  
+                  <blockquote>
+                     <p>&gt;w</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>Great Dining Hall</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>Such a long hall that the soup might get cold between one end and the other. You and he used only the far west end, nearest
+                        the kitchen. Once you took to dining together at all, that is; the first few months he brought trays to your room, while you
+                        hid.
+                     </p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>But then you took to eating here; and at the end of every meal he would stand up formally and ask his question.</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>"You can leave at any time," he said, when he first spoke to you. You stared at him, surprised that someone with his face and teeth was capable of human
+                        communication. "Would you like to go?"
+                     </p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>There are other memories, more recent, of course. Every glance around the room reminds you of a different one.</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>&gt;look at the room</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>You take another look around.</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>Great Dining Hall</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>You allow yourself to remember another night, another request.</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>"I'm surprised you haven't gone home yet," he said very early in your stay.</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>"I've heard stories," you replied. "As if there weren't enough to see around the castle. I know what happens to your servants who try to leave you."</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>"Nothing bad would happen to you," he said. But you could not believe him, not with all the captured spirits, not with the stories, not with the evidence around
+                        the castle.
+                     </p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>&gt;w</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>Enormous Kitchen</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>Haunted with the spirits of chefs past, generations and generations of culinary geniuses; one can never predict its whimsies.
+                        Unless he has moved everything, the bell to summon them into action should be in one of the rooms upstairs.
+                     </p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>&gt;n</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>Servant Quarters</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>You've never come here before, and now you see why. Not a room friendly to visitors, it has the air of resentful, martyred
+                        suffering. Even His most unpleasant ancestors would not have grudged this place more paint, surely, and more straw for the
+                        beds.
+                     </p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>A decaying ladder leads down.</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>&gt;go down</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>Darkness</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>Though a dim light filters down from the servant quarters, you can see almost nothing of the contents of your current location.
+                        You find yourself concentrating all the more alertly on your hearing, as though the slightest echo might offer a clue.
+                     </p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>You hear some dry sifting from the northeast.</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>&gt;wear the helmet</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>You settle the helmet over your head, and there is a roaring in your ears at first. But then the sharpened hearing begins
+                        to feel natural again.
+                     </p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>&gt;listen</p>
+                  </blockquote>
+                  
+                  <blockquote>
+                     <p>Windchimes ring, almost inaudible, from the east, competing with some dry sifting from the northeast. You can also make out
+                        your own steady breathing.
+                     </p>
+                  </blockquote>
+                  
+                  <p>In these exchanges, the importance of perception — something that has been integral to IF from the beginning — is foregrounded. In the dining hall, looking elicits a description of the surrounding area, but it does more than this: It
+                     also reveals memories. In the dark area under the servant quarters, an inability to see must be overcome with a different
+                     sense, and with an object that helps to amplify this sense. The puzzle posed by the darkness is solved (in this instance)
+                     not by finding a light source, but by realizing that another sense, if properly amplified, can help the player character to
+                     find her way around.
+                  </p>
+                  
+                  <p><i>Bronze</i> is a medium-sized game that can be completed in a few hours; these snippets represent a very small fraction of the texts
+                     that would be seen in a complete traversal of the game, in which everything would be solved and the session brought to a conclusion.
+                     At best, this beginning can hint at how a classic fairy tale is transformed in <i>Bronze</i> and can demonstrate some of the most typical interactions. There is much more to be found out and solved in <i>Bronze</i>, however, and there are many more spaces and interactions that reveal complex personal histories and relationships.
+                  </p>
+                  
+                  
+                  <a name="ss1-5-8_h3"></a><h3 class="normal">Interactive fiction as potential narrative</h3>
+                  
+                  <p>One perspective on interactive fiction is that it is potential narrative. The French literary and mathematical group Oulipo
+                     considered potential literature — literary spaces and possibilities — rather than literature itself. This concept, or at least, its narrative counterpart, can be useful in understanding interactive
+                     fiction. In the preceding transcript of <i>Bronze</i>, it is narrated that the player character enters the castle, goes east into an old wing of the place, finds and takes a helmet,
+                     and then goes through the kitchen and into the darkness, where she places the helmet on her head and is able to hear more
+                     effectively. But this is not "the" story, or "the" narrative, of <i>Bronze</i>; it is one particular sequence of events which was made to happen because of what the interactor typed. The interactor could
+                     have typed something different and gone into a different area at first, or could have directed the player character down into
+                     the dark area without having first found the helmet. <i>Bronze</i> provides a specific set of possibilities, however, not every imaginable text: the player character cannot walk off, get into
+                     a sport utility vehicle, and drive away.
+                  </p>
+                  
+                  <p>In some interactive fiction, anyone who finds a solution and reaches the "winning" conclusion will have experienced the same spaces and had the player character carry out the same significant actions. Even
+                     in these cases, it can be important to see IF as a potential narrative that can be experienced in a different order by different
+                     interactors, since the different ways in which interactors solve the same game may greatly affect their experiences of it.
+                     Many games also provide alternate ways to solve the same puzzles. It is possible to provide an ending that differs depending
+                     upon the behavior of the player character, as Jason Devlin's <i>Vespers</i> demonstrates. In Stephen Granade's <i>Losing Your Grip</i>, two of the five "fits" in the game are completely different if the interactor makes different choices earlier on, and there is not much of a way
+                     to discover this without replaying or being told about it. Other interactive fiction exhibits a more obvious "branching" structure, something that can be seen in Adam Cadre's <i>I-0</i>, and, in a more unusual way, in his <i>Narcolepsy</i>.
+                  </p>
+                  
+                  <p>Along with other useful perspectives (computer program, dialog system, simulation, game, riddle), the idea that interactive
+                     fiction is potential narrative encourages the consideration of how it is potential — what space of narratives is defined — and of how the elements of IF correspond to narrative elements. There are rather direct correspondences between characters
+                     and events, certainly, but levels of simulation can also correspond in interesting ways to diegetic levels. This suggests
+                     a few of several interesting ways in which the study of narrative can be used to understand interactive fiction while the
+                     nature of IF works as interactive computer programs is also taken into account.
+                  </p>
+                  
+                  
+                  
+                  <a name="ss1-5-8_h4"></a><h2 class="normal">A Brief History</h2>
+                  
+                  <p>While poetry generation systems, chatterbots, and video games originated before interactive fiction, the form has a rich and
+                     reasonably long history. Interactive fiction pre-dates personal computing, originating when only a small number of academics
+                     and researchers had regular access to mainframes and minicomputers. After playing an important role in early recreational
+                     computing, interactive fiction came to the microcomputer and became a notable part of the entertainment software market. Commercial
+                     sales brought interactive fiction to millions of interactors and left a lasting impression on the computer gaming industry.
+                     While interactive fiction does not top computer game sales charts today, its return to hobbyist roots and free distribution,
+                     facilitated by the internet, has offered new space for concepts and writing that would have been far too unusual and innovative
+                     for the mass market to bear.
+                  </p>
+                  
+                  <a name="ss1-5-8_h5"></a><h3 class="normal">Early "mainframe" games</h3>
+                  
+                  <p>The canonical first work of interactive fiction was <i>Adventure</i>, a cave simulation which appeared in its best-known form in 1977. Several important predecessors helped bring computing into
+                     the mid-1970s and contributed to some of aspects of <i>Adventure</i> that made it a success. One of these was an earlier cave simulation, <i>Hunt the Wumpus</i>, a BASIC program written by Gregory Yob and first published in print in 1973. This game was set on a dodecahedron instead
+                     of the usual Cartesian grid, a setting that was a step toward the arbitrary mazes of <i>Adventure</i>. Before this, Terry Winograd had developed a system that could carry on natural-language dialogue in a restricted domain.
+                     His <i>SHRDLU</i> (1972) offered a blocks world and was not much of an adventure — it was not designed to be — but it did have the textual exchange and the sort of world model that would characterize later interactive fiction. Another
+                     important dialogue system, developed even earlier, was Joseph Weizenbaum's <i>Eliza/Doctor</i>. This fictional therapist did not have the sort of world model that <i>SHURDLU</i> did or the complex cave setting of <i>Hunt the Wumpus</i>, but it provided something that interactive fiction would later need — a compelling scenario for interaction, one which invited users to participate in a conversation (<a href="#ss1-5-8_b8">Murray 1997</a>: 214–50).
+                  </p>
+                  
+                  <p>These computing developments laid some of the groundwork for a project that Will Crowther undertook, in the mid-1970s. Crowther,
+                     who worked at Bolt, Beranek, and Newman in Cambridge, Massachusetts, was working to develop the <i>ARPANET</i>. His hobbies included exploring caves and playing <i>Dungeons and Dragons</i>. He decided to develop a computer game, in FORTRAN, that drew on these experiences and which could be enjoyed by his young
+                     daughters. His first version of <i>Adventure</i> was a model of a real cave system in Kentucky, one which he had explored and mapped (<a href="#ss1-5-8_b5">Jerz 2007</a>). The simulation was not entirely realistic: He placed virtual treasures in the cave, for instance, to lure the interactor
+                     into exploring and reward her for reaching remote areas.
+                  </p>
+                  
+                  <p>The version of <i>Adventure</i> that became famous did not come out until later. It was due to an unusual collaborative effort. Don Woods, at Stanford, found
+                     <i>Adventure</i> and decided he would like to modify it. He asked Crowther for permission, but otherwise worked independently to fix bugs,
+                     expand the cave, and add other elements to the game. The canonical <i>Adventure</i> (sometimes called <i>Colossal Cave</i>) was the version of Crowther's code that Woods finished tweaking in 1977. <i>Adventure</i> was made available to all (at least, to the few who had access to PDP-10s at the time) and was well received. It became the
+                     subject of the first dissertation on a computer game (<a href="#ss1-5-8_b4">Buckles 1985</a>). Those who encountered it at the time joke that computing was set back two weeks while everyone who could run <i>Adventure</i> spent that time solving it. Several people may have been set back more than two weeks by <i>Adventure</i>, because they decided to port it to new systems, do their own expansions of the game, or write their own "adventures."
+                  </p>
+                  
+                  <p>These adventures included <i>Haunt</i>, developed at Carnegie Mellon by John Laird and set in a mansion rather than below ground. Other early "house" games included <i>Mystery Mansion</i>, written in the late 1970s, and the 1980 <i>Mystery House</i>, by Roberta and Ken Williams, which was the first text-and-graphics adventure. In England, David Seal, Jon Thackray, and
+                     Jonathan Partington used the University of Cambridge's Phoenix system to develop the sprawling game <i>Acheton</i>. A long series of additional adventures for the same platform followed. The other Cambridge, in Massachusetts, was not done
+                     with interactive fiction yet. At MIT, David Lebling, Marc Blank, Timothy A. Anderson, and Bruce Daniels worked to assemble
+                     a cave-crawl of a different sort, <i>Zork</i>, which incorporated several technological advances in parsing and world modeling. <i>Zork</i> also included the first notable character in interactive fiction, largely coded by Anderson and referred to simply as "the thief." <i>Zork</i>, a version of which was known as <i>Dungeon</i>, proved extremely popular, and its history did not end in the mainframe era: In 1979, three of the <i>Zork</i> creators joined with others at MIT to found a company, Infocom, which became the major player in commercial interactive fiction
+                     in the United States.
+                  </p>
+                  
+                  
+                  <a name="ss1-5-8_h6"></a><h3 class="normal">The commercial era</h3>
+                  
+                  <p>Although Infocom helped to popularize the term "interactive fiction" and became the major IF company in the United States, they were not the first company to use the term or the first to market
+                     with adventures. Scott Adams's company Adventure International was first to bill one of its publications as IF, and brought
+                     out <i>Adventure-land</i>, a condensed BASIC version of <i>Adventure</i>, back in 1978 — on cassette tape for the TRS-80 Model I. Adams's games are not literary masterpieces, but were important for helping to establish
+                     a commercial market for IF. They also provided many people's first exposure to the form.
+                  </p>
+                  
+                  <p>Infocom developed more than thirty interactive fiction works in its productive decade. The company began by publishing a trilogy
+                     based on the mainframe <i>Zork</i>. Slicing the game into three parts allowed each part to fit on disk and into a PC's limited memory. An interpreter, the Z-Machine,
+                     allowed Infocom's game to be written once and published on dozens of platforms. Infocom began to work in various popular genres,
+                     beginning with the detective story. Marc Blank's 1982 <i>Deadline</i> (see <a href="#ss1-5-8_b3">Aarseth 1997</a>: 115–28) was the first foray into this genre. Other developments included the science-fiction <i>Starcross</i> (Dave Lebling, 1982), the archeological adventure <i>Infidel</i> (Michael Berlyn and Patricia Fogelman, 1983), and a game styled after the romance novel, <i>Plundered Hearts</i> (Amy Biggs, 1987). Infocom also developed some IF that was based directly on popular novels, including what was probably
+                     the bestselling game of this sort, <i>The Hitchhiker's Guide to the Galaxy</i>. Unusually, the author of the earlier novel and radio play, Douglas Adams, collaborated with the most prolific of Infocom's
+                     implementors, Steve Meretzky, on this project. Making books into interactive fiction became a fairly popular idea during the
+                     1980s. In Australia, for instance, the company Melbourne House released the text-and-graphics game <i>The Hobbit</i> in 1983. Another US company, initially called Trillium and renamed Telarium, did text-and-graphics interactive fiction versions
+                     of Ray Bradbury's <i>Fahrenheit 451</i> and Roger Zelazny's <i>Nine Princes in Amber</i>; there were reworkings of Isaac Asimov and Stephen King novels as well. Infocom's other releases included many original contributions:
+                     a game based on wordplay, two juvenile interactive fiction pieces, and even a bawdy space opera.
+                  </p>
+                  
+                  <p>Other US companies didn't build the catalog that Infocom did, but they published a variety of interesting works. Synapse brought
+                     in print writers to work with programmers. The company released only four games, one of which, <i>Mindwheel</i> (1984), was by future US poet laureate Robert Pinsky (see <a href="#ss1-5-8_b10">Pinsky 1995</a>). Novelist and poet Thomas M. Disch worked with the Cognetics Corporation to create <i>Amnesia</i> (1986), set in contemporary Manhattan. Many text-and-graphics adventures were developed beginning in the early 1980s, too.
+                     Sierra On-Line began a successful series, which eventually went all-graphical, when they released <i>King's Quest: Quest for the Crown</i> in 1983, initially for the ill-fated IBM PC Jr. The game accepted textual commands, as earlier interactive fiction did, but
+                     also featured a walking character who could be directed with arrow keys or a joystick.
+                  </p>
+                  
+                  <p>The rest of the English-speaking world was not lacking for quality interactive fiction. In the UK, the brothers Pete, Mike,
+                     and Nick Austin founded Level 9 and published twenty games, starting with their version of <i>Adventure</i>, <i>Colossal Adventure</i>. They boasted that their 1983 science fiction game <i>Snowball</i> offered 7,000 rooms. In 1987, the company released <i>Knight Orc</i>, which featured autonomously wandering characters and gave the interactor the opportunity to play an anti-hero, a distasteful
+                     orc who is shunned even by his own kind. A UK company that came onto the scene later was Magnetic Scrolls, which was founded
+                     by Anita Sinclair, Ken Gordon, and Hugh Steers and started developing text-and-graphics adventures for more capable computers
+                     than Level 9 and Infocom had started off with. Their first offering, in 1985, was <i>The Pawn</i> by Rob Steggles. Later games included <i>Corruption</i> by Steggles and Hugh Steers (1988), set in contemporary London; the zany inter-dimensional <i>Fish!</i> by John Molloy and others (1988); and David Bishop's <i>Wonderland</i> (1990), which played on Lewis Carroll's <i>Alice in Wonderland</i>.
+                  </p>
+                  
+                  
+                  <a name="ss1-5-8_h7"></a><h3 class="normal">The IF community</h3>
+                  
+                  <p>Interactive fiction wasn't only consumed, or interacted with, by home computer users. At a time when learning BASIC was a
+                     typical activity for PC purchasers, it was common for people to program interactive fiction themselves, just as some of the
+                     early players of <i>Adventure</i> chose to do. While some coded up their adventures in BASIC, there were also systems that were customized to the task of interactive
+                     fiction development. One was Graeme Yeandle's The Quill Adventure System, published first in the UK in 1983 and later ported
+                     to the Commodore 64 and released in the United States as Adventure Writer. While the commercial market for IF was cooling
+                     at the end of the 1980s, very capable new IF development systems were reaching a wide audience. One was Mike Roberts's TADS
+                     (Text Adventure Development System), released as shareware in 1987. Another, made available for free by its creator, Graham
+                     Nelson, in 1993, was Inform (<a href="#ss1-5-8_b9">Nelson 2001</a>). At the same time that Inform was released, Nelson also released a large-scale, Infocom-style adventure, <i>Curses</i>, that he had written in the system and that proved its mettle. Over the years, the development of TADS, Inform, and other
+                     systems has continued. The availability of these systems helped to foster amateur development efforts as interactive fiction
+                     was disappearing from store shelves.
+                  </p>
+                  
+                  <p>A great deal of contemporary interactive fiction activity involves the "IF community," those who participate in the two Usenet newsgroups about interactive fiction, are part of the annual IF Competition, and
+                     maintain online institutions such as the IF Archive. The first IF Competition was run in 1995 by G. Kevin Wilson, an IF author
+                     who also founded the <i>Society for the Promotion of Adventure Games Newsletter</i>. The Comp, as it is called, is judged by users in the IF Community and offers a forum for shorter interactive fiction which
+                     can be solved in less than two hours. Winners have included a <i>Change in the Weather</i> by Andrew Plotkin (1995, Inform category), which features landscape descriptions that changed throughout the day; Adam Cadre's
+                     <i>Photopia</i> (1998), which portrays several scenes from a girl's life and imagination; Jon Ingold's <i>All Roads</i> (2001), a disorienting tale that shifts between perspectives in seventeenth-century Venice; Dan Ravipinto and Star Foster's
+                     <i>Slouching towards Bedlam</i> (2003), a steampunk story of language and madness; and Jason Devlin's <i>Vespers</i> (2005), in which the player character is an abbot during the Black Death. Several review websites, a Wiki, and a MUD provide
+                     other channels for online discussion of and publication about interactive fiction.
+                  </p>
+                  
+                  <p>The development of innovative short games, of the sort that feature in the Comp, has been an important new step in recent
+                     years. On the even shorter side, IF authors sometimes gather online to create "Speed IF," pieces that are usually silly and are entirely written in two hours. And, larger interactive fiction pieces on the scale
+                     of those sold in the 1980s have also been published. Some notable ones include Graham Nelson's 1995 <i>Jigsaw</i>, in which the player character travels back into the twentieth century re-righting a history that is disturbed by the mysterious
+                     character Black; Suzanne Britton's 1999 <i>Worlds Apart</i>, a science-fiction game with a vast and detailed world; Peter Nepstad's <i>1893: A World's Fair Mystery</i>, a 2002 commercial release that strives for historical accuracy and educational value; Emily Short's 2002 <i>Savoir-Faire</i>, set in an eighteenth-century French estate and involving a specially formulated magic. Other important long-form and short-form
+                     games from recent years are described in more detail later in the "Suggestions for Play" section.
+                  </p>
+                  
+                  <p>The development of interactive fiction in languages other than English has been undertaken since at least the commercial era.
+                     In recent years, there have been active communities of Spanish, Italian, and German IF developers and players, and some IF
+                     development activity in other languages.
+                  </p>
+                  
+                  
+                  
+                  <a name="ss1-5-8_h8"></a><h2 class="normal">Contexts of Interactive Fiction</h2>
+                  
+                  <p>Interactive fiction has been an influential part of computing, computer gaming, and digital literature. The role of IF in
+                     gaming has been recognized by Crowther and Woods receiving an award at the 2006 Game Developers Conference and by the occasional
+                     tribute article that appears online or in print in the gaming press. Interactive fiction is often a part of public readings
+                     of electronic literature and of courses that consider computing and literature. This section traces a few threads of influence,
+                     explains some of the material ways in which interactors encounter interactive fiction, and considers modern-day IF development
+                     systems in a bit more depth.
+                  </p>
+                  
+                  <a name="ss1-5-8_h9"></a><h3 class="normal">Interactive fiction and the origin of MUDs</h3>
+                  
+                  <p>Recent Massively Multiplayer Online Role-playing Games (MMORPGs, or MMOs), such as <i>World of Warcraft</i>, <i>Star Wars Galaxies</i>, and <i>Everquest</i>, are in many ways graphical versions of earlier text-based systems that originated with the MUD, or Multi-User Dungeon. The
+                     experience of a MUD is quite similar to that of interactive fiction in many ways: one controls a character with textual commands
+                     in a similar sort of virtual, all-text environment. There is one important difference, however. Other characters on the same
+                     MUD are controlled by other people, allowing the system to be used for group adventures and social interaction. MUD is sometimes
+                     expanded as "Multi-User Dimension" by those who find dungeons distasteful, but Richard Bartle, co-creator of the original MUD at the University of Essex in
+                     1978, explained that the name does contain the word "Dungeon" and that this refers specifically to the computer game <i>Dungeon</i>, a.k.a. <i>Zork</i>. The other "Multi-user Zorks" that followed from this first system at Essex provided further opportunities for player-to-player conversation and social
+                     dynamics that quickly became important to people's MUD experiences. Later, the MOO (MUD Object Oriented) made it easy for
+                     people to shape the virtual environment, build bots, and otherwise participate as designers. While the MUD can be considered
+                     formally to be a strictly improved, multi-user sort of interactive fiction, the importance of interpersonal interactions in
+                     these systems meant that their development took a different turn.
+                  </p>
+                  
+                  
+                  <a name="ss1-5-8_h10"></a><h3 class="normal">Relationship to gaming and graphical adventures</h3>
+                  
+                  <p>Via the MUD, interactive fiction has had an influence on graphical, massively multi-player gaming. Other game forms and genres
+                     also trace their roots to interactive fiction. One of these began with the 1980 computer game <i>Rogue</i>, which used ordinary ASCII characters to draw dungeons and mazes — the player's "man" was represented as "@". Interactive fiction was also influential, both directly and via <i>Rogue</i> and the similar game <i>Nethack</i>, on the genre of the computer RPG (role-playing game). In this category of games, turn-based combat and ability points of
+                     the <i>Dungeons and Dragons</i> sort were staples of the system, but some of the puzzle-solving and exploration that had been developing in interactive fiction
+                     could be seen as well.
+                  </p>
+                  
+                  <p>The main descendant of interactive fiction is no doubt the graphical adventure. The first game in this category was Warren
+                     Robinett's aptly titled <i>Adventure</i> for the cartridge-based Atari VCS (Atari 2600), released in 1978 and incorporating no text. Most of the development of the
+                     graphical adventure happened via various lines of text-and-graphics games in which, over time, graphics took over as interface
+                     development continued and the graphics capabilities of home computers improved. Sierra On-Line's <i>King's Quest</i> series (and the related <i>Space Quest</i> series and <i>Police Quest</i> series) followed this trajectory. The humorous graphical adventures developed by LucasArts are also adventures, and helped
+                     to innovate by providing the interactor with multiple player characters who sometimes interacted comically. The LucasArts
+                     games include <i>Maniac Mansion</i>, <i>Sam and Max Hit the Road</i>, the <i>Monkey Island</i> series, and <i>Grim Fandango</i>. The early CD-ROM hit <i>Myst</i>, which eschews language input for simple pointing and clicking, is another example in the graphical adventure category. More
+                     recently, "action adventure" games and those that involve a character undertaking the exploration of a simulated world — the <i>Tomb Raider</i> and later <i>Grand Theft Auto</i> games are examples — are, as the name of this genre suggests, descendants of interactive fiction, although more distant ones.
+                  </p>
+                  
+                  
+                  <a name="ss1-5-8_h11"></a><h3 class="normal">Literary aspects: the novel, the riddle</h3>
+                  
+                  <p>The obvious literary relative of interactive fiction seems to be the novel. Infocom developed pieces that fit into popular
+                     novelistic genres; many novels were adapted into interactive fiction works; Synapse dubbed each of its four IF publications
+                     "an electronic novel" and even packaged them in hard-bound books, cutting out pages in the back to accommodate the disks. Even the term "interactive fiction" suggests a connection to the novel. The output of IF usually looks more like novelistic prose than like poetry or the text
+                     of a play, although there are exceptions. Despite the long effort to draw connections between the novel and interactive fiction,
+                     there are several important differences, even overlooking the main one, that a novel is a text and a work of interactive fiction
+                     is an interactive computer program. It takes longer to solve many commercial works of IF than it takes to read a novel, for
+                     instance, while the process may result in less text (not counting repeated passages) being output. The setting is seldom the
+                     strong point of the novel, while the environment is an extremely important part of interactive fiction.
+                  </p>
+                  
+                  <p>In <i>Twisty Little Passages</i> (<a href="#ss1-5-8_b6">Montfort 2003</a>), I suggested a different literary connection, to a poetic form, the riddle. The tradition of the riddle is long-standing,
+                     although the form is now often dismissed as a trivial amusement for children. Riddles are among the first English poems and,
+                     while they have sometimes appeared as parlor amusements, some poets, including May Swenson and Emily Dickinson, have written
+                     compelling riddles that question the world and how it is perceived. By asking the listener or reader to complete them with
+                     an answer, riddles invite thought and discussion in a way that many other literary forms do not, but which interactive fiction
+                     does. Just as a real riddle requests an answer, interactive fiction requires input from the interactor. It also often provides
+                     an opportunity for the interactor to perform his or her understanding of the IF world: by having the player character act
+                     appropriately, the interactor demonstrates comprehension of the strange systems of a particular work. The riddle helps to
+                     explain how figuration and a negotiation of understanding can take place in interactive fiction.
+                  </p>
+                  
+                  
+                  <a name="ss1-5-8_h12"></a><h3 class="normal">Conventions and materials of interaction: mapping, transcripts, "feelies"</h3>
+                  
+                  <p>New interactors can be overwhelmed by interactive fiction, particularly when they confront older IF works, in part because
+                     they literally arrive ill-equipped. The classic mode of play, since <i>Adventure</i>, has involved keeping notes on paper as one tries to progress through a game. More recent IF works may not require mapping,
+                     either because of their small world size (as seen in some Comp games) or because authors have designed them with a geography
+                     or interface that makes it easier to keep track of the virtual space. Still, for many games, keeping a map is essential. Such
+                     a map often simply consists of room names in circles, lines drawn between adjacent rooms, and additional remarks on items
+                     and features of interest scribbled here and there.
+                  </p>
+                  
+                  <p>Another material tradition is referring back to a transcript to figure out a predicament. Players of <i>Adventure</i> would often get transcripts of their interaction by default, because many of them played on print terminals and their display
+                     was printed on paper. In the home computer era, players could print transcripts to study; it was also possible to save transcript
+                     files and look over them without printing.
+                  </p>
+                  
+                  <p>Finally, there is a fondly remembered material dimension of interactive fiction, that of the "feelie," which was established by Infocom. In part to discourage the illegal copying of their software, Infocom included various objects
+                     in their game packages: a glow-in-the-dark plastic stone came with <i>Wishbringer</i>, which was about a magical stone, for instance. Some recent IF authors have created virtual or tangible feelies to go along
+                     with their recent releases.
+                  </p>
+                  
+                  
+                  <a name="ss1-5-8_h13"></a><h3 class="normal">Modern IF development and distribution</h3>
+                  
+                  <p>In recent years, almost all the interactive fiction that has been developed has been made available online for free via the
+                     IF Archive and authors' websites. Most of it has been developed using dedicated IF development systems, including TADS and
+                     Inform. The third version of TADS and a greatly updated Inform 7 were both released in 2006. Both systems are available for
+                     free, and are general-purpose programming languages with well-developed, standard, and extensible libraries. For instance,
+                     they provide default replies when a command can't be carried out or has no effect, although these can be overridden; they
+                     also simulate the way that light sources and containers work. Alternatives to these systems include Hugo, a capable, cross-platform
+                     system that supports multimedia, and ADRIFT, a system many find easy to use.
+                  </p>
+                  
+                  <p>On the interactor's end, running interactive fiction is a two-step process that involves downloading the appropriate interpreter
+                     and then running the IF work in that interpreter. Although this process is not difficult, it is more involved than clicking
+                     on a link to see a Flash file or go to a webpage. Some effective web-based interpreters have been developed, although these
+                     are not ideal for sustained interaction.
+                  </p>
+                  
+                  
+                  
+                  <a name="ss1-5-8_h14"></a><h2 class="normal">Suggestions for Play</h2>
+                  
+                  <p>The easiest interactive fiction is not necessarily the best starting point. A complex, difficult piece such as Adam Cadre's
+                     1999 <i>Varicella</i> (see <a href="#ss1-5-8_b7">Montfort and Moulthrop 2003</a>) quickly conveys how the intricate simulation that IF affords can be turned to new literary purposes. In <i>Varicella</i>, the player character is a sniveling and completely unlikable palace minister. The setting is the palazzo of the recently
+                     departed King Charles, a place that seems to be historical at first, but which is discovered to have strange contemporary
+                     and science-fictional elements. The wide range of characters are almost uniformly despicable. The interactor will be amused
+                     at commanding the player character to eliminate his rivals and take over the regency, but will also encounter darker and more
+                     serious aspects of this violent system. Impossible for a beginner to solve in a short amount of time, <i>Varicella</i> nevertheless is excellent at quickly showing what interactive fiction can do.
+                  </p>
+                  
+                  <p>A shorter IF work that can be completed in an hour or so is Andrew Plotkin's <i>Shade</i> (2000), which plays on the concept of the "one-room game." <i>Shade</i> occurs — so we suppose — in the player character's apartment, in the early morning hours before departure for a Burning-Man-like festival. By performing
+                     ordinary tasks such as looking for plane tickets and trying to find a glass of water, the player character causes the apartment
+                     to undergo a transformation, and the true nature of the player's surroundings become evident. Although it requires some familiarity
+                     with IF interaction, <i>Shade</i> deals with levels of reality in an extremely powerful way.
+                  </p>
+                  
+                  <p>Another excellent piece set at some point near to the present day is Michael Gentry's <i>Anchorhead</i> (1998). The world of <i>Anchorhead</i>, inspired by H. P. Lovecraft, is a whole New England town; the player character explores this world over several days in
+                     the course of reaching the conclusion. The setting is well wrought, and the way the horrific discoveries unfold is particularly
+                     effective.
+                  </p>
+                  
+                  <p><i>Bad Machine</i> by Dan Shiovitz (1999) takes place in a science-fictional setting; the player character is a reconfigurable robot in a strange
+                     factory. The striking thing about this game is the way it blends elements of computerized communication (programming language
+                     constructs, for instance) to create a texture of the sort that is also seen in the "codework" of digital poets. Figuring out what is going on at first is a puzzle in itself; then, the nature of the factory — which refers to industrial and information-age work environments — poses further challenges. The player character has only managed to acquire free will because part of the productive systems
+                     of the factory have broken down, creating a "bad machine" with individual consciousness.
+                  </p>
+                  
+                  <p>An even less conventional piece, although more immediately legible, is Aaron Reed's <i>Whom the Telling Changed</i>, released in 2005. The story of Gilgamesh is the centerpiece of this game, which takes place at a ritual storytelling event
+                     in ancient Sumer. Standard interactive fiction commands are available, but the interactor can also type one of the highlighted
+                     words, selecting it as if choosing a hypertextual link.
+                  </p>
+                  
+                  <p>Sam Barlow's <i>Aisle</i> (1999) is fascinating as a limit case of interactive fiction. Each individual encounter with <i>Aisle</i> begins in a grocery story and is only one turn long —the interactor only has the opportunity to type one command. Repeated interactions with <i>Aisle</i> can reveal different things about the player character's past and present —some of which are oddly inconsistent, or intersect in curious ways.
+                  </p>
+                  
+                  <p>The previous items on this list are all from the past decade, and are available for free download — along with many others — from the Interactive Fiction Archive, easily accessed via Baf's Guide. There is plenty of commercial IF from the 1980s that
+                     can also provide a good starting point, although these games are harder to access. Steve Meretzky's <i>A Mind Forever Voyaging</i> is an extraordinary piece, for instance, offering a more and more dystopian city that can be explored at several points in
+                     the future. Also notable for their sociopolitical dimensions are two games that engaged the apocalyptic fears of the cold
+                     war, Brian Moriarty's <i>Trinity</i> and Robert Pinsky's <i>Mindwheel</i>.
+                  </p>
+                  
+                  
+                  <a name="ss1-5-8_h15"></a><h2 class="normal">Conclusion</h2>
+                  
+                  <p>Interactive fiction has been a rather startling subplot in computing and literature —one that has only recently been acknowledged as an interesting thread of practice, worth considering alongside higher-brow
+                     traditions such as hypertext fiction and digital poetry. If interactive fiction were simply a riff on the command-line way
+                     of interacting with computers, it would be of little interest. But it has been more than that for decades, providing a fascinating
+                     structure for narrative human—computer conversation, bringing simulation and narration together in novel ways.
+                  </p>
+                  
+                  <p>A great deal of gaming and literary innovation has followed from a single FORTRAN program, released to the world by Crowther
+                     and Woods in 1976. Author/programmers continue to develop interactive fiction that engages the questions of literature. People
+                     continue to encounter IF, and to learn to create IF, informally as well as in the classroom. IF has already survived, and
+                     prospered, despite the dwindling of the commercial market for text games and despite the shift from text-based to GUI (graphical
+                     user interface) computing. There is likely to be a good deal more literary innovation in store in the form of interactive
+                     fiction.
+                  </p>
+                  
+                  
+                  
+                  
+                  <a name="ss1-5-8_h16"></a><h2 class="normal">Bibliography</h2>
+                  <a name="ss1-5-8_b1"></a><p class="hang">Works of interactive fiction mentioned in this article are generally either available from the IF Archive or, either because
+                     they were commercially published or because they run only on older computer systems, are not available at all. Pieces on the
+                     IF Archive can be easily found and downloaded by searching by title or author on Baf's Guide, &lt;<a href="http://wurb.com/if/">http://wurb.com/if/</a>&gt;.
+                  </p>
+                  <a name="ss1-5-8_b2"></a><p class="hang">To see how to install the necessary interpreter and run a work of interactive fiction, consult the Interactive Fiction FAQ,
+                     by Nick Montfort with Sam Kabo Ashwell, Dave Cornelson, Dan Shiovitz, and other ifwiki contributors: &lt;<a href="http://nickm.com/if/faq.html">http://nickm.com/if/faq.html</a>&gt;.
+                  </p>
+                  <a name="ss1-5-8_b3"></a><p class="hang">Aarseth, Espen (1997). <i><span class="title">Cybertext: Perspectives on Ergodic Literature</span></i>. Baltimore, MD: Johns Hopkins University Press.
+                  </p>
+                  <a name="ss1-5-8_b4"></a><p class="hang">Buckles, Mary Ann (1985). "<i><span class="title">Interactive Fiction: The Computer Storygame 'Adventure.'</span></i>" PhD Thesis, University of California San Diego.
+                  </p>
+                  <a name="ss1-5-8_b5"></a><p class="hang">Jerz, Dennis G. (2007). "<i><span class="title">Somewhere Nearby is Colossal Cave: Examining Will Crowther's Original 'Adventure' in Code and in Kentucky.</span></i>" Forthcoming in <i>Digital Humanities Quarterly</i>.
+                  </p>
+                  <a name="ss1-5-8_b6"></a><p class="hang">Montfort, Nick (2003). <i><span class="title">Twisty Little Passages: An Approach to Interactive Fiction</span></i>. Cambridge, MA: The MIT Press.
+                  </p>
+                  <a name="ss1-5-8_b7"></a><p class="hang">Montfort, Nick, and Stuart Moulthrop (2003). "<i><span class="title">Face It, Tiger, You Just Hit the Jackpot: Reading and Playing Cadre's Varicella.</span></i>" <i><span class="title">Fineart Forum</span></i> 17:8. &lt;<a href="http://www.msstate.edu/Fineart_Online/Backissues/Vol_17/faf_v17_n08/reviews/mon-tfort.html">http://www.msstate.edu/Fineart_Online/Backissues/Vol_17/faf_v17_n08/reviews/mon-tfort.html</a>&gt;.
+                  </p>
+                  <a name="ss1-5-8_b8"></a><p class="hang">Murray, Janet (1997). <i><span class="title">Hamlet on the Holodeck: The Future of Narrative in Cyberspace</span></i>. New York: Free Press.
+                  </p>
+                  <a name="ss1-5-8_b9"></a><p class="hang">Nelson, Graham (2001). <i><span class="title">The Inform Designer's Manual</span></i>, 4th edn. St. Charles, IL: The Interactive Fiction Library. Also online at &lt;<a href="http://www.inform-fiction.org/manual/DM4.pdf">http://www.inform-fiction.org/manual/DM4.pdf</a>&gt;.
+                  </p>
+                  <a name="ss1-5-8_b10"></a><p class="hang">Pinsky, Robert (1995). "<i><span class="title">The Poetics of Zork.</span></i>" <i><span class="title">The New York Times Book Review</span></i>, March 19: 3+.
+                  </p>
+                  
+                  
+                  
+               </div>
+            

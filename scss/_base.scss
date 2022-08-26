@@ -14,10 +14,14 @@ body {
     "footer footer";
   grid-template-columns: auto 1fr;
   grid-template-rows: auto 1fr auto;
-  height: 100vh;
+
+  height: 100%;
+  height: -webkit-fill-available;
+  height: fill-available;
+
   margin: 0;
   overflow: hidden;
-  position: fixed;
+  position: absolute;
   width: 100vw;
 }
 
@@ -29,7 +33,7 @@ header {
 
   display: grid;
   align-items: center;
-  grid-template-columns: 65px auto 220px;
+  grid-template-columns: 75px auto 220px;
   grid-template-rows: 40px 30px;
   grid-template-areas:
     "img title bw"
@@ -37,6 +41,7 @@ header {
 
   > img {
     grid-area: img;
+    border-radius: 15px;
   }
 
   h1 {
@@ -102,7 +107,7 @@ nav {
   td[width="1"] {
     text-align: right;
     vertical-align: baseline;
-    width: 2.5em;
+    width: 1em;
   }
 
   td[width="15"] {
@@ -127,6 +132,8 @@ nav {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
   grid-area: main;
   overflow: auto;
 
