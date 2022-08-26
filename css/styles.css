@@ -111,7 +111,27 @@ footer {
   color: white;
   grid-column: 1 / 4;
   padding: 8px;
+  position: relative;
   text-align: center; }
+  footer a {
+    bottom: min(8px, calc((100% - 1.5em) / 2));
+    height: 1.5em;
+    position: absolute;
+    right: 1em; }
+  footer svg {
+    width: 1.5em; }
+    footer svg rect {
+      fill: grey;
+      fill: var(--background-color);
+      transition: fill 0.3s ease; }
+    footer svg path {
+      fill: var(--background-color);
+      fill: white;
+      transition: fill 0.3s ease; }
+  footer:hover svg rect {
+    fill: white; }
+  footer:hover svg path {
+    fill: var(--background-color); }
 
 input#open-sidebar {
   display: none; }

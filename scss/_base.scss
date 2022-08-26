@@ -157,5 +157,37 @@ footer {
   color: white;
   grid-column: 1 / 4;
   padding: 8px;
+  position: relative;
   text-align: center;
+
+  a {
+    bottom: unquote("min(8px, calc((100% - 1.5em) / 2))");
+    height: 1.5em;
+    position: absolute;
+    right: 1em;
+  }
+
+  svg {
+    width: 1.5em;
+
+    rect {
+      fill: grey;
+      fill: var(--background-color);
+      transition: fill 0.3s ease;
+    }
+
+    path {
+      fill: var(--background-color);
+      fill: white;
+      transition: fill 0.3s ease;
+    }
+  }
+
+  &:hover svg rect {
+    fill: white;
+  }
+
+  &:hover svg path {
+    fill: var(--background-color);
+  }
 }
