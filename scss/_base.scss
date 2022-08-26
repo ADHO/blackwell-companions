@@ -14,10 +14,14 @@ body {
     "footer footer";
   grid-template-columns: auto 1fr;
   grid-template-rows: auto 1fr auto;
-  height: 100vh;
+
+  height: 100%;
+  height: -webkit-fill-available;
+  height: fill-available;
+
   margin: 0;
   overflow: hidden;
-  position: fixed;
+  position: absolute;
   width: 100vw;
 }
 
@@ -128,6 +132,8 @@ nav {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
   grid-area: main;
   overflow: auto;
 
