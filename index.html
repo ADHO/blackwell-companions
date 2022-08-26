@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Blackwell Companions to Digital Humanities and Digital Literary Studies</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      margin: 0;
+      min-height: 100%;
+      padding: 1em;
+    }
+
+    main {
+      align-items: center;
+      display: flex;
+      flex-grow: 1;
+      flex-wrap: wrap;
+      gap: 2em 4em;
+      justify-content: center;
+    }
+
+    section {
+      border-radius: 1em;
+      box-shadow: 0 0 8px 2px rgba(0 0 0 / 0.2);
+      text-align: center;
+      padding: 1em;
+    }
+
+    section img {
+      max-height: 475px;
+      max-width: 100%;
+    }
+
+    footer {
+      align-items: center;
+      display: flex;
+      font-family: sans-serif;
+      gap: 1em;
+      justify-content: center;
+      padding: 0.5em;
+      width: 100vw;
+    }
+
+    /* Fancy hover effect */
+    section {
+      --border-thickness: 4px;
+      --color: #EDC951;
+      --corner-size: 60px;
+      --offset: 40px;
+      --half-offset: calc(var(--offset)/2);
+
+      background-image:
+        conic-gradient(from 90deg at top var(--border-thickness) left var(--border-thickness),
+          transparent 25%, var(--color) 0),
+        conic-gradient(from -90deg at bottom var(--border-thickness) right var(--border-thickness),
+          transparent 25%, var(--color) 0);
+      background-position:
+        var(--half-offset) var(--half-offset),
+        calc(100% - var(--half-offset)) calc(100% - var(--half-offset));
+      background-size: var(--corner-size) var(--corner-size);
+      background-repeat: no-repeat;
+      padding: calc(var(--border-thickness) + var(--offset));
+      transition:
+        background-position .3s .3s,
+        background-size .3s;
+    }
+
+    section:hover {
+      background-size: calc(100% - var(--offset)) calc(100% - var(--offset));
+    }
+
+  </style>
+</head>
+
+<body>
+  <main>
+    <a href="DH/" title="A Companion to Digital Humanities">
+      <section>
+        <img src="DH/content/9781405103213_cover.jpg" alt="
+      A Companion to Digital Humanities
+      Editor(s):
+      SUSAN SCHREIBMAN,
+      RAY SIEMENS, AND
+      JOHN UNSWORTH
+      Blackwell Publishing Ltd
+      Oxford, UK
+      © Blackwell Publishing Ltd 2004">
+      </section>
+    </a>
+
+    <a href="DLS/" title="A Companion to Digital Literary Studies">
+      <section>
+        <img src="DLS/content/9781405148641_cover.jpg" alt="
+      A Companion to Digital Literary Studies
+      Editor(s):
+      Ray Siemens and 
+      Susan Schreibman
+
+      Blackwell Publishing Ltd
+      Oxford, UK
+      © Blackwell Publishing Ltd 2007">
+      </section>
+    </a>
+  </main>
+
+  <footer>
+    Presented with the permission of
+    <a href="http://www.blackwellpublishing.com/">
+      <img height="40" width="93" src="img/bw_logo.93x40.png" alt="Blackwell Publishing">
+    </a>
+  </footer>
+
+</body>
+
+</html>
