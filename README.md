@@ -1,42 +1,34 @@
 # A Companion to Digital Humanities
 
-<a href="https://app.netlify.com/sites/companions/deploys"><img src="https://api.netlify.com/api/v1/badges/957c205d-5a3b-4b3b-9293-23607c822765/deploy-status" align="right" alt="Netlify Status"></a>
-https://companions.netlify.app/
+<https://companions.digitalhumanities.org/>
 
-This is a prototype / proof-of-concept / initial version (depending!) of a conversion of the Companion to Digital Humanities XTF installation at http://digitalhumanities.org/companion/
+The content here is a conversion of the Companion to Digital Humanities XTF installation formerly available at <http://digitalhumanities.org/companion/>.  The content has been extracted from XTF and rebuilt as a static site with a very minimal hand-rolled Javascript SPA framework.  The intention was to recreate the interface and functionality offered by the XTF site (warts and all) in the most direct and unembellished fashion possible.  There is a client-side full-text search functionality which is slightly more sophisticated than the previous offering (XTF could, presumably, have been configured to do the same, but the previous site had only very limited search capabilities).
 
-The site is entirely static, and as such it has (imho) a number of advantages over the XTF-based site. XTF is heavy and burdensome to support -- it requires a Java-based Tomcat server and significant server resources and represents a substantial technical debt. This seems excessive for a site that presents fixed content with a very limited search function. An entirely static site like this requires almost zero infrastructure resources (indeed, it can easily be hosted for free on, e.g., GitHub Pages or Netlify, as with this demo), requires no maintenance and exposes no security concerns.
+The primary motivation for the conversion was to reduce the maintenance, security, and resource requirements of hosting what is ultimately static content.
 
-For a (only slightly unfair) point of comparison, the XTF installation that currently serves up the two Companions is currently consuming about half a gigabyte of RAM and about 5Gb of storage space. Something like this requires essentially zero RAM, and less than 20mb of storage for each Companion.
 
-The search functionality included here is slightly more sophisticated than the current offering (XTF could, presumably, be configured to do the same, but the existing installation has only very limited search capabilities).
+## Development
 
-Note that doing the same for the Companion to Digital Literary Studies should be a case of dropping in the content and changing a few constants.
+Further development is not expected or advised.  However, should something need to be changed, the following notes may be useful.
 
-## TODO for full feature-parity:
+* The content is essentially as output by the old XTF site, and only very minimally edited (hence all the tables and so on).
+* The `bin/` folder contains two scripts:
+  * `make_json.py` will parse the content of the folder specified by the `--content-path` argument and outputs the text content of the HTML files in JSON format where the keys are the filenames and the values are the text content.
+  * `build_idx.js` takes this JSON data on `stdin` and builds the `lunr.js` search indexes found at `DH/idx.json` and `DLS/idx.json`.
+  * e.g.
 
-- **Implement a "print view"**  
-  Does this need to be an actual button that displays the "print view", or just some `@media print` styles...?
-- Add in the "Corrections to John Unsworth" link?
-- Add in the "Buy the book" link? (Note that this doesn't actually work, so presumably a new link would have to be found.)
-- This site doesn't use the chapter headers and footers with the prev / next navigation buttons (I don't much like them, personally) -- should they be added back in?
-- Likewise the prev/next search hit UI -- might be a nice-to-have?
+    ```
+    bin/make_json.py --content-path DH/content | bin/build_idx.js > DH/idx.json
+    ```
 
-### Nice-to-haves / Improvements
+  * Unless the content changes for some reason (?) there should be no need to rebuild the indexes at any time; however, should the need arise, note that the version of `lunr.js` that is used to build the index must match the version served by the front-end from `js/lunr.min.js` (currently `2.3.9`).
 
-- pre-generate pages for SEO and progressive-enhancement purposes
+* The CSS in `css/` is committed here in the repo for ease of deployment; however, it is generated from the files in `scss/`, and any edits should be made there and the CSS recompiled, e.g.
 
-  - the TOC, at least, should probably be hardcoded
-  - a build system for stamping out templating will be needed
-  - this will result in better URLs, and make a fall-back search functionality easier
-  - switching the DOM order of the TOC and the article would improved SEO / accessibility
+  ```
+  npx node-sass --output-style compressed --omit-source-map-url scss/styles.scss > css/styles.css;
+  npx node-sass --output-style compressed --omit-source-map-url scss/index.scss > css/index.css;
+  ```
 
-- redevelop some of the markup / css?
+* There is a substantial amount of `nginx` config on the server that hosts `digitalhumanities.org` which takes care of redirecting the various tangled URLs and routing from the XTF site to the new locations.  See the server deployment README for full details.
 
-  - the markup is awful (seriously -- I've stripped the tables around the chapter content, but take a look at the TOC...)
-  - the CSS for the text is just copied from the XTF-based site. Nicer typography might be nice.
-  - a (more) responsive, mobile-friendly layout would be nice, too.
-
-- depending on network latency, there can be a bit of a lag on loading a new chapter -- some immediate feedback (e.g. a spinner or something) would improve UX (this has been mitigated substantially by applying the "current link" styling before loading the page, but more could be done).
-
-- as it stands this will not work on Internet Explorer (MS Edge should be fine). Support _could_ be added, but I would argue against unless a compelling case could be made, tbh.
