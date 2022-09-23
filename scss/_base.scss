@@ -55,7 +55,7 @@ header {
   }
 
   #publisher {
-    display: grid;
+    columns: 2;
     grid-area: bw;
     font-size: x-small;
     text-align: center;
