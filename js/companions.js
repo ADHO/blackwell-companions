@@ -11,6 +11,12 @@ const loadPage = (filePath, targetElem = document.querySelector("main")) => {
         contentElem.innerHTML = textContent;
         const contentFrag = contentElem.content;
         for (let img of contentFrag.querySelectorAll(".content img")) {
+          if (
+            img.parentElement.tagName == "A" &&
+            img.parentElement.href == img.src
+          ) {
+            img.parentElement.href = `content/${img.getAttribute("src")}`;
+          }
           img.src = `content/${img.getAttribute("src")}`;
         }
         targetElem.innerHTML = "";
